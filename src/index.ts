@@ -1,3 +1,5 @@
+import "./practice-answers.ts"
+
 interface ConjugationSet {
   yo: string[]
   tú: string[]
