@@ -1,4 +1,5 @@
 import "./practice-answers.ts"
+import "./practice-session.ts"
 
 interface ConjugationSet {
   yo: string[]
