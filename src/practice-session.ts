@@ -24,6 +24,8 @@ class PracticeSession {
   }
 }
 
+// Example usage
+
 const session = new PracticeSession()
 
 session.recordResult("correct")
