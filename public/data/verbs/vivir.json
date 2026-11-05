@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "vivir",
+  "infinitive": "vivir",
+  "meaning": "to live",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["vivo"],
+      "tu": ["vives"],
+      "el": ["vive"],
+      "nosotros": ["vivimos"],
+      "vosotros": ["vivís"],
+      "ellos": ["viven"]
+    },
+    "indicative.preterite": {
+      "yo": ["viví"],
+      "tu": ["viviste"],
+      "el": ["vivió"],
+      "nosotros": ["vivimos"],
+      "vosotros": ["vivisteis"],
+      "ellos": ["vivieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["vivía"],
+      "tu": ["vivías"],
+      "el": ["vivía"],
+      "nosotros": ["vivíamos"],
+      "vosotros": ["vivíais"],
+      "ellos": ["vivían"]
+    },
+    "indicative.future": {
+      "yo": ["viviré"],
+      "tu": ["vivirás"],
+      "el": ["vivirá"],
+      "nosotros": ["viviremos"],
+      "vosotros": ["viviréis"],
+      "ellos": ["vivirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["viviría"],
+      "tu": ["vivirías"],
+      "el": ["viviría"],
+      "nosotros": ["viviríamos"],
+      "vosotros": ["viviríais"],
+      "ellos": ["vivirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["viva"],
+      "tu": ["vivas"],
+      "el": ["viva"],
+      "nosotros": ["vivamos"],
+      "vosotros": ["viváis"],
+      "ellos": ["vivan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["viviera", "viviese"],
+      "tu": ["vivieras", "vivieses"],
+      "el": ["viviera", "viviese"],
+      "nosotros": ["viviéramos", "viviésemos"],
+      "vosotros": ["vivierais", "vivieseis"],
+      "ellos": ["vivieran", "viviesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he vivido"],
+      "tu": ["has vivido"],
+      "el": ["ha vivido"],
+      "nosotros": ["hemos vivido"],
+      "vosotros": ["habéis vivido"],
+      "ellos": ["han vivido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había vivido"],
+      "tu": ["habías vivido"],
+      "el": ["había vivido"],
+      "nosotros": ["habíamos vivido"],
+      "vosotros": ["habíais vivido"],
+      "ellos": ["habían vivido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré vivido"],
+      "tu": ["habrás vivido"],
+      "el": ["habrá vivido"],
+      "nosotros": ["habremos vivido"],
+      "vosotros": ["habréis vivido"],
+      "ellos": ["habrán vivido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría vivido"],
+      "tu": ["habrías vivido"],
+      "el": ["habría vivido"],
+      "nosotros": ["habríamos vivido"],
+      "vosotros": ["habríais vivido"],
+      "ellos": ["habrían vivido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya vivido"],
+      "tu": ["hayas vivido"],
+      "el": ["haya vivido"],
+      "nosotros": ["hayamos vivido"],
+      "vosotros": ["hayáis vivido"],
+      "ellos": ["hayan vivido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera vivido", "hubiese vivido"],
+      "tu": ["hubieras vivido", "hubieses vivido"],
+      "el": ["hubiera vivido", "hubiese vivido"],
+      "nosotros": ["hubiéramos vivido", "hubiésemos vivido"],
+      "vosotros": ["hubierais vivido", "hubieseis vivido"],
+      "ellos": ["hubieran vivido", "hubiesen vivido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy viviendo"],
+      "tu": ["estás viviendo"],
+      "el": ["está viviendo"],
+      "nosotros": ["estamos viviendo"],
+      "vosotros": ["estáis viviendo"],
+      "ellos": ["están viviendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["vive"],
+      "usted": ["viva"],
+      "nosotros": ["vivamos"],
+      "vosotros": ["vivid"],
+      "ustedes": ["vivan"]
+    },
+    "imperative.negative": {
+      "tu": ["no vivas"],
+      "usted": ["no viva"],
+      "nosotros": ["no vivamos"],
+      "vosotros": ["no viváis"],
+      "ustedes": ["no vivan"]
+    }
+  }
+}

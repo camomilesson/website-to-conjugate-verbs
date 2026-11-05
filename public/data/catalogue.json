@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "verbs": [
+    {
+      "id": "hablar",
+      "infinitive": "hablar",
+      "meaning": "to speak"
+    },
+    {
+      "id": "comer",
+      "infinitive": "comer",
+      "meaning": "to eat"
+    },
+    {
+      "id": "vivir",
+      "infinitive": "vivir",
+      "meaning": "to live"
+    },
+    {
+      "id": "ser",
+      "infinitive": "ser",
+      "meaning": "to be"
+    },
+    {
+      "id": "ir",
+      "infinitive": "ir",
+      "meaning": "to go"
+    },
+    {
+      "id": "tener",
+      "infinitive": "tener",
+      "meaning": "to have"
+    },
+    {
+      "id": "levantarse",
+      "infinitive": "levantarse",
+      "meaning": "to get up"
+    }
+  ]
+}

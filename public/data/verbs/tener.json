@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "tener",
+  "infinitive": "tener",
+  "meaning": "to have",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["tengo"],
+      "tu": ["tienes"],
+      "el": ["tiene"],
+      "nosotros": ["tenemos"],
+      "vosotros": ["tenéis"],
+      "ellos": ["tienen"]
+    },
+    "indicative.preterite": {
+      "yo": ["tuve"],
+      "tu": ["tuviste"],
+      "el": ["tuvo"],
+      "nosotros": ["tuvimos"],
+      "vosotros": ["tuvisteis"],
+      "ellos": ["tuvieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["tenía"],
+      "tu": ["tenías"],
+      "el": ["tenía"],
+      "nosotros": ["teníamos"],
+      "vosotros": ["teníais"],
+      "ellos": ["tenían"]
+    },
+    "indicative.future": {
+      "yo": ["tendré"],
+      "tu": ["tendrás"],
+      "el": ["tendrá"],
+      "nosotros": ["tendremos"],
+      "vosotros": ["tendréis"],
+      "ellos": ["tendrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["tendría"],
+      "tu": ["tendrías"],
+      "el": ["tendría"],
+      "nosotros": ["tendríamos"],
+      "vosotros": ["tendríais"],
+      "ellos": ["tendrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["tenga"],
+      "tu": ["tengas"],
+      "el": ["tenga"],
+      "nosotros": ["tengamos"],
+      "vosotros": ["tengáis"],
+      "ellos": ["tengan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["tuviera", "tuviese"],
+      "tu": ["tuvieras", "tuvieses"],
+      "el": ["tuviera", "tuviese"],
+      "nosotros": ["tuviéramos", "tuviésemos"],
+      "vosotros": ["tuvierais", "tuvieseis"],
+      "ellos": ["tuvieran", "tuviesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he tenido"],
+      "tu": ["has tenido"],
+      "el": ["ha tenido"],
+      "nosotros": ["hemos tenido"],
+      "vosotros": ["habéis tenido"],
+      "ellos": ["han tenido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había tenido"],
+      "tu": ["habías tenido"],
+      "el": ["había tenido"],
+      "nosotros": ["habíamos tenido"],
+      "vosotros": ["habíais tenido"],
+      "ellos": ["habían tenido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré tenido"],
+      "tu": ["habrás tenido"],
+      "el": ["habrá tenido"],
+      "nosotros": ["habremos tenido"],
+      "vosotros": ["habréis tenido"],
+      "ellos": ["habrán tenido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría tenido"],
+      "tu": ["habrías tenido"],
+      "el": ["habría tenido"],
+      "nosotros": ["habríamos tenido"],
+      "vosotros": ["habríais tenido"],
+      "ellos": ["habrían tenido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya tenido"],
+      "tu": ["hayas tenido"],
+      "el": ["haya tenido"],
+      "nosotros": ["hayamos tenido"],
+      "vosotros": ["hayáis tenido"],
+      "ellos": ["hayan tenido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera tenido", "hubiese tenido"],
+      "tu": ["hubieras tenido", "hubieses tenido"],
+      "el": ["hubiera tenido", "hubiese tenido"],
+      "nosotros": ["hubiéramos tenido", "hubiésemos tenido"],
+      "vosotros": ["hubierais tenido", "hubieseis tenido"],
+      "ellos": ["hubieran tenido", "hubiesen tenido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy teniendo"],
+      "tu": ["estás teniendo"],
+      "el": ["está teniendo"],
+      "nosotros": ["estamos teniendo"],
+      "vosotros": ["estáis teniendo"],
+      "ellos": ["están teniendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ten"],
+      "usted": ["tenga"],
+      "nosotros": ["tengamos"],
+      "vosotros": ["tened"],
+      "ustedes": ["tengan"]
+    },
+    "imperative.negative": {
+      "tu": ["no tengas"],
+      "usted": ["no tenga"],
+      "nosotros": ["no tengamos"],
+      "vosotros": ["no tengáis"],
+      "ustedes": ["no tengan"]
+    }
+  }
+}

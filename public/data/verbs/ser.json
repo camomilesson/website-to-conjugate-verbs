@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "ser",
+  "infinitive": "ser",
+  "meaning": "to be",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["soy"],
+      "tu": ["eres"],
+      "el": ["es"],
+      "nosotros": ["somos"],
+      "vosotros": ["sois"],
+      "ellos": ["son"]
+    },
+    "indicative.preterite": {
+      "yo": ["fui"],
+      "tu": ["fuiste"],
+      "el": ["fue"],
+      "nosotros": ["fuimos"],
+      "vosotros": ["fuisteis"],
+      "ellos": ["fueron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["era"],
+      "tu": ["eras"],
+      "el": ["era"],
+      "nosotros": ["éramos"],
+      "vosotros": ["erais"],
+      "ellos": ["eran"]
+    },
+    "indicative.future": {
+      "yo": ["seré"],
+      "tu": ["serás"],
+      "el": ["será"],
+      "nosotros": ["seremos"],
+      "vosotros": ["seréis"],
+      "ellos": ["serán"]
+    },
+    "indicative.conditional": {
+      "yo": ["sería"],
+      "tu": ["serías"],
+      "el": ["sería"],
+      "nosotros": ["seríamos"],
+      "vosotros": ["seríais"],
+      "ellos": ["serían"]
+    },
+    "subjunctive.present": {
+      "yo": ["sea"],
+      "tu": ["seas"],
+      "el": ["sea"],
+      "nosotros": ["seamos"],
+      "vosotros": ["seáis"],
+      "ellos": ["sean"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["fuera", "fuese"],
+      "tu": ["fueras", "fueses"],
+      "el": ["fuera", "fuese"],
+      "nosotros": ["fuéramos", "fuésemos"],
+      "vosotros": ["fuerais", "fueseis"],
+      "ellos": ["fueran", "fuesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he sido"],
+      "tu": ["has sido"],
+      "el": ["ha sido"],
+      "nosotros": ["hemos sido"],
+      "vosotros": ["habéis sido"],
+      "ellos": ["han sido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había sido"],
+      "tu": ["habías sido"],
+      "el": ["había sido"],
+      "nosotros": ["habíamos sido"],
+      "vosotros": ["habíais sido"],
+      "ellos": ["habían sido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré sido"],
+      "tu": ["habrás sido"],
+      "el": ["habrá sido"],
+      "nosotros": ["habremos sido"],
+      "vosotros": ["habréis sido"],
+      "ellos": ["habrán sido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría sido"],
+      "tu": ["habrías sido"],
+      "el": ["habría sido"],
+      "nosotros": ["habríamos sido"],
+      "vosotros": ["habríais sido"],
+      "ellos": ["habrían sido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya sido"],
+      "tu": ["hayas sido"],
+      "el": ["haya sido"],
+      "nosotros": ["hayamos sido"],
+      "vosotros": ["hayáis sido"],
+      "ellos": ["hayan sido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera sido", "hubiese sido"],
+      "tu": ["hubieras sido", "hubieses sido"],
+      "el": ["hubiera sido", "hubiese sido"],
+      "nosotros": ["hubiéramos sido", "hubiésemos sido"],
+      "vosotros": ["hubierais sido", "hubieseis sido"],
+      "ellos": ["hubieran sido", "hubiesen sido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy siendo"],
+      "tu": ["estás siendo"],
+      "el": ["está siendo"],
+      "nosotros": ["estamos siendo"],
+      "vosotros": ["estáis siendo"],
+      "ellos": ["están siendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["sé"],
+      "usted": ["sea"],
+      "nosotros": ["seamos"],
+      "vosotros": ["sed"],
+      "ustedes": ["sean"]
+    },
+    "imperative.negative": {
+      "tu": ["no seas"],
+      "usted": ["no sea"],
+      "nosotros": ["no seamos"],
+      "vosotros": ["no seáis"],
+      "ustedes": ["no sean"]
+    }
+  }
+}

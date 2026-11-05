@@ -1,5 +1,7 @@
 # La Conjugadora
 
+[Open La Conjugadora](https://la-conjugadora.vercel.app)
+
 A desktop-first Spanish conjugation practice website with an old-newspaper
 visual style, developed for the Advanced JavaScript and TypeScript course at
 Harbour.Space University.
@@ -25,10 +27,10 @@ Prettier.
 
 ## Current status and development reference
 
-Step 1 is verified: the React/Vite shell has four navigable sections,
-newspaper styling, and modlet folders. Practice, progress tracking, sign-in,
-and persistence are not implemented yet. Existing console examples are preserved
-separately from the browser app.
+The public shell is deployed. Step 3 adds the seven-verb starter catalogue,
+16-category selectors, and an answer preview on the review branch. Full practice
+sessions, accounts, and persistence are not implemented yet. Original console
+examples remain separate from the browser app.
 
 Use Node.js 24+ and pnpm 12.16.1:
 
@@ -36,14 +38,15 @@ Use Node.js 24+ and pnpm 12.16.1:
 pnpm install
 pnpm dev       # local browser app; also available as pnpm start
 pnpm lint      # typecheck, ESLint, and formatting
-pnpm build     # typecheck and production build in dist/
+pnpm test      # catalogue validation and regression checks
+pnpm build     # typecheck, validate catalogue, build in dist/
 pnpm preview   # serve the production build locally
 pnpm examples  # original standalone console examples
 ```
 
 Open the URL printed by Vite. Navigation uses `/practice`, `/progress`, `/history`,
-and `/settings`; Vercel routing is prepared for step 2. See [DEPLOYMENT.md](DEPLOYMENT.md) for
-import settings and the publishing workflow. No public URL is confirmed yet. Feature code lives
+and `/settings`; Vercel routing is deployed and verified. See [DEPLOYMENT.md](DEPLOYMENT.md) for
+import settings and the publishing workflow. The public shell is live; practice features are still in development. Feature code lives
 under `src/modules/`, while `src/app/` owns composition and the global theme.
 
 [BLUEPRINT.md](BLUEPRINT.md) is the approved development reference, including the

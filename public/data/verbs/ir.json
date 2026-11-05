@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "ir",
+  "infinitive": "ir",
+  "meaning": "to go",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["voy"],
+      "tu": ["vas"],
+      "el": ["va"],
+      "nosotros": ["vamos"],
+      "vosotros": ["vais"],
+      "ellos": ["van"]
+    },
+    "indicative.preterite": {
+      "yo": ["fui"],
+      "tu": ["fuiste"],
+      "el": ["fue"],
+      "nosotros": ["fuimos"],
+      "vosotros": ["fuisteis"],
+      "ellos": ["fueron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["iba"],
+      "tu": ["ibas"],
+      "el": ["iba"],
+      "nosotros": ["íbamos"],
+      "vosotros": ["ibais"],
+      "ellos": ["iban"]
+    },
+    "indicative.future": {
+      "yo": ["iré"],
+      "tu": ["irás"],
+      "el": ["irá"],
+      "nosotros": ["iremos"],
+      "vosotros": ["iréis"],
+      "ellos": ["irán"]
+    },
+    "indicative.conditional": {
+      "yo": ["iría"],
+      "tu": ["irías"],
+      "el": ["iría"],
+      "nosotros": ["iríamos"],
+      "vosotros": ["iríais"],
+      "ellos": ["irían"]
+    },
+    "subjunctive.present": {
+      "yo": ["vaya"],
+      "tu": ["vayas"],
+      "el": ["vaya"],
+      "nosotros": ["vayamos"],
+      "vosotros": ["vayáis"],
+      "ellos": ["vayan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["fuera", "fuese"],
+      "tu": ["fueras", "fueses"],
+      "el": ["fuera", "fuese"],
+      "nosotros": ["fuéramos", "fuésemos"],
+      "vosotros": ["fuerais", "fueseis"],
+      "ellos": ["fueran", "fuesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he ido"],
+      "tu": ["has ido"],
+      "el": ["ha ido"],
+      "nosotros": ["hemos ido"],
+      "vosotros": ["habéis ido"],
+      "ellos": ["han ido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había ido"],
+      "tu": ["habías ido"],
+      "el": ["había ido"],
+      "nosotros": ["habíamos ido"],
+      "vosotros": ["habíais ido"],
+      "ellos": ["habían ido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré ido"],
+      "tu": ["habrás ido"],
+      "el": ["habrá ido"],
+      "nosotros": ["habremos ido"],
+      "vosotros": ["habréis ido"],
+      "ellos": ["habrán ido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría ido"],
+      "tu": ["habrías ido"],
+      "el": ["habría ido"],
+      "nosotros": ["habríamos ido"],
+      "vosotros": ["habríais ido"],
+      "ellos": ["habrían ido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya ido"],
+      "tu": ["hayas ido"],
+      "el": ["haya ido"],
+      "nosotros": ["hayamos ido"],
+      "vosotros": ["hayáis ido"],
+      "ellos": ["hayan ido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera ido", "hubiese ido"],
+      "tu": ["hubieras ido", "hubieses ido"],
+      "el": ["hubiera ido", "hubiese ido"],
+      "nosotros": ["hubiéramos ido", "hubiésemos ido"],
+      "vosotros": ["hubierais ido", "hubieseis ido"],
+      "ellos": ["hubieran ido", "hubiesen ido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy yendo"],
+      "tu": ["estás yendo"],
+      "el": ["está yendo"],
+      "nosotros": ["estamos yendo"],
+      "vosotros": ["estáis yendo"],
+      "ellos": ["están yendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ve"],
+      "usted": ["vaya"],
+      "nosotros": ["vamos", "vayamos"],
+      "vosotros": ["id"],
+      "ustedes": ["vayan"]
+    },
+    "imperative.negative": {
+      "tu": ["no vayas"],
+      "usted": ["no vaya"],
+      "nosotros": ["no vayamos"],
+      "vosotros": ["no vayáis"],
+      "ustedes": ["no vayan"]
+    }
+  }
+}

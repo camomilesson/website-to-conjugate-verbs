@@ -16,9 +16,11 @@
     "lint": "pnpm run lint-typecheck && pnpm run lint-eslint && pnpm run lint-prettier",
     "format": "prettier --write .",
     "dev": "vite",
-    "build": "pnpm check && vite build",
+    "build": "pnpm check && pnpm validate:catalogue && vite build",
     "preview": "vite preview",
-    "examples": "node src/examples/index.ts"
+    "examples": "node src/examples/index.ts",
+    "test": "node --test src/modules/verb-catalogue/catalogue.test.ts",
+    "validate:catalogue": "node --test src/modules/verb-catalogue/catalogue.test.ts"
   },
   "keywords": [],
   "author": "",

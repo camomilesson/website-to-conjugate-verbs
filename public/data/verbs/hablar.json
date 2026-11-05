@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "hablar",
+  "infinitive": "hablar",
+  "meaning": "to speak",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["hablo"],
+      "tu": ["hablas"],
+      "el": ["habla"],
+      "nosotros": ["hablamos"],
+      "vosotros": ["habláis"],
+      "ellos": ["hablan"]
+    },
+    "indicative.preterite": {
+      "yo": ["hablé"],
+      "tu": ["hablaste"],
+      "el": ["habló"],
+      "nosotros": ["hablamos"],
+      "vosotros": ["hablasteis"],
+      "ellos": ["hablaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["hablaba"],
+      "tu": ["hablabas"],
+      "el": ["hablaba"],
+      "nosotros": ["hablábamos"],
+      "vosotros": ["hablabais"],
+      "ellos": ["hablaban"]
+    },
+    "indicative.future": {
+      "yo": ["hablaré"],
+      "tu": ["hablarás"],
+      "el": ["hablará"],
+      "nosotros": ["hablaremos"],
+      "vosotros": ["hablaréis"],
+      "ellos": ["hablarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["hablaría"],
+      "tu": ["hablarías"],
+      "el": ["hablaría"],
+      "nosotros": ["hablaríamos"],
+      "vosotros": ["hablaríais"],
+      "ellos": ["hablarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["hable"],
+      "tu": ["hables"],
+      "el": ["hable"],
+      "nosotros": ["hablemos"],
+      "vosotros": ["habléis"],
+      "ellos": ["hablen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["hablara", "hablase"],
+      "tu": ["hablaras", "hablases"],
+      "el": ["hablara", "hablase"],
+      "nosotros": ["habláramos", "hablásemos"],
+      "vosotros": ["hablarais", "hablaseis"],
+      "ellos": ["hablaran", "hablasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he hablado"],
+      "tu": ["has hablado"],
+      "el": ["ha hablado"],
+      "nosotros": ["hemos hablado"],
+      "vosotros": ["habéis hablado"],
+      "ellos": ["han hablado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había hablado"],
+      "tu": ["habías hablado"],
+      "el": ["había hablado"],
+      "nosotros": ["habíamos hablado"],
+      "vosotros": ["habíais hablado"],
+      "ellos": ["habían hablado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré hablado"],
+      "tu": ["habrás hablado"],
+      "el": ["habrá hablado"],
+      "nosotros": ["habremos hablado"],
+      "vosotros": ["habréis hablado"],
+      "ellos": ["habrán hablado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría hablado"],
+      "tu": ["habrías hablado"],
+      "el": ["habría hablado"],
+      "nosotros": ["habríamos hablado"],
+      "vosotros": ["habríais hablado"],
+      "ellos": ["habrían hablado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya hablado"],
+      "tu": ["hayas hablado"],
+      "el": ["haya hablado"],
+      "nosotros": ["hayamos hablado"],
+      "vosotros": ["hayáis hablado"],
+      "ellos": ["hayan hablado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera hablado", "hubiese hablado"],
+      "tu": ["hubieras hablado", "hubieses hablado"],
+      "el": ["hubiera hablado", "hubiese hablado"],
+      "nosotros": ["hubiéramos hablado", "hubiésemos hablado"],
+      "vosotros": ["hubierais hablado", "hubieseis hablado"],
+      "ellos": ["hubieran hablado", "hubiesen hablado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy hablando"],
+      "tu": ["estás hablando"],
+      "el": ["está hablando"],
+      "nosotros": ["estamos hablando"],
+      "vosotros": ["estáis hablando"],
+      "ellos": ["están hablando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["habla"],
+      "usted": ["hable"],
+      "nosotros": ["hablemos"],
+      "vosotros": ["hablad"],
+      "ustedes": ["hablen"]
+    },
+    "imperative.negative": {
+      "tu": ["no hables"],
+      "usted": ["no hable"],
+      "nosotros": ["no hablemos"],
+      "vosotros": ["no habléis"],
+      "ustedes": ["no hablen"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "comer",
+  "infinitive": "comer",
+  "meaning": "to eat",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["como"],
+      "tu": ["comes"],
+      "el": ["come"],
+      "nosotros": ["comemos"],
+      "vosotros": ["coméis"],
+      "ellos": ["comen"]
+    },
+    "indicative.preterite": {
+      "yo": ["comí"],
+      "tu": ["comiste"],
+      "el": ["comió"],
+      "nosotros": ["comimos"],
+      "vosotros": ["comisteis"],
+      "ellos": ["comieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["comía"],
+      "tu": ["comías"],
+      "el": ["comía"],
+      "nosotros": ["comíamos"],
+      "vosotros": ["comíais"],
+      "ellos": ["comían"]
+    },
+    "indicative.future": {
+      "yo": ["comeré"],
+      "tu": ["comerás"],
+      "el": ["comerá"],
+      "nosotros": ["comeremos"],
+      "vosotros": ["comeréis"],
+      "ellos": ["comerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["comería"],
+      "tu": ["comerías"],
+      "el": ["comería"],
+      "nosotros": ["comeríamos"],
+      "vosotros": ["comeríais"],
+      "ellos": ["comerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["coma"],
+      "tu": ["comas"],
+      "el": ["coma"],
+      "nosotros": ["comamos"],
+      "vosotros": ["comáis"],
+      "ellos": ["coman"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["comiera", "comiese"],
+      "tu": ["comieras", "comieses"],
+      "el": ["comiera", "comiese"],
+      "nosotros": ["comiéramos", "comiésemos"],
+      "vosotros": ["comierais", "comieseis"],
+      "ellos": ["comieran", "comiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he comido"],
+      "tu": ["has comido"],
+      "el": ["ha comido"],
+      "nosotros": ["hemos comido"],
+      "vosotros": ["habéis comido"],
+      "ellos": ["han comido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había comido"],
+      "tu": ["habías comido"],
+      "el": ["había comido"],
+      "nosotros": ["habíamos comido"],
+      "vosotros": ["habíais comido"],
+      "ellos": ["habían comido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré comido"],
+      "tu": ["habrás comido"],
+      "el": ["habrá comido"],
+      "nosotros": ["habremos comido"],
+      "vosotros": ["habréis comido"],
+      "ellos": ["habrán comido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría comido"],
+      "tu": ["habrías comido"],
+      "el": ["habría comido"],
+      "nosotros": ["habríamos comido"],
+      "vosotros": ["habríais comido"],
+      "ellos": ["habrían comido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya comido"],
+      "tu": ["hayas comido"],
+      "el": ["haya comido"],
+      "nosotros": ["hayamos comido"],
+      "vosotros": ["hayáis comido"],
+      "ellos": ["hayan comido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera comido", "hubiese comido"],
+      "tu": ["hubieras comido", "hubieses comido"],
+      "el": ["hubiera comido", "hubiese comido"],
+      "nosotros": ["hubiéramos comido", "hubiésemos comido"],
+      "vosotros": ["hubierais comido", "hubieseis comido"],
+      "ellos": ["hubieran comido", "hubiesen comido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy comiendo"],
+      "tu": ["estás comiendo"],
+      "el": ["está comiendo"],
+      "nosotros": ["estamos comiendo"],
+      "vosotros": ["estáis comiendo"],
+      "ellos": ["están comiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["come"],
+      "usted": ["coma"],
+      "nosotros": ["comamos"],
+      "vosotros": ["comed"],
+      "ustedes": ["coman"]
+    },
+    "imperative.negative": {
+      "tu": ["no comas"],
+      "usted": ["no coma"],
+      "nosotros": ["no comamos"],
+      "vosotros": ["no comáis"],
+      "ustedes": ["no coman"]
+    }
+  }
+}

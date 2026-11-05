@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 2 in progress** · 5 November 2026
+Status: **Step 3 ready for your review** · 5 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -48,7 +48,7 @@ Expect a coherent shell, working navigation, and no console-example output.
 
 ## Step 2 — First public deployment
 
-**Status:** In progress · **Depends on:** 1
+**Status:** Verified · **Depends on:** 1
 
 **Outcome:** The shell is accessible at a public Vercel URL.
 
@@ -69,7 +69,7 @@ Agree how later review builds will be published.
 
 ## Step 3 — Reviewed starter catalogue
 
-**Status:** Not started · **Depends on:** 2
+**Status:** Ready for your review · **Depends on:** 2
 
 **Outcome:** Inspectable canonical JSON data and a real verb/category selector.
 
@@ -373,3 +373,32 @@ pushing the prepared app to main. Agreed workflow: main for production; separate
 codex/ branches for future review deployments. Vercel account not yet created.
 See DEPLOYMENT.md for the prepared import settings and production smoke checks.
 Public deployment remains incomplete until account setup/import and URL checks.
+
+### Step 2 — Verified (5 November 2026)
+
+- Production URL: https://la-conjugadora.vercel.app
+- User confirmed it works on their end.
+- Independent unauthenticated HTTP checks: root and all four direct app routes
+  return 200; missing /assets/ and /data/ files return 404 rather than app HTML.
+- Browser verification: app renders publicly, all four navigation views and
+  titles work, Progress refresh works, and no console warnings/errors appeared.
+- Deployed source: initial shell/config commit 3ef1c80 on main.
+- Step 3 remains not started, pending the user's request.
+
+### Step 3 — Ready for your review
+
+- Branch: codex/starter-catalogue. Production is unchanged until review/merge.
+- Implemented seven canonical static verb files, the 16-category registry,
+  cancellable validated loaders, selectors/search, presets, and an answer preview.
+- Checks passed: pnpm lint, pnpm test (6 tests), pnpm build (also validates all
+  658 answer cells). Browser checks: Basic/Advanced/All counts, empty selection,
+  search with no matches, reflexive imperative and subjunctive variant previews.
+- Run pnpm dev and open its printed URL. Start with 7/7 verbs and 6/16 categories.
+  Click Advanced or All: expect 16/16. Clear verbs and select one to limit the
+  preview. In Answer preview choose levantarse, Imperativo Afirmativo, vosotros:
+  expect levantaos, with no yo choice. Subjuntivo Pretérito imperfecto should show
+  both variants. Select Basic again: expect only six preview categories.
+- Inspect public/data/verbs/levantarse.json; review notes and grammatical references
+  are in src/modules/verb-catalogue/README.md. No practice session runs yet and
+  selections do not persist yet, as scheduled for later steps.
+- User verification is pending. Step 4 has not started.

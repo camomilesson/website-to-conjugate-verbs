@@ -8,12 +8,12 @@ configuration, and tests remain development work.
 ## Before the first public deployment
 
 - [x] Choose a working application/project name: La Conjugadora. A custom domain is optional.
-- [ ] Sign in to or create your GitHub account, if needed, and ensure the project
+- [x] Sign in to or create your GitHub account, if needed, and ensure the project
       repository is available there. Authorise access only to the required repo.
-- [ ] Sign in to or create a [Vercel account](https://vercel.com/signup).
-- [ ] Authorise Vercel's repository integration and select the repository when
+- [x] Sign in to or create a [Vercel account](https://vercel.com/signup).
+- [x] Authorise Vercel's repository integration and select the repository when
       we are ready to import it. Review the plan and any billing commitment.
-- [ ] Check the first deployed URL opens without a Vercel account in a private
+- [x] Check the first deployed URL opens without a Vercel account in a private
       browser window; the finished app must be publicly accessible.
 
 We will prepare the Vite build and deployment settings. No server rental or

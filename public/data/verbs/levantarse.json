@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "starter-1",
+  "id": "levantarse",
+  "infinitive": "levantarse",
+  "meaning": "to get up",
+  "tags": ["reflexive", "regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me levanto"],
+      "tu": ["te levantas"],
+      "el": ["se levanta"],
+      "nosotros": ["nos levantamos"],
+      "vosotros": ["os levantáis"],
+      "ellos": ["se levantan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me levanté"],
+      "tu": ["te levantaste"],
+      "el": ["se levantó"],
+      "nosotros": ["nos levantamos"],
+      "vosotros": ["os levantasteis"],
+      "ellos": ["se levantaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me levantaba"],
+      "tu": ["te levantabas"],
+      "el": ["se levantaba"],
+      "nosotros": ["nos levantábamos"],
+      "vosotros": ["os levantabais"],
+      "ellos": ["se levantaban"]
+    },
+    "indicative.future": {
+      "yo": ["me levantaré"],
+      "tu": ["te levantarás"],
+      "el": ["se levantará"],
+      "nosotros": ["nos levantaremos"],
+      "vosotros": ["os levantaréis"],
+      "ellos": ["se levantarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me levantaría"],
+      "tu": ["te levantarías"],
+      "el": ["se levantaría"],
+      "nosotros": ["nos levantaríamos"],
+      "vosotros": ["os levantaríais"],
+      "ellos": ["se levantarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me levante"],
+      "tu": ["te levantes"],
+      "el": ["se levante"],
+      "nosotros": ["nos levantemos"],
+      "vosotros": ["os levantéis"],
+      "ellos": ["se levanten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me levantara", "me levantase"],
+      "tu": ["te levantaras", "te levantases"],
+      "el": ["se levantara", "se levantase"],
+      "nosotros": ["nos levantáramos", "nos levantásemos"],
+      "vosotros": ["os levantarais", "os levantaseis"],
+      "ellos": ["se levantaran", "se levantasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he levantado"],
+      "tu": ["te has levantado"],
+      "el": ["se ha levantado"],
+      "nosotros": ["nos hemos levantado"],
+      "vosotros": ["os habéis levantado"],
+      "ellos": ["se han levantado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había levantado"],
+      "tu": ["te habías levantado"],
+      "el": ["se había levantado"],
+      "nosotros": ["nos habíamos levantado"],
+      "vosotros": ["os habíais levantado"],
+      "ellos": ["se habían levantado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré levantado"],
+      "tu": ["te habrás levantado"],
+      "el": ["se habrá levantado"],
+      "nosotros": ["nos habremos levantado"],
+      "vosotros": ["os habréis levantado"],
+      "ellos": ["se habrán levantado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría levantado"],
+      "tu": ["te habrías levantado"],
+      "el": ["se habría levantado"],
+      "nosotros": ["nos habríamos levantado"],
+      "vosotros": ["os habríais levantado"],
+      "ellos": ["se habrían levantado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya levantado"],
+      "tu": ["te hayas levantado"],
+      "el": ["se haya levantado"],
+      "nosotros": ["nos hayamos levantado"],
+      "vosotros": ["os hayáis levantado"],
+      "ellos": ["se hayan levantado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera levantado", "me hubiese levantado"],
+      "tu": ["te hubieras levantado", "te hubieses levantado"],
+      "el": ["se hubiera levantado", "se hubiese levantado"],
+      "nosotros": ["nos hubiéramos levantado", "nos hubiésemos levantado"],
+      "vosotros": ["os hubierais levantado", "os hubieseis levantado"],
+      "ellos": ["se hubieran levantado", "se hubiesen levantado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy levantando", "estoy levantándome"],
+      "tu": ["te estás levantando", "estás levantándote"],
+      "el": ["se está levantando", "está levantándose"],
+      "nosotros": ["nos estamos levantando", "estamos levantándonos"],
+      "vosotros": ["os estáis levantando", "estáis levantándoos"],
+      "ellos": ["se están levantando", "están levantándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["levántate"],
+      "usted": ["levántese"],
+      "nosotros": ["levantémonos"],
+      "vosotros": ["levantaos"],
+      "ustedes": ["levántense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te levantes"],
+      "usted": ["no se levante"],
+      "nosotros": ["no nos levantemos"],
+      "vosotros": ["no os levantéis"],
+      "ustedes": ["no se levanten"]
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Vercel deployment
 
+Production: https://la-conjugadora.vercel.app — verified 5 November 2026.
+
 ## First import
 
 1. Create/sign in to your [Vercel account](https://vercel.com/signup), completing
