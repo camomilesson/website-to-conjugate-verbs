@@ -161,7 +161,7 @@ await test("built-in sets follow current catalogue coverage while custom selecti
   }
   assert.equal(
     restorePreferences(stored(defaults), expanded).preferences.verbIds.length,
-    8,
+    101,
   )
   assert.deepEqual(
     restorePreferences(stored(custom), expanded).preferences.verbIds,
@@ -171,7 +171,7 @@ await test("built-in sets follow current catalogue coverage while custom selecti
     stored({ ...defaults, verbSet: "common", tenseSet: "all" }),
     catalogue,
   ).preferences
-  assert.deepEqual(common.verbIds, ["hablar", "ser", "ir", "tener"])
+  assert.equal(common.verbIds.length, 25)
   assert.equal(common.categories.length, 16)
 })
 await test("read/write storage failures are reported without blocking guest practice", () => {

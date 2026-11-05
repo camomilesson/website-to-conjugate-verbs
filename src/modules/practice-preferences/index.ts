@@ -14,3 +14,9 @@ export type {
   PracticeMode,
   PreferenceStorage,
 } from "./preferences.ts"
+export {
+  preferencePayload,
+  loadAccountPreferences,
+  saveAccountPreferences,
+} from "./repository.ts"
+export type { PreferenceRepository } from "./repository.ts"

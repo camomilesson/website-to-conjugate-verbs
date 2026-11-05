@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "escribir",
+  "infinitive": "escribir",
+  "meaning": "to write",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["escribo"],
+      "tu": ["escribes"],
+      "el": ["escribe"],
+      "nosotros": ["escribimos"],
+      "vosotros": ["escribís"],
+      "ellos": ["escriben"]
+    },
+    "indicative.preterite": {
+      "yo": ["escribí"],
+      "tu": ["escribiste"],
+      "el": ["escribió"],
+      "nosotros": ["escribimos"],
+      "vosotros": ["escribisteis"],
+      "ellos": ["escribieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["escribía"],
+      "tu": ["escribías"],
+      "el": ["escribía"],
+      "nosotros": ["escribíamos"],
+      "vosotros": ["escribíais"],
+      "ellos": ["escribían"]
+    },
+    "indicative.future": {
+      "yo": ["escribiré"],
+      "tu": ["escribirás"],
+      "el": ["escribirá"],
+      "nosotros": ["escribiremos"],
+      "vosotros": ["escribiréis"],
+      "ellos": ["escribirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["escribiría"],
+      "tu": ["escribirías"],
+      "el": ["escribiría"],
+      "nosotros": ["escribiríamos"],
+      "vosotros": ["escribiríais"],
+      "ellos": ["escribirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["escriba"],
+      "tu": ["escribas"],
+      "el": ["escriba"],
+      "nosotros": ["escribamos"],
+      "vosotros": ["escribáis"],
+      "ellos": ["escriban"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["escribiera", "escribiese"],
+      "tu": ["escribieras", "escribieses"],
+      "el": ["escribiera", "escribiese"],
+      "nosotros": ["escribiéramos", "escribiésemos"],
+      "vosotros": ["escribierais", "escribieseis"],
+      "ellos": ["escribieran", "escribiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he escrito"],
+      "tu": ["has escrito"],
+      "el": ["ha escrito"],
+      "nosotros": ["hemos escrito"],
+      "vosotros": ["habéis escrito"],
+      "ellos": ["han escrito"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había escrito"],
+      "tu": ["habías escrito"],
+      "el": ["había escrito"],
+      "nosotros": ["habíamos escrito"],
+      "vosotros": ["habíais escrito"],
+      "ellos": ["habían escrito"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré escrito"],
+      "tu": ["habrás escrito"],
+      "el": ["habrá escrito"],
+      "nosotros": ["habremos escrito"],
+      "vosotros": ["habréis escrito"],
+      "ellos": ["habrán escrito"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría escrito"],
+      "tu": ["habrías escrito"],
+      "el": ["habría escrito"],
+      "nosotros": ["habríamos escrito"],
+      "vosotros": ["habríais escrito"],
+      "ellos": ["habrían escrito"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya escrito"],
+      "tu": ["hayas escrito"],
+      "el": ["haya escrito"],
+      "nosotros": ["hayamos escrito"],
+      "vosotros": ["hayáis escrito"],
+      "ellos": ["hayan escrito"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera escrito", "hubiese escrito"],
+      "tu": ["hubieras escrito", "hubieses escrito"],
+      "el": ["hubiera escrito", "hubiese escrito"],
+      "nosotros": ["hubiéramos escrito", "hubiésemos escrito"],
+      "vosotros": ["hubierais escrito", "hubieseis escrito"],
+      "ellos": ["hubieran escrito", "hubiesen escrito"]
+    },
+    "progressive.present": {
+      "yo": ["estoy escribiendo"],
+      "tu": ["estás escribiendo"],
+      "el": ["está escribiendo"],
+      "nosotros": ["estamos escribiendo"],
+      "vosotros": ["estáis escribiendo"],
+      "ellos": ["están escribiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["escribe"],
+      "usted": ["escriba"],
+      "nosotros": ["escribamos"],
+      "vosotros": ["escribid"],
+      "ustedes": ["escriban"]
+    },
+    "imperative.negative": {
+      "tu": ["no escribas"],
+      "usted": ["no escriba"],
+      "nosotros": ["no escribamos"],
+      "vosotros": ["no escribáis"],
+      "ustedes": ["no escriban"]
+    }
+  }
+}

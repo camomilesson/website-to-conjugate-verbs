@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "llamar",
+  "infinitive": "llamar",
+  "meaning": "to call",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["llamo"],
+      "tu": ["llamas"],
+      "el": ["llama"],
+      "nosotros": ["llamamos"],
+      "vosotros": ["llamáis"],
+      "ellos": ["llaman"]
+    },
+    "indicative.preterite": {
+      "yo": ["llamé"],
+      "tu": ["llamaste"],
+      "el": ["llamó"],
+      "nosotros": ["llamamos"],
+      "vosotros": ["llamasteis"],
+      "ellos": ["llamaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["llamaba"],
+      "tu": ["llamabas"],
+      "el": ["llamaba"],
+      "nosotros": ["llamábamos"],
+      "vosotros": ["llamabais"],
+      "ellos": ["llamaban"]
+    },
+    "indicative.future": {
+      "yo": ["llamaré"],
+      "tu": ["llamarás"],
+      "el": ["llamará"],
+      "nosotros": ["llamaremos"],
+      "vosotros": ["llamaréis"],
+      "ellos": ["llamarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["llamaría"],
+      "tu": ["llamarías"],
+      "el": ["llamaría"],
+      "nosotros": ["llamaríamos"],
+      "vosotros": ["llamaríais"],
+      "ellos": ["llamarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["llame"],
+      "tu": ["llames"],
+      "el": ["llame"],
+      "nosotros": ["llamemos"],
+      "vosotros": ["llaméis"],
+      "ellos": ["llamen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["llamara", "llamase"],
+      "tu": ["llamaras", "llamases"],
+      "el": ["llamara", "llamase"],
+      "nosotros": ["llamáramos", "llamásemos"],
+      "vosotros": ["llamarais", "llamaseis"],
+      "ellos": ["llamaran", "llamasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he llamado"],
+      "tu": ["has llamado"],
+      "el": ["ha llamado"],
+      "nosotros": ["hemos llamado"],
+      "vosotros": ["habéis llamado"],
+      "ellos": ["han llamado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había llamado"],
+      "tu": ["habías llamado"],
+      "el": ["había llamado"],
+      "nosotros": ["habíamos llamado"],
+      "vosotros": ["habíais llamado"],
+      "ellos": ["habían llamado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré llamado"],
+      "tu": ["habrás llamado"],
+      "el": ["habrá llamado"],
+      "nosotros": ["habremos llamado"],
+      "vosotros": ["habréis llamado"],
+      "ellos": ["habrán llamado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría llamado"],
+      "tu": ["habrías llamado"],
+      "el": ["habría llamado"],
+      "nosotros": ["habríamos llamado"],
+      "vosotros": ["habríais llamado"],
+      "ellos": ["habrían llamado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya llamado"],
+      "tu": ["hayas llamado"],
+      "el": ["haya llamado"],
+      "nosotros": ["hayamos llamado"],
+      "vosotros": ["hayáis llamado"],
+      "ellos": ["hayan llamado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera llamado", "hubiese llamado"],
+      "tu": ["hubieras llamado", "hubieses llamado"],
+      "el": ["hubiera llamado", "hubiese llamado"],
+      "nosotros": ["hubiéramos llamado", "hubiésemos llamado"],
+      "vosotros": ["hubierais llamado", "hubieseis llamado"],
+      "ellos": ["hubieran llamado", "hubiesen llamado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy llamando"],
+      "tu": ["estás llamando"],
+      "el": ["está llamando"],
+      "nosotros": ["estamos llamando"],
+      "vosotros": ["estáis llamando"],
+      "ellos": ["están llamando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["llama"],
+      "usted": ["llame"],
+      "nosotros": ["llamemos"],
+      "vosotros": ["llamad"],
+      "ustedes": ["llamen"]
+    },
+    "imperative.negative": {
+      "tu": ["no llames"],
+      "usted": ["no llame"],
+      "nosotros": ["no llamemos"],
+      "vosotros": ["no llaméis"],
+      "ustedes": ["no llamen"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "parecer",
+  "infinitive": "parecer",
+  "meaning": "to seem",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["parezco"],
+      "tu": ["pareces"],
+      "el": ["parece"],
+      "nosotros": ["parecemos"],
+      "vosotros": ["parecéis"],
+      "ellos": ["parecen"]
+    },
+    "indicative.preterite": {
+      "yo": ["parecí"],
+      "tu": ["pareciste"],
+      "el": ["pareció"],
+      "nosotros": ["parecimos"],
+      "vosotros": ["parecisteis"],
+      "ellos": ["parecieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["parecía"],
+      "tu": ["parecías"],
+      "el": ["parecía"],
+      "nosotros": ["parecíamos"],
+      "vosotros": ["parecíais"],
+      "ellos": ["parecían"]
+    },
+    "indicative.future": {
+      "yo": ["pareceré"],
+      "tu": ["parecerás"],
+      "el": ["parecerá"],
+      "nosotros": ["pareceremos"],
+      "vosotros": ["pareceréis"],
+      "ellos": ["parecerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["parecería"],
+      "tu": ["parecerías"],
+      "el": ["parecería"],
+      "nosotros": ["pareceríamos"],
+      "vosotros": ["pareceríais"],
+      "ellos": ["parecerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["parezca"],
+      "tu": ["parezcas"],
+      "el": ["parezca"],
+      "nosotros": ["parezcamos"],
+      "vosotros": ["parezcáis"],
+      "ellos": ["parezcan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["pareciera", "pareciese"],
+      "tu": ["parecieras", "parecieses"],
+      "el": ["pareciera", "pareciese"],
+      "nosotros": ["pareciéramos", "pareciésemos"],
+      "vosotros": ["parecierais", "parecieseis"],
+      "ellos": ["parecieran", "pareciesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he parecido"],
+      "tu": ["has parecido"],
+      "el": ["ha parecido"],
+      "nosotros": ["hemos parecido"],
+      "vosotros": ["habéis parecido"],
+      "ellos": ["han parecido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había parecido"],
+      "tu": ["habías parecido"],
+      "el": ["había parecido"],
+      "nosotros": ["habíamos parecido"],
+      "vosotros": ["habíais parecido"],
+      "ellos": ["habían parecido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré parecido"],
+      "tu": ["habrás parecido"],
+      "el": ["habrá parecido"],
+      "nosotros": ["habremos parecido"],
+      "vosotros": ["habréis parecido"],
+      "ellos": ["habrán parecido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría parecido"],
+      "tu": ["habrías parecido"],
+      "el": ["habría parecido"],
+      "nosotros": ["habríamos parecido"],
+      "vosotros": ["habríais parecido"],
+      "ellos": ["habrían parecido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya parecido"],
+      "tu": ["hayas parecido"],
+      "el": ["haya parecido"],
+      "nosotros": ["hayamos parecido"],
+      "vosotros": ["hayáis parecido"],
+      "ellos": ["hayan parecido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera parecido", "hubiese parecido"],
+      "tu": ["hubieras parecido", "hubieses parecido"],
+      "el": ["hubiera parecido", "hubiese parecido"],
+      "nosotros": ["hubiéramos parecido", "hubiésemos parecido"],
+      "vosotros": ["hubierais parecido", "hubieseis parecido"],
+      "ellos": ["hubieran parecido", "hubiesen parecido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy pareciendo"],
+      "tu": ["estás pareciendo"],
+      "el": ["está pareciendo"],
+      "nosotros": ["estamos pareciendo"],
+      "vosotros": ["estáis pareciendo"],
+      "ellos": ["están pareciendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["parece"],
+      "usted": ["parezca"],
+      "nosotros": ["parezcamos"],
+      "vosotros": ["pareced"],
+      "ustedes": ["parezcan"]
+    },
+    "imperative.negative": {
+      "tu": ["no parezcas"],
+      "usted": ["no parezca"],
+      "nosotros": ["no parezcamos"],
+      "vosotros": ["no parezcáis"],
+      "ustedes": ["no parezcan"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "viajar",
+  "infinitive": "viajar",
+  "meaning": "to travel",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["viajo"],
+      "tu": ["viajas"],
+      "el": ["viaja"],
+      "nosotros": ["viajamos"],
+      "vosotros": ["viajáis"],
+      "ellos": ["viajan"]
+    },
+    "indicative.preterite": {
+      "yo": ["viajé"],
+      "tu": ["viajaste"],
+      "el": ["viajó"],
+      "nosotros": ["viajamos"],
+      "vosotros": ["viajasteis"],
+      "ellos": ["viajaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["viajaba"],
+      "tu": ["viajabas"],
+      "el": ["viajaba"],
+      "nosotros": ["viajábamos"],
+      "vosotros": ["viajabais"],
+      "ellos": ["viajaban"]
+    },
+    "indicative.future": {
+      "yo": ["viajaré"],
+      "tu": ["viajarás"],
+      "el": ["viajará"],
+      "nosotros": ["viajaremos"],
+      "vosotros": ["viajaréis"],
+      "ellos": ["viajarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["viajaría"],
+      "tu": ["viajarías"],
+      "el": ["viajaría"],
+      "nosotros": ["viajaríamos"],
+      "vosotros": ["viajaríais"],
+      "ellos": ["viajarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["viaje"],
+      "tu": ["viajes"],
+      "el": ["viaje"],
+      "nosotros": ["viajemos"],
+      "vosotros": ["viajéis"],
+      "ellos": ["viajen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["viajara", "viajase"],
+      "tu": ["viajaras", "viajases"],
+      "el": ["viajara", "viajase"],
+      "nosotros": ["viajáramos", "viajásemos"],
+      "vosotros": ["viajarais", "viajaseis"],
+      "ellos": ["viajaran", "viajasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he viajado"],
+      "tu": ["has viajado"],
+      "el": ["ha viajado"],
+      "nosotros": ["hemos viajado"],
+      "vosotros": ["habéis viajado"],
+      "ellos": ["han viajado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había viajado"],
+      "tu": ["habías viajado"],
+      "el": ["había viajado"],
+      "nosotros": ["habíamos viajado"],
+      "vosotros": ["habíais viajado"],
+      "ellos": ["habían viajado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré viajado"],
+      "tu": ["habrás viajado"],
+      "el": ["habrá viajado"],
+      "nosotros": ["habremos viajado"],
+      "vosotros": ["habréis viajado"],
+      "ellos": ["habrán viajado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría viajado"],
+      "tu": ["habrías viajado"],
+      "el": ["habría viajado"],
+      "nosotros": ["habríamos viajado"],
+      "vosotros": ["habríais viajado"],
+      "ellos": ["habrían viajado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya viajado"],
+      "tu": ["hayas viajado"],
+      "el": ["haya viajado"],
+      "nosotros": ["hayamos viajado"],
+      "vosotros": ["hayáis viajado"],
+      "ellos": ["hayan viajado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera viajado", "hubiese viajado"],
+      "tu": ["hubieras viajado", "hubieses viajado"],
+      "el": ["hubiera viajado", "hubiese viajado"],
+      "nosotros": ["hubiéramos viajado", "hubiésemos viajado"],
+      "vosotros": ["hubierais viajado", "hubieseis viajado"],
+      "ellos": ["hubieran viajado", "hubiesen viajado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy viajando"],
+      "tu": ["estás viajando"],
+      "el": ["está viajando"],
+      "nosotros": ["estamos viajando"],
+      "vosotros": ["estáis viajando"],
+      "ellos": ["están viajando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["viaja"],
+      "usted": ["viaje"],
+      "nosotros": ["viajemos"],
+      "vosotros": ["viajad"],
+      "ustedes": ["viajen"]
+    },
+    "imperative.negative": {
+      "tu": ["no viajes"],
+      "usted": ["no viaje"],
+      "nosotros": ["no viajemos"],
+      "vosotros": ["no viajéis"],
+      "ustedes": ["no viajen"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "llevar",
+  "infinitive": "llevar",
+  "meaning": "to carry",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["llevo"],
+      "tu": ["llevas"],
+      "el": ["lleva"],
+      "nosotros": ["llevamos"],
+      "vosotros": ["lleváis"],
+      "ellos": ["llevan"]
+    },
+    "indicative.preterite": {
+      "yo": ["llevé"],
+      "tu": ["llevaste"],
+      "el": ["llevó"],
+      "nosotros": ["llevamos"],
+      "vosotros": ["llevasteis"],
+      "ellos": ["llevaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["llevaba"],
+      "tu": ["llevabas"],
+      "el": ["llevaba"],
+      "nosotros": ["llevábamos"],
+      "vosotros": ["llevabais"],
+      "ellos": ["llevaban"]
+    },
+    "indicative.future": {
+      "yo": ["llevaré"],
+      "tu": ["llevarás"],
+      "el": ["llevará"],
+      "nosotros": ["llevaremos"],
+      "vosotros": ["llevaréis"],
+      "ellos": ["llevarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["llevaría"],
+      "tu": ["llevarías"],
+      "el": ["llevaría"],
+      "nosotros": ["llevaríamos"],
+      "vosotros": ["llevaríais"],
+      "ellos": ["llevarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["lleve"],
+      "tu": ["lleves"],
+      "el": ["lleve"],
+      "nosotros": ["llevemos"],
+      "vosotros": ["llevéis"],
+      "ellos": ["lleven"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["llevara", "llevase"],
+      "tu": ["llevaras", "llevases"],
+      "el": ["llevara", "llevase"],
+      "nosotros": ["lleváramos", "llevásemos"],
+      "vosotros": ["llevarais", "llevaseis"],
+      "ellos": ["llevaran", "llevasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he llevado"],
+      "tu": ["has llevado"],
+      "el": ["ha llevado"],
+      "nosotros": ["hemos llevado"],
+      "vosotros": ["habéis llevado"],
+      "ellos": ["han llevado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había llevado"],
+      "tu": ["habías llevado"],
+      "el": ["había llevado"],
+      "nosotros": ["habíamos llevado"],
+      "vosotros": ["habíais llevado"],
+      "ellos": ["habían llevado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré llevado"],
+      "tu": ["habrás llevado"],
+      "el": ["habrá llevado"],
+      "nosotros": ["habremos llevado"],
+      "vosotros": ["habréis llevado"],
+      "ellos": ["habrán llevado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría llevado"],
+      "tu": ["habrías llevado"],
+      "el": ["habría llevado"],
+      "nosotros": ["habríamos llevado"],
+      "vosotros": ["habríais llevado"],
+      "ellos": ["habrían llevado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya llevado"],
+      "tu": ["hayas llevado"],
+      "el": ["haya llevado"],
+      "nosotros": ["hayamos llevado"],
+      "vosotros": ["hayáis llevado"],
+      "ellos": ["hayan llevado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera llevado", "hubiese llevado"],
+      "tu": ["hubieras llevado", "hubieses llevado"],
+      "el": ["hubiera llevado", "hubiese llevado"],
+      "nosotros": ["hubiéramos llevado", "hubiésemos llevado"],
+      "vosotros": ["hubierais llevado", "hubieseis llevado"],
+      "ellos": ["hubieran llevado", "hubiesen llevado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy llevando"],
+      "tu": ["estás llevando"],
+      "el": ["está llevando"],
+      "nosotros": ["estamos llevando"],
+      "vosotros": ["estáis llevando"],
+      "ellos": ["están llevando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["lleva"],
+      "usted": ["lleve"],
+      "nosotros": ["llevemos"],
+      "vosotros": ["llevad"],
+      "ustedes": ["lleven"]
+    },
+    "imperative.negative": {
+      "tu": ["no lleves"],
+      "usted": ["no lleve"],
+      "nosotros": ["no llevemos"],
+      "vosotros": ["no llevéis"],
+      "ustedes": ["no lleven"]
+    }
+  }
+}

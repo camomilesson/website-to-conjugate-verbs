@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "hacer",
+  "infinitive": "hacer",
+  "meaning": "to do / make",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["hago"],
+      "tu": ["haces"],
+      "el": ["hace"],
+      "nosotros": ["hacemos"],
+      "vosotros": ["hacéis"],
+      "ellos": ["hacen"]
+    },
+    "indicative.preterite": {
+      "yo": ["hice"],
+      "tu": ["hiciste"],
+      "el": ["hizo"],
+      "nosotros": ["hicimos"],
+      "vosotros": ["hicisteis"],
+      "ellos": ["hicieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["hacía"],
+      "tu": ["hacías"],
+      "el": ["hacía"],
+      "nosotros": ["hacíamos"],
+      "vosotros": ["hacíais"],
+      "ellos": ["hacían"]
+    },
+    "indicative.future": {
+      "yo": ["haré"],
+      "tu": ["harás"],
+      "el": ["hará"],
+      "nosotros": ["haremos"],
+      "vosotros": ["haréis"],
+      "ellos": ["harán"]
+    },
+    "indicative.conditional": {
+      "yo": ["haría"],
+      "tu": ["harías"],
+      "el": ["haría"],
+      "nosotros": ["haríamos"],
+      "vosotros": ["haríais"],
+      "ellos": ["harían"]
+    },
+    "subjunctive.present": {
+      "yo": ["haga"],
+      "tu": ["hagas"],
+      "el": ["haga"],
+      "nosotros": ["hagamos"],
+      "vosotros": ["hagáis"],
+      "ellos": ["hagan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["hiciera", "hiciese"],
+      "tu": ["hicieras", "hicieses"],
+      "el": ["hiciera", "hiciese"],
+      "nosotros": ["hiciéramos", "hiciésemos"],
+      "vosotros": ["hicierais", "hicieseis"],
+      "ellos": ["hicieran", "hiciesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he hecho"],
+      "tu": ["has hecho"],
+      "el": ["ha hecho"],
+      "nosotros": ["hemos hecho"],
+      "vosotros": ["habéis hecho"],
+      "ellos": ["han hecho"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había hecho"],
+      "tu": ["habías hecho"],
+      "el": ["había hecho"],
+      "nosotros": ["habíamos hecho"],
+      "vosotros": ["habíais hecho"],
+      "ellos": ["habían hecho"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré hecho"],
+      "tu": ["habrás hecho"],
+      "el": ["habrá hecho"],
+      "nosotros": ["habremos hecho"],
+      "vosotros": ["habréis hecho"],
+      "ellos": ["habrán hecho"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría hecho"],
+      "tu": ["habrías hecho"],
+      "el": ["habría hecho"],
+      "nosotros": ["habríamos hecho"],
+      "vosotros": ["habríais hecho"],
+      "ellos": ["habrían hecho"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya hecho"],
+      "tu": ["hayas hecho"],
+      "el": ["haya hecho"],
+      "nosotros": ["hayamos hecho"],
+      "vosotros": ["hayáis hecho"],
+      "ellos": ["hayan hecho"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera hecho", "hubiese hecho"],
+      "tu": ["hubieras hecho", "hubieses hecho"],
+      "el": ["hubiera hecho", "hubiese hecho"],
+      "nosotros": ["hubiéramos hecho", "hubiésemos hecho"],
+      "vosotros": ["hubierais hecho", "hubieseis hecho"],
+      "ellos": ["hubieran hecho", "hubiesen hecho"]
+    },
+    "progressive.present": {
+      "yo": ["estoy haciendo"],
+      "tu": ["estás haciendo"],
+      "el": ["está haciendo"],
+      "nosotros": ["estamos haciendo"],
+      "vosotros": ["estáis haciendo"],
+      "ellos": ["están haciendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["haz"],
+      "usted": ["haga"],
+      "nosotros": ["hagamos"],
+      "vosotros": ["haced"],
+      "ustedes": ["hagan"]
+    },
+    "imperative.negative": {
+      "tu": ["no hagas"],
+      "usted": ["no haga"],
+      "nosotros": ["no hagamos"],
+      "vosotros": ["no hagáis"],
+      "ustedes": ["no hagan"]
+    }
+  }
+}

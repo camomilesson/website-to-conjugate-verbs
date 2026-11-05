@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "leer",
+  "infinitive": "leer",
+  "meaning": "to read",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["leo"],
+      "tu": ["lees"],
+      "el": ["lee"],
+      "nosotros": ["leemos"],
+      "vosotros": ["leéis"],
+      "ellos": ["leen"]
+    },
+    "indicative.preterite": {
+      "yo": ["leí"],
+      "tu": ["leíste"],
+      "el": ["leyó"],
+      "nosotros": ["leímos"],
+      "vosotros": ["leísteis"],
+      "ellos": ["leyeron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["leía"],
+      "tu": ["leías"],
+      "el": ["leía"],
+      "nosotros": ["leíamos"],
+      "vosotros": ["leíais"],
+      "ellos": ["leían"]
+    },
+    "indicative.future": {
+      "yo": ["leeré"],
+      "tu": ["leerás"],
+      "el": ["leerá"],
+      "nosotros": ["leeremos"],
+      "vosotros": ["leeréis"],
+      "ellos": ["leerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["leería"],
+      "tu": ["leerías"],
+      "el": ["leería"],
+      "nosotros": ["leeríamos"],
+      "vosotros": ["leeríais"],
+      "ellos": ["leerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["lea"],
+      "tu": ["leas"],
+      "el": ["lea"],
+      "nosotros": ["leamos"],
+      "vosotros": ["leáis"],
+      "ellos": ["lean"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["leyera", "leyese"],
+      "tu": ["leyeras", "leyeses"],
+      "el": ["leyera", "leyese"],
+      "nosotros": ["leyéramos", "leyésemos"],
+      "vosotros": ["leyerais", "leyeseis"],
+      "ellos": ["leyeran", "leyesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he leído"],
+      "tu": ["has leído"],
+      "el": ["ha leído"],
+      "nosotros": ["hemos leído"],
+      "vosotros": ["habéis leído"],
+      "ellos": ["han leído"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había leído"],
+      "tu": ["habías leído"],
+      "el": ["había leído"],
+      "nosotros": ["habíamos leído"],
+      "vosotros": ["habíais leído"],
+      "ellos": ["habían leído"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré leído"],
+      "tu": ["habrás leído"],
+      "el": ["habrá leído"],
+      "nosotros": ["habremos leído"],
+      "vosotros": ["habréis leído"],
+      "ellos": ["habrán leído"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría leído"],
+      "tu": ["habrías leído"],
+      "el": ["habría leído"],
+      "nosotros": ["habríamos leído"],
+      "vosotros": ["habríais leído"],
+      "ellos": ["habrían leído"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya leído"],
+      "tu": ["hayas leído"],
+      "el": ["haya leído"],
+      "nosotros": ["hayamos leído"],
+      "vosotros": ["hayáis leído"],
+      "ellos": ["hayan leído"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera leído", "hubiese leído"],
+      "tu": ["hubieras leído", "hubieses leído"],
+      "el": ["hubiera leído", "hubiese leído"],
+      "nosotros": ["hubiéramos leído", "hubiésemos leído"],
+      "vosotros": ["hubierais leído", "hubieseis leído"],
+      "ellos": ["hubieran leído", "hubiesen leído"]
+    },
+    "progressive.present": {
+      "yo": ["estoy leyendo"],
+      "tu": ["estás leyendo"],
+      "el": ["está leyendo"],
+      "nosotros": ["estamos leyendo"],
+      "vosotros": ["estáis leyendo"],
+      "ellos": ["están leyendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["lee"],
+      "usted": ["lea"],
+      "nosotros": ["leamos"],
+      "vosotros": ["leed"],
+      "ustedes": ["lean"]
+    },
+    "imperative.negative": {
+      "tu": ["no leas"],
+      "usted": ["no lea"],
+      "nosotros": ["no leamos"],
+      "vosotros": ["no leáis"],
+      "ustedes": ["no lean"]
+    }
+  }
+}

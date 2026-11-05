@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "recibir",
+  "infinitive": "recibir",
+  "meaning": "to receive",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["recibo"],
+      "tu": ["recibes"],
+      "el": ["recibe"],
+      "nosotros": ["recibimos"],
+      "vosotros": ["recibís"],
+      "ellos": ["reciben"]
+    },
+    "indicative.preterite": {
+      "yo": ["recibí"],
+      "tu": ["recibiste"],
+      "el": ["recibió"],
+      "nosotros": ["recibimos"],
+      "vosotros": ["recibisteis"],
+      "ellos": ["recibieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["recibía"],
+      "tu": ["recibías"],
+      "el": ["recibía"],
+      "nosotros": ["recibíamos"],
+      "vosotros": ["recibíais"],
+      "ellos": ["recibían"]
+    },
+    "indicative.future": {
+      "yo": ["recibiré"],
+      "tu": ["recibirás"],
+      "el": ["recibirá"],
+      "nosotros": ["recibiremos"],
+      "vosotros": ["recibiréis"],
+      "ellos": ["recibirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["recibiría"],
+      "tu": ["recibirías"],
+      "el": ["recibiría"],
+      "nosotros": ["recibiríamos"],
+      "vosotros": ["recibiríais"],
+      "ellos": ["recibirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["reciba"],
+      "tu": ["recibas"],
+      "el": ["reciba"],
+      "nosotros": ["recibamos"],
+      "vosotros": ["recibáis"],
+      "ellos": ["reciban"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["recibiera", "recibiese"],
+      "tu": ["recibieras", "recibieses"],
+      "el": ["recibiera", "recibiese"],
+      "nosotros": ["recibiéramos", "recibiésemos"],
+      "vosotros": ["recibierais", "recibieseis"],
+      "ellos": ["recibieran", "recibiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he recibido"],
+      "tu": ["has recibido"],
+      "el": ["ha recibido"],
+      "nosotros": ["hemos recibido"],
+      "vosotros": ["habéis recibido"],
+      "ellos": ["han recibido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había recibido"],
+      "tu": ["habías recibido"],
+      "el": ["había recibido"],
+      "nosotros": ["habíamos recibido"],
+      "vosotros": ["habíais recibido"],
+      "ellos": ["habían recibido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré recibido"],
+      "tu": ["habrás recibido"],
+      "el": ["habrá recibido"],
+      "nosotros": ["habremos recibido"],
+      "vosotros": ["habréis recibido"],
+      "ellos": ["habrán recibido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría recibido"],
+      "tu": ["habrías recibido"],
+      "el": ["habría recibido"],
+      "nosotros": ["habríamos recibido"],
+      "vosotros": ["habríais recibido"],
+      "ellos": ["habrían recibido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya recibido"],
+      "tu": ["hayas recibido"],
+      "el": ["haya recibido"],
+      "nosotros": ["hayamos recibido"],
+      "vosotros": ["hayáis recibido"],
+      "ellos": ["hayan recibido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera recibido", "hubiese recibido"],
+      "tu": ["hubieras recibido", "hubieses recibido"],
+      "el": ["hubiera recibido", "hubiese recibido"],
+      "nosotros": ["hubiéramos recibido", "hubiésemos recibido"],
+      "vosotros": ["hubierais recibido", "hubieseis recibido"],
+      "ellos": ["hubieran recibido", "hubiesen recibido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy recibiendo"],
+      "tu": ["estás recibiendo"],
+      "el": ["está recibiendo"],
+      "nosotros": ["estamos recibiendo"],
+      "vosotros": ["estáis recibiendo"],
+      "ellos": ["están recibiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["recibe"],
+      "usted": ["reciba"],
+      "nosotros": ["recibamos"],
+      "vosotros": ["recibid"],
+      "ustedes": ["reciban"]
+    },
+    "imperative.negative": {
+      "tu": ["no recibas"],
+      "usted": ["no reciba"],
+      "nosotros": ["no recibamos"],
+      "vosotros": ["no recibáis"],
+      "ustedes": ["no reciban"]
+    }
+  }
+}

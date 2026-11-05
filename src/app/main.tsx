@@ -1,6 +1,7 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router"
+import { AuthProvider } from "../modules/auth/ui.ts"
 import { App } from "./App.tsx"
 import "./theme.css"
 
@@ -11,6 +12,8 @@ const router = createBrowserRouter([{ path: "*", element: <App /> }])
 
 createRoot(root).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )

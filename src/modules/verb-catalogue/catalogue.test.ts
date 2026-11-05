@@ -30,8 +30,8 @@ function verb(id: string) {
   return value
 }
 
-await test("static starter catalogue has seven matching files and complete supported coverage", () => {
-  assert.equal(catalogue.verbs.length, 7)
+await test("static catalogue has 100 matching files and complete supported coverage", () => {
+  assert.equal(catalogue.verbs.length, 100)
   assert.deepEqual(
     readdirSync(new URL("verbs/", root)).sort(),
     catalogue.verbs.map((entry) => `${entry.id}.json`).sort(),
@@ -52,7 +52,7 @@ await test("static starter catalogue has seven matching files and complete suppo
       }
     }
   }
-  assert.equal(cells, 658)
+  assert.equal(cells, 9400)
 })
 
 await test("presets and imperative persons match release scope", () => {
@@ -198,4 +198,55 @@ await test("loaders handle HTTP failures, malformed data, mismatch, success, and
   } finally {
     globalThis.fetch = original
   }
+})
+
+await test("expanded catalogue review anchors cover spelling, irregular families, and reflexive commands", () => {
+  const anchors: [
+    string,
+    keyof ReturnType<typeof verb>["conjugations"],
+    "yo" | "tu" | "nosotros" | "vosotros" | "el",
+    string[],
+  ][] = [
+    ["pagar", "indicative.preterite", "yo", ["pagué"]],
+    ["buscar", "subjunctive.present", "yo", ["busque"]],
+    ["empezar", "subjunctive.present", "nosotros", ["empecemos"]],
+    ["jugar", "subjunctive.present", "nosotros", ["juguemos"]],
+    ["leer", "indicative.preterite", "el", ["leyó"]],
+    ["caer", "indicative.present-perfect", "yo", ["he caído"]],
+    ["hacer", "indicative.preterite", "el", ["hizo"]],
+    ["decir", "indicative.preterite", "el", ["dijo"]],
+    [
+      "conducir",
+      "subjunctive.imperfect",
+      "nosotros",
+      ["condujéramos", "condujésemos"],
+    ],
+    ["morir", "indicative.present-perfect", "yo", ["he muerto"]],
+    ["dormir", "subjunctive.present", "nosotros", ["durmamos"]],
+    ["preferir", "subjunctive.present", "nosotros", ["prefiramos"]],
+    ["mantener", "imperative.affirmative", "tu", ["mantén"]],
+    ["conseguir", "progressive.present", "yo", ["estoy consiguiendo"]],
+    ["vestirse", "imperative.affirmative", "vosotros", ["vestíos"]],
+    ["sentarse", "imperative.affirmative", "nosotros", ["sentémonos"]],
+    ["irse", "imperative.affirmative", "vosotros", ["idos", "iros"]],
+    ["irse", "progressive.present", "yo", ["me estoy yendo", "estoy yéndome"]],
+    [
+      "vestirse",
+      "progressive.present",
+      "yo",
+      ["me estoy vistiendo", "estoy vistiéndome"],
+    ],
+  ]
+  for (const [id, category, person, answers] of anchors)
+    assert.deepEqual(
+      verb(id).conjugations[category][person],
+      answers,
+      `${id}:${category}:${person}`,
+    )
+  assert.equal(catalogue.verbs.filter((entry) => entry.common).length, 25)
+  assert.equal(
+    [...verbs.values()].filter((entry) => entry.tags.includes("reflexive"))
+      .length,
+    10,
+  )
 })

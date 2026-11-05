@@ -30,15 +30,15 @@ const config: PracticeConfig = {
   verbIds: catalogue.verbs.map((entry) => entry.id),
   categories: CATEGORIES.map((item) => item.id),
   persons: [...PRACTICE_PERSONS],
-  length: 1000,
+  length: 10000,
   accentPolicy: "strict",
 }
 
-await test("every starter choice question has distinct real options and exactly one accepted answer", () => {
+await test("every catalogue choice question has distinct real options and exactly one accepted answer", () => {
   for (const random of [() => 0, () => 0.5, () => 0.99999]) {
     const questions = createQuestions(verbs, config, random)
-    assert.equal(questions.length, 658)
-    assert.equal(new Set(questions.map((question) => question.id)).size, 658)
+    assert.equal(questions.length, 9400)
+    assert.equal(new Set(questions.map((question) => question.id)).size, 9400)
     for (const question of questions) {
       assert.equal(question.options?.length, 4)
       assert.equal(

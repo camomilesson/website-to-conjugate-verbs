@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "beber",
+  "infinitive": "beber",
+  "meaning": "to drink",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["bebo"],
+      "tu": ["bebes"],
+      "el": ["bebe"],
+      "nosotros": ["bebemos"],
+      "vosotros": ["bebéis"],
+      "ellos": ["beben"]
+    },
+    "indicative.preterite": {
+      "yo": ["bebí"],
+      "tu": ["bebiste"],
+      "el": ["bebió"],
+      "nosotros": ["bebimos"],
+      "vosotros": ["bebisteis"],
+      "ellos": ["bebieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["bebía"],
+      "tu": ["bebías"],
+      "el": ["bebía"],
+      "nosotros": ["bebíamos"],
+      "vosotros": ["bebíais"],
+      "ellos": ["bebían"]
+    },
+    "indicative.future": {
+      "yo": ["beberé"],
+      "tu": ["beberás"],
+      "el": ["beberá"],
+      "nosotros": ["beberemos"],
+      "vosotros": ["beberéis"],
+      "ellos": ["beberán"]
+    },
+    "indicative.conditional": {
+      "yo": ["bebería"],
+      "tu": ["beberías"],
+      "el": ["bebería"],
+      "nosotros": ["beberíamos"],
+      "vosotros": ["beberíais"],
+      "ellos": ["beberían"]
+    },
+    "subjunctive.present": {
+      "yo": ["beba"],
+      "tu": ["bebas"],
+      "el": ["beba"],
+      "nosotros": ["bebamos"],
+      "vosotros": ["bebáis"],
+      "ellos": ["beban"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["bebiera", "bebiese"],
+      "tu": ["bebieras", "bebieses"],
+      "el": ["bebiera", "bebiese"],
+      "nosotros": ["bebiéramos", "bebiésemos"],
+      "vosotros": ["bebierais", "bebieseis"],
+      "ellos": ["bebieran", "bebiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he bebido"],
+      "tu": ["has bebido"],
+      "el": ["ha bebido"],
+      "nosotros": ["hemos bebido"],
+      "vosotros": ["habéis bebido"],
+      "ellos": ["han bebido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había bebido"],
+      "tu": ["habías bebido"],
+      "el": ["había bebido"],
+      "nosotros": ["habíamos bebido"],
+      "vosotros": ["habíais bebido"],
+      "ellos": ["habían bebido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré bebido"],
+      "tu": ["habrás bebido"],
+      "el": ["habrá bebido"],
+      "nosotros": ["habremos bebido"],
+      "vosotros": ["habréis bebido"],
+      "ellos": ["habrán bebido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría bebido"],
+      "tu": ["habrías bebido"],
+      "el": ["habría bebido"],
+      "nosotros": ["habríamos bebido"],
+      "vosotros": ["habríais bebido"],
+      "ellos": ["habrían bebido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya bebido"],
+      "tu": ["hayas bebido"],
+      "el": ["haya bebido"],
+      "nosotros": ["hayamos bebido"],
+      "vosotros": ["hayáis bebido"],
+      "ellos": ["hayan bebido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera bebido", "hubiese bebido"],
+      "tu": ["hubieras bebido", "hubieses bebido"],
+      "el": ["hubiera bebido", "hubiese bebido"],
+      "nosotros": ["hubiéramos bebido", "hubiésemos bebido"],
+      "vosotros": ["hubierais bebido", "hubieseis bebido"],
+      "ellos": ["hubieran bebido", "hubiesen bebido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy bebiendo"],
+      "tu": ["estás bebiendo"],
+      "el": ["está bebiendo"],
+      "nosotros": ["estamos bebiendo"],
+      "vosotros": ["estáis bebiendo"],
+      "ellos": ["están bebiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["bebe"],
+      "usted": ["beba"],
+      "nosotros": ["bebamos"],
+      "vosotros": ["bebed"],
+      "ustedes": ["beban"]
+    },
+    "imperative.negative": {
+      "tu": ["no bebas"],
+      "usted": ["no beba"],
+      "nosotros": ["no bebamos"],
+      "vosotros": ["no bebáis"],
+      "ustedes": ["no beban"]
+    }
+  }
+}

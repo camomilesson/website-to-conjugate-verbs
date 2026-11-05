@@ -70,3 +70,9 @@ We will request specific values/actions when their milestone is ready.
 
 Provider dashboards change. Follow current documentation and actual project
 values at setup time; this checklist defines responsibilities and sequencing.
+
+## Current checkpoint — steps 7–8
+
+The catalogue and account integration are ready on the review branch. Follow
+[AUTH_SETUP.md](AUTH_SETUP.md) for the exact migration, environment variables,
+Google redirects, and two-account verification. Guest review needs no setup.

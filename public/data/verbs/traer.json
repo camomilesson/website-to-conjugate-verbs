@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "traer",
+  "infinitive": "traer",
+  "meaning": "to bring",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["traigo"],
+      "tu": ["traes"],
+      "el": ["trae"],
+      "nosotros": ["traemos"],
+      "vosotros": ["traéis"],
+      "ellos": ["traen"]
+    },
+    "indicative.preterite": {
+      "yo": ["traje"],
+      "tu": ["trajiste"],
+      "el": ["trajo"],
+      "nosotros": ["trajimos"],
+      "vosotros": ["trajisteis"],
+      "ellos": ["trajeron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["traía"],
+      "tu": ["traías"],
+      "el": ["traía"],
+      "nosotros": ["traíamos"],
+      "vosotros": ["traíais"],
+      "ellos": ["traían"]
+    },
+    "indicative.future": {
+      "yo": ["traeré"],
+      "tu": ["traerás"],
+      "el": ["traerá"],
+      "nosotros": ["traeremos"],
+      "vosotros": ["traeréis"],
+      "ellos": ["traerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["traería"],
+      "tu": ["traerías"],
+      "el": ["traería"],
+      "nosotros": ["traeríamos"],
+      "vosotros": ["traeríais"],
+      "ellos": ["traerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["traiga"],
+      "tu": ["traigas"],
+      "el": ["traiga"],
+      "nosotros": ["traigamos"],
+      "vosotros": ["traigáis"],
+      "ellos": ["traigan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["trajera", "trajese"],
+      "tu": ["trajeras", "trajeses"],
+      "el": ["trajera", "trajese"],
+      "nosotros": ["trajéramos", "trajésemos"],
+      "vosotros": ["trajerais", "trajeseis"],
+      "ellos": ["trajeran", "trajesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he traído"],
+      "tu": ["has traído"],
+      "el": ["ha traído"],
+      "nosotros": ["hemos traído"],
+      "vosotros": ["habéis traído"],
+      "ellos": ["han traído"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había traído"],
+      "tu": ["habías traído"],
+      "el": ["había traído"],
+      "nosotros": ["habíamos traído"],
+      "vosotros": ["habíais traído"],
+      "ellos": ["habían traído"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré traído"],
+      "tu": ["habrás traído"],
+      "el": ["habrá traído"],
+      "nosotros": ["habremos traído"],
+      "vosotros": ["habréis traído"],
+      "ellos": ["habrán traído"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría traído"],
+      "tu": ["habrías traído"],
+      "el": ["habría traído"],
+      "nosotros": ["habríamos traído"],
+      "vosotros": ["habríais traído"],
+      "ellos": ["habrían traído"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya traído"],
+      "tu": ["hayas traído"],
+      "el": ["haya traído"],
+      "nosotros": ["hayamos traído"],
+      "vosotros": ["hayáis traído"],
+      "ellos": ["hayan traído"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera traído", "hubiese traído"],
+      "tu": ["hubieras traído", "hubieses traído"],
+      "el": ["hubiera traído", "hubiese traído"],
+      "nosotros": ["hubiéramos traído", "hubiésemos traído"],
+      "vosotros": ["hubierais traído", "hubieseis traído"],
+      "ellos": ["hubieran traído", "hubiesen traído"]
+    },
+    "progressive.present": {
+      "yo": ["estoy trayendo"],
+      "tu": ["estás trayendo"],
+      "el": ["está trayendo"],
+      "nosotros": ["estamos trayendo"],
+      "vosotros": ["estáis trayendo"],
+      "ellos": ["están trayendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["trae"],
+      "usted": ["traiga"],
+      "nosotros": ["traigamos"],
+      "vosotros": ["traed"],
+      "ustedes": ["traigan"]
+    },
+    "imperative.negative": {
+      "tu": ["no traigas"],
+      "usted": ["no traiga"],
+      "nosotros": ["no traigamos"],
+      "vosotros": ["no traigáis"],
+      "ustedes": ["no traigan"]
+    }
+  }
+}

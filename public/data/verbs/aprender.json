@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "aprender",
+  "infinitive": "aprender",
+  "meaning": "to learn",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["aprendo"],
+      "tu": ["aprendes"],
+      "el": ["aprende"],
+      "nosotros": ["aprendemos"],
+      "vosotros": ["aprendéis"],
+      "ellos": ["aprenden"]
+    },
+    "indicative.preterite": {
+      "yo": ["aprendí"],
+      "tu": ["aprendiste"],
+      "el": ["aprendió"],
+      "nosotros": ["aprendimos"],
+      "vosotros": ["aprendisteis"],
+      "ellos": ["aprendieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["aprendía"],
+      "tu": ["aprendías"],
+      "el": ["aprendía"],
+      "nosotros": ["aprendíamos"],
+      "vosotros": ["aprendíais"],
+      "ellos": ["aprendían"]
+    },
+    "indicative.future": {
+      "yo": ["aprenderé"],
+      "tu": ["aprenderás"],
+      "el": ["aprenderá"],
+      "nosotros": ["aprenderemos"],
+      "vosotros": ["aprenderéis"],
+      "ellos": ["aprenderán"]
+    },
+    "indicative.conditional": {
+      "yo": ["aprendería"],
+      "tu": ["aprenderías"],
+      "el": ["aprendería"],
+      "nosotros": ["aprenderíamos"],
+      "vosotros": ["aprenderíais"],
+      "ellos": ["aprenderían"]
+    },
+    "subjunctive.present": {
+      "yo": ["aprenda"],
+      "tu": ["aprendas"],
+      "el": ["aprenda"],
+      "nosotros": ["aprendamos"],
+      "vosotros": ["aprendáis"],
+      "ellos": ["aprendan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["aprendiera", "aprendiese"],
+      "tu": ["aprendieras", "aprendieses"],
+      "el": ["aprendiera", "aprendiese"],
+      "nosotros": ["aprendiéramos", "aprendiésemos"],
+      "vosotros": ["aprendierais", "aprendieseis"],
+      "ellos": ["aprendieran", "aprendiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he aprendido"],
+      "tu": ["has aprendido"],
+      "el": ["ha aprendido"],
+      "nosotros": ["hemos aprendido"],
+      "vosotros": ["habéis aprendido"],
+      "ellos": ["han aprendido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había aprendido"],
+      "tu": ["habías aprendido"],
+      "el": ["había aprendido"],
+      "nosotros": ["habíamos aprendido"],
+      "vosotros": ["habíais aprendido"],
+      "ellos": ["habían aprendido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré aprendido"],
+      "tu": ["habrás aprendido"],
+      "el": ["habrá aprendido"],
+      "nosotros": ["habremos aprendido"],
+      "vosotros": ["habréis aprendido"],
+      "ellos": ["habrán aprendido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría aprendido"],
+      "tu": ["habrías aprendido"],
+      "el": ["habría aprendido"],
+      "nosotros": ["habríamos aprendido"],
+      "vosotros": ["habríais aprendido"],
+      "ellos": ["habrían aprendido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya aprendido"],
+      "tu": ["hayas aprendido"],
+      "el": ["haya aprendido"],
+      "nosotros": ["hayamos aprendido"],
+      "vosotros": ["hayáis aprendido"],
+      "ellos": ["hayan aprendido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera aprendido", "hubiese aprendido"],
+      "tu": ["hubieras aprendido", "hubieses aprendido"],
+      "el": ["hubiera aprendido", "hubiese aprendido"],
+      "nosotros": ["hubiéramos aprendido", "hubiésemos aprendido"],
+      "vosotros": ["hubierais aprendido", "hubieseis aprendido"],
+      "ellos": ["hubieran aprendido", "hubiesen aprendido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy aprendiendo"],
+      "tu": ["estás aprendiendo"],
+      "el": ["está aprendiendo"],
+      "nosotros": ["estamos aprendiendo"],
+      "vosotros": ["estáis aprendiendo"],
+      "ellos": ["están aprendiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["aprende"],
+      "usted": ["aprenda"],
+      "nosotros": ["aprendamos"],
+      "vosotros": ["aprended"],
+      "ustedes": ["aprendan"]
+    },
+    "imperative.negative": {
+      "tu": ["no aprendas"],
+      "usted": ["no aprenda"],
+      "nosotros": ["no aprendamos"],
+      "vosotros": ["no aprendáis"],
+      "ustedes": ["no aprendan"]
+    }
+  }
+}

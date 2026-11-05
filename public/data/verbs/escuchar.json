@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "escuchar",
+  "infinitive": "escuchar",
+  "meaning": "to listen",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["escucho"],
+      "tu": ["escuchas"],
+      "el": ["escucha"],
+      "nosotros": ["escuchamos"],
+      "vosotros": ["escucháis"],
+      "ellos": ["escuchan"]
+    },
+    "indicative.preterite": {
+      "yo": ["escuché"],
+      "tu": ["escuchaste"],
+      "el": ["escuchó"],
+      "nosotros": ["escuchamos"],
+      "vosotros": ["escuchasteis"],
+      "ellos": ["escucharon"]
+    },
+    "indicative.imperfect": {
+      "yo": ["escuchaba"],
+      "tu": ["escuchabas"],
+      "el": ["escuchaba"],
+      "nosotros": ["escuchábamos"],
+      "vosotros": ["escuchabais"],
+      "ellos": ["escuchaban"]
+    },
+    "indicative.future": {
+      "yo": ["escucharé"],
+      "tu": ["escucharás"],
+      "el": ["escuchará"],
+      "nosotros": ["escucharemos"],
+      "vosotros": ["escucharéis"],
+      "ellos": ["escucharán"]
+    },
+    "indicative.conditional": {
+      "yo": ["escucharía"],
+      "tu": ["escucharías"],
+      "el": ["escucharía"],
+      "nosotros": ["escucharíamos"],
+      "vosotros": ["escucharíais"],
+      "ellos": ["escucharían"]
+    },
+    "subjunctive.present": {
+      "yo": ["escuche"],
+      "tu": ["escuches"],
+      "el": ["escuche"],
+      "nosotros": ["escuchemos"],
+      "vosotros": ["escuchéis"],
+      "ellos": ["escuchen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["escuchara", "escuchase"],
+      "tu": ["escucharas", "escuchases"],
+      "el": ["escuchara", "escuchase"],
+      "nosotros": ["escucháramos", "escuchásemos"],
+      "vosotros": ["escucharais", "escuchaseis"],
+      "ellos": ["escucharan", "escuchasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he escuchado"],
+      "tu": ["has escuchado"],
+      "el": ["ha escuchado"],
+      "nosotros": ["hemos escuchado"],
+      "vosotros": ["habéis escuchado"],
+      "ellos": ["han escuchado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había escuchado"],
+      "tu": ["habías escuchado"],
+      "el": ["había escuchado"],
+      "nosotros": ["habíamos escuchado"],
+      "vosotros": ["habíais escuchado"],
+      "ellos": ["habían escuchado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré escuchado"],
+      "tu": ["habrás escuchado"],
+      "el": ["habrá escuchado"],
+      "nosotros": ["habremos escuchado"],
+      "vosotros": ["habréis escuchado"],
+      "ellos": ["habrán escuchado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría escuchado"],
+      "tu": ["habrías escuchado"],
+      "el": ["habría escuchado"],
+      "nosotros": ["habríamos escuchado"],
+      "vosotros": ["habríais escuchado"],
+      "ellos": ["habrían escuchado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya escuchado"],
+      "tu": ["hayas escuchado"],
+      "el": ["haya escuchado"],
+      "nosotros": ["hayamos escuchado"],
+      "vosotros": ["hayáis escuchado"],
+      "ellos": ["hayan escuchado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera escuchado", "hubiese escuchado"],
+      "tu": ["hubieras escuchado", "hubieses escuchado"],
+      "el": ["hubiera escuchado", "hubiese escuchado"],
+      "nosotros": ["hubiéramos escuchado", "hubiésemos escuchado"],
+      "vosotros": ["hubierais escuchado", "hubieseis escuchado"],
+      "ellos": ["hubieran escuchado", "hubiesen escuchado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy escuchando"],
+      "tu": ["estás escuchando"],
+      "el": ["está escuchando"],
+      "nosotros": ["estamos escuchando"],
+      "vosotros": ["estáis escuchando"],
+      "ellos": ["están escuchando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["escucha"],
+      "usted": ["escuche"],
+      "nosotros": ["escuchemos"],
+      "vosotros": ["escuchad"],
+      "ustedes": ["escuchen"]
+    },
+    "imperative.negative": {
+      "tu": ["no escuches"],
+      "usted": ["no escuche"],
+      "nosotros": ["no escuchemos"],
+      "vosotros": ["no escuchéis"],
+      "ustedes": ["no escuchen"]
+    }
+  }
+}

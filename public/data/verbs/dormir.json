@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "dormir",
+  "infinitive": "dormir",
+  "meaning": "to sleep",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["duermo"],
+      "tu": ["duermes"],
+      "el": ["duerme"],
+      "nosotros": ["dormimos"],
+      "vosotros": ["dormís"],
+      "ellos": ["duermen"]
+    },
+    "indicative.preterite": {
+      "yo": ["dormí"],
+      "tu": ["dormiste"],
+      "el": ["durmió"],
+      "nosotros": ["dormimos"],
+      "vosotros": ["dormisteis"],
+      "ellos": ["durmieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["dormía"],
+      "tu": ["dormías"],
+      "el": ["dormía"],
+      "nosotros": ["dormíamos"],
+      "vosotros": ["dormíais"],
+      "ellos": ["dormían"]
+    },
+    "indicative.future": {
+      "yo": ["dormiré"],
+      "tu": ["dormirás"],
+      "el": ["dormirá"],
+      "nosotros": ["dormiremos"],
+      "vosotros": ["dormiréis"],
+      "ellos": ["dormirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["dormiría"],
+      "tu": ["dormirías"],
+      "el": ["dormiría"],
+      "nosotros": ["dormiríamos"],
+      "vosotros": ["dormiríais"],
+      "ellos": ["dormirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["duerma"],
+      "tu": ["duermas"],
+      "el": ["duerma"],
+      "nosotros": ["durmamos"],
+      "vosotros": ["durmáis"],
+      "ellos": ["duerman"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["durmiera", "durmiese"],
+      "tu": ["durmieras", "durmieses"],
+      "el": ["durmiera", "durmiese"],
+      "nosotros": ["durmiéramos", "durmiésemos"],
+      "vosotros": ["durmierais", "durmieseis"],
+      "ellos": ["durmieran", "durmiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he dormido"],
+      "tu": ["has dormido"],
+      "el": ["ha dormido"],
+      "nosotros": ["hemos dormido"],
+      "vosotros": ["habéis dormido"],
+      "ellos": ["han dormido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había dormido"],
+      "tu": ["habías dormido"],
+      "el": ["había dormido"],
+      "nosotros": ["habíamos dormido"],
+      "vosotros": ["habíais dormido"],
+      "ellos": ["habían dormido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré dormido"],
+      "tu": ["habrás dormido"],
+      "el": ["habrá dormido"],
+      "nosotros": ["habremos dormido"],
+      "vosotros": ["habréis dormido"],
+      "ellos": ["habrán dormido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría dormido"],
+      "tu": ["habrías dormido"],
+      "el": ["habría dormido"],
+      "nosotros": ["habríamos dormido"],
+      "vosotros": ["habríais dormido"],
+      "ellos": ["habrían dormido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya dormido"],
+      "tu": ["hayas dormido"],
+      "el": ["haya dormido"],
+      "nosotros": ["hayamos dormido"],
+      "vosotros": ["hayáis dormido"],
+      "ellos": ["hayan dormido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera dormido", "hubiese dormido"],
+      "tu": ["hubieras dormido", "hubieses dormido"],
+      "el": ["hubiera dormido", "hubiese dormido"],
+      "nosotros": ["hubiéramos dormido", "hubiésemos dormido"],
+      "vosotros": ["hubierais dormido", "hubieseis dormido"],
+      "ellos": ["hubieran dormido", "hubiesen dormido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy durmiendo"],
+      "tu": ["estás durmiendo"],
+      "el": ["está durmiendo"],
+      "nosotros": ["estamos durmiendo"],
+      "vosotros": ["estáis durmiendo"],
+      "ellos": ["están durmiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["duerme"],
+      "usted": ["duerma"],
+      "nosotros": ["durmamos"],
+      "vosotros": ["dormid"],
+      "ustedes": ["duerman"]
+    },
+    "imperative.negative": {
+      "tu": ["no duermas"],
+      "usted": ["no duerma"],
+      "nosotros": ["no durmamos"],
+      "vosotros": ["no durmáis"],
+      "ustedes": ["no duerman"]
+    }
+  }
+}

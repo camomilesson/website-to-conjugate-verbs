@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "llamarse",
+  "infinitive": "llamarse",
+  "meaning": "to be called",
+  "tags": ["reflexive", "regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me llamo"],
+      "tu": ["te llamas"],
+      "el": ["se llama"],
+      "nosotros": ["nos llamamos"],
+      "vosotros": ["os llamáis"],
+      "ellos": ["se llaman"]
+    },
+    "indicative.preterite": {
+      "yo": ["me llamé"],
+      "tu": ["te llamaste"],
+      "el": ["se llamó"],
+      "nosotros": ["nos llamamos"],
+      "vosotros": ["os llamasteis"],
+      "ellos": ["se llamaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me llamaba"],
+      "tu": ["te llamabas"],
+      "el": ["se llamaba"],
+      "nosotros": ["nos llamábamos"],
+      "vosotros": ["os llamabais"],
+      "ellos": ["se llamaban"]
+    },
+    "indicative.future": {
+      "yo": ["me llamaré"],
+      "tu": ["te llamarás"],
+      "el": ["se llamará"],
+      "nosotros": ["nos llamaremos"],
+      "vosotros": ["os llamaréis"],
+      "ellos": ["se llamarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me llamaría"],
+      "tu": ["te llamarías"],
+      "el": ["se llamaría"],
+      "nosotros": ["nos llamaríamos"],
+      "vosotros": ["os llamaríais"],
+      "ellos": ["se llamarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me llame"],
+      "tu": ["te llames"],
+      "el": ["se llame"],
+      "nosotros": ["nos llamemos"],
+      "vosotros": ["os llaméis"],
+      "ellos": ["se llamen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me llamara", "me llamase"],
+      "tu": ["te llamaras", "te llamases"],
+      "el": ["se llamara", "se llamase"],
+      "nosotros": ["nos llamáramos", "nos llamásemos"],
+      "vosotros": ["os llamarais", "os llamaseis"],
+      "ellos": ["se llamaran", "se llamasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he llamado"],
+      "tu": ["te has llamado"],
+      "el": ["se ha llamado"],
+      "nosotros": ["nos hemos llamado"],
+      "vosotros": ["os habéis llamado"],
+      "ellos": ["se han llamado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había llamado"],
+      "tu": ["te habías llamado"],
+      "el": ["se había llamado"],
+      "nosotros": ["nos habíamos llamado"],
+      "vosotros": ["os habíais llamado"],
+      "ellos": ["se habían llamado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré llamado"],
+      "tu": ["te habrás llamado"],
+      "el": ["se habrá llamado"],
+      "nosotros": ["nos habremos llamado"],
+      "vosotros": ["os habréis llamado"],
+      "ellos": ["se habrán llamado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría llamado"],
+      "tu": ["te habrías llamado"],
+      "el": ["se habría llamado"],
+      "nosotros": ["nos habríamos llamado"],
+      "vosotros": ["os habríais llamado"],
+      "ellos": ["se habrían llamado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya llamado"],
+      "tu": ["te hayas llamado"],
+      "el": ["se haya llamado"],
+      "nosotros": ["nos hayamos llamado"],
+      "vosotros": ["os hayáis llamado"],
+      "ellos": ["se hayan llamado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera llamado", "me hubiese llamado"],
+      "tu": ["te hubieras llamado", "te hubieses llamado"],
+      "el": ["se hubiera llamado", "se hubiese llamado"],
+      "nosotros": ["nos hubiéramos llamado", "nos hubiésemos llamado"],
+      "vosotros": ["os hubierais llamado", "os hubieseis llamado"],
+      "ellos": ["se hubieran llamado", "se hubiesen llamado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy llamando", "estoy llamándome"],
+      "tu": ["te estás llamando", "estás llamándote"],
+      "el": ["se está llamando", "está llamándose"],
+      "nosotros": ["nos estamos llamando", "estamos llamándonos"],
+      "vosotros": ["os estáis llamando", "estáis llamándoos"],
+      "ellos": ["se están llamando", "están llamándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["llámate"],
+      "usted": ["llámese"],
+      "nosotros": ["llamémonos"],
+      "vosotros": ["llamaos"],
+      "ustedes": ["llámense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te llames"],
+      "usted": ["no se llame"],
+      "nosotros": ["no nos llamemos"],
+      "vosotros": ["no os llaméis"],
+      "ustedes": ["no se llamen"]
+    }
+  }
+}

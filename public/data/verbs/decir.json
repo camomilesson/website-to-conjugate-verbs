@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "decir",
+  "infinitive": "decir",
+  "meaning": "to say",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["digo"],
+      "tu": ["dices"],
+      "el": ["dice"],
+      "nosotros": ["decimos"],
+      "vosotros": ["decís"],
+      "ellos": ["dicen"]
+    },
+    "indicative.preterite": {
+      "yo": ["dije"],
+      "tu": ["dijiste"],
+      "el": ["dijo"],
+      "nosotros": ["dijimos"],
+      "vosotros": ["dijisteis"],
+      "ellos": ["dijeron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["decía"],
+      "tu": ["decías"],
+      "el": ["decía"],
+      "nosotros": ["decíamos"],
+      "vosotros": ["decíais"],
+      "ellos": ["decían"]
+    },
+    "indicative.future": {
+      "yo": ["diré"],
+      "tu": ["dirás"],
+      "el": ["dirá"],
+      "nosotros": ["diremos"],
+      "vosotros": ["diréis"],
+      "ellos": ["dirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["diría"],
+      "tu": ["dirías"],
+      "el": ["diría"],
+      "nosotros": ["diríamos"],
+      "vosotros": ["diríais"],
+      "ellos": ["dirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["diga"],
+      "tu": ["digas"],
+      "el": ["diga"],
+      "nosotros": ["digamos"],
+      "vosotros": ["digáis"],
+      "ellos": ["digan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["dijera", "dijese"],
+      "tu": ["dijeras", "dijeses"],
+      "el": ["dijera", "dijese"],
+      "nosotros": ["dijéramos", "dijésemos"],
+      "vosotros": ["dijerais", "dijeseis"],
+      "ellos": ["dijeran", "dijesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he dicho"],
+      "tu": ["has dicho"],
+      "el": ["ha dicho"],
+      "nosotros": ["hemos dicho"],
+      "vosotros": ["habéis dicho"],
+      "ellos": ["han dicho"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había dicho"],
+      "tu": ["habías dicho"],
+      "el": ["había dicho"],
+      "nosotros": ["habíamos dicho"],
+      "vosotros": ["habíais dicho"],
+      "ellos": ["habían dicho"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré dicho"],
+      "tu": ["habrás dicho"],
+      "el": ["habrá dicho"],
+      "nosotros": ["habremos dicho"],
+      "vosotros": ["habréis dicho"],
+      "ellos": ["habrán dicho"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría dicho"],
+      "tu": ["habrías dicho"],
+      "el": ["habría dicho"],
+      "nosotros": ["habríamos dicho"],
+      "vosotros": ["habríais dicho"],
+      "ellos": ["habrían dicho"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya dicho"],
+      "tu": ["hayas dicho"],
+      "el": ["haya dicho"],
+      "nosotros": ["hayamos dicho"],
+      "vosotros": ["hayáis dicho"],
+      "ellos": ["hayan dicho"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera dicho", "hubiese dicho"],
+      "tu": ["hubieras dicho", "hubieses dicho"],
+      "el": ["hubiera dicho", "hubiese dicho"],
+      "nosotros": ["hubiéramos dicho", "hubiésemos dicho"],
+      "vosotros": ["hubierais dicho", "hubieseis dicho"],
+      "ellos": ["hubieran dicho", "hubiesen dicho"]
+    },
+    "progressive.present": {
+      "yo": ["estoy diciendo"],
+      "tu": ["estás diciendo"],
+      "el": ["está diciendo"],
+      "nosotros": ["estamos diciendo"],
+      "vosotros": ["estáis diciendo"],
+      "ellos": ["están diciendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["di"],
+      "usted": ["diga"],
+      "nosotros": ["digamos"],
+      "vosotros": ["decid"],
+      "ustedes": ["digan"]
+    },
+    "imperative.negative": {
+      "tu": ["no digas"],
+      "usted": ["no diga"],
+      "nosotros": ["no digamos"],
+      "vosotros": ["no digáis"],
+      "ustedes": ["no digan"]
+    }
+  }
+}

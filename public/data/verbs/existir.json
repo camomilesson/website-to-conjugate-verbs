@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "existir",
+  "infinitive": "existir",
+  "meaning": "to exist",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["existo"],
+      "tu": ["existes"],
+      "el": ["existe"],
+      "nosotros": ["existimos"],
+      "vosotros": ["existís"],
+      "ellos": ["existen"]
+    },
+    "indicative.preterite": {
+      "yo": ["existí"],
+      "tu": ["exististe"],
+      "el": ["existió"],
+      "nosotros": ["existimos"],
+      "vosotros": ["exististeis"],
+      "ellos": ["existieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["existía"],
+      "tu": ["existías"],
+      "el": ["existía"],
+      "nosotros": ["existíamos"],
+      "vosotros": ["existíais"],
+      "ellos": ["existían"]
+    },
+    "indicative.future": {
+      "yo": ["existiré"],
+      "tu": ["existirás"],
+      "el": ["existirá"],
+      "nosotros": ["existiremos"],
+      "vosotros": ["existiréis"],
+      "ellos": ["existirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["existiría"],
+      "tu": ["existirías"],
+      "el": ["existiría"],
+      "nosotros": ["existiríamos"],
+      "vosotros": ["existiríais"],
+      "ellos": ["existirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["exista"],
+      "tu": ["existas"],
+      "el": ["exista"],
+      "nosotros": ["existamos"],
+      "vosotros": ["existáis"],
+      "ellos": ["existan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["existiera", "existiese"],
+      "tu": ["existieras", "existieses"],
+      "el": ["existiera", "existiese"],
+      "nosotros": ["existiéramos", "existiésemos"],
+      "vosotros": ["existierais", "existieseis"],
+      "ellos": ["existieran", "existiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he existido"],
+      "tu": ["has existido"],
+      "el": ["ha existido"],
+      "nosotros": ["hemos existido"],
+      "vosotros": ["habéis existido"],
+      "ellos": ["han existido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había existido"],
+      "tu": ["habías existido"],
+      "el": ["había existido"],
+      "nosotros": ["habíamos existido"],
+      "vosotros": ["habíais existido"],
+      "ellos": ["habían existido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré existido"],
+      "tu": ["habrás existido"],
+      "el": ["habrá existido"],
+      "nosotros": ["habremos existido"],
+      "vosotros": ["habréis existido"],
+      "ellos": ["habrán existido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría existido"],
+      "tu": ["habrías existido"],
+      "el": ["habría existido"],
+      "nosotros": ["habríamos existido"],
+      "vosotros": ["habríais existido"],
+      "ellos": ["habrían existido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya existido"],
+      "tu": ["hayas existido"],
+      "el": ["haya existido"],
+      "nosotros": ["hayamos existido"],
+      "vosotros": ["hayáis existido"],
+      "ellos": ["hayan existido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera existido", "hubiese existido"],
+      "tu": ["hubieras existido", "hubieses existido"],
+      "el": ["hubiera existido", "hubiese existido"],
+      "nosotros": ["hubiéramos existido", "hubiésemos existido"],
+      "vosotros": ["hubierais existido", "hubieseis existido"],
+      "ellos": ["hubieran existido", "hubiesen existido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy existiendo"],
+      "tu": ["estás existiendo"],
+      "el": ["está existiendo"],
+      "nosotros": ["estamos existiendo"],
+      "vosotros": ["estáis existiendo"],
+      "ellos": ["están existiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["existe"],
+      "usted": ["exista"],
+      "nosotros": ["existamos"],
+      "vosotros": ["existid"],
+      "ustedes": ["existan"]
+    },
+    "imperative.negative": {
+      "tu": ["no existas"],
+      "usted": ["no exista"],
+      "nosotros": ["no existamos"],
+      "vosotros": ["no existáis"],
+      "ustedes": ["no existan"]
+    }
+  }
+}

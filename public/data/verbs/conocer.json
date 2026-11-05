@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "conocer",
+  "infinitive": "conocer",
+  "meaning": "to know / meet",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["conozco"],
+      "tu": ["conoces"],
+      "el": ["conoce"],
+      "nosotros": ["conocemos"],
+      "vosotros": ["conocéis"],
+      "ellos": ["conocen"]
+    },
+    "indicative.preterite": {
+      "yo": ["conocí"],
+      "tu": ["conociste"],
+      "el": ["conoció"],
+      "nosotros": ["conocimos"],
+      "vosotros": ["conocisteis"],
+      "ellos": ["conocieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["conocía"],
+      "tu": ["conocías"],
+      "el": ["conocía"],
+      "nosotros": ["conocíamos"],
+      "vosotros": ["conocíais"],
+      "ellos": ["conocían"]
+    },
+    "indicative.future": {
+      "yo": ["conoceré"],
+      "tu": ["conocerás"],
+      "el": ["conocerá"],
+      "nosotros": ["conoceremos"],
+      "vosotros": ["conoceréis"],
+      "ellos": ["conocerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["conocería"],
+      "tu": ["conocerías"],
+      "el": ["conocería"],
+      "nosotros": ["conoceríamos"],
+      "vosotros": ["conoceríais"],
+      "ellos": ["conocerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["conozca"],
+      "tu": ["conozcas"],
+      "el": ["conozca"],
+      "nosotros": ["conozcamos"],
+      "vosotros": ["conozcáis"],
+      "ellos": ["conozcan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["conociera", "conociese"],
+      "tu": ["conocieras", "conocieses"],
+      "el": ["conociera", "conociese"],
+      "nosotros": ["conociéramos", "conociésemos"],
+      "vosotros": ["conocierais", "conocieseis"],
+      "ellos": ["conocieran", "conociesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he conocido"],
+      "tu": ["has conocido"],
+      "el": ["ha conocido"],
+      "nosotros": ["hemos conocido"],
+      "vosotros": ["habéis conocido"],
+      "ellos": ["han conocido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había conocido"],
+      "tu": ["habías conocido"],
+      "el": ["había conocido"],
+      "nosotros": ["habíamos conocido"],
+      "vosotros": ["habíais conocido"],
+      "ellos": ["habían conocido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré conocido"],
+      "tu": ["habrás conocido"],
+      "el": ["habrá conocido"],
+      "nosotros": ["habremos conocido"],
+      "vosotros": ["habréis conocido"],
+      "ellos": ["habrán conocido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría conocido"],
+      "tu": ["habrías conocido"],
+      "el": ["habría conocido"],
+      "nosotros": ["habríamos conocido"],
+      "vosotros": ["habríais conocido"],
+      "ellos": ["habrían conocido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya conocido"],
+      "tu": ["hayas conocido"],
+      "el": ["haya conocido"],
+      "nosotros": ["hayamos conocido"],
+      "vosotros": ["hayáis conocido"],
+      "ellos": ["hayan conocido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera conocido", "hubiese conocido"],
+      "tu": ["hubieras conocido", "hubieses conocido"],
+      "el": ["hubiera conocido", "hubiese conocido"],
+      "nosotros": ["hubiéramos conocido", "hubiésemos conocido"],
+      "vosotros": ["hubierais conocido", "hubieseis conocido"],
+      "ellos": ["hubieran conocido", "hubiesen conocido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy conociendo"],
+      "tu": ["estás conociendo"],
+      "el": ["está conociendo"],
+      "nosotros": ["estamos conociendo"],
+      "vosotros": ["estáis conociendo"],
+      "ellos": ["están conociendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["conoce"],
+      "usted": ["conozca"],
+      "nosotros": ["conozcamos"],
+      "vosotros": ["conoced"],
+      "ustedes": ["conozcan"]
+    },
+    "imperative.negative": {
+      "tu": ["no conozcas"],
+      "usted": ["no conozca"],
+      "nosotros": ["no conozcamos"],
+      "vosotros": ["no conozcáis"],
+      "ustedes": ["no conozcan"]
+    }
+  }
+}

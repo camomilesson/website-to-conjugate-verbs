@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "sentir",
+  "infinitive": "sentir",
+  "meaning": "to feel",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["siento"],
+      "tu": ["sientes"],
+      "el": ["siente"],
+      "nosotros": ["sentimos"],
+      "vosotros": ["sentís"],
+      "ellos": ["sienten"]
+    },
+    "indicative.preterite": {
+      "yo": ["sentí"],
+      "tu": ["sentiste"],
+      "el": ["sintió"],
+      "nosotros": ["sentimos"],
+      "vosotros": ["sentisteis"],
+      "ellos": ["sintieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["sentía"],
+      "tu": ["sentías"],
+      "el": ["sentía"],
+      "nosotros": ["sentíamos"],
+      "vosotros": ["sentíais"],
+      "ellos": ["sentían"]
+    },
+    "indicative.future": {
+      "yo": ["sentiré"],
+      "tu": ["sentirás"],
+      "el": ["sentirá"],
+      "nosotros": ["sentiremos"],
+      "vosotros": ["sentiréis"],
+      "ellos": ["sentirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["sentiría"],
+      "tu": ["sentirías"],
+      "el": ["sentiría"],
+      "nosotros": ["sentiríamos"],
+      "vosotros": ["sentiríais"],
+      "ellos": ["sentirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["sienta"],
+      "tu": ["sientas"],
+      "el": ["sienta"],
+      "nosotros": ["sintamos"],
+      "vosotros": ["sintáis"],
+      "ellos": ["sientan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["sintiera", "sintiese"],
+      "tu": ["sintieras", "sintieses"],
+      "el": ["sintiera", "sintiese"],
+      "nosotros": ["sintiéramos", "sintiésemos"],
+      "vosotros": ["sintierais", "sintieseis"],
+      "ellos": ["sintieran", "sintiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he sentido"],
+      "tu": ["has sentido"],
+      "el": ["ha sentido"],
+      "nosotros": ["hemos sentido"],
+      "vosotros": ["habéis sentido"],
+      "ellos": ["han sentido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había sentido"],
+      "tu": ["habías sentido"],
+      "el": ["había sentido"],
+      "nosotros": ["habíamos sentido"],
+      "vosotros": ["habíais sentido"],
+      "ellos": ["habían sentido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré sentido"],
+      "tu": ["habrás sentido"],
+      "el": ["habrá sentido"],
+      "nosotros": ["habremos sentido"],
+      "vosotros": ["habréis sentido"],
+      "ellos": ["habrán sentido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría sentido"],
+      "tu": ["habrías sentido"],
+      "el": ["habría sentido"],
+      "nosotros": ["habríamos sentido"],
+      "vosotros": ["habríais sentido"],
+      "ellos": ["habrían sentido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya sentido"],
+      "tu": ["hayas sentido"],
+      "el": ["haya sentido"],
+      "nosotros": ["hayamos sentido"],
+      "vosotros": ["hayáis sentido"],
+      "ellos": ["hayan sentido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera sentido", "hubiese sentido"],
+      "tu": ["hubieras sentido", "hubieses sentido"],
+      "el": ["hubiera sentido", "hubiese sentido"],
+      "nosotros": ["hubiéramos sentido", "hubiésemos sentido"],
+      "vosotros": ["hubierais sentido", "hubieseis sentido"],
+      "ellos": ["hubieran sentido", "hubiesen sentido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy sintiendo"],
+      "tu": ["estás sintiendo"],
+      "el": ["está sintiendo"],
+      "nosotros": ["estamos sintiendo"],
+      "vosotros": ["estáis sintiendo"],
+      "ellos": ["están sintiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["siente"],
+      "usted": ["sienta"],
+      "nosotros": ["sintamos"],
+      "vosotros": ["sentid"],
+      "ustedes": ["sientan"]
+    },
+    "imperative.negative": {
+      "tu": ["no sientas"],
+      "usted": ["no sienta"],
+      "nosotros": ["no sintamos"],
+      "vosotros": ["no sintáis"],
+      "ustedes": ["no sientan"]
+    }
+  }
+}

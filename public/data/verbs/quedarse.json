@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "quedarse",
+  "infinitive": "quedarse",
+  "meaning": "to stay",
+  "tags": ["reflexive", "regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me quedo"],
+      "tu": ["te quedas"],
+      "el": ["se queda"],
+      "nosotros": ["nos quedamos"],
+      "vosotros": ["os quedáis"],
+      "ellos": ["se quedan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me quedé"],
+      "tu": ["te quedaste"],
+      "el": ["se quedó"],
+      "nosotros": ["nos quedamos"],
+      "vosotros": ["os quedasteis"],
+      "ellos": ["se quedaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me quedaba"],
+      "tu": ["te quedabas"],
+      "el": ["se quedaba"],
+      "nosotros": ["nos quedábamos"],
+      "vosotros": ["os quedabais"],
+      "ellos": ["se quedaban"]
+    },
+    "indicative.future": {
+      "yo": ["me quedaré"],
+      "tu": ["te quedarás"],
+      "el": ["se quedará"],
+      "nosotros": ["nos quedaremos"],
+      "vosotros": ["os quedaréis"],
+      "ellos": ["se quedarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me quedaría"],
+      "tu": ["te quedarías"],
+      "el": ["se quedaría"],
+      "nosotros": ["nos quedaríamos"],
+      "vosotros": ["os quedaríais"],
+      "ellos": ["se quedarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me quede"],
+      "tu": ["te quedes"],
+      "el": ["se quede"],
+      "nosotros": ["nos quedemos"],
+      "vosotros": ["os quedéis"],
+      "ellos": ["se queden"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me quedara", "me quedase"],
+      "tu": ["te quedaras", "te quedases"],
+      "el": ["se quedara", "se quedase"],
+      "nosotros": ["nos quedáramos", "nos quedásemos"],
+      "vosotros": ["os quedarais", "os quedaseis"],
+      "ellos": ["se quedaran", "se quedasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he quedado"],
+      "tu": ["te has quedado"],
+      "el": ["se ha quedado"],
+      "nosotros": ["nos hemos quedado"],
+      "vosotros": ["os habéis quedado"],
+      "ellos": ["se han quedado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había quedado"],
+      "tu": ["te habías quedado"],
+      "el": ["se había quedado"],
+      "nosotros": ["nos habíamos quedado"],
+      "vosotros": ["os habíais quedado"],
+      "ellos": ["se habían quedado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré quedado"],
+      "tu": ["te habrás quedado"],
+      "el": ["se habrá quedado"],
+      "nosotros": ["nos habremos quedado"],
+      "vosotros": ["os habréis quedado"],
+      "ellos": ["se habrán quedado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría quedado"],
+      "tu": ["te habrías quedado"],
+      "el": ["se habría quedado"],
+      "nosotros": ["nos habríamos quedado"],
+      "vosotros": ["os habríais quedado"],
+      "ellos": ["se habrían quedado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya quedado"],
+      "tu": ["te hayas quedado"],
+      "el": ["se haya quedado"],
+      "nosotros": ["nos hayamos quedado"],
+      "vosotros": ["os hayáis quedado"],
+      "ellos": ["se hayan quedado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera quedado", "me hubiese quedado"],
+      "tu": ["te hubieras quedado", "te hubieses quedado"],
+      "el": ["se hubiera quedado", "se hubiese quedado"],
+      "nosotros": ["nos hubiéramos quedado", "nos hubiésemos quedado"],
+      "vosotros": ["os hubierais quedado", "os hubieseis quedado"],
+      "ellos": ["se hubieran quedado", "se hubiesen quedado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy quedando", "estoy quedándome"],
+      "tu": ["te estás quedando", "estás quedándote"],
+      "el": ["se está quedando", "está quedándose"],
+      "nosotros": ["nos estamos quedando", "estamos quedándonos"],
+      "vosotros": ["os estáis quedando", "estáis quedándoos"],
+      "ellos": ["se están quedando", "están quedándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["quédate"],
+      "usted": ["quédese"],
+      "nosotros": ["quedémonos"],
+      "vosotros": ["quedaos"],
+      "ustedes": ["quédense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te quedes"],
+      "usted": ["no se quede"],
+      "nosotros": ["no nos quedemos"],
+      "vosotros": ["no os quedéis"],
+      "ustedes": ["no se queden"]
+    }
+  }
+}

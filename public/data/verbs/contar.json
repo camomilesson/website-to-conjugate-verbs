@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "contar",
+  "infinitive": "contar",
+  "meaning": "to count",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["cuento"],
+      "tu": ["cuentas"],
+      "el": ["cuenta"],
+      "nosotros": ["contamos"],
+      "vosotros": ["contáis"],
+      "ellos": ["cuentan"]
+    },
+    "indicative.preterite": {
+      "yo": ["conté"],
+      "tu": ["contaste"],
+      "el": ["contó"],
+      "nosotros": ["contamos"],
+      "vosotros": ["contasteis"],
+      "ellos": ["contaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["contaba"],
+      "tu": ["contabas"],
+      "el": ["contaba"],
+      "nosotros": ["contábamos"],
+      "vosotros": ["contabais"],
+      "ellos": ["contaban"]
+    },
+    "indicative.future": {
+      "yo": ["contaré"],
+      "tu": ["contarás"],
+      "el": ["contará"],
+      "nosotros": ["contaremos"],
+      "vosotros": ["contaréis"],
+      "ellos": ["contarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["contaría"],
+      "tu": ["contarías"],
+      "el": ["contaría"],
+      "nosotros": ["contaríamos"],
+      "vosotros": ["contaríais"],
+      "ellos": ["contarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["cuente"],
+      "tu": ["cuentes"],
+      "el": ["cuente"],
+      "nosotros": ["contemos"],
+      "vosotros": ["contéis"],
+      "ellos": ["cuenten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["contara", "contase"],
+      "tu": ["contaras", "contases"],
+      "el": ["contara", "contase"],
+      "nosotros": ["contáramos", "contásemos"],
+      "vosotros": ["contarais", "contaseis"],
+      "ellos": ["contaran", "contasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he contado"],
+      "tu": ["has contado"],
+      "el": ["ha contado"],
+      "nosotros": ["hemos contado"],
+      "vosotros": ["habéis contado"],
+      "ellos": ["han contado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había contado"],
+      "tu": ["habías contado"],
+      "el": ["había contado"],
+      "nosotros": ["habíamos contado"],
+      "vosotros": ["habíais contado"],
+      "ellos": ["habían contado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré contado"],
+      "tu": ["habrás contado"],
+      "el": ["habrá contado"],
+      "nosotros": ["habremos contado"],
+      "vosotros": ["habréis contado"],
+      "ellos": ["habrán contado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría contado"],
+      "tu": ["habrías contado"],
+      "el": ["habría contado"],
+      "nosotros": ["habríamos contado"],
+      "vosotros": ["habríais contado"],
+      "ellos": ["habrían contado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya contado"],
+      "tu": ["hayas contado"],
+      "el": ["haya contado"],
+      "nosotros": ["hayamos contado"],
+      "vosotros": ["hayáis contado"],
+      "ellos": ["hayan contado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera contado", "hubiese contado"],
+      "tu": ["hubieras contado", "hubieses contado"],
+      "el": ["hubiera contado", "hubiese contado"],
+      "nosotros": ["hubiéramos contado", "hubiésemos contado"],
+      "vosotros": ["hubierais contado", "hubieseis contado"],
+      "ellos": ["hubieran contado", "hubiesen contado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy contando"],
+      "tu": ["estás contando"],
+      "el": ["está contando"],
+      "nosotros": ["estamos contando"],
+      "vosotros": ["estáis contando"],
+      "ellos": ["están contando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["cuenta"],
+      "usted": ["cuente"],
+      "nosotros": ["contemos"],
+      "vosotros": ["contad"],
+      "ustedes": ["cuenten"]
+    },
+    "imperative.negative": {
+      "tu": ["no cuentes"],
+      "usted": ["no cuente"],
+      "nosotros": ["no contemos"],
+      "vosotros": ["no contéis"],
+      "ustedes": ["no cuenten"]
+    }
+  }
+}

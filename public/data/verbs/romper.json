@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "romper",
+  "infinitive": "romper",
+  "meaning": "to break",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["rompo"],
+      "tu": ["rompes"],
+      "el": ["rompe"],
+      "nosotros": ["rompemos"],
+      "vosotros": ["rompéis"],
+      "ellos": ["rompen"]
+    },
+    "indicative.preterite": {
+      "yo": ["rompí"],
+      "tu": ["rompiste"],
+      "el": ["rompió"],
+      "nosotros": ["rompimos"],
+      "vosotros": ["rompisteis"],
+      "ellos": ["rompieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["rompía"],
+      "tu": ["rompías"],
+      "el": ["rompía"],
+      "nosotros": ["rompíamos"],
+      "vosotros": ["rompíais"],
+      "ellos": ["rompían"]
+    },
+    "indicative.future": {
+      "yo": ["romperé"],
+      "tu": ["romperás"],
+      "el": ["romperá"],
+      "nosotros": ["romperemos"],
+      "vosotros": ["romperéis"],
+      "ellos": ["romperán"]
+    },
+    "indicative.conditional": {
+      "yo": ["rompería"],
+      "tu": ["romperías"],
+      "el": ["rompería"],
+      "nosotros": ["romperíamos"],
+      "vosotros": ["romperíais"],
+      "ellos": ["romperían"]
+    },
+    "subjunctive.present": {
+      "yo": ["rompa"],
+      "tu": ["rompas"],
+      "el": ["rompa"],
+      "nosotros": ["rompamos"],
+      "vosotros": ["rompáis"],
+      "ellos": ["rompan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["rompiera", "rompiese"],
+      "tu": ["rompieras", "rompieses"],
+      "el": ["rompiera", "rompiese"],
+      "nosotros": ["rompiéramos", "rompiésemos"],
+      "vosotros": ["rompierais", "rompieseis"],
+      "ellos": ["rompieran", "rompiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he roto"],
+      "tu": ["has roto"],
+      "el": ["ha roto"],
+      "nosotros": ["hemos roto"],
+      "vosotros": ["habéis roto"],
+      "ellos": ["han roto"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había roto"],
+      "tu": ["habías roto"],
+      "el": ["había roto"],
+      "nosotros": ["habíamos roto"],
+      "vosotros": ["habíais roto"],
+      "ellos": ["habían roto"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré roto"],
+      "tu": ["habrás roto"],
+      "el": ["habrá roto"],
+      "nosotros": ["habremos roto"],
+      "vosotros": ["habréis roto"],
+      "ellos": ["habrán roto"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría roto"],
+      "tu": ["habrías roto"],
+      "el": ["habría roto"],
+      "nosotros": ["habríamos roto"],
+      "vosotros": ["habríais roto"],
+      "ellos": ["habrían roto"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya roto"],
+      "tu": ["hayas roto"],
+      "el": ["haya roto"],
+      "nosotros": ["hayamos roto"],
+      "vosotros": ["hayáis roto"],
+      "ellos": ["hayan roto"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera roto", "hubiese roto"],
+      "tu": ["hubieras roto", "hubieses roto"],
+      "el": ["hubiera roto", "hubiese roto"],
+      "nosotros": ["hubiéramos roto", "hubiésemos roto"],
+      "vosotros": ["hubierais roto", "hubieseis roto"],
+      "ellos": ["hubieran roto", "hubiesen roto"]
+    },
+    "progressive.present": {
+      "yo": ["estoy rompiendo"],
+      "tu": ["estás rompiendo"],
+      "el": ["está rompiendo"],
+      "nosotros": ["estamos rompiendo"],
+      "vosotros": ["estáis rompiendo"],
+      "ellos": ["están rompiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["rompe"],
+      "usted": ["rompa"],
+      "nosotros": ["rompamos"],
+      "vosotros": ["romped"],
+      "ustedes": ["rompan"]
+    },
+    "imperative.negative": {
+      "tu": ["no rompas"],
+      "usted": ["no rompa"],
+      "nosotros": ["no rompamos"],
+      "vosotros": ["no rompáis"],
+      "ustedes": ["no rompan"]
+    }
+  }
+}

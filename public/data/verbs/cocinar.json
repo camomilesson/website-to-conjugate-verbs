@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "cocinar",
+  "infinitive": "cocinar",
+  "meaning": "to cook",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["cocino"],
+      "tu": ["cocinas"],
+      "el": ["cocina"],
+      "nosotros": ["cocinamos"],
+      "vosotros": ["cocináis"],
+      "ellos": ["cocinan"]
+    },
+    "indicative.preterite": {
+      "yo": ["cociné"],
+      "tu": ["cocinaste"],
+      "el": ["cocinó"],
+      "nosotros": ["cocinamos"],
+      "vosotros": ["cocinasteis"],
+      "ellos": ["cocinaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["cocinaba"],
+      "tu": ["cocinabas"],
+      "el": ["cocinaba"],
+      "nosotros": ["cocinábamos"],
+      "vosotros": ["cocinabais"],
+      "ellos": ["cocinaban"]
+    },
+    "indicative.future": {
+      "yo": ["cocinaré"],
+      "tu": ["cocinarás"],
+      "el": ["cocinará"],
+      "nosotros": ["cocinaremos"],
+      "vosotros": ["cocinaréis"],
+      "ellos": ["cocinarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["cocinaría"],
+      "tu": ["cocinarías"],
+      "el": ["cocinaría"],
+      "nosotros": ["cocinaríamos"],
+      "vosotros": ["cocinaríais"],
+      "ellos": ["cocinarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["cocine"],
+      "tu": ["cocines"],
+      "el": ["cocine"],
+      "nosotros": ["cocinemos"],
+      "vosotros": ["cocinéis"],
+      "ellos": ["cocinen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["cocinara", "cocinase"],
+      "tu": ["cocinaras", "cocinases"],
+      "el": ["cocinara", "cocinase"],
+      "nosotros": ["cocináramos", "cocinásemos"],
+      "vosotros": ["cocinarais", "cocinaseis"],
+      "ellos": ["cocinaran", "cocinasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he cocinado"],
+      "tu": ["has cocinado"],
+      "el": ["ha cocinado"],
+      "nosotros": ["hemos cocinado"],
+      "vosotros": ["habéis cocinado"],
+      "ellos": ["han cocinado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había cocinado"],
+      "tu": ["habías cocinado"],
+      "el": ["había cocinado"],
+      "nosotros": ["habíamos cocinado"],
+      "vosotros": ["habíais cocinado"],
+      "ellos": ["habían cocinado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré cocinado"],
+      "tu": ["habrás cocinado"],
+      "el": ["habrá cocinado"],
+      "nosotros": ["habremos cocinado"],
+      "vosotros": ["habréis cocinado"],
+      "ellos": ["habrán cocinado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría cocinado"],
+      "tu": ["habrías cocinado"],
+      "el": ["habría cocinado"],
+      "nosotros": ["habríamos cocinado"],
+      "vosotros": ["habríais cocinado"],
+      "ellos": ["habrían cocinado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya cocinado"],
+      "tu": ["hayas cocinado"],
+      "el": ["haya cocinado"],
+      "nosotros": ["hayamos cocinado"],
+      "vosotros": ["hayáis cocinado"],
+      "ellos": ["hayan cocinado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera cocinado", "hubiese cocinado"],
+      "tu": ["hubieras cocinado", "hubieses cocinado"],
+      "el": ["hubiera cocinado", "hubiese cocinado"],
+      "nosotros": ["hubiéramos cocinado", "hubiésemos cocinado"],
+      "vosotros": ["hubierais cocinado", "hubieseis cocinado"],
+      "ellos": ["hubieran cocinado", "hubiesen cocinado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy cocinando"],
+      "tu": ["estás cocinando"],
+      "el": ["está cocinando"],
+      "nosotros": ["estamos cocinando"],
+      "vosotros": ["estáis cocinando"],
+      "ellos": ["están cocinando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["cocina"],
+      "usted": ["cocine"],
+      "nosotros": ["cocinemos"],
+      "vosotros": ["cocinad"],
+      "ustedes": ["cocinen"]
+    },
+    "imperative.negative": {
+      "tu": ["no cocines"],
+      "usted": ["no cocine"],
+      "nosotros": ["no cocinemos"],
+      "vosotros": ["no cocinéis"],
+      "ustedes": ["no cocinen"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "llegar",
+  "infinitive": "llegar",
+  "meaning": "to arrive",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["llego"],
+      "tu": ["llegas"],
+      "el": ["llega"],
+      "nosotros": ["llegamos"],
+      "vosotros": ["llegáis"],
+      "ellos": ["llegan"]
+    },
+    "indicative.preterite": {
+      "yo": ["llegué"],
+      "tu": ["llegaste"],
+      "el": ["llegó"],
+      "nosotros": ["llegamos"],
+      "vosotros": ["llegasteis"],
+      "ellos": ["llegaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["llegaba"],
+      "tu": ["llegabas"],
+      "el": ["llegaba"],
+      "nosotros": ["llegábamos"],
+      "vosotros": ["llegabais"],
+      "ellos": ["llegaban"]
+    },
+    "indicative.future": {
+      "yo": ["llegaré"],
+      "tu": ["llegarás"],
+      "el": ["llegará"],
+      "nosotros": ["llegaremos"],
+      "vosotros": ["llegaréis"],
+      "ellos": ["llegarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["llegaría"],
+      "tu": ["llegarías"],
+      "el": ["llegaría"],
+      "nosotros": ["llegaríamos"],
+      "vosotros": ["llegaríais"],
+      "ellos": ["llegarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["llegue"],
+      "tu": ["llegues"],
+      "el": ["llegue"],
+      "nosotros": ["lleguemos"],
+      "vosotros": ["lleguéis"],
+      "ellos": ["lleguen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["llegara", "llegase"],
+      "tu": ["llegaras", "llegases"],
+      "el": ["llegara", "llegase"],
+      "nosotros": ["llegáramos", "llegásemos"],
+      "vosotros": ["llegarais", "llegaseis"],
+      "ellos": ["llegaran", "llegasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he llegado"],
+      "tu": ["has llegado"],
+      "el": ["ha llegado"],
+      "nosotros": ["hemos llegado"],
+      "vosotros": ["habéis llegado"],
+      "ellos": ["han llegado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había llegado"],
+      "tu": ["habías llegado"],
+      "el": ["había llegado"],
+      "nosotros": ["habíamos llegado"],
+      "vosotros": ["habíais llegado"],
+      "ellos": ["habían llegado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré llegado"],
+      "tu": ["habrás llegado"],
+      "el": ["habrá llegado"],
+      "nosotros": ["habremos llegado"],
+      "vosotros": ["habréis llegado"],
+      "ellos": ["habrán llegado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría llegado"],
+      "tu": ["habrías llegado"],
+      "el": ["habría llegado"],
+      "nosotros": ["habríamos llegado"],
+      "vosotros": ["habríais llegado"],
+      "ellos": ["habrían llegado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya llegado"],
+      "tu": ["hayas llegado"],
+      "el": ["haya llegado"],
+      "nosotros": ["hayamos llegado"],
+      "vosotros": ["hayáis llegado"],
+      "ellos": ["hayan llegado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera llegado", "hubiese llegado"],
+      "tu": ["hubieras llegado", "hubieses llegado"],
+      "el": ["hubiera llegado", "hubiese llegado"],
+      "nosotros": ["hubiéramos llegado", "hubiésemos llegado"],
+      "vosotros": ["hubierais llegado", "hubieseis llegado"],
+      "ellos": ["hubieran llegado", "hubiesen llegado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy llegando"],
+      "tu": ["estás llegando"],
+      "el": ["está llegando"],
+      "nosotros": ["estamos llegando"],
+      "vosotros": ["estáis llegando"],
+      "ellos": ["están llegando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["llega"],
+      "usted": ["llegue"],
+      "nosotros": ["lleguemos"],
+      "vosotros": ["llegad"],
+      "ustedes": ["lleguen"]
+    },
+    "imperative.negative": {
+      "tu": ["no llegues"],
+      "usted": ["no llegue"],
+      "nosotros": ["no lleguemos"],
+      "vosotros": ["no lleguéis"],
+      "ustedes": ["no lleguen"]
+    }
+  }
+}

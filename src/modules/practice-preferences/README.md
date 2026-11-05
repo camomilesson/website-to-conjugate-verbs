@@ -41,3 +41,11 @@ Run `pnpm test` for round trips, latest-save behaviour, custom/preset restores,
 invalid/stale values, storage failures, and serialization boundaries. Browser
 checks cover save-on-Start, Settings Save, reload, and a second-tab edit while
 practice remains in progress.
+
+## Account storage
+
+When signed in, `usePreferenceDraft` loads/saves via the auth modlet's Supabase
+repository. New accounts use factory defaults; guest data is not imported.
+Identity changes hide stale drafts and cancel pending loads. A failed account
+read/write is surfaced without silently falling back to local storage. See
+[AUTH_SETUP.md](../../../AUTH_SETUP.md); hosted verification is still pending.

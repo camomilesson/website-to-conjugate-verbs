@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "escoger",
+  "infinitive": "escoger",
+  "meaning": "to choose",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["escojo"],
+      "tu": ["escoges"],
+      "el": ["escoge"],
+      "nosotros": ["escogemos"],
+      "vosotros": ["escogéis"],
+      "ellos": ["escogen"]
+    },
+    "indicative.preterite": {
+      "yo": ["escogí"],
+      "tu": ["escogiste"],
+      "el": ["escogió"],
+      "nosotros": ["escogimos"],
+      "vosotros": ["escogisteis"],
+      "ellos": ["escogieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["escogía"],
+      "tu": ["escogías"],
+      "el": ["escogía"],
+      "nosotros": ["escogíamos"],
+      "vosotros": ["escogíais"],
+      "ellos": ["escogían"]
+    },
+    "indicative.future": {
+      "yo": ["escogeré"],
+      "tu": ["escogerás"],
+      "el": ["escogerá"],
+      "nosotros": ["escogeremos"],
+      "vosotros": ["escogeréis"],
+      "ellos": ["escogerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["escogería"],
+      "tu": ["escogerías"],
+      "el": ["escogería"],
+      "nosotros": ["escogeríamos"],
+      "vosotros": ["escogeríais"],
+      "ellos": ["escogerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["escoja"],
+      "tu": ["escojas"],
+      "el": ["escoja"],
+      "nosotros": ["escojamos"],
+      "vosotros": ["escojáis"],
+      "ellos": ["escojan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["escogiera", "escogiese"],
+      "tu": ["escogieras", "escogieses"],
+      "el": ["escogiera", "escogiese"],
+      "nosotros": ["escogiéramos", "escogiésemos"],
+      "vosotros": ["escogierais", "escogieseis"],
+      "ellos": ["escogieran", "escogiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he escogido"],
+      "tu": ["has escogido"],
+      "el": ["ha escogido"],
+      "nosotros": ["hemos escogido"],
+      "vosotros": ["habéis escogido"],
+      "ellos": ["han escogido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había escogido"],
+      "tu": ["habías escogido"],
+      "el": ["había escogido"],
+      "nosotros": ["habíamos escogido"],
+      "vosotros": ["habíais escogido"],
+      "ellos": ["habían escogido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré escogido"],
+      "tu": ["habrás escogido"],
+      "el": ["habrá escogido"],
+      "nosotros": ["habremos escogido"],
+      "vosotros": ["habréis escogido"],
+      "ellos": ["habrán escogido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría escogido"],
+      "tu": ["habrías escogido"],
+      "el": ["habría escogido"],
+      "nosotros": ["habríamos escogido"],
+      "vosotros": ["habríais escogido"],
+      "ellos": ["habrían escogido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya escogido"],
+      "tu": ["hayas escogido"],
+      "el": ["haya escogido"],
+      "nosotros": ["hayamos escogido"],
+      "vosotros": ["hayáis escogido"],
+      "ellos": ["hayan escogido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera escogido", "hubiese escogido"],
+      "tu": ["hubieras escogido", "hubieses escogido"],
+      "el": ["hubiera escogido", "hubiese escogido"],
+      "nosotros": ["hubiéramos escogido", "hubiésemos escogido"],
+      "vosotros": ["hubierais escogido", "hubieseis escogido"],
+      "ellos": ["hubieran escogido", "hubiesen escogido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy escogiendo"],
+      "tu": ["estás escogiendo"],
+      "el": ["está escogiendo"],
+      "nosotros": ["estamos escogiendo"],
+      "vosotros": ["estáis escogiendo"],
+      "ellos": ["están escogiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["escoge"],
+      "usted": ["escoja"],
+      "nosotros": ["escojamos"],
+      "vosotros": ["escoged"],
+      "ustedes": ["escojan"]
+    },
+    "imperative.negative": {
+      "tu": ["no escojas"],
+      "usted": ["no escoja"],
+      "nosotros": ["no escojamos"],
+      "vosotros": ["no escojáis"],
+      "ustedes": ["no escojan"]
+    }
+  }
+}

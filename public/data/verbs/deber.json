@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "deber",
+  "infinitive": "deber",
+  "meaning": "to owe / must",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["debo"],
+      "tu": ["debes"],
+      "el": ["debe"],
+      "nosotros": ["debemos"],
+      "vosotros": ["debéis"],
+      "ellos": ["deben"]
+    },
+    "indicative.preterite": {
+      "yo": ["debí"],
+      "tu": ["debiste"],
+      "el": ["debió"],
+      "nosotros": ["debimos"],
+      "vosotros": ["debisteis"],
+      "ellos": ["debieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["debía"],
+      "tu": ["debías"],
+      "el": ["debía"],
+      "nosotros": ["debíamos"],
+      "vosotros": ["debíais"],
+      "ellos": ["debían"]
+    },
+    "indicative.future": {
+      "yo": ["deberé"],
+      "tu": ["deberás"],
+      "el": ["deberá"],
+      "nosotros": ["deberemos"],
+      "vosotros": ["deberéis"],
+      "ellos": ["deberán"]
+    },
+    "indicative.conditional": {
+      "yo": ["debería"],
+      "tu": ["deberías"],
+      "el": ["debería"],
+      "nosotros": ["deberíamos"],
+      "vosotros": ["deberíais"],
+      "ellos": ["deberían"]
+    },
+    "subjunctive.present": {
+      "yo": ["deba"],
+      "tu": ["debas"],
+      "el": ["deba"],
+      "nosotros": ["debamos"],
+      "vosotros": ["debáis"],
+      "ellos": ["deban"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["debiera", "debiese"],
+      "tu": ["debieras", "debieses"],
+      "el": ["debiera", "debiese"],
+      "nosotros": ["debiéramos", "debiésemos"],
+      "vosotros": ["debierais", "debieseis"],
+      "ellos": ["debieran", "debiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he debido"],
+      "tu": ["has debido"],
+      "el": ["ha debido"],
+      "nosotros": ["hemos debido"],
+      "vosotros": ["habéis debido"],
+      "ellos": ["han debido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había debido"],
+      "tu": ["habías debido"],
+      "el": ["había debido"],
+      "nosotros": ["habíamos debido"],
+      "vosotros": ["habíais debido"],
+      "ellos": ["habían debido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré debido"],
+      "tu": ["habrás debido"],
+      "el": ["habrá debido"],
+      "nosotros": ["habremos debido"],
+      "vosotros": ["habréis debido"],
+      "ellos": ["habrán debido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría debido"],
+      "tu": ["habrías debido"],
+      "el": ["habría debido"],
+      "nosotros": ["habríamos debido"],
+      "vosotros": ["habríais debido"],
+      "ellos": ["habrían debido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya debido"],
+      "tu": ["hayas debido"],
+      "el": ["haya debido"],
+      "nosotros": ["hayamos debido"],
+      "vosotros": ["hayáis debido"],
+      "ellos": ["hayan debido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera debido", "hubiese debido"],
+      "tu": ["hubieras debido", "hubieses debido"],
+      "el": ["hubiera debido", "hubiese debido"],
+      "nosotros": ["hubiéramos debido", "hubiésemos debido"],
+      "vosotros": ["hubierais debido", "hubieseis debido"],
+      "ellos": ["hubieran debido", "hubiesen debido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy debiendo"],
+      "tu": ["estás debiendo"],
+      "el": ["está debiendo"],
+      "nosotros": ["estamos debiendo"],
+      "vosotros": ["estáis debiendo"],
+      "ellos": ["están debiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["debe"],
+      "usted": ["deba"],
+      "nosotros": ["debamos"],
+      "vosotros": ["debed"],
+      "ustedes": ["deban"]
+    },
+    "imperative.negative": {
+      "tu": ["no debas"],
+      "usted": ["no deba"],
+      "nosotros": ["no debamos"],
+      "vosotros": ["no debáis"],
+      "ustedes": ["no deban"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "preguntar",
+  "infinitive": "preguntar",
+  "meaning": "to ask",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["pregunto"],
+      "tu": ["preguntas"],
+      "el": ["pregunta"],
+      "nosotros": ["preguntamos"],
+      "vosotros": ["preguntáis"],
+      "ellos": ["preguntan"]
+    },
+    "indicative.preterite": {
+      "yo": ["pregunté"],
+      "tu": ["preguntaste"],
+      "el": ["preguntó"],
+      "nosotros": ["preguntamos"],
+      "vosotros": ["preguntasteis"],
+      "ellos": ["preguntaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["preguntaba"],
+      "tu": ["preguntabas"],
+      "el": ["preguntaba"],
+      "nosotros": ["preguntábamos"],
+      "vosotros": ["preguntabais"],
+      "ellos": ["preguntaban"]
+    },
+    "indicative.future": {
+      "yo": ["preguntaré"],
+      "tu": ["preguntarás"],
+      "el": ["preguntará"],
+      "nosotros": ["preguntaremos"],
+      "vosotros": ["preguntaréis"],
+      "ellos": ["preguntarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["preguntaría"],
+      "tu": ["preguntarías"],
+      "el": ["preguntaría"],
+      "nosotros": ["preguntaríamos"],
+      "vosotros": ["preguntaríais"],
+      "ellos": ["preguntarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["pregunte"],
+      "tu": ["preguntes"],
+      "el": ["pregunte"],
+      "nosotros": ["preguntemos"],
+      "vosotros": ["preguntéis"],
+      "ellos": ["pregunten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["preguntara", "preguntase"],
+      "tu": ["preguntaras", "preguntases"],
+      "el": ["preguntara", "preguntase"],
+      "nosotros": ["preguntáramos", "preguntásemos"],
+      "vosotros": ["preguntarais", "preguntaseis"],
+      "ellos": ["preguntaran", "preguntasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he preguntado"],
+      "tu": ["has preguntado"],
+      "el": ["ha preguntado"],
+      "nosotros": ["hemos preguntado"],
+      "vosotros": ["habéis preguntado"],
+      "ellos": ["han preguntado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había preguntado"],
+      "tu": ["habías preguntado"],
+      "el": ["había preguntado"],
+      "nosotros": ["habíamos preguntado"],
+      "vosotros": ["habíais preguntado"],
+      "ellos": ["habían preguntado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré preguntado"],
+      "tu": ["habrás preguntado"],
+      "el": ["habrá preguntado"],
+      "nosotros": ["habremos preguntado"],
+      "vosotros": ["habréis preguntado"],
+      "ellos": ["habrán preguntado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría preguntado"],
+      "tu": ["habrías preguntado"],
+      "el": ["habría preguntado"],
+      "nosotros": ["habríamos preguntado"],
+      "vosotros": ["habríais preguntado"],
+      "ellos": ["habrían preguntado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya preguntado"],
+      "tu": ["hayas preguntado"],
+      "el": ["haya preguntado"],
+      "nosotros": ["hayamos preguntado"],
+      "vosotros": ["hayáis preguntado"],
+      "ellos": ["hayan preguntado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera preguntado", "hubiese preguntado"],
+      "tu": ["hubieras preguntado", "hubieses preguntado"],
+      "el": ["hubiera preguntado", "hubiese preguntado"],
+      "nosotros": ["hubiéramos preguntado", "hubiésemos preguntado"],
+      "vosotros": ["hubierais preguntado", "hubieseis preguntado"],
+      "ellos": ["hubieran preguntado", "hubiesen preguntado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy preguntando"],
+      "tu": ["estás preguntando"],
+      "el": ["está preguntando"],
+      "nosotros": ["estamos preguntando"],
+      "vosotros": ["estáis preguntando"],
+      "ellos": ["están preguntando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["pregunta"],
+      "usted": ["pregunte"],
+      "nosotros": ["preguntemos"],
+      "vosotros": ["preguntad"],
+      "ustedes": ["pregunten"]
+    },
+    "imperative.negative": {
+      "tu": ["no preguntes"],
+      "usted": ["no pregunte"],
+      "nosotros": ["no preguntemos"],
+      "vosotros": ["no preguntéis"],
+      "ustedes": ["no pregunten"]
+    }
+  }
+}

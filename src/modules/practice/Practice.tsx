@@ -29,7 +29,7 @@ function LeavePrompt({
       }}
     >
       <h2 id="leave-title">Leave this practice?</h2>
-      <p>This guest session will be discarded. It cannot be resumed.</p>
+      <p>This practice session will be discarded. It cannot be resumed.</p>
       <div className="selection-actions">
         <button onClick={onStay} autoFocus>
           Keep practising
@@ -176,8 +176,8 @@ function PracticeSession({
           </p>
           <p className="field-note">
             {modeLabel}
-            {config.mode === "typing" ? ` · ${policyLabel}` : ""}. Guest results
-            are not saved.
+            {config.mode === "typing" ? ` · ${policyLabel}` : ""}. Practice
+            results are not saved yet.
           </p>
           {score.incorrect ? (
             <>

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "poner",
+  "infinitive": "poner",
+  "meaning": "to put",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["pongo"],
+      "tu": ["pones"],
+      "el": ["pone"],
+      "nosotros": ["ponemos"],
+      "vosotros": ["ponéis"],
+      "ellos": ["ponen"]
+    },
+    "indicative.preterite": {
+      "yo": ["puse"],
+      "tu": ["pusiste"],
+      "el": ["puso"],
+      "nosotros": ["pusimos"],
+      "vosotros": ["pusisteis"],
+      "ellos": ["pusieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["ponía"],
+      "tu": ["ponías"],
+      "el": ["ponía"],
+      "nosotros": ["poníamos"],
+      "vosotros": ["poníais"],
+      "ellos": ["ponían"]
+    },
+    "indicative.future": {
+      "yo": ["pondré"],
+      "tu": ["pondrás"],
+      "el": ["pondrá"],
+      "nosotros": ["pondremos"],
+      "vosotros": ["pondréis"],
+      "ellos": ["pondrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["pondría"],
+      "tu": ["pondrías"],
+      "el": ["pondría"],
+      "nosotros": ["pondríamos"],
+      "vosotros": ["pondríais"],
+      "ellos": ["pondrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["ponga"],
+      "tu": ["pongas"],
+      "el": ["ponga"],
+      "nosotros": ["pongamos"],
+      "vosotros": ["pongáis"],
+      "ellos": ["pongan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["pusiera", "pusiese"],
+      "tu": ["pusieras", "pusieses"],
+      "el": ["pusiera", "pusiese"],
+      "nosotros": ["pusiéramos", "pusiésemos"],
+      "vosotros": ["pusierais", "pusieseis"],
+      "ellos": ["pusieran", "pusiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he puesto"],
+      "tu": ["has puesto"],
+      "el": ["ha puesto"],
+      "nosotros": ["hemos puesto"],
+      "vosotros": ["habéis puesto"],
+      "ellos": ["han puesto"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había puesto"],
+      "tu": ["habías puesto"],
+      "el": ["había puesto"],
+      "nosotros": ["habíamos puesto"],
+      "vosotros": ["habíais puesto"],
+      "ellos": ["habían puesto"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré puesto"],
+      "tu": ["habrás puesto"],
+      "el": ["habrá puesto"],
+      "nosotros": ["habremos puesto"],
+      "vosotros": ["habréis puesto"],
+      "ellos": ["habrán puesto"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría puesto"],
+      "tu": ["habrías puesto"],
+      "el": ["habría puesto"],
+      "nosotros": ["habríamos puesto"],
+      "vosotros": ["habríais puesto"],
+      "ellos": ["habrían puesto"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya puesto"],
+      "tu": ["hayas puesto"],
+      "el": ["haya puesto"],
+      "nosotros": ["hayamos puesto"],
+      "vosotros": ["hayáis puesto"],
+      "ellos": ["hayan puesto"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera puesto", "hubiese puesto"],
+      "tu": ["hubieras puesto", "hubieses puesto"],
+      "el": ["hubiera puesto", "hubiese puesto"],
+      "nosotros": ["hubiéramos puesto", "hubiésemos puesto"],
+      "vosotros": ["hubierais puesto", "hubieseis puesto"],
+      "ellos": ["hubieran puesto", "hubiesen puesto"]
+    },
+    "progressive.present": {
+      "yo": ["estoy poniendo"],
+      "tu": ["estás poniendo"],
+      "el": ["está poniendo"],
+      "nosotros": ["estamos poniendo"],
+      "vosotros": ["estáis poniendo"],
+      "ellos": ["están poniendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["pon"],
+      "usted": ["ponga"],
+      "nosotros": ["pongamos"],
+      "vosotros": ["poned"],
+      "ustedes": ["pongan"]
+    },
+    "imperative.negative": {
+      "tu": ["no pongas"],
+      "usted": ["no ponga"],
+      "nosotros": ["no pongamos"],
+      "vosotros": ["no pongáis"],
+      "ustedes": ["no pongan"]
+    }
+  }
+}

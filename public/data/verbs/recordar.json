@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "recordar",
+  "infinitive": "recordar",
+  "meaning": "to remember",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["recuerdo"],
+      "tu": ["recuerdas"],
+      "el": ["recuerda"],
+      "nosotros": ["recordamos"],
+      "vosotros": ["recordáis"],
+      "ellos": ["recuerdan"]
+    },
+    "indicative.preterite": {
+      "yo": ["recordé"],
+      "tu": ["recordaste"],
+      "el": ["recordó"],
+      "nosotros": ["recordamos"],
+      "vosotros": ["recordasteis"],
+      "ellos": ["recordaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["recordaba"],
+      "tu": ["recordabas"],
+      "el": ["recordaba"],
+      "nosotros": ["recordábamos"],
+      "vosotros": ["recordabais"],
+      "ellos": ["recordaban"]
+    },
+    "indicative.future": {
+      "yo": ["recordaré"],
+      "tu": ["recordarás"],
+      "el": ["recordará"],
+      "nosotros": ["recordaremos"],
+      "vosotros": ["recordaréis"],
+      "ellos": ["recordarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["recordaría"],
+      "tu": ["recordarías"],
+      "el": ["recordaría"],
+      "nosotros": ["recordaríamos"],
+      "vosotros": ["recordaríais"],
+      "ellos": ["recordarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["recuerde"],
+      "tu": ["recuerdes"],
+      "el": ["recuerde"],
+      "nosotros": ["recordemos"],
+      "vosotros": ["recordéis"],
+      "ellos": ["recuerden"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["recordara", "recordase"],
+      "tu": ["recordaras", "recordases"],
+      "el": ["recordara", "recordase"],
+      "nosotros": ["recordáramos", "recordásemos"],
+      "vosotros": ["recordarais", "recordaseis"],
+      "ellos": ["recordaran", "recordasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he recordado"],
+      "tu": ["has recordado"],
+      "el": ["ha recordado"],
+      "nosotros": ["hemos recordado"],
+      "vosotros": ["habéis recordado"],
+      "ellos": ["han recordado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había recordado"],
+      "tu": ["habías recordado"],
+      "el": ["había recordado"],
+      "nosotros": ["habíamos recordado"],
+      "vosotros": ["habíais recordado"],
+      "ellos": ["habían recordado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré recordado"],
+      "tu": ["habrás recordado"],
+      "el": ["habrá recordado"],
+      "nosotros": ["habremos recordado"],
+      "vosotros": ["habréis recordado"],
+      "ellos": ["habrán recordado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría recordado"],
+      "tu": ["habrías recordado"],
+      "el": ["habría recordado"],
+      "nosotros": ["habríamos recordado"],
+      "vosotros": ["habríais recordado"],
+      "ellos": ["habrían recordado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya recordado"],
+      "tu": ["hayas recordado"],
+      "el": ["haya recordado"],
+      "nosotros": ["hayamos recordado"],
+      "vosotros": ["hayáis recordado"],
+      "ellos": ["hayan recordado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera recordado", "hubiese recordado"],
+      "tu": ["hubieras recordado", "hubieses recordado"],
+      "el": ["hubiera recordado", "hubiese recordado"],
+      "nosotros": ["hubiéramos recordado", "hubiésemos recordado"],
+      "vosotros": ["hubierais recordado", "hubieseis recordado"],
+      "ellos": ["hubieran recordado", "hubiesen recordado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy recordando"],
+      "tu": ["estás recordando"],
+      "el": ["está recordando"],
+      "nosotros": ["estamos recordando"],
+      "vosotros": ["estáis recordando"],
+      "ellos": ["están recordando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["recuerda"],
+      "usted": ["recuerde"],
+      "nosotros": ["recordemos"],
+      "vosotros": ["recordad"],
+      "ustedes": ["recuerden"]
+    },
+    "imperative.negative": {
+      "tu": ["no recuerdes"],
+      "usted": ["no recuerde"],
+      "nosotros": ["no recordemos"],
+      "vosotros": ["no recordéis"],
+      "ustedes": ["no recuerden"]
+    }
+  }
+}

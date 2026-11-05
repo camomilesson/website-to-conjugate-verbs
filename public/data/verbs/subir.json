@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "subir",
+  "infinitive": "subir",
+  "meaning": "to go up",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["subo"],
+      "tu": ["subes"],
+      "el": ["sube"],
+      "nosotros": ["subimos"],
+      "vosotros": ["subís"],
+      "ellos": ["suben"]
+    },
+    "indicative.preterite": {
+      "yo": ["subí"],
+      "tu": ["subiste"],
+      "el": ["subió"],
+      "nosotros": ["subimos"],
+      "vosotros": ["subisteis"],
+      "ellos": ["subieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["subía"],
+      "tu": ["subías"],
+      "el": ["subía"],
+      "nosotros": ["subíamos"],
+      "vosotros": ["subíais"],
+      "ellos": ["subían"]
+    },
+    "indicative.future": {
+      "yo": ["subiré"],
+      "tu": ["subirás"],
+      "el": ["subirá"],
+      "nosotros": ["subiremos"],
+      "vosotros": ["subiréis"],
+      "ellos": ["subirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["subiría"],
+      "tu": ["subirías"],
+      "el": ["subiría"],
+      "nosotros": ["subiríamos"],
+      "vosotros": ["subiríais"],
+      "ellos": ["subirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["suba"],
+      "tu": ["subas"],
+      "el": ["suba"],
+      "nosotros": ["subamos"],
+      "vosotros": ["subáis"],
+      "ellos": ["suban"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["subiera", "subiese"],
+      "tu": ["subieras", "subieses"],
+      "el": ["subiera", "subiese"],
+      "nosotros": ["subiéramos", "subiésemos"],
+      "vosotros": ["subierais", "subieseis"],
+      "ellos": ["subieran", "subiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he subido"],
+      "tu": ["has subido"],
+      "el": ["ha subido"],
+      "nosotros": ["hemos subido"],
+      "vosotros": ["habéis subido"],
+      "ellos": ["han subido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había subido"],
+      "tu": ["habías subido"],
+      "el": ["había subido"],
+      "nosotros": ["habíamos subido"],
+      "vosotros": ["habíais subido"],
+      "ellos": ["habían subido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré subido"],
+      "tu": ["habrás subido"],
+      "el": ["habrá subido"],
+      "nosotros": ["habremos subido"],
+      "vosotros": ["habréis subido"],
+      "ellos": ["habrán subido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría subido"],
+      "tu": ["habrías subido"],
+      "el": ["habría subido"],
+      "nosotros": ["habríamos subido"],
+      "vosotros": ["habríais subido"],
+      "ellos": ["habrían subido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya subido"],
+      "tu": ["hayas subido"],
+      "el": ["haya subido"],
+      "nosotros": ["hayamos subido"],
+      "vosotros": ["hayáis subido"],
+      "ellos": ["hayan subido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera subido", "hubiese subido"],
+      "tu": ["hubieras subido", "hubieses subido"],
+      "el": ["hubiera subido", "hubiese subido"],
+      "nosotros": ["hubiéramos subido", "hubiésemos subido"],
+      "vosotros": ["hubierais subido", "hubieseis subido"],
+      "ellos": ["hubieran subido", "hubiesen subido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy subiendo"],
+      "tu": ["estás subiendo"],
+      "el": ["está subiendo"],
+      "nosotros": ["estamos subiendo"],
+      "vosotros": ["estáis subiendo"],
+      "ellos": ["están subiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["sube"],
+      "usted": ["suba"],
+      "nosotros": ["subamos"],
+      "vosotros": ["subid"],
+      "ustedes": ["suban"]
+    },
+    "imperative.negative": {
+      "tu": ["no subas"],
+      "usted": ["no suba"],
+      "nosotros": ["no subamos"],
+      "vosotros": ["no subáis"],
+      "ustedes": ["no suban"]
+    }
+  }
+}

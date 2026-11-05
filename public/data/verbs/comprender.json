@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "comprender",
+  "infinitive": "comprender",
+  "meaning": "to understand",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["comprendo"],
+      "tu": ["comprendes"],
+      "el": ["comprende"],
+      "nosotros": ["comprendemos"],
+      "vosotros": ["comprendéis"],
+      "ellos": ["comprenden"]
+    },
+    "indicative.preterite": {
+      "yo": ["comprendí"],
+      "tu": ["comprendiste"],
+      "el": ["comprendió"],
+      "nosotros": ["comprendimos"],
+      "vosotros": ["comprendisteis"],
+      "ellos": ["comprendieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["comprendía"],
+      "tu": ["comprendías"],
+      "el": ["comprendía"],
+      "nosotros": ["comprendíamos"],
+      "vosotros": ["comprendíais"],
+      "ellos": ["comprendían"]
+    },
+    "indicative.future": {
+      "yo": ["comprenderé"],
+      "tu": ["comprenderás"],
+      "el": ["comprenderá"],
+      "nosotros": ["comprenderemos"],
+      "vosotros": ["comprenderéis"],
+      "ellos": ["comprenderán"]
+    },
+    "indicative.conditional": {
+      "yo": ["comprendería"],
+      "tu": ["comprenderías"],
+      "el": ["comprendería"],
+      "nosotros": ["comprenderíamos"],
+      "vosotros": ["comprenderíais"],
+      "ellos": ["comprenderían"]
+    },
+    "subjunctive.present": {
+      "yo": ["comprenda"],
+      "tu": ["comprendas"],
+      "el": ["comprenda"],
+      "nosotros": ["comprendamos"],
+      "vosotros": ["comprendáis"],
+      "ellos": ["comprendan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["comprendiera", "comprendiese"],
+      "tu": ["comprendieras", "comprendieses"],
+      "el": ["comprendiera", "comprendiese"],
+      "nosotros": ["comprendiéramos", "comprendiésemos"],
+      "vosotros": ["comprendierais", "comprendieseis"],
+      "ellos": ["comprendieran", "comprendiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he comprendido"],
+      "tu": ["has comprendido"],
+      "el": ["ha comprendido"],
+      "nosotros": ["hemos comprendido"],
+      "vosotros": ["habéis comprendido"],
+      "ellos": ["han comprendido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había comprendido"],
+      "tu": ["habías comprendido"],
+      "el": ["había comprendido"],
+      "nosotros": ["habíamos comprendido"],
+      "vosotros": ["habíais comprendido"],
+      "ellos": ["habían comprendido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré comprendido"],
+      "tu": ["habrás comprendido"],
+      "el": ["habrá comprendido"],
+      "nosotros": ["habremos comprendido"],
+      "vosotros": ["habréis comprendido"],
+      "ellos": ["habrán comprendido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría comprendido"],
+      "tu": ["habrías comprendido"],
+      "el": ["habría comprendido"],
+      "nosotros": ["habríamos comprendido"],
+      "vosotros": ["habríais comprendido"],
+      "ellos": ["habrían comprendido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya comprendido"],
+      "tu": ["hayas comprendido"],
+      "el": ["haya comprendido"],
+      "nosotros": ["hayamos comprendido"],
+      "vosotros": ["hayáis comprendido"],
+      "ellos": ["hayan comprendido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera comprendido", "hubiese comprendido"],
+      "tu": ["hubieras comprendido", "hubieses comprendido"],
+      "el": ["hubiera comprendido", "hubiese comprendido"],
+      "nosotros": ["hubiéramos comprendido", "hubiésemos comprendido"],
+      "vosotros": ["hubierais comprendido", "hubieseis comprendido"],
+      "ellos": ["hubieran comprendido", "hubiesen comprendido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy comprendiendo"],
+      "tu": ["estás comprendiendo"],
+      "el": ["está comprendiendo"],
+      "nosotros": ["estamos comprendiendo"],
+      "vosotros": ["estáis comprendiendo"],
+      "ellos": ["están comprendiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["comprende"],
+      "usted": ["comprenda"],
+      "nosotros": ["comprendamos"],
+      "vosotros": ["comprended"],
+      "ustedes": ["comprendan"]
+    },
+    "imperative.negative": {
+      "tu": ["no comprendas"],
+      "usted": ["no comprenda"],
+      "nosotros": ["no comprendamos"],
+      "vosotros": ["no comprendáis"],
+      "ustedes": ["no comprendan"]
+    }
+  }
+}

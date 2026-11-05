@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "comenzar",
+  "infinitive": "comenzar",
+  "meaning": "to begin",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["comienzo"],
+      "tu": ["comienzas"],
+      "el": ["comienza"],
+      "nosotros": ["comenzamos"],
+      "vosotros": ["comenzáis"],
+      "ellos": ["comienzan"]
+    },
+    "indicative.preterite": {
+      "yo": ["comencé"],
+      "tu": ["comenzaste"],
+      "el": ["comenzó"],
+      "nosotros": ["comenzamos"],
+      "vosotros": ["comenzasteis"],
+      "ellos": ["comenzaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["comenzaba"],
+      "tu": ["comenzabas"],
+      "el": ["comenzaba"],
+      "nosotros": ["comenzábamos"],
+      "vosotros": ["comenzabais"],
+      "ellos": ["comenzaban"]
+    },
+    "indicative.future": {
+      "yo": ["comenzaré"],
+      "tu": ["comenzarás"],
+      "el": ["comenzará"],
+      "nosotros": ["comenzaremos"],
+      "vosotros": ["comenzaréis"],
+      "ellos": ["comenzarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["comenzaría"],
+      "tu": ["comenzarías"],
+      "el": ["comenzaría"],
+      "nosotros": ["comenzaríamos"],
+      "vosotros": ["comenzaríais"],
+      "ellos": ["comenzarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["comience"],
+      "tu": ["comiences"],
+      "el": ["comience"],
+      "nosotros": ["comencemos"],
+      "vosotros": ["comencéis"],
+      "ellos": ["comiencen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["comenzara", "comenzase"],
+      "tu": ["comenzaras", "comenzases"],
+      "el": ["comenzara", "comenzase"],
+      "nosotros": ["comenzáramos", "comenzásemos"],
+      "vosotros": ["comenzarais", "comenzaseis"],
+      "ellos": ["comenzaran", "comenzasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he comenzado"],
+      "tu": ["has comenzado"],
+      "el": ["ha comenzado"],
+      "nosotros": ["hemos comenzado"],
+      "vosotros": ["habéis comenzado"],
+      "ellos": ["han comenzado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había comenzado"],
+      "tu": ["habías comenzado"],
+      "el": ["había comenzado"],
+      "nosotros": ["habíamos comenzado"],
+      "vosotros": ["habíais comenzado"],
+      "ellos": ["habían comenzado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré comenzado"],
+      "tu": ["habrás comenzado"],
+      "el": ["habrá comenzado"],
+      "nosotros": ["habremos comenzado"],
+      "vosotros": ["habréis comenzado"],
+      "ellos": ["habrán comenzado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría comenzado"],
+      "tu": ["habrías comenzado"],
+      "el": ["habría comenzado"],
+      "nosotros": ["habríamos comenzado"],
+      "vosotros": ["habríais comenzado"],
+      "ellos": ["habrían comenzado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya comenzado"],
+      "tu": ["hayas comenzado"],
+      "el": ["haya comenzado"],
+      "nosotros": ["hayamos comenzado"],
+      "vosotros": ["hayáis comenzado"],
+      "ellos": ["hayan comenzado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera comenzado", "hubiese comenzado"],
+      "tu": ["hubieras comenzado", "hubieses comenzado"],
+      "el": ["hubiera comenzado", "hubiese comenzado"],
+      "nosotros": ["hubiéramos comenzado", "hubiésemos comenzado"],
+      "vosotros": ["hubierais comenzado", "hubieseis comenzado"],
+      "ellos": ["hubieran comenzado", "hubiesen comenzado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy comenzando"],
+      "tu": ["estás comenzando"],
+      "el": ["está comenzando"],
+      "nosotros": ["estamos comenzando"],
+      "vosotros": ["estáis comenzando"],
+      "ellos": ["están comenzando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["comienza"],
+      "usted": ["comience"],
+      "nosotros": ["comencemos"],
+      "vosotros": ["comenzad"],
+      "ustedes": ["comiencen"]
+    },
+    "imperative.negative": {
+      "tu": ["no comiences"],
+      "usted": ["no comience"],
+      "nosotros": ["no comencemos"],
+      "vosotros": ["no comencéis"],
+      "ustedes": ["no comiencen"]
+    }
+  }
+}

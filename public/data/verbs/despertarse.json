@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "despertarse",
+  "infinitive": "despertarse",
+  "meaning": "to wake up",
+  "tags": ["reflexive", "irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me despierto"],
+      "tu": ["te despiertas"],
+      "el": ["se despierta"],
+      "nosotros": ["nos despertamos"],
+      "vosotros": ["os despertáis"],
+      "ellos": ["se despiertan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me desperté"],
+      "tu": ["te despertaste"],
+      "el": ["se despertó"],
+      "nosotros": ["nos despertamos"],
+      "vosotros": ["os despertasteis"],
+      "ellos": ["se despertaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me despertaba"],
+      "tu": ["te despertabas"],
+      "el": ["se despertaba"],
+      "nosotros": ["nos despertábamos"],
+      "vosotros": ["os despertabais"],
+      "ellos": ["se despertaban"]
+    },
+    "indicative.future": {
+      "yo": ["me despertaré"],
+      "tu": ["te despertarás"],
+      "el": ["se despertará"],
+      "nosotros": ["nos despertaremos"],
+      "vosotros": ["os despertaréis"],
+      "ellos": ["se despertarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me despertaría"],
+      "tu": ["te despertarías"],
+      "el": ["se despertaría"],
+      "nosotros": ["nos despertaríamos"],
+      "vosotros": ["os despertaríais"],
+      "ellos": ["se despertarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me despierte"],
+      "tu": ["te despiertes"],
+      "el": ["se despierte"],
+      "nosotros": ["nos despertemos"],
+      "vosotros": ["os despertéis"],
+      "ellos": ["se despierten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me despertara", "me despertase"],
+      "tu": ["te despertaras", "te despertases"],
+      "el": ["se despertara", "se despertase"],
+      "nosotros": ["nos despertáramos", "nos despertásemos"],
+      "vosotros": ["os despertarais", "os despertaseis"],
+      "ellos": ["se despertaran", "se despertasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he despertado"],
+      "tu": ["te has despertado"],
+      "el": ["se ha despertado"],
+      "nosotros": ["nos hemos despertado"],
+      "vosotros": ["os habéis despertado"],
+      "ellos": ["se han despertado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había despertado"],
+      "tu": ["te habías despertado"],
+      "el": ["se había despertado"],
+      "nosotros": ["nos habíamos despertado"],
+      "vosotros": ["os habíais despertado"],
+      "ellos": ["se habían despertado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré despertado"],
+      "tu": ["te habrás despertado"],
+      "el": ["se habrá despertado"],
+      "nosotros": ["nos habremos despertado"],
+      "vosotros": ["os habréis despertado"],
+      "ellos": ["se habrán despertado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría despertado"],
+      "tu": ["te habrías despertado"],
+      "el": ["se habría despertado"],
+      "nosotros": ["nos habríamos despertado"],
+      "vosotros": ["os habríais despertado"],
+      "ellos": ["se habrían despertado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya despertado"],
+      "tu": ["te hayas despertado"],
+      "el": ["se haya despertado"],
+      "nosotros": ["nos hayamos despertado"],
+      "vosotros": ["os hayáis despertado"],
+      "ellos": ["se hayan despertado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera despertado", "me hubiese despertado"],
+      "tu": ["te hubieras despertado", "te hubieses despertado"],
+      "el": ["se hubiera despertado", "se hubiese despertado"],
+      "nosotros": ["nos hubiéramos despertado", "nos hubiésemos despertado"],
+      "vosotros": ["os hubierais despertado", "os hubieseis despertado"],
+      "ellos": ["se hubieran despertado", "se hubiesen despertado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy despertando", "estoy despertándome"],
+      "tu": ["te estás despertando", "estás despertándote"],
+      "el": ["se está despertando", "está despertándose"],
+      "nosotros": ["nos estamos despertando", "estamos despertándonos"],
+      "vosotros": ["os estáis despertando", "estáis despertándoos"],
+      "ellos": ["se están despertando", "están despertándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["despiértate"],
+      "usted": ["despiértese"],
+      "nosotros": ["despertémonos"],
+      "vosotros": ["despertaos"],
+      "ustedes": ["despiértense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te despiertes"],
+      "usted": ["no se despierte"],
+      "nosotros": ["no nos despertemos"],
+      "vosotros": ["no os despertéis"],
+      "ustedes": ["no se despierten"]
+    }
+  }
+}

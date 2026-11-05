@@ -1,3 +1,4 @@
+import { AccountControls } from "../auth/ui.ts"
 import { useState } from "react"
 import {
   PreferenceFields,
@@ -5,17 +6,46 @@ import {
 } from "../practice-preferences/ui.ts"
 import {
   defaultPreferences,
-  savePreferences,
   validPreferences,
 } from "../practice-preferences/index.ts"
 
 export function Settings() {
-  const { catalogue, preferences, setPreferences, notice, error, retry } =
-    usePreferenceDraft()
+  const {
+    catalogue,
+    preferences,
+    setPreferences,
+    notice,
+    error,
+    retry,
+    save,
+    isAccount,
+  } = usePreferenceDraft()
   const [status, setStatus] = useState<{
     text: string
     failed: boolean
   } | null>(null)
+  const [saving, setSaving] = useState(false)
+  async function saveCurrent() {
+    if (!preferences || saving) return
+    setSaving(true)
+    try {
+      const failure = await save(structuredClone(preferences))
+      setStatus({
+        text: failure ?? "Preferences saved for your next practice.",
+        failed: failure !== null,
+      })
+    } catch (reason: unknown) {
+      setStatus({
+        text:
+          reason instanceof Error
+            ? reason.message
+            : "Could not save preferences.",
+        failed: true,
+      })
+    } finally {
+      setSaving(false)
+    }
+  }
   return (
     <section
       className="page-section setup-page"
@@ -23,8 +53,10 @@ export function Settings() {
     >
       <h1 id="settings-title">Settings</h1>
       <p className="field-note">
-        Defaults for your next practice. Stored in this browser.
+        Defaults for your next practice.{" "}
+        {isAccount ? "Synced to your account." : "Stored in this browser."}
       </p>
+      <AccountControls />
       {error ? (
         <div role="alert">
           <p>{error}</p>
@@ -35,6 +67,7 @@ export function Settings() {
       ) : (
         <>
           <PreferenceFields
+            disabled={saving}
             catalogue={catalogue}
             value={preferences}
             onChange={(update) => {
@@ -56,18 +89,15 @@ export function Settings() {
           <div className="selection-actions">
             <button
               className="primary-button"
-              disabled={!validPreferences(preferences)}
+              disabled={saving || !validPreferences(preferences)}
               onClick={() => {
-                const failure = savePreferences(preferences)
-                setStatus({
-                  text: failure ?? "Preferences saved for your next practice.",
-                  failed: failure !== null,
-                })
+                void saveCurrent()
               }}
             >
-              Save preferences
+              {saving ? "Saving…" : "Save preferences"}
             </button>
             <button
+              disabled={saving}
               onClick={() => {
                 setPreferences(defaultPreferences(catalogue))
                 setStatus({
@@ -86,9 +116,6 @@ export function Settings() {
             Starting a practice saves that setup as your new defaults. Changes
             here take effect after Save preferences. Answers and unfinished
             tests are never saved.
-          </p>
-          <p className="field-note">
-            Google sign-in and account controls are coming later.
           </p>
         </>
       )}

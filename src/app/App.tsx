@@ -1,3 +1,4 @@
+import { useAuth } from "../modules/auth/ui.ts"
 import { useEffect, useRef } from "react"
 import { NavLink, Navigate, Route, Routes, useLocation } from "react-router"
 import { Practice } from "../modules/practice/index.ts"
@@ -8,6 +9,7 @@ import { Settings } from "../modules/settings/index.ts"
 const sections = ["Practice", "Progress", "History", "Settings"]
 
 export function App() {
+  const { identityKey } = useAuth()
   const location = useLocation()
   const main = useRef<HTMLElement>(null)
   const previousPath = useRef(location.pathname)
@@ -51,10 +53,10 @@ export function App() {
       </header>
       <main id="main" ref={main} tabIndex={-1}>
         <Routes>
-          <Route path="/practice" element={<Practice />} />
+          <Route path="/practice" element={<Practice key={identityKey} />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/history" element={<History />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/settings" element={<Settings key={identityKey} />} />
           <Route path="*" element={<Navigate to="/practice" replace />} />
         </Routes>
       </main>

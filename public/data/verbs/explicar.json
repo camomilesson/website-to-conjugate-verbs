@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "explicar",
+  "infinitive": "explicar",
+  "meaning": "to explain",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["explico"],
+      "tu": ["explicas"],
+      "el": ["explica"],
+      "nosotros": ["explicamos"],
+      "vosotros": ["explicáis"],
+      "ellos": ["explican"]
+    },
+    "indicative.preterite": {
+      "yo": ["expliqué"],
+      "tu": ["explicaste"],
+      "el": ["explicó"],
+      "nosotros": ["explicamos"],
+      "vosotros": ["explicasteis"],
+      "ellos": ["explicaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["explicaba"],
+      "tu": ["explicabas"],
+      "el": ["explicaba"],
+      "nosotros": ["explicábamos"],
+      "vosotros": ["explicabais"],
+      "ellos": ["explicaban"]
+    },
+    "indicative.future": {
+      "yo": ["explicaré"],
+      "tu": ["explicarás"],
+      "el": ["explicará"],
+      "nosotros": ["explicaremos"],
+      "vosotros": ["explicaréis"],
+      "ellos": ["explicarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["explicaría"],
+      "tu": ["explicarías"],
+      "el": ["explicaría"],
+      "nosotros": ["explicaríamos"],
+      "vosotros": ["explicaríais"],
+      "ellos": ["explicarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["explique"],
+      "tu": ["expliques"],
+      "el": ["explique"],
+      "nosotros": ["expliquemos"],
+      "vosotros": ["expliquéis"],
+      "ellos": ["expliquen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["explicara", "explicase"],
+      "tu": ["explicaras", "explicases"],
+      "el": ["explicara", "explicase"],
+      "nosotros": ["explicáramos", "explicásemos"],
+      "vosotros": ["explicarais", "explicaseis"],
+      "ellos": ["explicaran", "explicasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he explicado"],
+      "tu": ["has explicado"],
+      "el": ["ha explicado"],
+      "nosotros": ["hemos explicado"],
+      "vosotros": ["habéis explicado"],
+      "ellos": ["han explicado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había explicado"],
+      "tu": ["habías explicado"],
+      "el": ["había explicado"],
+      "nosotros": ["habíamos explicado"],
+      "vosotros": ["habíais explicado"],
+      "ellos": ["habían explicado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré explicado"],
+      "tu": ["habrás explicado"],
+      "el": ["habrá explicado"],
+      "nosotros": ["habremos explicado"],
+      "vosotros": ["habréis explicado"],
+      "ellos": ["habrán explicado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría explicado"],
+      "tu": ["habrías explicado"],
+      "el": ["habría explicado"],
+      "nosotros": ["habríamos explicado"],
+      "vosotros": ["habríais explicado"],
+      "ellos": ["habrían explicado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya explicado"],
+      "tu": ["hayas explicado"],
+      "el": ["haya explicado"],
+      "nosotros": ["hayamos explicado"],
+      "vosotros": ["hayáis explicado"],
+      "ellos": ["hayan explicado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera explicado", "hubiese explicado"],
+      "tu": ["hubieras explicado", "hubieses explicado"],
+      "el": ["hubiera explicado", "hubiese explicado"],
+      "nosotros": ["hubiéramos explicado", "hubiésemos explicado"],
+      "vosotros": ["hubierais explicado", "hubieseis explicado"],
+      "ellos": ["hubieran explicado", "hubiesen explicado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy explicando"],
+      "tu": ["estás explicando"],
+      "el": ["está explicando"],
+      "nosotros": ["estamos explicando"],
+      "vosotros": ["estáis explicando"],
+      "ellos": ["están explicando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["explica"],
+      "usted": ["explique"],
+      "nosotros": ["expliquemos"],
+      "vosotros": ["explicad"],
+      "ustedes": ["expliquen"]
+    },
+    "imperative.negative": {
+      "tu": ["no expliques"],
+      "usted": ["no explique"],
+      "nosotros": ["no expliquemos"],
+      "vosotros": ["no expliquéis"],
+      "ustedes": ["no expliquen"]
+    }
+  }
+}

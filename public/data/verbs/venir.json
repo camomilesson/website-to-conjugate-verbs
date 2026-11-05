@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "venir",
+  "infinitive": "venir",
+  "meaning": "to come",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["vengo"],
+      "tu": ["vienes"],
+      "el": ["viene"],
+      "nosotros": ["venimos"],
+      "vosotros": ["venís"],
+      "ellos": ["vienen"]
+    },
+    "indicative.preterite": {
+      "yo": ["vine"],
+      "tu": ["viniste"],
+      "el": ["vino"],
+      "nosotros": ["vinimos"],
+      "vosotros": ["vinisteis"],
+      "ellos": ["vinieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["venía"],
+      "tu": ["venías"],
+      "el": ["venía"],
+      "nosotros": ["veníamos"],
+      "vosotros": ["veníais"],
+      "ellos": ["venían"]
+    },
+    "indicative.future": {
+      "yo": ["vendré"],
+      "tu": ["vendrás"],
+      "el": ["vendrá"],
+      "nosotros": ["vendremos"],
+      "vosotros": ["vendréis"],
+      "ellos": ["vendrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["vendría"],
+      "tu": ["vendrías"],
+      "el": ["vendría"],
+      "nosotros": ["vendríamos"],
+      "vosotros": ["vendríais"],
+      "ellos": ["vendrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["venga"],
+      "tu": ["vengas"],
+      "el": ["venga"],
+      "nosotros": ["vengamos"],
+      "vosotros": ["vengáis"],
+      "ellos": ["vengan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["viniera", "viniese"],
+      "tu": ["vinieras", "vinieses"],
+      "el": ["viniera", "viniese"],
+      "nosotros": ["viniéramos", "viniésemos"],
+      "vosotros": ["vinierais", "vinieseis"],
+      "ellos": ["vinieran", "viniesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he venido"],
+      "tu": ["has venido"],
+      "el": ["ha venido"],
+      "nosotros": ["hemos venido"],
+      "vosotros": ["habéis venido"],
+      "ellos": ["han venido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había venido"],
+      "tu": ["habías venido"],
+      "el": ["había venido"],
+      "nosotros": ["habíamos venido"],
+      "vosotros": ["habíais venido"],
+      "ellos": ["habían venido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré venido"],
+      "tu": ["habrás venido"],
+      "el": ["habrá venido"],
+      "nosotros": ["habremos venido"],
+      "vosotros": ["habréis venido"],
+      "ellos": ["habrán venido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría venido"],
+      "tu": ["habrías venido"],
+      "el": ["habría venido"],
+      "nosotros": ["habríamos venido"],
+      "vosotros": ["habríais venido"],
+      "ellos": ["habrían venido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya venido"],
+      "tu": ["hayas venido"],
+      "el": ["haya venido"],
+      "nosotros": ["hayamos venido"],
+      "vosotros": ["hayáis venido"],
+      "ellos": ["hayan venido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera venido", "hubiese venido"],
+      "tu": ["hubieras venido", "hubieses venido"],
+      "el": ["hubiera venido", "hubiese venido"],
+      "nosotros": ["hubiéramos venido", "hubiésemos venido"],
+      "vosotros": ["hubierais venido", "hubieseis venido"],
+      "ellos": ["hubieran venido", "hubiesen venido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy viniendo"],
+      "tu": ["estás viniendo"],
+      "el": ["está viniendo"],
+      "nosotros": ["estamos viniendo"],
+      "vosotros": ["estáis viniendo"],
+      "ellos": ["están viniendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ven"],
+      "usted": ["venga"],
+      "nosotros": ["vengamos"],
+      "vosotros": ["venid"],
+      "ustedes": ["vengan"]
+    },
+    "imperative.negative": {
+      "tu": ["no vengas"],
+      "usted": ["no venga"],
+      "nosotros": ["no vengamos"],
+      "vosotros": ["no vengáis"],
+      "ustedes": ["no vengan"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "irse",
+  "infinitive": "irse",
+  "meaning": "to leave",
+  "tags": ["reflexive", "irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me voy"],
+      "tu": ["te vas"],
+      "el": ["se va"],
+      "nosotros": ["nos vamos"],
+      "vosotros": ["os vais"],
+      "ellos": ["se van"]
+    },
+    "indicative.preterite": {
+      "yo": ["me fui"],
+      "tu": ["te fuiste"],
+      "el": ["se fue"],
+      "nosotros": ["nos fuimos"],
+      "vosotros": ["os fuisteis"],
+      "ellos": ["se fueron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me iba"],
+      "tu": ["te ibas"],
+      "el": ["se iba"],
+      "nosotros": ["nos íbamos"],
+      "vosotros": ["os ibais"],
+      "ellos": ["se iban"]
+    },
+    "indicative.future": {
+      "yo": ["me iré"],
+      "tu": ["te irás"],
+      "el": ["se irá"],
+      "nosotros": ["nos iremos"],
+      "vosotros": ["os iréis"],
+      "ellos": ["se irán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me iría"],
+      "tu": ["te irías"],
+      "el": ["se iría"],
+      "nosotros": ["nos iríamos"],
+      "vosotros": ["os iríais"],
+      "ellos": ["se irían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me vaya"],
+      "tu": ["te vayas"],
+      "el": ["se vaya"],
+      "nosotros": ["nos vayamos"],
+      "vosotros": ["os vayáis"],
+      "ellos": ["se vayan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me fuera", "me fuese"],
+      "tu": ["te fueras", "te fueses"],
+      "el": ["se fuera", "se fuese"],
+      "nosotros": ["nos fuéramos", "nos fuésemos"],
+      "vosotros": ["os fuerais", "os fueseis"],
+      "ellos": ["se fueran", "se fuesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he ido"],
+      "tu": ["te has ido"],
+      "el": ["se ha ido"],
+      "nosotros": ["nos hemos ido"],
+      "vosotros": ["os habéis ido"],
+      "ellos": ["se han ido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había ido"],
+      "tu": ["te habías ido"],
+      "el": ["se había ido"],
+      "nosotros": ["nos habíamos ido"],
+      "vosotros": ["os habíais ido"],
+      "ellos": ["se habían ido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré ido"],
+      "tu": ["te habrás ido"],
+      "el": ["se habrá ido"],
+      "nosotros": ["nos habremos ido"],
+      "vosotros": ["os habréis ido"],
+      "ellos": ["se habrán ido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría ido"],
+      "tu": ["te habrías ido"],
+      "el": ["se habría ido"],
+      "nosotros": ["nos habríamos ido"],
+      "vosotros": ["os habríais ido"],
+      "ellos": ["se habrían ido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya ido"],
+      "tu": ["te hayas ido"],
+      "el": ["se haya ido"],
+      "nosotros": ["nos hayamos ido"],
+      "vosotros": ["os hayáis ido"],
+      "ellos": ["se hayan ido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera ido", "me hubiese ido"],
+      "tu": ["te hubieras ido", "te hubieses ido"],
+      "el": ["se hubiera ido", "se hubiese ido"],
+      "nosotros": ["nos hubiéramos ido", "nos hubiésemos ido"],
+      "vosotros": ["os hubierais ido", "os hubieseis ido"],
+      "ellos": ["se hubieran ido", "se hubiesen ido"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy yendo", "estoy yéndome"],
+      "tu": ["te estás yendo", "estás yéndote"],
+      "el": ["se está yendo", "está yéndose"],
+      "nosotros": ["nos estamos yendo", "estamos yéndonos"],
+      "vosotros": ["os estáis yendo", "estáis yéndoos"],
+      "ellos": ["se están yendo", "están yéndose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["vete"],
+      "usted": ["váyase"],
+      "nosotros": ["vámonos", "vayámonos"],
+      "vosotros": ["idos", "iros"],
+      "ustedes": ["váyanse"]
+    },
+    "imperative.negative": {
+      "tu": ["no te vayas"],
+      "usted": ["no se vaya"],
+      "nosotros": ["no nos vayamos"],
+      "vosotros": ["no os vayáis"],
+      "ustedes": ["no se vayan"]
+    }
+  }
+}

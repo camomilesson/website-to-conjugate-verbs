@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "jugar",
+  "infinitive": "jugar",
+  "meaning": "to play",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["juego"],
+      "tu": ["juegas"],
+      "el": ["juega"],
+      "nosotros": ["jugamos"],
+      "vosotros": ["jugáis"],
+      "ellos": ["juegan"]
+    },
+    "indicative.preterite": {
+      "yo": ["jugué"],
+      "tu": ["jugaste"],
+      "el": ["jugó"],
+      "nosotros": ["jugamos"],
+      "vosotros": ["jugasteis"],
+      "ellos": ["jugaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["jugaba"],
+      "tu": ["jugabas"],
+      "el": ["jugaba"],
+      "nosotros": ["jugábamos"],
+      "vosotros": ["jugabais"],
+      "ellos": ["jugaban"]
+    },
+    "indicative.future": {
+      "yo": ["jugaré"],
+      "tu": ["jugarás"],
+      "el": ["jugará"],
+      "nosotros": ["jugaremos"],
+      "vosotros": ["jugaréis"],
+      "ellos": ["jugarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["jugaría"],
+      "tu": ["jugarías"],
+      "el": ["jugaría"],
+      "nosotros": ["jugaríamos"],
+      "vosotros": ["jugaríais"],
+      "ellos": ["jugarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["juegue"],
+      "tu": ["juegues"],
+      "el": ["juegue"],
+      "nosotros": ["juguemos"],
+      "vosotros": ["juguéis"],
+      "ellos": ["jueguen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["jugara", "jugase"],
+      "tu": ["jugaras", "jugases"],
+      "el": ["jugara", "jugase"],
+      "nosotros": ["jugáramos", "jugásemos"],
+      "vosotros": ["jugarais", "jugaseis"],
+      "ellos": ["jugaran", "jugasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he jugado"],
+      "tu": ["has jugado"],
+      "el": ["ha jugado"],
+      "nosotros": ["hemos jugado"],
+      "vosotros": ["habéis jugado"],
+      "ellos": ["han jugado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había jugado"],
+      "tu": ["habías jugado"],
+      "el": ["había jugado"],
+      "nosotros": ["habíamos jugado"],
+      "vosotros": ["habíais jugado"],
+      "ellos": ["habían jugado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré jugado"],
+      "tu": ["habrás jugado"],
+      "el": ["habrá jugado"],
+      "nosotros": ["habremos jugado"],
+      "vosotros": ["habréis jugado"],
+      "ellos": ["habrán jugado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría jugado"],
+      "tu": ["habrías jugado"],
+      "el": ["habría jugado"],
+      "nosotros": ["habríamos jugado"],
+      "vosotros": ["habríais jugado"],
+      "ellos": ["habrían jugado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya jugado"],
+      "tu": ["hayas jugado"],
+      "el": ["haya jugado"],
+      "nosotros": ["hayamos jugado"],
+      "vosotros": ["hayáis jugado"],
+      "ellos": ["hayan jugado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera jugado", "hubiese jugado"],
+      "tu": ["hubieras jugado", "hubieses jugado"],
+      "el": ["hubiera jugado", "hubiese jugado"],
+      "nosotros": ["hubiéramos jugado", "hubiésemos jugado"],
+      "vosotros": ["hubierais jugado", "hubieseis jugado"],
+      "ellos": ["hubieran jugado", "hubiesen jugado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy jugando"],
+      "tu": ["estás jugando"],
+      "el": ["está jugando"],
+      "nosotros": ["estamos jugando"],
+      "vosotros": ["estáis jugando"],
+      "ellos": ["están jugando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["juega"],
+      "usted": ["juegue"],
+      "nosotros": ["juguemos"],
+      "vosotros": ["jugad"],
+      "ustedes": ["jueguen"]
+    },
+    "imperative.negative": {
+      "tu": ["no juegues"],
+      "usted": ["no juegue"],
+      "nosotros": ["no juguemos"],
+      "vosotros": ["no juguéis"],
+      "ustedes": ["no jueguen"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "caer",
+  "infinitive": "caer",
+  "meaning": "to fall",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["caigo"],
+      "tu": ["caes"],
+      "el": ["cae"],
+      "nosotros": ["caemos"],
+      "vosotros": ["caéis"],
+      "ellos": ["caen"]
+    },
+    "indicative.preterite": {
+      "yo": ["caí"],
+      "tu": ["caíste"],
+      "el": ["cayó"],
+      "nosotros": ["caímos"],
+      "vosotros": ["caísteis"],
+      "ellos": ["cayeron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["caía"],
+      "tu": ["caías"],
+      "el": ["caía"],
+      "nosotros": ["caíamos"],
+      "vosotros": ["caíais"],
+      "ellos": ["caían"]
+    },
+    "indicative.future": {
+      "yo": ["caeré"],
+      "tu": ["caerás"],
+      "el": ["caerá"],
+      "nosotros": ["caeremos"],
+      "vosotros": ["caeréis"],
+      "ellos": ["caerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["caería"],
+      "tu": ["caerías"],
+      "el": ["caería"],
+      "nosotros": ["caeríamos"],
+      "vosotros": ["caeríais"],
+      "ellos": ["caerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["caiga"],
+      "tu": ["caigas"],
+      "el": ["caiga"],
+      "nosotros": ["caigamos"],
+      "vosotros": ["caigáis"],
+      "ellos": ["caigan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["cayera", "cayese"],
+      "tu": ["cayeras", "cayeses"],
+      "el": ["cayera", "cayese"],
+      "nosotros": ["cayéramos", "cayésemos"],
+      "vosotros": ["cayerais", "cayeseis"],
+      "ellos": ["cayeran", "cayesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he caído"],
+      "tu": ["has caído"],
+      "el": ["ha caído"],
+      "nosotros": ["hemos caído"],
+      "vosotros": ["habéis caído"],
+      "ellos": ["han caído"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había caído"],
+      "tu": ["habías caído"],
+      "el": ["había caído"],
+      "nosotros": ["habíamos caído"],
+      "vosotros": ["habíais caído"],
+      "ellos": ["habían caído"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré caído"],
+      "tu": ["habrás caído"],
+      "el": ["habrá caído"],
+      "nosotros": ["habremos caído"],
+      "vosotros": ["habréis caído"],
+      "ellos": ["habrán caído"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría caído"],
+      "tu": ["habrías caído"],
+      "el": ["habría caído"],
+      "nosotros": ["habríamos caído"],
+      "vosotros": ["habríais caído"],
+      "ellos": ["habrían caído"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya caído"],
+      "tu": ["hayas caído"],
+      "el": ["haya caído"],
+      "nosotros": ["hayamos caído"],
+      "vosotros": ["hayáis caído"],
+      "ellos": ["hayan caído"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera caído", "hubiese caído"],
+      "tu": ["hubieras caído", "hubieses caído"],
+      "el": ["hubiera caído", "hubiese caído"],
+      "nosotros": ["hubiéramos caído", "hubiésemos caído"],
+      "vosotros": ["hubierais caído", "hubieseis caído"],
+      "ellos": ["hubieran caído", "hubiesen caído"]
+    },
+    "progressive.present": {
+      "yo": ["estoy cayendo"],
+      "tu": ["estás cayendo"],
+      "el": ["está cayendo"],
+      "nosotros": ["estamos cayendo"],
+      "vosotros": ["estáis cayendo"],
+      "ellos": ["están cayendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["cae"],
+      "usted": ["caiga"],
+      "nosotros": ["caigamos"],
+      "vosotros": ["caed"],
+      "ustedes": ["caigan"]
+    },
+    "imperative.negative": {
+      "tu": ["no caigas"],
+      "usted": ["no caiga"],
+      "nosotros": ["no caigamos"],
+      "vosotros": ["no caigáis"],
+      "ustedes": ["no caigan"]
+    }
+  }
+}

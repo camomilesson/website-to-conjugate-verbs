@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "responder",
+  "infinitive": "responder",
+  "meaning": "to answer",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["respondo"],
+      "tu": ["respondes"],
+      "el": ["responde"],
+      "nosotros": ["respondemos"],
+      "vosotros": ["respondéis"],
+      "ellos": ["responden"]
+    },
+    "indicative.preterite": {
+      "yo": ["respondí"],
+      "tu": ["respondiste"],
+      "el": ["respondió"],
+      "nosotros": ["respondimos"],
+      "vosotros": ["respondisteis"],
+      "ellos": ["respondieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["respondía"],
+      "tu": ["respondías"],
+      "el": ["respondía"],
+      "nosotros": ["respondíamos"],
+      "vosotros": ["respondíais"],
+      "ellos": ["respondían"]
+    },
+    "indicative.future": {
+      "yo": ["responderé"],
+      "tu": ["responderás"],
+      "el": ["responderá"],
+      "nosotros": ["responderemos"],
+      "vosotros": ["responderéis"],
+      "ellos": ["responderán"]
+    },
+    "indicative.conditional": {
+      "yo": ["respondería"],
+      "tu": ["responderías"],
+      "el": ["respondería"],
+      "nosotros": ["responderíamos"],
+      "vosotros": ["responderíais"],
+      "ellos": ["responderían"]
+    },
+    "subjunctive.present": {
+      "yo": ["responda"],
+      "tu": ["respondas"],
+      "el": ["responda"],
+      "nosotros": ["respondamos"],
+      "vosotros": ["respondáis"],
+      "ellos": ["respondan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["respondiera", "respondiese"],
+      "tu": ["respondieras", "respondieses"],
+      "el": ["respondiera", "respondiese"],
+      "nosotros": ["respondiéramos", "respondiésemos"],
+      "vosotros": ["respondierais", "respondieseis"],
+      "ellos": ["respondieran", "respondiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he respondido"],
+      "tu": ["has respondido"],
+      "el": ["ha respondido"],
+      "nosotros": ["hemos respondido"],
+      "vosotros": ["habéis respondido"],
+      "ellos": ["han respondido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había respondido"],
+      "tu": ["habías respondido"],
+      "el": ["había respondido"],
+      "nosotros": ["habíamos respondido"],
+      "vosotros": ["habíais respondido"],
+      "ellos": ["habían respondido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré respondido"],
+      "tu": ["habrás respondido"],
+      "el": ["habrá respondido"],
+      "nosotros": ["habremos respondido"],
+      "vosotros": ["habréis respondido"],
+      "ellos": ["habrán respondido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría respondido"],
+      "tu": ["habrías respondido"],
+      "el": ["habría respondido"],
+      "nosotros": ["habríamos respondido"],
+      "vosotros": ["habríais respondido"],
+      "ellos": ["habrían respondido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya respondido"],
+      "tu": ["hayas respondido"],
+      "el": ["haya respondido"],
+      "nosotros": ["hayamos respondido"],
+      "vosotros": ["hayáis respondido"],
+      "ellos": ["hayan respondido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera respondido", "hubiese respondido"],
+      "tu": ["hubieras respondido", "hubieses respondido"],
+      "el": ["hubiera respondido", "hubiese respondido"],
+      "nosotros": ["hubiéramos respondido", "hubiésemos respondido"],
+      "vosotros": ["hubierais respondido", "hubieseis respondido"],
+      "ellos": ["hubieran respondido", "hubiesen respondido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy respondiendo"],
+      "tu": ["estás respondiendo"],
+      "el": ["está respondiendo"],
+      "nosotros": ["estamos respondiendo"],
+      "vosotros": ["estáis respondiendo"],
+      "ellos": ["están respondiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["responde"],
+      "usted": ["responda"],
+      "nosotros": ["respondamos"],
+      "vosotros": ["responded"],
+      "ustedes": ["respondan"]
+    },
+    "imperative.negative": {
+      "tu": ["no respondas"],
+      "usted": ["no responda"],
+      "nosotros": ["no respondamos"],
+      "vosotros": ["no respondáis"],
+      "ustedes": ["no respondan"]
+    }
+  }
+}

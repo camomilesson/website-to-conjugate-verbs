@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "querer",
+  "infinitive": "querer",
+  "meaning": "to want",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["quiero"],
+      "tu": ["quieres"],
+      "el": ["quiere"],
+      "nosotros": ["queremos"],
+      "vosotros": ["queréis"],
+      "ellos": ["quieren"]
+    },
+    "indicative.preterite": {
+      "yo": ["quise"],
+      "tu": ["quisiste"],
+      "el": ["quiso"],
+      "nosotros": ["quisimos"],
+      "vosotros": ["quisisteis"],
+      "ellos": ["quisieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["quería"],
+      "tu": ["querías"],
+      "el": ["quería"],
+      "nosotros": ["queríamos"],
+      "vosotros": ["queríais"],
+      "ellos": ["querían"]
+    },
+    "indicative.future": {
+      "yo": ["querré"],
+      "tu": ["querrás"],
+      "el": ["querrá"],
+      "nosotros": ["querremos"],
+      "vosotros": ["querréis"],
+      "ellos": ["querrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["querría"],
+      "tu": ["querrías"],
+      "el": ["querría"],
+      "nosotros": ["querríamos"],
+      "vosotros": ["querríais"],
+      "ellos": ["querrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["quiera"],
+      "tu": ["quieras"],
+      "el": ["quiera"],
+      "nosotros": ["queramos"],
+      "vosotros": ["queráis"],
+      "ellos": ["quieran"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["quisiera", "quisiese"],
+      "tu": ["quisieras", "quisieses"],
+      "el": ["quisiera", "quisiese"],
+      "nosotros": ["quisiéramos", "quisiésemos"],
+      "vosotros": ["quisierais", "quisieseis"],
+      "ellos": ["quisieran", "quisiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he querido"],
+      "tu": ["has querido"],
+      "el": ["ha querido"],
+      "nosotros": ["hemos querido"],
+      "vosotros": ["habéis querido"],
+      "ellos": ["han querido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había querido"],
+      "tu": ["habías querido"],
+      "el": ["había querido"],
+      "nosotros": ["habíamos querido"],
+      "vosotros": ["habíais querido"],
+      "ellos": ["habían querido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré querido"],
+      "tu": ["habrás querido"],
+      "el": ["habrá querido"],
+      "nosotros": ["habremos querido"],
+      "vosotros": ["habréis querido"],
+      "ellos": ["habrán querido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría querido"],
+      "tu": ["habrías querido"],
+      "el": ["habría querido"],
+      "nosotros": ["habríamos querido"],
+      "vosotros": ["habríais querido"],
+      "ellos": ["habrían querido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya querido"],
+      "tu": ["hayas querido"],
+      "el": ["haya querido"],
+      "nosotros": ["hayamos querido"],
+      "vosotros": ["hayáis querido"],
+      "ellos": ["hayan querido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera querido", "hubiese querido"],
+      "tu": ["hubieras querido", "hubieses querido"],
+      "el": ["hubiera querido", "hubiese querido"],
+      "nosotros": ["hubiéramos querido", "hubiésemos querido"],
+      "vosotros": ["hubierais querido", "hubieseis querido"],
+      "ellos": ["hubieran querido", "hubiesen querido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy queriendo"],
+      "tu": ["estás queriendo"],
+      "el": ["está queriendo"],
+      "nosotros": ["estamos queriendo"],
+      "vosotros": ["estáis queriendo"],
+      "ellos": ["están queriendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["quiere"],
+      "usted": ["quiera"],
+      "nosotros": ["queramos"],
+      "vosotros": ["quered"],
+      "ustedes": ["quieran"]
+    },
+    "imperative.negative": {
+      "tu": ["no quieras"],
+      "usted": ["no quiera"],
+      "nosotros": ["no queramos"],
+      "vosotros": ["no queráis"],
+      "ustedes": ["no quieran"]
+    }
+  }
+}

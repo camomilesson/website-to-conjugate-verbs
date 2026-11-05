@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "vender",
+  "infinitive": "vender",
+  "meaning": "to sell",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["vendo"],
+      "tu": ["vendes"],
+      "el": ["vende"],
+      "nosotros": ["vendemos"],
+      "vosotros": ["vendéis"],
+      "ellos": ["venden"]
+    },
+    "indicative.preterite": {
+      "yo": ["vendí"],
+      "tu": ["vendiste"],
+      "el": ["vendió"],
+      "nosotros": ["vendimos"],
+      "vosotros": ["vendisteis"],
+      "ellos": ["vendieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["vendía"],
+      "tu": ["vendías"],
+      "el": ["vendía"],
+      "nosotros": ["vendíamos"],
+      "vosotros": ["vendíais"],
+      "ellos": ["vendían"]
+    },
+    "indicative.future": {
+      "yo": ["venderé"],
+      "tu": ["venderás"],
+      "el": ["venderá"],
+      "nosotros": ["venderemos"],
+      "vosotros": ["venderéis"],
+      "ellos": ["venderán"]
+    },
+    "indicative.conditional": {
+      "yo": ["vendería"],
+      "tu": ["venderías"],
+      "el": ["vendería"],
+      "nosotros": ["venderíamos"],
+      "vosotros": ["venderíais"],
+      "ellos": ["venderían"]
+    },
+    "subjunctive.present": {
+      "yo": ["venda"],
+      "tu": ["vendas"],
+      "el": ["venda"],
+      "nosotros": ["vendamos"],
+      "vosotros": ["vendáis"],
+      "ellos": ["vendan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["vendiera", "vendiese"],
+      "tu": ["vendieras", "vendieses"],
+      "el": ["vendiera", "vendiese"],
+      "nosotros": ["vendiéramos", "vendiésemos"],
+      "vosotros": ["vendierais", "vendieseis"],
+      "ellos": ["vendieran", "vendiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he vendido"],
+      "tu": ["has vendido"],
+      "el": ["ha vendido"],
+      "nosotros": ["hemos vendido"],
+      "vosotros": ["habéis vendido"],
+      "ellos": ["han vendido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había vendido"],
+      "tu": ["habías vendido"],
+      "el": ["había vendido"],
+      "nosotros": ["habíamos vendido"],
+      "vosotros": ["habíais vendido"],
+      "ellos": ["habían vendido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré vendido"],
+      "tu": ["habrás vendido"],
+      "el": ["habrá vendido"],
+      "nosotros": ["habremos vendido"],
+      "vosotros": ["habréis vendido"],
+      "ellos": ["habrán vendido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría vendido"],
+      "tu": ["habrías vendido"],
+      "el": ["habría vendido"],
+      "nosotros": ["habríamos vendido"],
+      "vosotros": ["habríais vendido"],
+      "ellos": ["habrían vendido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya vendido"],
+      "tu": ["hayas vendido"],
+      "el": ["haya vendido"],
+      "nosotros": ["hayamos vendido"],
+      "vosotros": ["hayáis vendido"],
+      "ellos": ["hayan vendido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera vendido", "hubiese vendido"],
+      "tu": ["hubieras vendido", "hubieses vendido"],
+      "el": ["hubiera vendido", "hubiese vendido"],
+      "nosotros": ["hubiéramos vendido", "hubiésemos vendido"],
+      "vosotros": ["hubierais vendido", "hubieseis vendido"],
+      "ellos": ["hubieran vendido", "hubiesen vendido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy vendiendo"],
+      "tu": ["estás vendiendo"],
+      "el": ["está vendiendo"],
+      "nosotros": ["estamos vendiendo"],
+      "vosotros": ["estáis vendiendo"],
+      "ellos": ["están vendiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["vende"],
+      "usted": ["venda"],
+      "nosotros": ["vendamos"],
+      "vosotros": ["vended"],
+      "ustedes": ["vendan"]
+    },
+    "imperative.negative": {
+      "tu": ["no vendas"],
+      "usted": ["no venda"],
+      "nosotros": ["no vendamos"],
+      "vosotros": ["no vendáis"],
+      "ustedes": ["no vendan"]
+    }
+  }
+}

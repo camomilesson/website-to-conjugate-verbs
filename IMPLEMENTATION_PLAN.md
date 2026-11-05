@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 6 ready for your review** · 5 November 2026
+Status: **Step 7 ready for review; step 8 awaiting manual setup** · 5 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -141,7 +141,7 @@ modes for a new test.
 
 ## Step 6 — Remembered preferences and Settings
 
-**Status:** Ready for your review · **Depends on:** 5
+**Status:** Verified · **Depends on:** 5
 
 **Outcome:** Guests return to their most recently started configuration.
 
@@ -162,7 +162,7 @@ expect it on the next setup. Existing active questions must remain unchanged.
 
 ## Step 7 — Full 100-verb catalogue
 
-**Status:** Not started · **Depends on:** 6
+**Status:** Ready for your review · **Depends on:** 6
 
 **Outcome:** Both modes support the full release catalogue.
 
@@ -187,7 +187,7 @@ no missing-answer questions.
 
 ## Step 8 — Google accounts and synced preferences
 
-**Status:** Not started · **Depends on:** 7
+**Status:** Implemented; manual setup and hosted verification pending · **Depends on:** 7
 
 **Outcome:** Public Google sign-in works; account preferences follow the user.
 
@@ -501,3 +501,27 @@ and matching vertical centres.
   values should return. Save different values in Settings and revisit Practice.
 - Settings are browser-local and origin-specific until account syncing in step 8.
   Step 7 has not started; final verb-list approval is its first checkpoint.
+
+### Steps 7–8 — Review branch and manual setup checkpoint
+
+- Owner approved step 6 and requested production promotion, then steps 7–8 through
+  the manual setup boundary. Step 6 was promoted to main (5a3ec1c).
+- This request authorises bulk catalogue preparation before the separate list
+  checkpoint originally proposed in step 7. Review the final list in CATALOGUE_REPORT.md.
+- Branch: codex/catalogue-and-auth. 100 verbs, 25 Common, 10 reflexive,
+  16 categories, 9,400 cells. Static JSON remains canonical.
+- Google OAuth/session UI, account preference repository, environment template,
+  ownership migration and a two-identity SQL test are prepared. Guest settings
+  are separate; new accounts start with defaults. Failed cloud reads/writes do
+  not silently fall back to guest storage.
+- AUTH_SETUP.md is the next owner checklist. No Supabase project or Google client
+  was created, no migration was applied, and no hosted sign-in or RLS execution
+  is claimed. Step 8 remains pending those checks. Steps 9 onward are untouched.
+- SDK declaration conflicts with TypeScript 6 DOM WebAuthn types require
+  skipLibCheck; application code remains strictly typechecked.
+
+- Validation: 33 tests pass, strict application typecheck, ESLint, formatting,
+  and production build pass. The SDK raises the bundle to about 570 KB minified /
+  165 KB gzip; Vite reports its 500 KB chunk advisory. Browser checks covered
+  all/all typing, 9,400-choice eligibility, correct choice scoring, verb search,
+  and unconfigured account Settings. Hosted OAuth and SQL tests remain pending.

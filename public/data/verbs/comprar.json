@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "comprar",
+  "infinitive": "comprar",
+  "meaning": "to buy",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["compro"],
+      "tu": ["compras"],
+      "el": ["compra"],
+      "nosotros": ["compramos"],
+      "vosotros": ["compráis"],
+      "ellos": ["compran"]
+    },
+    "indicative.preterite": {
+      "yo": ["compré"],
+      "tu": ["compraste"],
+      "el": ["compró"],
+      "nosotros": ["compramos"],
+      "vosotros": ["comprasteis"],
+      "ellos": ["compraron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["compraba"],
+      "tu": ["comprabas"],
+      "el": ["compraba"],
+      "nosotros": ["comprábamos"],
+      "vosotros": ["comprabais"],
+      "ellos": ["compraban"]
+    },
+    "indicative.future": {
+      "yo": ["compraré"],
+      "tu": ["comprarás"],
+      "el": ["comprará"],
+      "nosotros": ["compraremos"],
+      "vosotros": ["compraréis"],
+      "ellos": ["comprarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["compraría"],
+      "tu": ["comprarías"],
+      "el": ["compraría"],
+      "nosotros": ["compraríamos"],
+      "vosotros": ["compraríais"],
+      "ellos": ["comprarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["compre"],
+      "tu": ["compres"],
+      "el": ["compre"],
+      "nosotros": ["compremos"],
+      "vosotros": ["compréis"],
+      "ellos": ["compren"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["comprara", "comprase"],
+      "tu": ["compraras", "comprases"],
+      "el": ["comprara", "comprase"],
+      "nosotros": ["compráramos", "comprásemos"],
+      "vosotros": ["comprarais", "compraseis"],
+      "ellos": ["compraran", "comprasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he comprado"],
+      "tu": ["has comprado"],
+      "el": ["ha comprado"],
+      "nosotros": ["hemos comprado"],
+      "vosotros": ["habéis comprado"],
+      "ellos": ["han comprado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había comprado"],
+      "tu": ["habías comprado"],
+      "el": ["había comprado"],
+      "nosotros": ["habíamos comprado"],
+      "vosotros": ["habíais comprado"],
+      "ellos": ["habían comprado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré comprado"],
+      "tu": ["habrás comprado"],
+      "el": ["habrá comprado"],
+      "nosotros": ["habremos comprado"],
+      "vosotros": ["habréis comprado"],
+      "ellos": ["habrán comprado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría comprado"],
+      "tu": ["habrías comprado"],
+      "el": ["habría comprado"],
+      "nosotros": ["habríamos comprado"],
+      "vosotros": ["habríais comprado"],
+      "ellos": ["habrían comprado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya comprado"],
+      "tu": ["hayas comprado"],
+      "el": ["haya comprado"],
+      "nosotros": ["hayamos comprado"],
+      "vosotros": ["hayáis comprado"],
+      "ellos": ["hayan comprado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera comprado", "hubiese comprado"],
+      "tu": ["hubieras comprado", "hubieses comprado"],
+      "el": ["hubiera comprado", "hubiese comprado"],
+      "nosotros": ["hubiéramos comprado", "hubiésemos comprado"],
+      "vosotros": ["hubierais comprado", "hubieseis comprado"],
+      "ellos": ["hubieran comprado", "hubiesen comprado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy comprando"],
+      "tu": ["estás comprando"],
+      "el": ["está comprando"],
+      "nosotros": ["estamos comprando"],
+      "vosotros": ["estáis comprando"],
+      "ellos": ["están comprando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["compra"],
+      "usted": ["compre"],
+      "nosotros": ["compremos"],
+      "vosotros": ["comprad"],
+      "ustedes": ["compren"]
+    },
+    "imperative.negative": {
+      "tu": ["no compres"],
+      "usted": ["no compre"],
+      "nosotros": ["no compremos"],
+      "vosotros": ["no compréis"],
+      "ustedes": ["no compren"]
+    }
+  }
+}

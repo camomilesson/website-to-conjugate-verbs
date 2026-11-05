@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "ver",
+  "infinitive": "ver",
+  "meaning": "to see",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["veo"],
+      "tu": ["ves"],
+      "el": ["ve"],
+      "nosotros": ["vemos"],
+      "vosotros": ["veis"],
+      "ellos": ["ven"]
+    },
+    "indicative.preterite": {
+      "yo": ["vi"],
+      "tu": ["viste"],
+      "el": ["vio"],
+      "nosotros": ["vimos"],
+      "vosotros": ["visteis"],
+      "ellos": ["vieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["veía"],
+      "tu": ["veías"],
+      "el": ["veía"],
+      "nosotros": ["veíamos"],
+      "vosotros": ["veíais"],
+      "ellos": ["veían"]
+    },
+    "indicative.future": {
+      "yo": ["veré"],
+      "tu": ["verás"],
+      "el": ["verá"],
+      "nosotros": ["veremos"],
+      "vosotros": ["veréis"],
+      "ellos": ["verán"]
+    },
+    "indicative.conditional": {
+      "yo": ["vería"],
+      "tu": ["verías"],
+      "el": ["vería"],
+      "nosotros": ["veríamos"],
+      "vosotros": ["veríais"],
+      "ellos": ["verían"]
+    },
+    "subjunctive.present": {
+      "yo": ["vea"],
+      "tu": ["veas"],
+      "el": ["vea"],
+      "nosotros": ["veamos"],
+      "vosotros": ["veáis"],
+      "ellos": ["vean"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["viera", "viese"],
+      "tu": ["vieras", "vieses"],
+      "el": ["viera", "viese"],
+      "nosotros": ["viéramos", "viésemos"],
+      "vosotros": ["vierais", "vieseis"],
+      "ellos": ["vieran", "viesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he visto"],
+      "tu": ["has visto"],
+      "el": ["ha visto"],
+      "nosotros": ["hemos visto"],
+      "vosotros": ["habéis visto"],
+      "ellos": ["han visto"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había visto"],
+      "tu": ["habías visto"],
+      "el": ["había visto"],
+      "nosotros": ["habíamos visto"],
+      "vosotros": ["habíais visto"],
+      "ellos": ["habían visto"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré visto"],
+      "tu": ["habrás visto"],
+      "el": ["habrá visto"],
+      "nosotros": ["habremos visto"],
+      "vosotros": ["habréis visto"],
+      "ellos": ["habrán visto"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría visto"],
+      "tu": ["habrías visto"],
+      "el": ["habría visto"],
+      "nosotros": ["habríamos visto"],
+      "vosotros": ["habríais visto"],
+      "ellos": ["habrían visto"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya visto"],
+      "tu": ["hayas visto"],
+      "el": ["haya visto"],
+      "nosotros": ["hayamos visto"],
+      "vosotros": ["hayáis visto"],
+      "ellos": ["hayan visto"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera visto", "hubiese visto"],
+      "tu": ["hubieras visto", "hubieses visto"],
+      "el": ["hubiera visto", "hubiese visto"],
+      "nosotros": ["hubiéramos visto", "hubiésemos visto"],
+      "vosotros": ["hubierais visto", "hubieseis visto"],
+      "ellos": ["hubieran visto", "hubiesen visto"]
+    },
+    "progressive.present": {
+      "yo": ["estoy viendo"],
+      "tu": ["estás viendo"],
+      "el": ["está viendo"],
+      "nosotros": ["estamos viendo"],
+      "vosotros": ["estáis viendo"],
+      "ellos": ["están viendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ve"],
+      "usted": ["vea"],
+      "nosotros": ["veamos"],
+      "vosotros": ["ved"],
+      "ustedes": ["vean"]
+    },
+    "imperative.negative": {
+      "tu": ["no veas"],
+      "usted": ["no vea"],
+      "nosotros": ["no veamos"],
+      "vosotros": ["no veáis"],
+      "ustedes": ["no vean"]
+    }
+  }
+}

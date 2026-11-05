@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "lavarse",
+  "infinitive": "lavarse",
+  "meaning": "to wash oneself",
+  "tags": ["reflexive", "regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me lavo"],
+      "tu": ["te lavas"],
+      "el": ["se lava"],
+      "nosotros": ["nos lavamos"],
+      "vosotros": ["os laváis"],
+      "ellos": ["se lavan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me lavé"],
+      "tu": ["te lavaste"],
+      "el": ["se lavó"],
+      "nosotros": ["nos lavamos"],
+      "vosotros": ["os lavasteis"],
+      "ellos": ["se lavaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me lavaba"],
+      "tu": ["te lavabas"],
+      "el": ["se lavaba"],
+      "nosotros": ["nos lavábamos"],
+      "vosotros": ["os lavabais"],
+      "ellos": ["se lavaban"]
+    },
+    "indicative.future": {
+      "yo": ["me lavaré"],
+      "tu": ["te lavarás"],
+      "el": ["se lavará"],
+      "nosotros": ["nos lavaremos"],
+      "vosotros": ["os lavaréis"],
+      "ellos": ["se lavarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me lavaría"],
+      "tu": ["te lavarías"],
+      "el": ["se lavaría"],
+      "nosotros": ["nos lavaríamos"],
+      "vosotros": ["os lavaríais"],
+      "ellos": ["se lavarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me lave"],
+      "tu": ["te laves"],
+      "el": ["se lave"],
+      "nosotros": ["nos lavemos"],
+      "vosotros": ["os lavéis"],
+      "ellos": ["se laven"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me lavara", "me lavase"],
+      "tu": ["te lavaras", "te lavases"],
+      "el": ["se lavara", "se lavase"],
+      "nosotros": ["nos laváramos", "nos lavásemos"],
+      "vosotros": ["os lavarais", "os lavaseis"],
+      "ellos": ["se lavaran", "se lavasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he lavado"],
+      "tu": ["te has lavado"],
+      "el": ["se ha lavado"],
+      "nosotros": ["nos hemos lavado"],
+      "vosotros": ["os habéis lavado"],
+      "ellos": ["se han lavado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había lavado"],
+      "tu": ["te habías lavado"],
+      "el": ["se había lavado"],
+      "nosotros": ["nos habíamos lavado"],
+      "vosotros": ["os habíais lavado"],
+      "ellos": ["se habían lavado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré lavado"],
+      "tu": ["te habrás lavado"],
+      "el": ["se habrá lavado"],
+      "nosotros": ["nos habremos lavado"],
+      "vosotros": ["os habréis lavado"],
+      "ellos": ["se habrán lavado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría lavado"],
+      "tu": ["te habrías lavado"],
+      "el": ["se habría lavado"],
+      "nosotros": ["nos habríamos lavado"],
+      "vosotros": ["os habríais lavado"],
+      "ellos": ["se habrían lavado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya lavado"],
+      "tu": ["te hayas lavado"],
+      "el": ["se haya lavado"],
+      "nosotros": ["nos hayamos lavado"],
+      "vosotros": ["os hayáis lavado"],
+      "ellos": ["se hayan lavado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera lavado", "me hubiese lavado"],
+      "tu": ["te hubieras lavado", "te hubieses lavado"],
+      "el": ["se hubiera lavado", "se hubiese lavado"],
+      "nosotros": ["nos hubiéramos lavado", "nos hubiésemos lavado"],
+      "vosotros": ["os hubierais lavado", "os hubieseis lavado"],
+      "ellos": ["se hubieran lavado", "se hubiesen lavado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy lavando", "estoy lavándome"],
+      "tu": ["te estás lavando", "estás lavándote"],
+      "el": ["se está lavando", "está lavándose"],
+      "nosotros": ["nos estamos lavando", "estamos lavándonos"],
+      "vosotros": ["os estáis lavando", "estáis lavándoos"],
+      "ellos": ["se están lavando", "están lavándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["lávate"],
+      "usted": ["lávese"],
+      "nosotros": ["lavémonos"],
+      "vosotros": ["lavaos"],
+      "ustedes": ["lávense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te laves"],
+      "usted": ["no se lave"],
+      "nosotros": ["no nos lavemos"],
+      "vosotros": ["no os lavéis"],
+      "ustedes": ["no se laven"]
+    }
+  }
+}

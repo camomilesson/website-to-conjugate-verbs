@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "mantener",
+  "infinitive": "mantener",
+  "meaning": "to maintain",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["mantengo"],
+      "tu": ["mantienes"],
+      "el": ["mantiene"],
+      "nosotros": ["mantenemos"],
+      "vosotros": ["mantenéis"],
+      "ellos": ["mantienen"]
+    },
+    "indicative.preterite": {
+      "yo": ["mantuve"],
+      "tu": ["mantuviste"],
+      "el": ["mantuvo"],
+      "nosotros": ["mantuvimos"],
+      "vosotros": ["mantuvisteis"],
+      "ellos": ["mantuvieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["mantenía"],
+      "tu": ["mantenías"],
+      "el": ["mantenía"],
+      "nosotros": ["manteníamos"],
+      "vosotros": ["manteníais"],
+      "ellos": ["mantenían"]
+    },
+    "indicative.future": {
+      "yo": ["mantendré"],
+      "tu": ["mantendrás"],
+      "el": ["mantendrá"],
+      "nosotros": ["mantendremos"],
+      "vosotros": ["mantendréis"],
+      "ellos": ["mantendrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["mantendría"],
+      "tu": ["mantendrías"],
+      "el": ["mantendría"],
+      "nosotros": ["mantendríamos"],
+      "vosotros": ["mantendríais"],
+      "ellos": ["mantendrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["mantenga"],
+      "tu": ["mantengas"],
+      "el": ["mantenga"],
+      "nosotros": ["mantengamos"],
+      "vosotros": ["mantengáis"],
+      "ellos": ["mantengan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["mantuviera", "mantuviese"],
+      "tu": ["mantuvieras", "mantuvieses"],
+      "el": ["mantuviera", "mantuviese"],
+      "nosotros": ["mantuviéramos", "mantuviésemos"],
+      "vosotros": ["mantuvierais", "mantuvieseis"],
+      "ellos": ["mantuvieran", "mantuviesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he mantenido"],
+      "tu": ["has mantenido"],
+      "el": ["ha mantenido"],
+      "nosotros": ["hemos mantenido"],
+      "vosotros": ["habéis mantenido"],
+      "ellos": ["han mantenido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había mantenido"],
+      "tu": ["habías mantenido"],
+      "el": ["había mantenido"],
+      "nosotros": ["habíamos mantenido"],
+      "vosotros": ["habíais mantenido"],
+      "ellos": ["habían mantenido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré mantenido"],
+      "tu": ["habrás mantenido"],
+      "el": ["habrá mantenido"],
+      "nosotros": ["habremos mantenido"],
+      "vosotros": ["habréis mantenido"],
+      "ellos": ["habrán mantenido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría mantenido"],
+      "tu": ["habrías mantenido"],
+      "el": ["habría mantenido"],
+      "nosotros": ["habríamos mantenido"],
+      "vosotros": ["habríais mantenido"],
+      "ellos": ["habrían mantenido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya mantenido"],
+      "tu": ["hayas mantenido"],
+      "el": ["haya mantenido"],
+      "nosotros": ["hayamos mantenido"],
+      "vosotros": ["hayáis mantenido"],
+      "ellos": ["hayan mantenido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera mantenido", "hubiese mantenido"],
+      "tu": ["hubieras mantenido", "hubieses mantenido"],
+      "el": ["hubiera mantenido", "hubiese mantenido"],
+      "nosotros": ["hubiéramos mantenido", "hubiésemos mantenido"],
+      "vosotros": ["hubierais mantenido", "hubieseis mantenido"],
+      "ellos": ["hubieran mantenido", "hubiesen mantenido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy manteniendo"],
+      "tu": ["estás manteniendo"],
+      "el": ["está manteniendo"],
+      "nosotros": ["estamos manteniendo"],
+      "vosotros": ["estáis manteniendo"],
+      "ellos": ["están manteniendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["mantén"],
+      "usted": ["mantenga"],
+      "nosotros": ["mantengamos"],
+      "vosotros": ["mantened"],
+      "ustedes": ["mantengan"]
+    },
+    "imperative.negative": {
+      "tu": ["no mantengas"],
+      "usted": ["no mantenga"],
+      "nosotros": ["no mantengamos"],
+      "vosotros": ["no mantengáis"],
+      "ustedes": ["no mantengan"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "saber",
+  "infinitive": "saber",
+  "meaning": "to know",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["sé"],
+      "tu": ["sabes"],
+      "el": ["sabe"],
+      "nosotros": ["sabemos"],
+      "vosotros": ["sabéis"],
+      "ellos": ["saben"]
+    },
+    "indicative.preterite": {
+      "yo": ["supe"],
+      "tu": ["supiste"],
+      "el": ["supo"],
+      "nosotros": ["supimos"],
+      "vosotros": ["supisteis"],
+      "ellos": ["supieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["sabía"],
+      "tu": ["sabías"],
+      "el": ["sabía"],
+      "nosotros": ["sabíamos"],
+      "vosotros": ["sabíais"],
+      "ellos": ["sabían"]
+    },
+    "indicative.future": {
+      "yo": ["sabré"],
+      "tu": ["sabrás"],
+      "el": ["sabrá"],
+      "nosotros": ["sabremos"],
+      "vosotros": ["sabréis"],
+      "ellos": ["sabrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["sabría"],
+      "tu": ["sabrías"],
+      "el": ["sabría"],
+      "nosotros": ["sabríamos"],
+      "vosotros": ["sabríais"],
+      "ellos": ["sabrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["sepa"],
+      "tu": ["sepas"],
+      "el": ["sepa"],
+      "nosotros": ["sepamos"],
+      "vosotros": ["sepáis"],
+      "ellos": ["sepan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["supiera", "supiese"],
+      "tu": ["supieras", "supieses"],
+      "el": ["supiera", "supiese"],
+      "nosotros": ["supiéramos", "supiésemos"],
+      "vosotros": ["supierais", "supieseis"],
+      "ellos": ["supieran", "supiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he sabido"],
+      "tu": ["has sabido"],
+      "el": ["ha sabido"],
+      "nosotros": ["hemos sabido"],
+      "vosotros": ["habéis sabido"],
+      "ellos": ["han sabido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había sabido"],
+      "tu": ["habías sabido"],
+      "el": ["había sabido"],
+      "nosotros": ["habíamos sabido"],
+      "vosotros": ["habíais sabido"],
+      "ellos": ["habían sabido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré sabido"],
+      "tu": ["habrás sabido"],
+      "el": ["habrá sabido"],
+      "nosotros": ["habremos sabido"],
+      "vosotros": ["habréis sabido"],
+      "ellos": ["habrán sabido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría sabido"],
+      "tu": ["habrías sabido"],
+      "el": ["habría sabido"],
+      "nosotros": ["habríamos sabido"],
+      "vosotros": ["habríais sabido"],
+      "ellos": ["habrían sabido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya sabido"],
+      "tu": ["hayas sabido"],
+      "el": ["haya sabido"],
+      "nosotros": ["hayamos sabido"],
+      "vosotros": ["hayáis sabido"],
+      "ellos": ["hayan sabido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera sabido", "hubiese sabido"],
+      "tu": ["hubieras sabido", "hubieses sabido"],
+      "el": ["hubiera sabido", "hubiese sabido"],
+      "nosotros": ["hubiéramos sabido", "hubiésemos sabido"],
+      "vosotros": ["hubierais sabido", "hubieseis sabido"],
+      "ellos": ["hubieran sabido", "hubiesen sabido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy sabiendo"],
+      "tu": ["estás sabiendo"],
+      "el": ["está sabiendo"],
+      "nosotros": ["estamos sabiendo"],
+      "vosotros": ["estáis sabiendo"],
+      "ellos": ["están sabiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["sabe"],
+      "usted": ["sepa"],
+      "nosotros": ["sepamos"],
+      "vosotros": ["sabed"],
+      "ustedes": ["sepan"]
+    },
+    "imperative.negative": {
+      "tu": ["no sepas"],
+      "usted": ["no sepa"],
+      "nosotros": ["no sepamos"],
+      "vosotros": ["no sepáis"],
+      "ustedes": ["no sepan"]
+    }
+  }
+}

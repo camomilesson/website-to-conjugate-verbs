@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { loadCatalogueVerb } from "../verb-catalogue/index.ts"
 import type { CatalogueVerb } from "../verb-catalogue/index.ts"
-import { savePreferences } from "../practice-preferences/index.ts"
 import {
   PreferenceFields,
   usePreferenceDraft,
@@ -19,8 +18,16 @@ export function PracticeSetup({
     storageNotice: string | null,
   ) => void
 }) {
-  const { catalogue, preferences, setPreferences, notice, error, retry } =
-    usePreferenceDraft()
+  const {
+    catalogue,
+    preferences,
+    setPreferences,
+    notice,
+    error,
+    retry,
+    save,
+    isAccount,
+  } = usePreferenceDraft()
   const selectedVerbs = preferences?.verbIds ?? []
   const selectedCategories = preferences?.categories ?? []
   const selectedPersons = preferences?.persons ?? []
@@ -72,21 +79,31 @@ export function PracticeSetup({
     selectedCategories,
     selectedPersons,
   )
-  const available =
-    mode === "choice"
-      ? createQuestionPool(
-          currentChoiceData?.verbs ?? [],
-          {
-            mode,
-            verbIds: selectedVerbs,
-            categories: selectedCategories,
-            persons: selectedPersons,
-            length: 1,
-            accentPolicy: "strict",
-          },
-          () => 0.5,
-        ).length
-      : selectedPoolSize
+  const available = useMemo(
+    () =>
+      mode === "choice"
+        ? createQuestionPool(
+            currentChoiceData?.verbs ?? [],
+            {
+              mode,
+              verbIds: selectedVerbs,
+              categories: selectedCategories,
+              persons: selectedPersons,
+              length: 1,
+              accentPolicy: "strict",
+            },
+            () => 0.5,
+          ).length
+        : selectedPoolSize,
+    [
+      mode,
+      currentChoiceData?.verbs,
+      selectedVerbs,
+      selectedCategories,
+      selectedPersons,
+      selectedPoolSize,
+    ],
+  )
   const validLength = Number.isSafeInteger(Number(length)) && Number(length) > 0
   async function start() {
     if (
@@ -128,7 +145,9 @@ export function PracticeSetup({
             )
       if (!controller.signal.aborted) {
         const questions = createQuestions(verbs, config)
-        const storageNotice = savePreferences(structuredClone(preferences))
+        const storageNotice = await save(structuredClone(preferences))
+        if (controller.signal.aborted) return
+        if (isAccount && storageNotice) throw new Error(storageNotice)
         onStart(questions, config, storageNotice)
       }
     } catch (reason: unknown) {
@@ -223,7 +242,9 @@ export function PracticeSetup({
               : `Start ${mode === "choice" ? "multiple-choice" : "typing"} practice${validLength && available ? ` · ${Math.min(Number(length), available)} ${Math.min(Number(length), available) === 1 ? "question" : "questions"}` : ""}`}
           </button>
           <p className="field-note">
-            Guest practice. Results last for this sitting only.
+            Preferences{" "}
+            {isAccount ? "sync to your account" : "are stored in this browser"}.
+            Practice results are not saved yet.
           </p>
         </>
       )}

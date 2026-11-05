@@ -1,41 +1,606 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "starter-1",
+  "datasetVersion": "catalogue-1",
   "verbs": [
     {
       "id": "hablar",
       "infinitive": "hablar",
-      "meaning": "to speak"
+      "meaning": "to speak",
+      "common": true
     },
     {
       "id": "comer",
       "infinitive": "comer",
-      "meaning": "to eat"
+      "meaning": "to eat",
+      "common": true
     },
     {
       "id": "vivir",
       "infinitive": "vivir",
-      "meaning": "to live"
+      "meaning": "to live",
+      "common": true
     },
     {
       "id": "ser",
       "infinitive": "ser",
-      "meaning": "to be"
+      "meaning": "to be",
+      "common": true
     },
     {
       "id": "ir",
       "infinitive": "ir",
-      "meaning": "to go"
+      "meaning": "to go",
+      "common": true
     },
     {
       "id": "tener",
       "infinitive": "tener",
-      "meaning": "to have"
+      "meaning": "to have",
+      "common": true
     },
     {
       "id": "levantarse",
       "infinitive": "levantarse",
-      "meaning": "to get up"
+      "meaning": "to get up",
+      "common": false
+    },
+    {
+      "id": "trabajar",
+      "infinitive": "trabajar",
+      "meaning": "to work",
+      "common": true
+    },
+    {
+      "id": "estudiar",
+      "infinitive": "estudiar",
+      "meaning": "to study",
+      "common": false
+    },
+    {
+      "id": "comprar",
+      "infinitive": "comprar",
+      "meaning": "to buy",
+      "common": false
+    },
+    {
+      "id": "mirar",
+      "infinitive": "mirar",
+      "meaning": "to look",
+      "common": false
+    },
+    {
+      "id": "escuchar",
+      "infinitive": "escuchar",
+      "meaning": "to listen",
+      "common": false
+    },
+    {
+      "id": "tomar",
+      "infinitive": "tomar",
+      "meaning": "to take",
+      "common": false
+    },
+    {
+      "id": "llevar",
+      "infinitive": "llevar",
+      "meaning": "to carry",
+      "common": true
+    },
+    {
+      "id": "dejar",
+      "infinitive": "dejar",
+      "meaning": "to leave",
+      "common": false
+    },
+    {
+      "id": "pasar",
+      "infinitive": "pasar",
+      "meaning": "to pass",
+      "common": true
+    },
+    {
+      "id": "llamar",
+      "infinitive": "llamar",
+      "meaning": "to call",
+      "common": false
+    },
+    {
+      "id": "esperar",
+      "infinitive": "esperar",
+      "meaning": "to wait",
+      "common": false
+    },
+    {
+      "id": "entrar",
+      "infinitive": "entrar",
+      "meaning": "to enter",
+      "common": false
+    },
+    {
+      "id": "terminar",
+      "infinitive": "terminar",
+      "meaning": "to finish",
+      "common": false
+    },
+    {
+      "id": "necesitar",
+      "infinitive": "necesitar",
+      "meaning": "to need",
+      "common": false
+    },
+    {
+      "id": "ayudar",
+      "infinitive": "ayudar",
+      "meaning": "to help",
+      "common": false
+    },
+    {
+      "id": "preguntar",
+      "infinitive": "preguntar",
+      "meaning": "to ask",
+      "common": false
+    },
+    {
+      "id": "usar",
+      "infinitive": "usar",
+      "meaning": "to use",
+      "common": false
+    },
+    {
+      "id": "caminar",
+      "infinitive": "caminar",
+      "meaning": "to walk",
+      "common": false
+    },
+    {
+      "id": "viajar",
+      "infinitive": "viajar",
+      "meaning": "to travel",
+      "common": false
+    },
+    {
+      "id": "cocinar",
+      "infinitive": "cocinar",
+      "meaning": "to cook",
+      "common": false
+    },
+    {
+      "id": "ganar",
+      "infinitive": "ganar",
+      "meaning": "to win",
+      "common": false
+    },
+    {
+      "id": "pagar",
+      "infinitive": "pagar",
+      "meaning": "to pay",
+      "common": false
+    },
+    {
+      "id": "llegar",
+      "infinitive": "llegar",
+      "meaning": "to arrive",
+      "common": true
+    },
+    {
+      "id": "buscar",
+      "infinitive": "buscar",
+      "meaning": "to look for",
+      "common": false
+    },
+    {
+      "id": "sacar",
+      "infinitive": "sacar",
+      "meaning": "to take out",
+      "common": false
+    },
+    {
+      "id": "tocar",
+      "infinitive": "tocar",
+      "meaning": "to touch",
+      "common": false
+    },
+    {
+      "id": "explicar",
+      "infinitive": "explicar",
+      "meaning": "to explain",
+      "common": false
+    },
+    {
+      "id": "empezar",
+      "infinitive": "empezar",
+      "meaning": "to start",
+      "common": false
+    },
+    {
+      "id": "comenzar",
+      "infinitive": "comenzar",
+      "meaning": "to begin",
+      "common": false
+    },
+    {
+      "id": "pensar",
+      "infinitive": "pensar",
+      "meaning": "to think",
+      "common": true
+    },
+    {
+      "id": "contar",
+      "infinitive": "contar",
+      "meaning": "to count",
+      "common": false
+    },
+    {
+      "id": "encontrar",
+      "infinitive": "encontrar",
+      "meaning": "to find",
+      "common": true
+    },
+    {
+      "id": "recordar",
+      "infinitive": "recordar",
+      "meaning": "to remember",
+      "common": false
+    },
+    {
+      "id": "jugar",
+      "infinitive": "jugar",
+      "meaning": "to play",
+      "common": false
+    },
+    {
+      "id": "beber",
+      "infinitive": "beber",
+      "meaning": "to drink",
+      "common": false
+    },
+    {
+      "id": "aprender",
+      "infinitive": "aprender",
+      "meaning": "to learn",
+      "common": false
+    },
+    {
+      "id": "comprender",
+      "infinitive": "comprender",
+      "meaning": "to understand",
+      "common": false
+    },
+    {
+      "id": "vender",
+      "infinitive": "vender",
+      "meaning": "to sell",
+      "common": false
+    },
+    {
+      "id": "correr",
+      "infinitive": "correr",
+      "meaning": "to run",
+      "common": false
+    },
+    {
+      "id": "leer",
+      "infinitive": "leer",
+      "meaning": "to read",
+      "common": false
+    },
+    {
+      "id": "creer",
+      "infinitive": "creer",
+      "meaning": "to believe",
+      "common": false
+    },
+    {
+      "id": "deber",
+      "infinitive": "deber",
+      "meaning": "to owe / must",
+      "common": true
+    },
+    {
+      "id": "recibir",
+      "infinitive": "recibir",
+      "meaning": "to receive",
+      "common": false
+    },
+    {
+      "id": "permitir",
+      "infinitive": "permitir",
+      "meaning": "to allow",
+      "common": false
+    },
+    {
+      "id": "existir",
+      "infinitive": "existir",
+      "meaning": "to exist",
+      "common": false
+    },
+    {
+      "id": "ocurrir",
+      "infinitive": "ocurrir",
+      "meaning": "to happen",
+      "common": false
+    },
+    {
+      "id": "escribir",
+      "infinitive": "escribir",
+      "meaning": "to write",
+      "common": false
+    },
+    {
+      "id": "abrir",
+      "infinitive": "abrir",
+      "meaning": "to open",
+      "common": false
+    },
+    {
+      "id": "decidir",
+      "infinitive": "decidir",
+      "meaning": "to decide",
+      "common": false
+    },
+    {
+      "id": "subir",
+      "infinitive": "subir",
+      "meaning": "to go up",
+      "common": false
+    },
+    {
+      "id": "estar",
+      "infinitive": "estar",
+      "meaning": "to be",
+      "common": true
+    },
+    {
+      "id": "quedar",
+      "infinitive": "quedar",
+      "meaning": "to remain",
+      "common": true
+    },
+    {
+      "id": "hacer",
+      "infinitive": "hacer",
+      "meaning": "to do / make",
+      "common": true
+    },
+    {
+      "id": "decir",
+      "infinitive": "decir",
+      "meaning": "to say",
+      "common": true
+    },
+    {
+      "id": "poder",
+      "infinitive": "poder",
+      "meaning": "to be able to",
+      "common": true
+    },
+    {
+      "id": "querer",
+      "infinitive": "querer",
+      "meaning": "to want",
+      "common": true
+    },
+    {
+      "id": "saber",
+      "infinitive": "saber",
+      "meaning": "to know",
+      "common": true
+    },
+    {
+      "id": "ver",
+      "infinitive": "ver",
+      "meaning": "to see",
+      "common": true
+    },
+    {
+      "id": "dar",
+      "infinitive": "dar",
+      "meaning": "to give",
+      "common": true
+    },
+    {
+      "id": "poner",
+      "infinitive": "poner",
+      "meaning": "to put",
+      "common": true
+    },
+    {
+      "id": "venir",
+      "infinitive": "venir",
+      "meaning": "to come",
+      "common": true
+    },
+    {
+      "id": "salir",
+      "infinitive": "salir",
+      "meaning": "to go out",
+      "common": true
+    },
+    {
+      "id": "seguir",
+      "infinitive": "seguir",
+      "meaning": "to follow",
+      "common": false
+    },
+    {
+      "id": "sentir",
+      "infinitive": "sentir",
+      "meaning": "to feel",
+      "common": false
+    },
+    {
+      "id": "volver",
+      "infinitive": "volver",
+      "meaning": "to return",
+      "common": false
+    },
+    {
+      "id": "conocer",
+      "infinitive": "conocer",
+      "meaning": "to know / meet",
+      "common": false
+    },
+    {
+      "id": "perder",
+      "infinitive": "perder",
+      "meaning": "to lose",
+      "common": false
+    },
+    {
+      "id": "entender",
+      "infinitive": "entender",
+      "meaning": "to understand",
+      "common": false
+    },
+    {
+      "id": "pedir",
+      "infinitive": "pedir",
+      "meaning": "to ask for",
+      "common": false
+    },
+    {
+      "id": "servir",
+      "infinitive": "servir",
+      "meaning": "to serve",
+      "common": false
+    },
+    {
+      "id": "conseguir",
+      "infinitive": "conseguir",
+      "meaning": "to obtain",
+      "common": false
+    },
+    {
+      "id": "mantener",
+      "infinitive": "mantener",
+      "meaning": "to maintain",
+      "common": false
+    },
+    {
+      "id": "parecer",
+      "infinitive": "parecer",
+      "meaning": "to seem",
+      "common": false
+    },
+    {
+      "id": "caer",
+      "infinitive": "caer",
+      "meaning": "to fall",
+      "common": false
+    },
+    {
+      "id": "dormir",
+      "infinitive": "dormir",
+      "meaning": "to sleep",
+      "common": false
+    },
+    {
+      "id": "morir",
+      "infinitive": "morir",
+      "meaning": "to die",
+      "common": false
+    },
+    {
+      "id": "conducir",
+      "infinitive": "conducir",
+      "meaning": "to drive",
+      "common": false
+    },
+    {
+      "id": "preferir",
+      "infinitive": "preferir",
+      "meaning": "to prefer",
+      "common": false
+    },
+    {
+      "id": "traer",
+      "infinitive": "traer",
+      "meaning": "to bring",
+      "common": false
+    },
+    {
+      "id": "romper",
+      "infinitive": "romper",
+      "meaning": "to break",
+      "common": false
+    },
+    {
+      "id": "responder",
+      "infinitive": "responder",
+      "meaning": "to answer",
+      "common": false
+    },
+    {
+      "id": "disfrutar",
+      "infinitive": "disfrutar",
+      "meaning": "to enjoy",
+      "common": false
+    },
+    {
+      "id": "escoger",
+      "infinitive": "escoger",
+      "meaning": "to choose",
+      "common": false
+    },
+    {
+      "id": "ofrecer",
+      "infinitive": "ofrecer",
+      "meaning": "to offer",
+      "common": false
+    },
+    {
+      "id": "llamarse",
+      "infinitive": "llamarse",
+      "meaning": "to be called",
+      "common": false
+    },
+    {
+      "id": "quedarse",
+      "infinitive": "quedarse",
+      "meaning": "to stay",
+      "common": false
+    },
+    {
+      "id": "sentarse",
+      "infinitive": "sentarse",
+      "meaning": "to sit down",
+      "common": false
+    },
+    {
+      "id": "acostarse",
+      "infinitive": "acostarse",
+      "meaning": "to go to bed",
+      "common": false
+    },
+    {
+      "id": "despertarse",
+      "infinitive": "despertarse",
+      "meaning": "to wake up",
+      "common": false
+    },
+    {
+      "id": "vestirse",
+      "infinitive": "vestirse",
+      "meaning": "to get dressed",
+      "common": false
+    },
+    {
+      "id": "ducharse",
+      "infinitive": "ducharse",
+      "meaning": "to shower",
+      "common": false
+    },
+    {
+      "id": "lavarse",
+      "infinitive": "lavarse",
+      "meaning": "to wash oneself",
+      "common": false
+    },
+    {
+      "id": "irse",
+      "infinitive": "irse",
+      "meaning": "to leave",
+      "common": false
     }
   ]
 }

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "perder",
+  "infinitive": "perder",
+  "meaning": "to lose",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["pierdo"],
+      "tu": ["pierdes"],
+      "el": ["pierde"],
+      "nosotros": ["perdemos"],
+      "vosotros": ["perdéis"],
+      "ellos": ["pierden"]
+    },
+    "indicative.preterite": {
+      "yo": ["perdí"],
+      "tu": ["perdiste"],
+      "el": ["perdió"],
+      "nosotros": ["perdimos"],
+      "vosotros": ["perdisteis"],
+      "ellos": ["perdieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["perdía"],
+      "tu": ["perdías"],
+      "el": ["perdía"],
+      "nosotros": ["perdíamos"],
+      "vosotros": ["perdíais"],
+      "ellos": ["perdían"]
+    },
+    "indicative.future": {
+      "yo": ["perderé"],
+      "tu": ["perderás"],
+      "el": ["perderá"],
+      "nosotros": ["perderemos"],
+      "vosotros": ["perderéis"],
+      "ellos": ["perderán"]
+    },
+    "indicative.conditional": {
+      "yo": ["perdería"],
+      "tu": ["perderías"],
+      "el": ["perdería"],
+      "nosotros": ["perderíamos"],
+      "vosotros": ["perderíais"],
+      "ellos": ["perderían"]
+    },
+    "subjunctive.present": {
+      "yo": ["pierda"],
+      "tu": ["pierdas"],
+      "el": ["pierda"],
+      "nosotros": ["perdamos"],
+      "vosotros": ["perdáis"],
+      "ellos": ["pierdan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["perdiera", "perdiese"],
+      "tu": ["perdieras", "perdieses"],
+      "el": ["perdiera", "perdiese"],
+      "nosotros": ["perdiéramos", "perdiésemos"],
+      "vosotros": ["perdierais", "perdieseis"],
+      "ellos": ["perdieran", "perdiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he perdido"],
+      "tu": ["has perdido"],
+      "el": ["ha perdido"],
+      "nosotros": ["hemos perdido"],
+      "vosotros": ["habéis perdido"],
+      "ellos": ["han perdido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había perdido"],
+      "tu": ["habías perdido"],
+      "el": ["había perdido"],
+      "nosotros": ["habíamos perdido"],
+      "vosotros": ["habíais perdido"],
+      "ellos": ["habían perdido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré perdido"],
+      "tu": ["habrás perdido"],
+      "el": ["habrá perdido"],
+      "nosotros": ["habremos perdido"],
+      "vosotros": ["habréis perdido"],
+      "ellos": ["habrán perdido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría perdido"],
+      "tu": ["habrías perdido"],
+      "el": ["habría perdido"],
+      "nosotros": ["habríamos perdido"],
+      "vosotros": ["habríais perdido"],
+      "ellos": ["habrían perdido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya perdido"],
+      "tu": ["hayas perdido"],
+      "el": ["haya perdido"],
+      "nosotros": ["hayamos perdido"],
+      "vosotros": ["hayáis perdido"],
+      "ellos": ["hayan perdido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera perdido", "hubiese perdido"],
+      "tu": ["hubieras perdido", "hubieses perdido"],
+      "el": ["hubiera perdido", "hubiese perdido"],
+      "nosotros": ["hubiéramos perdido", "hubiésemos perdido"],
+      "vosotros": ["hubierais perdido", "hubieseis perdido"],
+      "ellos": ["hubieran perdido", "hubiesen perdido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy perdiendo"],
+      "tu": ["estás perdiendo"],
+      "el": ["está perdiendo"],
+      "nosotros": ["estamos perdiendo"],
+      "vosotros": ["estáis perdiendo"],
+      "ellos": ["están perdiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["pierde"],
+      "usted": ["pierda"],
+      "nosotros": ["perdamos"],
+      "vosotros": ["perded"],
+      "ustedes": ["pierdan"]
+    },
+    "imperative.negative": {
+      "tu": ["no pierdas"],
+      "usted": ["no pierda"],
+      "nosotros": ["no perdamos"],
+      "vosotros": ["no perdáis"],
+      "ustedes": ["no pierdan"]
+    }
+  }
+}

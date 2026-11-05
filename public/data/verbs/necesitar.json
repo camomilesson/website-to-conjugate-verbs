@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "necesitar",
+  "infinitive": "necesitar",
+  "meaning": "to need",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["necesito"],
+      "tu": ["necesitas"],
+      "el": ["necesita"],
+      "nosotros": ["necesitamos"],
+      "vosotros": ["necesitáis"],
+      "ellos": ["necesitan"]
+    },
+    "indicative.preterite": {
+      "yo": ["necesité"],
+      "tu": ["necesitaste"],
+      "el": ["necesitó"],
+      "nosotros": ["necesitamos"],
+      "vosotros": ["necesitasteis"],
+      "ellos": ["necesitaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["necesitaba"],
+      "tu": ["necesitabas"],
+      "el": ["necesitaba"],
+      "nosotros": ["necesitábamos"],
+      "vosotros": ["necesitabais"],
+      "ellos": ["necesitaban"]
+    },
+    "indicative.future": {
+      "yo": ["necesitaré"],
+      "tu": ["necesitarás"],
+      "el": ["necesitará"],
+      "nosotros": ["necesitaremos"],
+      "vosotros": ["necesitaréis"],
+      "ellos": ["necesitarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["necesitaría"],
+      "tu": ["necesitarías"],
+      "el": ["necesitaría"],
+      "nosotros": ["necesitaríamos"],
+      "vosotros": ["necesitaríais"],
+      "ellos": ["necesitarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["necesite"],
+      "tu": ["necesites"],
+      "el": ["necesite"],
+      "nosotros": ["necesitemos"],
+      "vosotros": ["necesitéis"],
+      "ellos": ["necesiten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["necesitara", "necesitase"],
+      "tu": ["necesitaras", "necesitases"],
+      "el": ["necesitara", "necesitase"],
+      "nosotros": ["necesitáramos", "necesitásemos"],
+      "vosotros": ["necesitarais", "necesitaseis"],
+      "ellos": ["necesitaran", "necesitasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he necesitado"],
+      "tu": ["has necesitado"],
+      "el": ["ha necesitado"],
+      "nosotros": ["hemos necesitado"],
+      "vosotros": ["habéis necesitado"],
+      "ellos": ["han necesitado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había necesitado"],
+      "tu": ["habías necesitado"],
+      "el": ["había necesitado"],
+      "nosotros": ["habíamos necesitado"],
+      "vosotros": ["habíais necesitado"],
+      "ellos": ["habían necesitado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré necesitado"],
+      "tu": ["habrás necesitado"],
+      "el": ["habrá necesitado"],
+      "nosotros": ["habremos necesitado"],
+      "vosotros": ["habréis necesitado"],
+      "ellos": ["habrán necesitado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría necesitado"],
+      "tu": ["habrías necesitado"],
+      "el": ["habría necesitado"],
+      "nosotros": ["habríamos necesitado"],
+      "vosotros": ["habríais necesitado"],
+      "ellos": ["habrían necesitado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya necesitado"],
+      "tu": ["hayas necesitado"],
+      "el": ["haya necesitado"],
+      "nosotros": ["hayamos necesitado"],
+      "vosotros": ["hayáis necesitado"],
+      "ellos": ["hayan necesitado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera necesitado", "hubiese necesitado"],
+      "tu": ["hubieras necesitado", "hubieses necesitado"],
+      "el": ["hubiera necesitado", "hubiese necesitado"],
+      "nosotros": ["hubiéramos necesitado", "hubiésemos necesitado"],
+      "vosotros": ["hubierais necesitado", "hubieseis necesitado"],
+      "ellos": ["hubieran necesitado", "hubiesen necesitado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy necesitando"],
+      "tu": ["estás necesitando"],
+      "el": ["está necesitando"],
+      "nosotros": ["estamos necesitando"],
+      "vosotros": ["estáis necesitando"],
+      "ellos": ["están necesitando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["necesita"],
+      "usted": ["necesite"],
+      "nosotros": ["necesitemos"],
+      "vosotros": ["necesitad"],
+      "ustedes": ["necesiten"]
+    },
+    "imperative.negative": {
+      "tu": ["no necesites"],
+      "usted": ["no necesite"],
+      "nosotros": ["no necesitemos"],
+      "vosotros": ["no necesitéis"],
+      "ustedes": ["no necesiten"]
+    }
+  }
+}

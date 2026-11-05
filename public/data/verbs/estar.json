@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "estar",
+  "infinitive": "estar",
+  "meaning": "to be",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["estoy"],
+      "tu": ["estás"],
+      "el": ["está"],
+      "nosotros": ["estamos"],
+      "vosotros": ["estáis"],
+      "ellos": ["están"]
+    },
+    "indicative.preterite": {
+      "yo": ["estuve"],
+      "tu": ["estuviste"],
+      "el": ["estuvo"],
+      "nosotros": ["estuvimos"],
+      "vosotros": ["estuvisteis"],
+      "ellos": ["estuvieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["estaba"],
+      "tu": ["estabas"],
+      "el": ["estaba"],
+      "nosotros": ["estábamos"],
+      "vosotros": ["estabais"],
+      "ellos": ["estaban"]
+    },
+    "indicative.future": {
+      "yo": ["estaré"],
+      "tu": ["estarás"],
+      "el": ["estará"],
+      "nosotros": ["estaremos"],
+      "vosotros": ["estaréis"],
+      "ellos": ["estarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["estaría"],
+      "tu": ["estarías"],
+      "el": ["estaría"],
+      "nosotros": ["estaríamos"],
+      "vosotros": ["estaríais"],
+      "ellos": ["estarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["esté"],
+      "tu": ["estés"],
+      "el": ["esté"],
+      "nosotros": ["estemos"],
+      "vosotros": ["estéis"],
+      "ellos": ["estén"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["estuviera", "estuviese"],
+      "tu": ["estuvieras", "estuvieses"],
+      "el": ["estuviera", "estuviese"],
+      "nosotros": ["estuviéramos", "estuviésemos"],
+      "vosotros": ["estuvierais", "estuvieseis"],
+      "ellos": ["estuvieran", "estuviesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he estado"],
+      "tu": ["has estado"],
+      "el": ["ha estado"],
+      "nosotros": ["hemos estado"],
+      "vosotros": ["habéis estado"],
+      "ellos": ["han estado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había estado"],
+      "tu": ["habías estado"],
+      "el": ["había estado"],
+      "nosotros": ["habíamos estado"],
+      "vosotros": ["habíais estado"],
+      "ellos": ["habían estado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré estado"],
+      "tu": ["habrás estado"],
+      "el": ["habrá estado"],
+      "nosotros": ["habremos estado"],
+      "vosotros": ["habréis estado"],
+      "ellos": ["habrán estado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría estado"],
+      "tu": ["habrías estado"],
+      "el": ["habría estado"],
+      "nosotros": ["habríamos estado"],
+      "vosotros": ["habríais estado"],
+      "ellos": ["habrían estado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya estado"],
+      "tu": ["hayas estado"],
+      "el": ["haya estado"],
+      "nosotros": ["hayamos estado"],
+      "vosotros": ["hayáis estado"],
+      "ellos": ["hayan estado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera estado", "hubiese estado"],
+      "tu": ["hubieras estado", "hubieses estado"],
+      "el": ["hubiera estado", "hubiese estado"],
+      "nosotros": ["hubiéramos estado", "hubiésemos estado"],
+      "vosotros": ["hubierais estado", "hubieseis estado"],
+      "ellos": ["hubieran estado", "hubiesen estado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy estando"],
+      "tu": ["estás estando"],
+      "el": ["está estando"],
+      "nosotros": ["estamos estando"],
+      "vosotros": ["estáis estando"],
+      "ellos": ["están estando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["está"],
+      "usted": ["esté"],
+      "nosotros": ["estemos"],
+      "vosotros": ["estad"],
+      "ustedes": ["estén"]
+    },
+    "imperative.negative": {
+      "tu": ["no estés"],
+      "usted": ["no esté"],
+      "nosotros": ["no estemos"],
+      "vosotros": ["no estéis"],
+      "ustedes": ["no estén"]
+    }
+  }
+}

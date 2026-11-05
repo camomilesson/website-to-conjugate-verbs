@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "mirar",
+  "infinitive": "mirar",
+  "meaning": "to look",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["miro"],
+      "tu": ["miras"],
+      "el": ["mira"],
+      "nosotros": ["miramos"],
+      "vosotros": ["miráis"],
+      "ellos": ["miran"]
+    },
+    "indicative.preterite": {
+      "yo": ["miré"],
+      "tu": ["miraste"],
+      "el": ["miró"],
+      "nosotros": ["miramos"],
+      "vosotros": ["mirasteis"],
+      "ellos": ["miraron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["miraba"],
+      "tu": ["mirabas"],
+      "el": ["miraba"],
+      "nosotros": ["mirábamos"],
+      "vosotros": ["mirabais"],
+      "ellos": ["miraban"]
+    },
+    "indicative.future": {
+      "yo": ["miraré"],
+      "tu": ["mirarás"],
+      "el": ["mirará"],
+      "nosotros": ["miraremos"],
+      "vosotros": ["miraréis"],
+      "ellos": ["mirarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["miraría"],
+      "tu": ["mirarías"],
+      "el": ["miraría"],
+      "nosotros": ["miraríamos"],
+      "vosotros": ["miraríais"],
+      "ellos": ["mirarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["mire"],
+      "tu": ["mires"],
+      "el": ["mire"],
+      "nosotros": ["miremos"],
+      "vosotros": ["miréis"],
+      "ellos": ["miren"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["mirara", "mirase"],
+      "tu": ["miraras", "mirases"],
+      "el": ["mirara", "mirase"],
+      "nosotros": ["miráramos", "mirásemos"],
+      "vosotros": ["mirarais", "miraseis"],
+      "ellos": ["miraran", "mirasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he mirado"],
+      "tu": ["has mirado"],
+      "el": ["ha mirado"],
+      "nosotros": ["hemos mirado"],
+      "vosotros": ["habéis mirado"],
+      "ellos": ["han mirado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había mirado"],
+      "tu": ["habías mirado"],
+      "el": ["había mirado"],
+      "nosotros": ["habíamos mirado"],
+      "vosotros": ["habíais mirado"],
+      "ellos": ["habían mirado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré mirado"],
+      "tu": ["habrás mirado"],
+      "el": ["habrá mirado"],
+      "nosotros": ["habremos mirado"],
+      "vosotros": ["habréis mirado"],
+      "ellos": ["habrán mirado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría mirado"],
+      "tu": ["habrías mirado"],
+      "el": ["habría mirado"],
+      "nosotros": ["habríamos mirado"],
+      "vosotros": ["habríais mirado"],
+      "ellos": ["habrían mirado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya mirado"],
+      "tu": ["hayas mirado"],
+      "el": ["haya mirado"],
+      "nosotros": ["hayamos mirado"],
+      "vosotros": ["hayáis mirado"],
+      "ellos": ["hayan mirado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera mirado", "hubiese mirado"],
+      "tu": ["hubieras mirado", "hubieses mirado"],
+      "el": ["hubiera mirado", "hubiese mirado"],
+      "nosotros": ["hubiéramos mirado", "hubiésemos mirado"],
+      "vosotros": ["hubierais mirado", "hubieseis mirado"],
+      "ellos": ["hubieran mirado", "hubiesen mirado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy mirando"],
+      "tu": ["estás mirando"],
+      "el": ["está mirando"],
+      "nosotros": ["estamos mirando"],
+      "vosotros": ["estáis mirando"],
+      "ellos": ["están mirando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["mira"],
+      "usted": ["mire"],
+      "nosotros": ["miremos"],
+      "vosotros": ["mirad"],
+      "ustedes": ["miren"]
+    },
+    "imperative.negative": {
+      "tu": ["no mires"],
+      "usted": ["no mire"],
+      "nosotros": ["no miremos"],
+      "vosotros": ["no miréis"],
+      "ustedes": ["no miren"]
+    }
+  }
+}

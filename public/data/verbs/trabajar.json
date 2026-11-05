@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "trabajar",
+  "infinitive": "trabajar",
+  "meaning": "to work",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["trabajo"],
+      "tu": ["trabajas"],
+      "el": ["trabaja"],
+      "nosotros": ["trabajamos"],
+      "vosotros": ["trabajáis"],
+      "ellos": ["trabajan"]
+    },
+    "indicative.preterite": {
+      "yo": ["trabajé"],
+      "tu": ["trabajaste"],
+      "el": ["trabajó"],
+      "nosotros": ["trabajamos"],
+      "vosotros": ["trabajasteis"],
+      "ellos": ["trabajaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["trabajaba"],
+      "tu": ["trabajabas"],
+      "el": ["trabajaba"],
+      "nosotros": ["trabajábamos"],
+      "vosotros": ["trabajabais"],
+      "ellos": ["trabajaban"]
+    },
+    "indicative.future": {
+      "yo": ["trabajaré"],
+      "tu": ["trabajarás"],
+      "el": ["trabajará"],
+      "nosotros": ["trabajaremos"],
+      "vosotros": ["trabajaréis"],
+      "ellos": ["trabajarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["trabajaría"],
+      "tu": ["trabajarías"],
+      "el": ["trabajaría"],
+      "nosotros": ["trabajaríamos"],
+      "vosotros": ["trabajaríais"],
+      "ellos": ["trabajarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["trabaje"],
+      "tu": ["trabajes"],
+      "el": ["trabaje"],
+      "nosotros": ["trabajemos"],
+      "vosotros": ["trabajéis"],
+      "ellos": ["trabajen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["trabajara", "trabajase"],
+      "tu": ["trabajaras", "trabajases"],
+      "el": ["trabajara", "trabajase"],
+      "nosotros": ["trabajáramos", "trabajásemos"],
+      "vosotros": ["trabajarais", "trabajaseis"],
+      "ellos": ["trabajaran", "trabajasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he trabajado"],
+      "tu": ["has trabajado"],
+      "el": ["ha trabajado"],
+      "nosotros": ["hemos trabajado"],
+      "vosotros": ["habéis trabajado"],
+      "ellos": ["han trabajado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había trabajado"],
+      "tu": ["habías trabajado"],
+      "el": ["había trabajado"],
+      "nosotros": ["habíamos trabajado"],
+      "vosotros": ["habíais trabajado"],
+      "ellos": ["habían trabajado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré trabajado"],
+      "tu": ["habrás trabajado"],
+      "el": ["habrá trabajado"],
+      "nosotros": ["habremos trabajado"],
+      "vosotros": ["habréis trabajado"],
+      "ellos": ["habrán trabajado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría trabajado"],
+      "tu": ["habrías trabajado"],
+      "el": ["habría trabajado"],
+      "nosotros": ["habríamos trabajado"],
+      "vosotros": ["habríais trabajado"],
+      "ellos": ["habrían trabajado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya trabajado"],
+      "tu": ["hayas trabajado"],
+      "el": ["haya trabajado"],
+      "nosotros": ["hayamos trabajado"],
+      "vosotros": ["hayáis trabajado"],
+      "ellos": ["hayan trabajado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera trabajado", "hubiese trabajado"],
+      "tu": ["hubieras trabajado", "hubieses trabajado"],
+      "el": ["hubiera trabajado", "hubiese trabajado"],
+      "nosotros": ["hubiéramos trabajado", "hubiésemos trabajado"],
+      "vosotros": ["hubierais trabajado", "hubieseis trabajado"],
+      "ellos": ["hubieran trabajado", "hubiesen trabajado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy trabajando"],
+      "tu": ["estás trabajando"],
+      "el": ["está trabajando"],
+      "nosotros": ["estamos trabajando"],
+      "vosotros": ["estáis trabajando"],
+      "ellos": ["están trabajando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["trabaja"],
+      "usted": ["trabaje"],
+      "nosotros": ["trabajemos"],
+      "vosotros": ["trabajad"],
+      "ustedes": ["trabajen"]
+    },
+    "imperative.negative": {
+      "tu": ["no trabajes"],
+      "usted": ["no trabaje"],
+      "nosotros": ["no trabajemos"],
+      "vosotros": ["no trabajéis"],
+      "ustedes": ["no trabajen"]
+    }
+  }
+}

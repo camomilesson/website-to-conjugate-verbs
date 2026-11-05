@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "conseguir",
+  "infinitive": "conseguir",
+  "meaning": "to obtain",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["consigo"],
+      "tu": ["consigues"],
+      "el": ["consigue"],
+      "nosotros": ["conseguimos"],
+      "vosotros": ["conseguís"],
+      "ellos": ["consiguen"]
+    },
+    "indicative.preterite": {
+      "yo": ["conseguí"],
+      "tu": ["conseguiste"],
+      "el": ["consiguió"],
+      "nosotros": ["conseguimos"],
+      "vosotros": ["conseguisteis"],
+      "ellos": ["consiguieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["conseguía"],
+      "tu": ["conseguías"],
+      "el": ["conseguía"],
+      "nosotros": ["conseguíamos"],
+      "vosotros": ["conseguíais"],
+      "ellos": ["conseguían"]
+    },
+    "indicative.future": {
+      "yo": ["conseguiré"],
+      "tu": ["conseguirás"],
+      "el": ["conseguirá"],
+      "nosotros": ["conseguiremos"],
+      "vosotros": ["conseguiréis"],
+      "ellos": ["conseguirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["conseguiría"],
+      "tu": ["conseguirías"],
+      "el": ["conseguiría"],
+      "nosotros": ["conseguiríamos"],
+      "vosotros": ["conseguiríais"],
+      "ellos": ["conseguirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["consiga"],
+      "tu": ["consigas"],
+      "el": ["consiga"],
+      "nosotros": ["consigamos"],
+      "vosotros": ["consigáis"],
+      "ellos": ["consigan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["consiguiera", "consiguiese"],
+      "tu": ["consiguieras", "consiguieses"],
+      "el": ["consiguiera", "consiguiese"],
+      "nosotros": ["consiguiéramos", "consiguiésemos"],
+      "vosotros": ["consiguierais", "consiguieseis"],
+      "ellos": ["consiguieran", "consiguiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he conseguido"],
+      "tu": ["has conseguido"],
+      "el": ["ha conseguido"],
+      "nosotros": ["hemos conseguido"],
+      "vosotros": ["habéis conseguido"],
+      "ellos": ["han conseguido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había conseguido"],
+      "tu": ["habías conseguido"],
+      "el": ["había conseguido"],
+      "nosotros": ["habíamos conseguido"],
+      "vosotros": ["habíais conseguido"],
+      "ellos": ["habían conseguido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré conseguido"],
+      "tu": ["habrás conseguido"],
+      "el": ["habrá conseguido"],
+      "nosotros": ["habremos conseguido"],
+      "vosotros": ["habréis conseguido"],
+      "ellos": ["habrán conseguido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría conseguido"],
+      "tu": ["habrías conseguido"],
+      "el": ["habría conseguido"],
+      "nosotros": ["habríamos conseguido"],
+      "vosotros": ["habríais conseguido"],
+      "ellos": ["habrían conseguido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya conseguido"],
+      "tu": ["hayas conseguido"],
+      "el": ["haya conseguido"],
+      "nosotros": ["hayamos conseguido"],
+      "vosotros": ["hayáis conseguido"],
+      "ellos": ["hayan conseguido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera conseguido", "hubiese conseguido"],
+      "tu": ["hubieras conseguido", "hubieses conseguido"],
+      "el": ["hubiera conseguido", "hubiese conseguido"],
+      "nosotros": ["hubiéramos conseguido", "hubiésemos conseguido"],
+      "vosotros": ["hubierais conseguido", "hubieseis conseguido"],
+      "ellos": ["hubieran conseguido", "hubiesen conseguido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy consiguiendo"],
+      "tu": ["estás consiguiendo"],
+      "el": ["está consiguiendo"],
+      "nosotros": ["estamos consiguiendo"],
+      "vosotros": ["estáis consiguiendo"],
+      "ellos": ["están consiguiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["consigue"],
+      "usted": ["consiga"],
+      "nosotros": ["consigamos"],
+      "vosotros": ["conseguid"],
+      "ustedes": ["consigan"]
+    },
+    "imperative.negative": {
+      "tu": ["no consigas"],
+      "usted": ["no consiga"],
+      "nosotros": ["no consigamos"],
+      "vosotros": ["no consigáis"],
+      "ustedes": ["no consigan"]
+    }
+  }
+}

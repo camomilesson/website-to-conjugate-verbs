@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "encontrar",
+  "infinitive": "encontrar",
+  "meaning": "to find",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["encuentro"],
+      "tu": ["encuentras"],
+      "el": ["encuentra"],
+      "nosotros": ["encontramos"],
+      "vosotros": ["encontráis"],
+      "ellos": ["encuentran"]
+    },
+    "indicative.preterite": {
+      "yo": ["encontré"],
+      "tu": ["encontraste"],
+      "el": ["encontró"],
+      "nosotros": ["encontramos"],
+      "vosotros": ["encontrasteis"],
+      "ellos": ["encontraron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["encontraba"],
+      "tu": ["encontrabas"],
+      "el": ["encontraba"],
+      "nosotros": ["encontrábamos"],
+      "vosotros": ["encontrabais"],
+      "ellos": ["encontraban"]
+    },
+    "indicative.future": {
+      "yo": ["encontraré"],
+      "tu": ["encontrarás"],
+      "el": ["encontrará"],
+      "nosotros": ["encontraremos"],
+      "vosotros": ["encontraréis"],
+      "ellos": ["encontrarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["encontraría"],
+      "tu": ["encontrarías"],
+      "el": ["encontraría"],
+      "nosotros": ["encontraríamos"],
+      "vosotros": ["encontraríais"],
+      "ellos": ["encontrarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["encuentre"],
+      "tu": ["encuentres"],
+      "el": ["encuentre"],
+      "nosotros": ["encontremos"],
+      "vosotros": ["encontréis"],
+      "ellos": ["encuentren"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["encontrara", "encontrase"],
+      "tu": ["encontraras", "encontrases"],
+      "el": ["encontrara", "encontrase"],
+      "nosotros": ["encontráramos", "encontrásemos"],
+      "vosotros": ["encontrarais", "encontraseis"],
+      "ellos": ["encontraran", "encontrasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he encontrado"],
+      "tu": ["has encontrado"],
+      "el": ["ha encontrado"],
+      "nosotros": ["hemos encontrado"],
+      "vosotros": ["habéis encontrado"],
+      "ellos": ["han encontrado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había encontrado"],
+      "tu": ["habías encontrado"],
+      "el": ["había encontrado"],
+      "nosotros": ["habíamos encontrado"],
+      "vosotros": ["habíais encontrado"],
+      "ellos": ["habían encontrado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré encontrado"],
+      "tu": ["habrás encontrado"],
+      "el": ["habrá encontrado"],
+      "nosotros": ["habremos encontrado"],
+      "vosotros": ["habréis encontrado"],
+      "ellos": ["habrán encontrado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría encontrado"],
+      "tu": ["habrías encontrado"],
+      "el": ["habría encontrado"],
+      "nosotros": ["habríamos encontrado"],
+      "vosotros": ["habríais encontrado"],
+      "ellos": ["habrían encontrado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya encontrado"],
+      "tu": ["hayas encontrado"],
+      "el": ["haya encontrado"],
+      "nosotros": ["hayamos encontrado"],
+      "vosotros": ["hayáis encontrado"],
+      "ellos": ["hayan encontrado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera encontrado", "hubiese encontrado"],
+      "tu": ["hubieras encontrado", "hubieses encontrado"],
+      "el": ["hubiera encontrado", "hubiese encontrado"],
+      "nosotros": ["hubiéramos encontrado", "hubiésemos encontrado"],
+      "vosotros": ["hubierais encontrado", "hubieseis encontrado"],
+      "ellos": ["hubieran encontrado", "hubiesen encontrado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy encontrando"],
+      "tu": ["estás encontrando"],
+      "el": ["está encontrando"],
+      "nosotros": ["estamos encontrando"],
+      "vosotros": ["estáis encontrando"],
+      "ellos": ["están encontrando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["encuentra"],
+      "usted": ["encuentre"],
+      "nosotros": ["encontremos"],
+      "vosotros": ["encontrad"],
+      "ustedes": ["encuentren"]
+    },
+    "imperative.negative": {
+      "tu": ["no encuentres"],
+      "usted": ["no encuentre"],
+      "nosotros": ["no encontremos"],
+      "vosotros": ["no encontréis"],
+      "ustedes": ["no encuentren"]
+    }
+  }
+}

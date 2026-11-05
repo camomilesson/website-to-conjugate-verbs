@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "buscar",
+  "infinitive": "buscar",
+  "meaning": "to look for",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["busco"],
+      "tu": ["buscas"],
+      "el": ["busca"],
+      "nosotros": ["buscamos"],
+      "vosotros": ["buscáis"],
+      "ellos": ["buscan"]
+    },
+    "indicative.preterite": {
+      "yo": ["busqué"],
+      "tu": ["buscaste"],
+      "el": ["buscó"],
+      "nosotros": ["buscamos"],
+      "vosotros": ["buscasteis"],
+      "ellos": ["buscaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["buscaba"],
+      "tu": ["buscabas"],
+      "el": ["buscaba"],
+      "nosotros": ["buscábamos"],
+      "vosotros": ["buscabais"],
+      "ellos": ["buscaban"]
+    },
+    "indicative.future": {
+      "yo": ["buscaré"],
+      "tu": ["buscarás"],
+      "el": ["buscará"],
+      "nosotros": ["buscaremos"],
+      "vosotros": ["buscaréis"],
+      "ellos": ["buscarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["buscaría"],
+      "tu": ["buscarías"],
+      "el": ["buscaría"],
+      "nosotros": ["buscaríamos"],
+      "vosotros": ["buscaríais"],
+      "ellos": ["buscarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["busque"],
+      "tu": ["busques"],
+      "el": ["busque"],
+      "nosotros": ["busquemos"],
+      "vosotros": ["busquéis"],
+      "ellos": ["busquen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["buscara", "buscase"],
+      "tu": ["buscaras", "buscases"],
+      "el": ["buscara", "buscase"],
+      "nosotros": ["buscáramos", "buscásemos"],
+      "vosotros": ["buscarais", "buscaseis"],
+      "ellos": ["buscaran", "buscasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he buscado"],
+      "tu": ["has buscado"],
+      "el": ["ha buscado"],
+      "nosotros": ["hemos buscado"],
+      "vosotros": ["habéis buscado"],
+      "ellos": ["han buscado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había buscado"],
+      "tu": ["habías buscado"],
+      "el": ["había buscado"],
+      "nosotros": ["habíamos buscado"],
+      "vosotros": ["habíais buscado"],
+      "ellos": ["habían buscado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré buscado"],
+      "tu": ["habrás buscado"],
+      "el": ["habrá buscado"],
+      "nosotros": ["habremos buscado"],
+      "vosotros": ["habréis buscado"],
+      "ellos": ["habrán buscado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría buscado"],
+      "tu": ["habrías buscado"],
+      "el": ["habría buscado"],
+      "nosotros": ["habríamos buscado"],
+      "vosotros": ["habríais buscado"],
+      "ellos": ["habrían buscado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya buscado"],
+      "tu": ["hayas buscado"],
+      "el": ["haya buscado"],
+      "nosotros": ["hayamos buscado"],
+      "vosotros": ["hayáis buscado"],
+      "ellos": ["hayan buscado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera buscado", "hubiese buscado"],
+      "tu": ["hubieras buscado", "hubieses buscado"],
+      "el": ["hubiera buscado", "hubiese buscado"],
+      "nosotros": ["hubiéramos buscado", "hubiésemos buscado"],
+      "vosotros": ["hubierais buscado", "hubieseis buscado"],
+      "ellos": ["hubieran buscado", "hubiesen buscado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy buscando"],
+      "tu": ["estás buscando"],
+      "el": ["está buscando"],
+      "nosotros": ["estamos buscando"],
+      "vosotros": ["estáis buscando"],
+      "ellos": ["están buscando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["busca"],
+      "usted": ["busque"],
+      "nosotros": ["busquemos"],
+      "vosotros": ["buscad"],
+      "ustedes": ["busquen"]
+    },
+    "imperative.negative": {
+      "tu": ["no busques"],
+      "usted": ["no busque"],
+      "nosotros": ["no busquemos"],
+      "vosotros": ["no busquéis"],
+      "ustedes": ["no busquen"]
+    }
+  }
+}

@@ -5,6 +5,7 @@ export interface CatalogueEntry {
   id: string
   infinitive: string
   meaning: string
+  common?: boolean
 }
 export interface Catalogue {
   schemaVersion: 1
@@ -30,7 +31,8 @@ function entry(value: unknown): value is CatalogueEntry {
     nonempty(value.id) &&
     /^[a-z]+$/.test(value.id) &&
     nonempty(value.infinitive) &&
-    nonempty(value.meaning)
+    nonempty(value.meaning) &&
+    (value.common === undefined || typeof value.common === "boolean")
   )
 }
 export function parseCatalogue(value: unknown): Catalogue {

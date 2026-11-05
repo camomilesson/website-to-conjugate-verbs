@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "preferir",
+  "infinitive": "preferir",
+  "meaning": "to prefer",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["prefiero"],
+      "tu": ["prefieres"],
+      "el": ["prefiere"],
+      "nosotros": ["preferimos"],
+      "vosotros": ["preferís"],
+      "ellos": ["prefieren"]
+    },
+    "indicative.preterite": {
+      "yo": ["preferí"],
+      "tu": ["preferiste"],
+      "el": ["prefirió"],
+      "nosotros": ["preferimos"],
+      "vosotros": ["preferisteis"],
+      "ellos": ["prefirieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["prefería"],
+      "tu": ["preferías"],
+      "el": ["prefería"],
+      "nosotros": ["preferíamos"],
+      "vosotros": ["preferíais"],
+      "ellos": ["preferían"]
+    },
+    "indicative.future": {
+      "yo": ["preferiré"],
+      "tu": ["preferirás"],
+      "el": ["preferirá"],
+      "nosotros": ["preferiremos"],
+      "vosotros": ["preferiréis"],
+      "ellos": ["preferirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["preferiría"],
+      "tu": ["preferirías"],
+      "el": ["preferiría"],
+      "nosotros": ["preferiríamos"],
+      "vosotros": ["preferiríais"],
+      "ellos": ["preferirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["prefiera"],
+      "tu": ["prefieras"],
+      "el": ["prefiera"],
+      "nosotros": ["prefiramos"],
+      "vosotros": ["prefiráis"],
+      "ellos": ["prefieran"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["prefiriera", "prefiriese"],
+      "tu": ["prefirieras", "prefirieses"],
+      "el": ["prefiriera", "prefiriese"],
+      "nosotros": ["prefiriéramos", "prefiriésemos"],
+      "vosotros": ["prefirierais", "prefirieseis"],
+      "ellos": ["prefirieran", "prefiriesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he preferido"],
+      "tu": ["has preferido"],
+      "el": ["ha preferido"],
+      "nosotros": ["hemos preferido"],
+      "vosotros": ["habéis preferido"],
+      "ellos": ["han preferido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había preferido"],
+      "tu": ["habías preferido"],
+      "el": ["había preferido"],
+      "nosotros": ["habíamos preferido"],
+      "vosotros": ["habíais preferido"],
+      "ellos": ["habían preferido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré preferido"],
+      "tu": ["habrás preferido"],
+      "el": ["habrá preferido"],
+      "nosotros": ["habremos preferido"],
+      "vosotros": ["habréis preferido"],
+      "ellos": ["habrán preferido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría preferido"],
+      "tu": ["habrías preferido"],
+      "el": ["habría preferido"],
+      "nosotros": ["habríamos preferido"],
+      "vosotros": ["habríais preferido"],
+      "ellos": ["habrían preferido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya preferido"],
+      "tu": ["hayas preferido"],
+      "el": ["haya preferido"],
+      "nosotros": ["hayamos preferido"],
+      "vosotros": ["hayáis preferido"],
+      "ellos": ["hayan preferido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera preferido", "hubiese preferido"],
+      "tu": ["hubieras preferido", "hubieses preferido"],
+      "el": ["hubiera preferido", "hubiese preferido"],
+      "nosotros": ["hubiéramos preferido", "hubiésemos preferido"],
+      "vosotros": ["hubierais preferido", "hubieseis preferido"],
+      "ellos": ["hubieran preferido", "hubiesen preferido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy prefiriendo"],
+      "tu": ["estás prefiriendo"],
+      "el": ["está prefiriendo"],
+      "nosotros": ["estamos prefiriendo"],
+      "vosotros": ["estáis prefiriendo"],
+      "ellos": ["están prefiriendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["prefiere"],
+      "usted": ["prefiera"],
+      "nosotros": ["prefiramos"],
+      "vosotros": ["preferid"],
+      "ustedes": ["prefieran"]
+    },
+    "imperative.negative": {
+      "tu": ["no prefieras"],
+      "usted": ["no prefiera"],
+      "nosotros": ["no prefiramos"],
+      "vosotros": ["no prefiráis"],
+      "ustedes": ["no prefieran"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "correr",
+  "infinitive": "correr",
+  "meaning": "to run",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["corro"],
+      "tu": ["corres"],
+      "el": ["corre"],
+      "nosotros": ["corremos"],
+      "vosotros": ["corréis"],
+      "ellos": ["corren"]
+    },
+    "indicative.preterite": {
+      "yo": ["corrí"],
+      "tu": ["corriste"],
+      "el": ["corrió"],
+      "nosotros": ["corrimos"],
+      "vosotros": ["corristeis"],
+      "ellos": ["corrieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["corría"],
+      "tu": ["corrías"],
+      "el": ["corría"],
+      "nosotros": ["corríamos"],
+      "vosotros": ["corríais"],
+      "ellos": ["corrían"]
+    },
+    "indicative.future": {
+      "yo": ["correré"],
+      "tu": ["correrás"],
+      "el": ["correrá"],
+      "nosotros": ["correremos"],
+      "vosotros": ["correréis"],
+      "ellos": ["correrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["correría"],
+      "tu": ["correrías"],
+      "el": ["correría"],
+      "nosotros": ["correríamos"],
+      "vosotros": ["correríais"],
+      "ellos": ["correrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["corra"],
+      "tu": ["corras"],
+      "el": ["corra"],
+      "nosotros": ["corramos"],
+      "vosotros": ["corráis"],
+      "ellos": ["corran"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["corriera", "corriese"],
+      "tu": ["corrieras", "corrieses"],
+      "el": ["corriera", "corriese"],
+      "nosotros": ["corriéramos", "corriésemos"],
+      "vosotros": ["corrierais", "corrieseis"],
+      "ellos": ["corrieran", "corriesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he corrido"],
+      "tu": ["has corrido"],
+      "el": ["ha corrido"],
+      "nosotros": ["hemos corrido"],
+      "vosotros": ["habéis corrido"],
+      "ellos": ["han corrido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había corrido"],
+      "tu": ["habías corrido"],
+      "el": ["había corrido"],
+      "nosotros": ["habíamos corrido"],
+      "vosotros": ["habíais corrido"],
+      "ellos": ["habían corrido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré corrido"],
+      "tu": ["habrás corrido"],
+      "el": ["habrá corrido"],
+      "nosotros": ["habremos corrido"],
+      "vosotros": ["habréis corrido"],
+      "ellos": ["habrán corrido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría corrido"],
+      "tu": ["habrías corrido"],
+      "el": ["habría corrido"],
+      "nosotros": ["habríamos corrido"],
+      "vosotros": ["habríais corrido"],
+      "ellos": ["habrían corrido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya corrido"],
+      "tu": ["hayas corrido"],
+      "el": ["haya corrido"],
+      "nosotros": ["hayamos corrido"],
+      "vosotros": ["hayáis corrido"],
+      "ellos": ["hayan corrido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera corrido", "hubiese corrido"],
+      "tu": ["hubieras corrido", "hubieses corrido"],
+      "el": ["hubiera corrido", "hubiese corrido"],
+      "nosotros": ["hubiéramos corrido", "hubiésemos corrido"],
+      "vosotros": ["hubierais corrido", "hubieseis corrido"],
+      "ellos": ["hubieran corrido", "hubiesen corrido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy corriendo"],
+      "tu": ["estás corriendo"],
+      "el": ["está corriendo"],
+      "nosotros": ["estamos corriendo"],
+      "vosotros": ["estáis corriendo"],
+      "ellos": ["están corriendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["corre"],
+      "usted": ["corra"],
+      "nosotros": ["corramos"],
+      "vosotros": ["corred"],
+      "ustedes": ["corran"]
+    },
+    "imperative.negative": {
+      "tu": ["no corras"],
+      "usted": ["no corra"],
+      "nosotros": ["no corramos"],
+      "vosotros": ["no corráis"],
+      "ustedes": ["no corran"]
+    }
+  }
+}

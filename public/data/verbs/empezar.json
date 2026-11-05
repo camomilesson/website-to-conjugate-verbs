@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "empezar",
+  "infinitive": "empezar",
+  "meaning": "to start",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["empiezo"],
+      "tu": ["empiezas"],
+      "el": ["empieza"],
+      "nosotros": ["empezamos"],
+      "vosotros": ["empezáis"],
+      "ellos": ["empiezan"]
+    },
+    "indicative.preterite": {
+      "yo": ["empecé"],
+      "tu": ["empezaste"],
+      "el": ["empezó"],
+      "nosotros": ["empezamos"],
+      "vosotros": ["empezasteis"],
+      "ellos": ["empezaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["empezaba"],
+      "tu": ["empezabas"],
+      "el": ["empezaba"],
+      "nosotros": ["empezábamos"],
+      "vosotros": ["empezabais"],
+      "ellos": ["empezaban"]
+    },
+    "indicative.future": {
+      "yo": ["empezaré"],
+      "tu": ["empezarás"],
+      "el": ["empezará"],
+      "nosotros": ["empezaremos"],
+      "vosotros": ["empezaréis"],
+      "ellos": ["empezarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["empezaría"],
+      "tu": ["empezarías"],
+      "el": ["empezaría"],
+      "nosotros": ["empezaríamos"],
+      "vosotros": ["empezaríais"],
+      "ellos": ["empezarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["empiece"],
+      "tu": ["empieces"],
+      "el": ["empiece"],
+      "nosotros": ["empecemos"],
+      "vosotros": ["empecéis"],
+      "ellos": ["empiecen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["empezara", "empezase"],
+      "tu": ["empezaras", "empezases"],
+      "el": ["empezara", "empezase"],
+      "nosotros": ["empezáramos", "empezásemos"],
+      "vosotros": ["empezarais", "empezaseis"],
+      "ellos": ["empezaran", "empezasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he empezado"],
+      "tu": ["has empezado"],
+      "el": ["ha empezado"],
+      "nosotros": ["hemos empezado"],
+      "vosotros": ["habéis empezado"],
+      "ellos": ["han empezado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había empezado"],
+      "tu": ["habías empezado"],
+      "el": ["había empezado"],
+      "nosotros": ["habíamos empezado"],
+      "vosotros": ["habíais empezado"],
+      "ellos": ["habían empezado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré empezado"],
+      "tu": ["habrás empezado"],
+      "el": ["habrá empezado"],
+      "nosotros": ["habremos empezado"],
+      "vosotros": ["habréis empezado"],
+      "ellos": ["habrán empezado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría empezado"],
+      "tu": ["habrías empezado"],
+      "el": ["habría empezado"],
+      "nosotros": ["habríamos empezado"],
+      "vosotros": ["habríais empezado"],
+      "ellos": ["habrían empezado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya empezado"],
+      "tu": ["hayas empezado"],
+      "el": ["haya empezado"],
+      "nosotros": ["hayamos empezado"],
+      "vosotros": ["hayáis empezado"],
+      "ellos": ["hayan empezado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera empezado", "hubiese empezado"],
+      "tu": ["hubieras empezado", "hubieses empezado"],
+      "el": ["hubiera empezado", "hubiese empezado"],
+      "nosotros": ["hubiéramos empezado", "hubiésemos empezado"],
+      "vosotros": ["hubierais empezado", "hubieseis empezado"],
+      "ellos": ["hubieran empezado", "hubiesen empezado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy empezando"],
+      "tu": ["estás empezando"],
+      "el": ["está empezando"],
+      "nosotros": ["estamos empezando"],
+      "vosotros": ["estáis empezando"],
+      "ellos": ["están empezando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["empieza"],
+      "usted": ["empiece"],
+      "nosotros": ["empecemos"],
+      "vosotros": ["empezad"],
+      "ustedes": ["empiecen"]
+    },
+    "imperative.negative": {
+      "tu": ["no empieces"],
+      "usted": ["no empiece"],
+      "nosotros": ["no empecemos"],
+      "vosotros": ["no empecéis"],
+      "ustedes": ["no empiecen"]
+    }
+  }
+}

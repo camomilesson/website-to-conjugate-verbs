@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "sentarse",
+  "infinitive": "sentarse",
+  "meaning": "to sit down",
+  "tags": ["reflexive", "irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me siento"],
+      "tu": ["te sientas"],
+      "el": ["se sienta"],
+      "nosotros": ["nos sentamos"],
+      "vosotros": ["os sentáis"],
+      "ellos": ["se sientan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me senté"],
+      "tu": ["te sentaste"],
+      "el": ["se sentó"],
+      "nosotros": ["nos sentamos"],
+      "vosotros": ["os sentasteis"],
+      "ellos": ["se sentaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me sentaba"],
+      "tu": ["te sentabas"],
+      "el": ["se sentaba"],
+      "nosotros": ["nos sentábamos"],
+      "vosotros": ["os sentabais"],
+      "ellos": ["se sentaban"]
+    },
+    "indicative.future": {
+      "yo": ["me sentaré"],
+      "tu": ["te sentarás"],
+      "el": ["se sentará"],
+      "nosotros": ["nos sentaremos"],
+      "vosotros": ["os sentaréis"],
+      "ellos": ["se sentarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me sentaría"],
+      "tu": ["te sentarías"],
+      "el": ["se sentaría"],
+      "nosotros": ["nos sentaríamos"],
+      "vosotros": ["os sentaríais"],
+      "ellos": ["se sentarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me siente"],
+      "tu": ["te sientes"],
+      "el": ["se siente"],
+      "nosotros": ["nos sentemos"],
+      "vosotros": ["os sentéis"],
+      "ellos": ["se sienten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me sentara", "me sentase"],
+      "tu": ["te sentaras", "te sentases"],
+      "el": ["se sentara", "se sentase"],
+      "nosotros": ["nos sentáramos", "nos sentásemos"],
+      "vosotros": ["os sentarais", "os sentaseis"],
+      "ellos": ["se sentaran", "se sentasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he sentado"],
+      "tu": ["te has sentado"],
+      "el": ["se ha sentado"],
+      "nosotros": ["nos hemos sentado"],
+      "vosotros": ["os habéis sentado"],
+      "ellos": ["se han sentado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había sentado"],
+      "tu": ["te habías sentado"],
+      "el": ["se había sentado"],
+      "nosotros": ["nos habíamos sentado"],
+      "vosotros": ["os habíais sentado"],
+      "ellos": ["se habían sentado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré sentado"],
+      "tu": ["te habrás sentado"],
+      "el": ["se habrá sentado"],
+      "nosotros": ["nos habremos sentado"],
+      "vosotros": ["os habréis sentado"],
+      "ellos": ["se habrán sentado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría sentado"],
+      "tu": ["te habrías sentado"],
+      "el": ["se habría sentado"],
+      "nosotros": ["nos habríamos sentado"],
+      "vosotros": ["os habríais sentado"],
+      "ellos": ["se habrían sentado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya sentado"],
+      "tu": ["te hayas sentado"],
+      "el": ["se haya sentado"],
+      "nosotros": ["nos hayamos sentado"],
+      "vosotros": ["os hayáis sentado"],
+      "ellos": ["se hayan sentado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera sentado", "me hubiese sentado"],
+      "tu": ["te hubieras sentado", "te hubieses sentado"],
+      "el": ["se hubiera sentado", "se hubiese sentado"],
+      "nosotros": ["nos hubiéramos sentado", "nos hubiésemos sentado"],
+      "vosotros": ["os hubierais sentado", "os hubieseis sentado"],
+      "ellos": ["se hubieran sentado", "se hubiesen sentado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy sentando", "estoy sentándome"],
+      "tu": ["te estás sentando", "estás sentándote"],
+      "el": ["se está sentando", "está sentándose"],
+      "nosotros": ["nos estamos sentando", "estamos sentándonos"],
+      "vosotros": ["os estáis sentando", "estáis sentándoos"],
+      "ellos": ["se están sentando", "están sentándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["siéntate"],
+      "usted": ["siéntese"],
+      "nosotros": ["sentémonos"],
+      "vosotros": ["sentaos"],
+      "ustedes": ["siéntense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te sientes"],
+      "usted": ["no se siente"],
+      "nosotros": ["no nos sentemos"],
+      "vosotros": ["no os sentéis"],
+      "ustedes": ["no se sienten"]
+    }
+  }
+}

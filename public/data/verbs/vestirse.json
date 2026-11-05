@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "vestirse",
+  "infinitive": "vestirse",
+  "meaning": "to get dressed",
+  "tags": ["reflexive", "irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me visto"],
+      "tu": ["te vistes"],
+      "el": ["se viste"],
+      "nosotros": ["nos vestimos"],
+      "vosotros": ["os vestís"],
+      "ellos": ["se visten"]
+    },
+    "indicative.preterite": {
+      "yo": ["me vestí"],
+      "tu": ["te vestiste"],
+      "el": ["se vistió"],
+      "nosotros": ["nos vestimos"],
+      "vosotros": ["os vestisteis"],
+      "ellos": ["se vistieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me vestía"],
+      "tu": ["te vestías"],
+      "el": ["se vestía"],
+      "nosotros": ["nos vestíamos"],
+      "vosotros": ["os vestíais"],
+      "ellos": ["se vestían"]
+    },
+    "indicative.future": {
+      "yo": ["me vestiré"],
+      "tu": ["te vestirás"],
+      "el": ["se vestirá"],
+      "nosotros": ["nos vestiremos"],
+      "vosotros": ["os vestiréis"],
+      "ellos": ["se vestirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me vestiría"],
+      "tu": ["te vestirías"],
+      "el": ["se vestiría"],
+      "nosotros": ["nos vestiríamos"],
+      "vosotros": ["os vestiríais"],
+      "ellos": ["se vestirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me vista"],
+      "tu": ["te vistas"],
+      "el": ["se vista"],
+      "nosotros": ["nos vistamos"],
+      "vosotros": ["os vistáis"],
+      "ellos": ["se vistan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me vistiera", "me vistiese"],
+      "tu": ["te vistieras", "te vistieses"],
+      "el": ["se vistiera", "se vistiese"],
+      "nosotros": ["nos vistiéramos", "nos vistiésemos"],
+      "vosotros": ["os vistierais", "os vistieseis"],
+      "ellos": ["se vistieran", "se vistiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he vestido"],
+      "tu": ["te has vestido"],
+      "el": ["se ha vestido"],
+      "nosotros": ["nos hemos vestido"],
+      "vosotros": ["os habéis vestido"],
+      "ellos": ["se han vestido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había vestido"],
+      "tu": ["te habías vestido"],
+      "el": ["se había vestido"],
+      "nosotros": ["nos habíamos vestido"],
+      "vosotros": ["os habíais vestido"],
+      "ellos": ["se habían vestido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré vestido"],
+      "tu": ["te habrás vestido"],
+      "el": ["se habrá vestido"],
+      "nosotros": ["nos habremos vestido"],
+      "vosotros": ["os habréis vestido"],
+      "ellos": ["se habrán vestido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría vestido"],
+      "tu": ["te habrías vestido"],
+      "el": ["se habría vestido"],
+      "nosotros": ["nos habríamos vestido"],
+      "vosotros": ["os habríais vestido"],
+      "ellos": ["se habrían vestido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya vestido"],
+      "tu": ["te hayas vestido"],
+      "el": ["se haya vestido"],
+      "nosotros": ["nos hayamos vestido"],
+      "vosotros": ["os hayáis vestido"],
+      "ellos": ["se hayan vestido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera vestido", "me hubiese vestido"],
+      "tu": ["te hubieras vestido", "te hubieses vestido"],
+      "el": ["se hubiera vestido", "se hubiese vestido"],
+      "nosotros": ["nos hubiéramos vestido", "nos hubiésemos vestido"],
+      "vosotros": ["os hubierais vestido", "os hubieseis vestido"],
+      "ellos": ["se hubieran vestido", "se hubiesen vestido"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy vistiendo", "estoy vistiéndome"],
+      "tu": ["te estás vistiendo", "estás vistiéndote"],
+      "el": ["se está vistiendo", "está vistiéndose"],
+      "nosotros": ["nos estamos vistiendo", "estamos vistiéndonos"],
+      "vosotros": ["os estáis vistiendo", "estáis vistiéndoos"],
+      "ellos": ["se están vistiendo", "están vistiéndose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["vístete"],
+      "usted": ["vístase"],
+      "nosotros": ["vistámonos"],
+      "vosotros": ["vestíos"],
+      "ustedes": ["vístanse"]
+    },
+    "imperative.negative": {
+      "tu": ["no te vistas"],
+      "usted": ["no se vista"],
+      "nosotros": ["no nos vistamos"],
+      "vosotros": ["no os vistáis"],
+      "ustedes": ["no se vistan"]
+    }
+  }
+}

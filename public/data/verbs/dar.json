@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "dar",
+  "infinitive": "dar",
+  "meaning": "to give",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["doy"],
+      "tu": ["das"],
+      "el": ["da"],
+      "nosotros": ["damos"],
+      "vosotros": ["dais"],
+      "ellos": ["dan"]
+    },
+    "indicative.preterite": {
+      "yo": ["di"],
+      "tu": ["diste"],
+      "el": ["dio"],
+      "nosotros": ["dimos"],
+      "vosotros": ["disteis"],
+      "ellos": ["dieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["daba"],
+      "tu": ["dabas"],
+      "el": ["daba"],
+      "nosotros": ["dábamos"],
+      "vosotros": ["dabais"],
+      "ellos": ["daban"]
+    },
+    "indicative.future": {
+      "yo": ["daré"],
+      "tu": ["darás"],
+      "el": ["dará"],
+      "nosotros": ["daremos"],
+      "vosotros": ["daréis"],
+      "ellos": ["darán"]
+    },
+    "indicative.conditional": {
+      "yo": ["daría"],
+      "tu": ["darías"],
+      "el": ["daría"],
+      "nosotros": ["daríamos"],
+      "vosotros": ["daríais"],
+      "ellos": ["darían"]
+    },
+    "subjunctive.present": {
+      "yo": ["dé"],
+      "tu": ["des"],
+      "el": ["dé"],
+      "nosotros": ["demos"],
+      "vosotros": ["deis"],
+      "ellos": ["den"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["diera", "diese"],
+      "tu": ["dieras", "dieses"],
+      "el": ["diera", "diese"],
+      "nosotros": ["diéramos", "diésemos"],
+      "vosotros": ["dierais", "dieseis"],
+      "ellos": ["dieran", "diesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he dado"],
+      "tu": ["has dado"],
+      "el": ["ha dado"],
+      "nosotros": ["hemos dado"],
+      "vosotros": ["habéis dado"],
+      "ellos": ["han dado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había dado"],
+      "tu": ["habías dado"],
+      "el": ["había dado"],
+      "nosotros": ["habíamos dado"],
+      "vosotros": ["habíais dado"],
+      "ellos": ["habían dado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré dado"],
+      "tu": ["habrás dado"],
+      "el": ["habrá dado"],
+      "nosotros": ["habremos dado"],
+      "vosotros": ["habréis dado"],
+      "ellos": ["habrán dado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría dado"],
+      "tu": ["habrías dado"],
+      "el": ["habría dado"],
+      "nosotros": ["habríamos dado"],
+      "vosotros": ["habríais dado"],
+      "ellos": ["habrían dado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya dado"],
+      "tu": ["hayas dado"],
+      "el": ["haya dado"],
+      "nosotros": ["hayamos dado"],
+      "vosotros": ["hayáis dado"],
+      "ellos": ["hayan dado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera dado", "hubiese dado"],
+      "tu": ["hubieras dado", "hubieses dado"],
+      "el": ["hubiera dado", "hubiese dado"],
+      "nosotros": ["hubiéramos dado", "hubiésemos dado"],
+      "vosotros": ["hubierais dado", "hubieseis dado"],
+      "ellos": ["hubieran dado", "hubiesen dado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy dando"],
+      "tu": ["estás dando"],
+      "el": ["está dando"],
+      "nosotros": ["estamos dando"],
+      "vosotros": ["estáis dando"],
+      "ellos": ["están dando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["da"],
+      "usted": ["dé"],
+      "nosotros": ["demos"],
+      "vosotros": ["dad"],
+      "ustedes": ["den"]
+    },
+    "imperative.negative": {
+      "tu": ["no des"],
+      "usted": ["no dé"],
+      "nosotros": ["no demos"],
+      "vosotros": ["no deis"],
+      "ustedes": ["no den"]
+    }
+  }
+}

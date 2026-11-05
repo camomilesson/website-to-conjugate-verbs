@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "ofrecer",
+  "infinitive": "ofrecer",
+  "meaning": "to offer",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["ofrezco"],
+      "tu": ["ofreces"],
+      "el": ["ofrece"],
+      "nosotros": ["ofrecemos"],
+      "vosotros": ["ofrecéis"],
+      "ellos": ["ofrecen"]
+    },
+    "indicative.preterite": {
+      "yo": ["ofrecí"],
+      "tu": ["ofreciste"],
+      "el": ["ofreció"],
+      "nosotros": ["ofrecimos"],
+      "vosotros": ["ofrecisteis"],
+      "ellos": ["ofrecieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["ofrecía"],
+      "tu": ["ofrecías"],
+      "el": ["ofrecía"],
+      "nosotros": ["ofrecíamos"],
+      "vosotros": ["ofrecíais"],
+      "ellos": ["ofrecían"]
+    },
+    "indicative.future": {
+      "yo": ["ofreceré"],
+      "tu": ["ofrecerás"],
+      "el": ["ofrecerá"],
+      "nosotros": ["ofreceremos"],
+      "vosotros": ["ofreceréis"],
+      "ellos": ["ofrecerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["ofrecería"],
+      "tu": ["ofrecerías"],
+      "el": ["ofrecería"],
+      "nosotros": ["ofreceríamos"],
+      "vosotros": ["ofreceríais"],
+      "ellos": ["ofrecerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["ofrezca"],
+      "tu": ["ofrezcas"],
+      "el": ["ofrezca"],
+      "nosotros": ["ofrezcamos"],
+      "vosotros": ["ofrezcáis"],
+      "ellos": ["ofrezcan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["ofreciera", "ofreciese"],
+      "tu": ["ofrecieras", "ofrecieses"],
+      "el": ["ofreciera", "ofreciese"],
+      "nosotros": ["ofreciéramos", "ofreciésemos"],
+      "vosotros": ["ofrecierais", "ofrecieseis"],
+      "ellos": ["ofrecieran", "ofreciesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he ofrecido"],
+      "tu": ["has ofrecido"],
+      "el": ["ha ofrecido"],
+      "nosotros": ["hemos ofrecido"],
+      "vosotros": ["habéis ofrecido"],
+      "ellos": ["han ofrecido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había ofrecido"],
+      "tu": ["habías ofrecido"],
+      "el": ["había ofrecido"],
+      "nosotros": ["habíamos ofrecido"],
+      "vosotros": ["habíais ofrecido"],
+      "ellos": ["habían ofrecido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré ofrecido"],
+      "tu": ["habrás ofrecido"],
+      "el": ["habrá ofrecido"],
+      "nosotros": ["habremos ofrecido"],
+      "vosotros": ["habréis ofrecido"],
+      "ellos": ["habrán ofrecido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría ofrecido"],
+      "tu": ["habrías ofrecido"],
+      "el": ["habría ofrecido"],
+      "nosotros": ["habríamos ofrecido"],
+      "vosotros": ["habríais ofrecido"],
+      "ellos": ["habrían ofrecido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya ofrecido"],
+      "tu": ["hayas ofrecido"],
+      "el": ["haya ofrecido"],
+      "nosotros": ["hayamos ofrecido"],
+      "vosotros": ["hayáis ofrecido"],
+      "ellos": ["hayan ofrecido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera ofrecido", "hubiese ofrecido"],
+      "tu": ["hubieras ofrecido", "hubieses ofrecido"],
+      "el": ["hubiera ofrecido", "hubiese ofrecido"],
+      "nosotros": ["hubiéramos ofrecido", "hubiésemos ofrecido"],
+      "vosotros": ["hubierais ofrecido", "hubieseis ofrecido"],
+      "ellos": ["hubieran ofrecido", "hubiesen ofrecido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy ofreciendo"],
+      "tu": ["estás ofreciendo"],
+      "el": ["está ofreciendo"],
+      "nosotros": ["estamos ofreciendo"],
+      "vosotros": ["estáis ofreciendo"],
+      "ellos": ["están ofreciendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ofrece"],
+      "usted": ["ofrezca"],
+      "nosotros": ["ofrezcamos"],
+      "vosotros": ["ofreced"],
+      "ustedes": ["ofrezcan"]
+    },
+    "imperative.negative": {
+      "tu": ["no ofrezcas"],
+      "usted": ["no ofrezca"],
+      "nosotros": ["no ofrezcamos"],
+      "vosotros": ["no ofrezcáis"],
+      "ustedes": ["no ofrezcan"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "volver",
+  "infinitive": "volver",
+  "meaning": "to return",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["vuelvo"],
+      "tu": ["vuelves"],
+      "el": ["vuelve"],
+      "nosotros": ["volvemos"],
+      "vosotros": ["volvéis"],
+      "ellos": ["vuelven"]
+    },
+    "indicative.preterite": {
+      "yo": ["volví"],
+      "tu": ["volviste"],
+      "el": ["volvió"],
+      "nosotros": ["volvimos"],
+      "vosotros": ["volvisteis"],
+      "ellos": ["volvieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["volvía"],
+      "tu": ["volvías"],
+      "el": ["volvía"],
+      "nosotros": ["volvíamos"],
+      "vosotros": ["volvíais"],
+      "ellos": ["volvían"]
+    },
+    "indicative.future": {
+      "yo": ["volveré"],
+      "tu": ["volverás"],
+      "el": ["volverá"],
+      "nosotros": ["volveremos"],
+      "vosotros": ["volveréis"],
+      "ellos": ["volverán"]
+    },
+    "indicative.conditional": {
+      "yo": ["volvería"],
+      "tu": ["volverías"],
+      "el": ["volvería"],
+      "nosotros": ["volveríamos"],
+      "vosotros": ["volveríais"],
+      "ellos": ["volverían"]
+    },
+    "subjunctive.present": {
+      "yo": ["vuelva"],
+      "tu": ["vuelvas"],
+      "el": ["vuelva"],
+      "nosotros": ["volvamos"],
+      "vosotros": ["volváis"],
+      "ellos": ["vuelvan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["volviera", "volviese"],
+      "tu": ["volvieras", "volvieses"],
+      "el": ["volviera", "volviese"],
+      "nosotros": ["volviéramos", "volviésemos"],
+      "vosotros": ["volvierais", "volvieseis"],
+      "ellos": ["volvieran", "volviesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he vuelto"],
+      "tu": ["has vuelto"],
+      "el": ["ha vuelto"],
+      "nosotros": ["hemos vuelto"],
+      "vosotros": ["habéis vuelto"],
+      "ellos": ["han vuelto"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había vuelto"],
+      "tu": ["habías vuelto"],
+      "el": ["había vuelto"],
+      "nosotros": ["habíamos vuelto"],
+      "vosotros": ["habíais vuelto"],
+      "ellos": ["habían vuelto"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré vuelto"],
+      "tu": ["habrás vuelto"],
+      "el": ["habrá vuelto"],
+      "nosotros": ["habremos vuelto"],
+      "vosotros": ["habréis vuelto"],
+      "ellos": ["habrán vuelto"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría vuelto"],
+      "tu": ["habrías vuelto"],
+      "el": ["habría vuelto"],
+      "nosotros": ["habríamos vuelto"],
+      "vosotros": ["habríais vuelto"],
+      "ellos": ["habrían vuelto"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya vuelto"],
+      "tu": ["hayas vuelto"],
+      "el": ["haya vuelto"],
+      "nosotros": ["hayamos vuelto"],
+      "vosotros": ["hayáis vuelto"],
+      "ellos": ["hayan vuelto"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera vuelto", "hubiese vuelto"],
+      "tu": ["hubieras vuelto", "hubieses vuelto"],
+      "el": ["hubiera vuelto", "hubiese vuelto"],
+      "nosotros": ["hubiéramos vuelto", "hubiésemos vuelto"],
+      "vosotros": ["hubierais vuelto", "hubieseis vuelto"],
+      "ellos": ["hubieran vuelto", "hubiesen vuelto"]
+    },
+    "progressive.present": {
+      "yo": ["estoy volviendo"],
+      "tu": ["estás volviendo"],
+      "el": ["está volviendo"],
+      "nosotros": ["estamos volviendo"],
+      "vosotros": ["estáis volviendo"],
+      "ellos": ["están volviendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["vuelve"],
+      "usted": ["vuelva"],
+      "nosotros": ["volvamos"],
+      "vosotros": ["volved"],
+      "ustedes": ["vuelvan"]
+    },
+    "imperative.negative": {
+      "tu": ["no vuelvas"],
+      "usted": ["no vuelva"],
+      "nosotros": ["no volvamos"],
+      "vosotros": ["no volváis"],
+      "ustedes": ["no vuelvan"]
+    }
+  }
+}

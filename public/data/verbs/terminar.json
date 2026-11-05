@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "terminar",
+  "infinitive": "terminar",
+  "meaning": "to finish",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["termino"],
+      "tu": ["terminas"],
+      "el": ["termina"],
+      "nosotros": ["terminamos"],
+      "vosotros": ["termináis"],
+      "ellos": ["terminan"]
+    },
+    "indicative.preterite": {
+      "yo": ["terminé"],
+      "tu": ["terminaste"],
+      "el": ["terminó"],
+      "nosotros": ["terminamos"],
+      "vosotros": ["terminasteis"],
+      "ellos": ["terminaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["terminaba"],
+      "tu": ["terminabas"],
+      "el": ["terminaba"],
+      "nosotros": ["terminábamos"],
+      "vosotros": ["terminabais"],
+      "ellos": ["terminaban"]
+    },
+    "indicative.future": {
+      "yo": ["terminaré"],
+      "tu": ["terminarás"],
+      "el": ["terminará"],
+      "nosotros": ["terminaremos"],
+      "vosotros": ["terminaréis"],
+      "ellos": ["terminarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["terminaría"],
+      "tu": ["terminarías"],
+      "el": ["terminaría"],
+      "nosotros": ["terminaríamos"],
+      "vosotros": ["terminaríais"],
+      "ellos": ["terminarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["termine"],
+      "tu": ["termines"],
+      "el": ["termine"],
+      "nosotros": ["terminemos"],
+      "vosotros": ["terminéis"],
+      "ellos": ["terminen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["terminara", "terminase"],
+      "tu": ["terminaras", "terminases"],
+      "el": ["terminara", "terminase"],
+      "nosotros": ["termináramos", "terminásemos"],
+      "vosotros": ["terminarais", "terminaseis"],
+      "ellos": ["terminaran", "terminasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he terminado"],
+      "tu": ["has terminado"],
+      "el": ["ha terminado"],
+      "nosotros": ["hemos terminado"],
+      "vosotros": ["habéis terminado"],
+      "ellos": ["han terminado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había terminado"],
+      "tu": ["habías terminado"],
+      "el": ["había terminado"],
+      "nosotros": ["habíamos terminado"],
+      "vosotros": ["habíais terminado"],
+      "ellos": ["habían terminado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré terminado"],
+      "tu": ["habrás terminado"],
+      "el": ["habrá terminado"],
+      "nosotros": ["habremos terminado"],
+      "vosotros": ["habréis terminado"],
+      "ellos": ["habrán terminado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría terminado"],
+      "tu": ["habrías terminado"],
+      "el": ["habría terminado"],
+      "nosotros": ["habríamos terminado"],
+      "vosotros": ["habríais terminado"],
+      "ellos": ["habrían terminado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya terminado"],
+      "tu": ["hayas terminado"],
+      "el": ["haya terminado"],
+      "nosotros": ["hayamos terminado"],
+      "vosotros": ["hayáis terminado"],
+      "ellos": ["hayan terminado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera terminado", "hubiese terminado"],
+      "tu": ["hubieras terminado", "hubieses terminado"],
+      "el": ["hubiera terminado", "hubiese terminado"],
+      "nosotros": ["hubiéramos terminado", "hubiésemos terminado"],
+      "vosotros": ["hubierais terminado", "hubieseis terminado"],
+      "ellos": ["hubieran terminado", "hubiesen terminado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy terminando"],
+      "tu": ["estás terminando"],
+      "el": ["está terminando"],
+      "nosotros": ["estamos terminando"],
+      "vosotros": ["estáis terminando"],
+      "ellos": ["están terminando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["termina"],
+      "usted": ["termine"],
+      "nosotros": ["terminemos"],
+      "vosotros": ["terminad"],
+      "ustedes": ["terminen"]
+    },
+    "imperative.negative": {
+      "tu": ["no termines"],
+      "usted": ["no termine"],
+      "nosotros": ["no terminemos"],
+      "vosotros": ["no terminéis"],
+      "ustedes": ["no terminen"]
+    }
+  }
+}

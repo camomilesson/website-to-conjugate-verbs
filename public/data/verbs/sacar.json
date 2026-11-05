@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "sacar",
+  "infinitive": "sacar",
+  "meaning": "to take out",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["saco"],
+      "tu": ["sacas"],
+      "el": ["saca"],
+      "nosotros": ["sacamos"],
+      "vosotros": ["sacáis"],
+      "ellos": ["sacan"]
+    },
+    "indicative.preterite": {
+      "yo": ["saqué"],
+      "tu": ["sacaste"],
+      "el": ["sacó"],
+      "nosotros": ["sacamos"],
+      "vosotros": ["sacasteis"],
+      "ellos": ["sacaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["sacaba"],
+      "tu": ["sacabas"],
+      "el": ["sacaba"],
+      "nosotros": ["sacábamos"],
+      "vosotros": ["sacabais"],
+      "ellos": ["sacaban"]
+    },
+    "indicative.future": {
+      "yo": ["sacaré"],
+      "tu": ["sacarás"],
+      "el": ["sacará"],
+      "nosotros": ["sacaremos"],
+      "vosotros": ["sacaréis"],
+      "ellos": ["sacarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["sacaría"],
+      "tu": ["sacarías"],
+      "el": ["sacaría"],
+      "nosotros": ["sacaríamos"],
+      "vosotros": ["sacaríais"],
+      "ellos": ["sacarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["saque"],
+      "tu": ["saques"],
+      "el": ["saque"],
+      "nosotros": ["saquemos"],
+      "vosotros": ["saquéis"],
+      "ellos": ["saquen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["sacara", "sacase"],
+      "tu": ["sacaras", "sacases"],
+      "el": ["sacara", "sacase"],
+      "nosotros": ["sacáramos", "sacásemos"],
+      "vosotros": ["sacarais", "sacaseis"],
+      "ellos": ["sacaran", "sacasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he sacado"],
+      "tu": ["has sacado"],
+      "el": ["ha sacado"],
+      "nosotros": ["hemos sacado"],
+      "vosotros": ["habéis sacado"],
+      "ellos": ["han sacado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había sacado"],
+      "tu": ["habías sacado"],
+      "el": ["había sacado"],
+      "nosotros": ["habíamos sacado"],
+      "vosotros": ["habíais sacado"],
+      "ellos": ["habían sacado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré sacado"],
+      "tu": ["habrás sacado"],
+      "el": ["habrá sacado"],
+      "nosotros": ["habremos sacado"],
+      "vosotros": ["habréis sacado"],
+      "ellos": ["habrán sacado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría sacado"],
+      "tu": ["habrías sacado"],
+      "el": ["habría sacado"],
+      "nosotros": ["habríamos sacado"],
+      "vosotros": ["habríais sacado"],
+      "ellos": ["habrían sacado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya sacado"],
+      "tu": ["hayas sacado"],
+      "el": ["haya sacado"],
+      "nosotros": ["hayamos sacado"],
+      "vosotros": ["hayáis sacado"],
+      "ellos": ["hayan sacado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera sacado", "hubiese sacado"],
+      "tu": ["hubieras sacado", "hubieses sacado"],
+      "el": ["hubiera sacado", "hubiese sacado"],
+      "nosotros": ["hubiéramos sacado", "hubiésemos sacado"],
+      "vosotros": ["hubierais sacado", "hubieseis sacado"],
+      "ellos": ["hubieran sacado", "hubiesen sacado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy sacando"],
+      "tu": ["estás sacando"],
+      "el": ["está sacando"],
+      "nosotros": ["estamos sacando"],
+      "vosotros": ["estáis sacando"],
+      "ellos": ["están sacando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["saca"],
+      "usted": ["saque"],
+      "nosotros": ["saquemos"],
+      "vosotros": ["sacad"],
+      "ustedes": ["saquen"]
+    },
+    "imperative.negative": {
+      "tu": ["no saques"],
+      "usted": ["no saque"],
+      "nosotros": ["no saquemos"],
+      "vosotros": ["no saquéis"],
+      "ustedes": ["no saquen"]
+    }
+  }
+}

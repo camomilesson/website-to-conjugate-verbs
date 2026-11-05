@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "entender",
+  "infinitive": "entender",
+  "meaning": "to understand",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["entiendo"],
+      "tu": ["entiendes"],
+      "el": ["entiende"],
+      "nosotros": ["entendemos"],
+      "vosotros": ["entendéis"],
+      "ellos": ["entienden"]
+    },
+    "indicative.preterite": {
+      "yo": ["entendí"],
+      "tu": ["entendiste"],
+      "el": ["entendió"],
+      "nosotros": ["entendimos"],
+      "vosotros": ["entendisteis"],
+      "ellos": ["entendieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["entendía"],
+      "tu": ["entendías"],
+      "el": ["entendía"],
+      "nosotros": ["entendíamos"],
+      "vosotros": ["entendíais"],
+      "ellos": ["entendían"]
+    },
+    "indicative.future": {
+      "yo": ["entenderé"],
+      "tu": ["entenderás"],
+      "el": ["entenderá"],
+      "nosotros": ["entenderemos"],
+      "vosotros": ["entenderéis"],
+      "ellos": ["entenderán"]
+    },
+    "indicative.conditional": {
+      "yo": ["entendería"],
+      "tu": ["entenderías"],
+      "el": ["entendería"],
+      "nosotros": ["entenderíamos"],
+      "vosotros": ["entenderíais"],
+      "ellos": ["entenderían"]
+    },
+    "subjunctive.present": {
+      "yo": ["entienda"],
+      "tu": ["entiendas"],
+      "el": ["entienda"],
+      "nosotros": ["entendamos"],
+      "vosotros": ["entendáis"],
+      "ellos": ["entiendan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["entendiera", "entendiese"],
+      "tu": ["entendieras", "entendieses"],
+      "el": ["entendiera", "entendiese"],
+      "nosotros": ["entendiéramos", "entendiésemos"],
+      "vosotros": ["entendierais", "entendieseis"],
+      "ellos": ["entendieran", "entendiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he entendido"],
+      "tu": ["has entendido"],
+      "el": ["ha entendido"],
+      "nosotros": ["hemos entendido"],
+      "vosotros": ["habéis entendido"],
+      "ellos": ["han entendido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había entendido"],
+      "tu": ["habías entendido"],
+      "el": ["había entendido"],
+      "nosotros": ["habíamos entendido"],
+      "vosotros": ["habíais entendido"],
+      "ellos": ["habían entendido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré entendido"],
+      "tu": ["habrás entendido"],
+      "el": ["habrá entendido"],
+      "nosotros": ["habremos entendido"],
+      "vosotros": ["habréis entendido"],
+      "ellos": ["habrán entendido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría entendido"],
+      "tu": ["habrías entendido"],
+      "el": ["habría entendido"],
+      "nosotros": ["habríamos entendido"],
+      "vosotros": ["habríais entendido"],
+      "ellos": ["habrían entendido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya entendido"],
+      "tu": ["hayas entendido"],
+      "el": ["haya entendido"],
+      "nosotros": ["hayamos entendido"],
+      "vosotros": ["hayáis entendido"],
+      "ellos": ["hayan entendido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera entendido", "hubiese entendido"],
+      "tu": ["hubieras entendido", "hubieses entendido"],
+      "el": ["hubiera entendido", "hubiese entendido"],
+      "nosotros": ["hubiéramos entendido", "hubiésemos entendido"],
+      "vosotros": ["hubierais entendido", "hubieseis entendido"],
+      "ellos": ["hubieran entendido", "hubiesen entendido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy entendiendo"],
+      "tu": ["estás entendiendo"],
+      "el": ["está entendiendo"],
+      "nosotros": ["estamos entendiendo"],
+      "vosotros": ["estáis entendiendo"],
+      "ellos": ["están entendiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["entiende"],
+      "usted": ["entienda"],
+      "nosotros": ["entendamos"],
+      "vosotros": ["entended"],
+      "ustedes": ["entiendan"]
+    },
+    "imperative.negative": {
+      "tu": ["no entiendas"],
+      "usted": ["no entienda"],
+      "nosotros": ["no entendamos"],
+      "vosotros": ["no entendáis"],
+      "ustedes": ["no entiendan"]
+    }
+  }
+}

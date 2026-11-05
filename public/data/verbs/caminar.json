@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "caminar",
+  "infinitive": "caminar",
+  "meaning": "to walk",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["camino"],
+      "tu": ["caminas"],
+      "el": ["camina"],
+      "nosotros": ["caminamos"],
+      "vosotros": ["camináis"],
+      "ellos": ["caminan"]
+    },
+    "indicative.preterite": {
+      "yo": ["caminé"],
+      "tu": ["caminaste"],
+      "el": ["caminó"],
+      "nosotros": ["caminamos"],
+      "vosotros": ["caminasteis"],
+      "ellos": ["caminaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["caminaba"],
+      "tu": ["caminabas"],
+      "el": ["caminaba"],
+      "nosotros": ["caminábamos"],
+      "vosotros": ["caminabais"],
+      "ellos": ["caminaban"]
+    },
+    "indicative.future": {
+      "yo": ["caminaré"],
+      "tu": ["caminarás"],
+      "el": ["caminará"],
+      "nosotros": ["caminaremos"],
+      "vosotros": ["caminaréis"],
+      "ellos": ["caminarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["caminaría"],
+      "tu": ["caminarías"],
+      "el": ["caminaría"],
+      "nosotros": ["caminaríamos"],
+      "vosotros": ["caminaríais"],
+      "ellos": ["caminarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["camine"],
+      "tu": ["camines"],
+      "el": ["camine"],
+      "nosotros": ["caminemos"],
+      "vosotros": ["caminéis"],
+      "ellos": ["caminen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["caminara", "caminase"],
+      "tu": ["caminaras", "caminases"],
+      "el": ["caminara", "caminase"],
+      "nosotros": ["camináramos", "caminásemos"],
+      "vosotros": ["caminarais", "caminaseis"],
+      "ellos": ["caminaran", "caminasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he caminado"],
+      "tu": ["has caminado"],
+      "el": ["ha caminado"],
+      "nosotros": ["hemos caminado"],
+      "vosotros": ["habéis caminado"],
+      "ellos": ["han caminado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había caminado"],
+      "tu": ["habías caminado"],
+      "el": ["había caminado"],
+      "nosotros": ["habíamos caminado"],
+      "vosotros": ["habíais caminado"],
+      "ellos": ["habían caminado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré caminado"],
+      "tu": ["habrás caminado"],
+      "el": ["habrá caminado"],
+      "nosotros": ["habremos caminado"],
+      "vosotros": ["habréis caminado"],
+      "ellos": ["habrán caminado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría caminado"],
+      "tu": ["habrías caminado"],
+      "el": ["habría caminado"],
+      "nosotros": ["habríamos caminado"],
+      "vosotros": ["habríais caminado"],
+      "ellos": ["habrían caminado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya caminado"],
+      "tu": ["hayas caminado"],
+      "el": ["haya caminado"],
+      "nosotros": ["hayamos caminado"],
+      "vosotros": ["hayáis caminado"],
+      "ellos": ["hayan caminado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera caminado", "hubiese caminado"],
+      "tu": ["hubieras caminado", "hubieses caminado"],
+      "el": ["hubiera caminado", "hubiese caminado"],
+      "nosotros": ["hubiéramos caminado", "hubiésemos caminado"],
+      "vosotros": ["hubierais caminado", "hubieseis caminado"],
+      "ellos": ["hubieran caminado", "hubiesen caminado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy caminando"],
+      "tu": ["estás caminando"],
+      "el": ["está caminando"],
+      "nosotros": ["estamos caminando"],
+      "vosotros": ["estáis caminando"],
+      "ellos": ["están caminando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["camina"],
+      "usted": ["camine"],
+      "nosotros": ["caminemos"],
+      "vosotros": ["caminad"],
+      "ustedes": ["caminen"]
+    },
+    "imperative.negative": {
+      "tu": ["no camines"],
+      "usted": ["no camine"],
+      "nosotros": ["no caminemos"],
+      "vosotros": ["no caminéis"],
+      "ustedes": ["no caminen"]
+    }
+  }
+}

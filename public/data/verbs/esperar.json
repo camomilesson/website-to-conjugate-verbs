@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "esperar",
+  "infinitive": "esperar",
+  "meaning": "to wait",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["espero"],
+      "tu": ["esperas"],
+      "el": ["espera"],
+      "nosotros": ["esperamos"],
+      "vosotros": ["esperáis"],
+      "ellos": ["esperan"]
+    },
+    "indicative.preterite": {
+      "yo": ["esperé"],
+      "tu": ["esperaste"],
+      "el": ["esperó"],
+      "nosotros": ["esperamos"],
+      "vosotros": ["esperasteis"],
+      "ellos": ["esperaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["esperaba"],
+      "tu": ["esperabas"],
+      "el": ["esperaba"],
+      "nosotros": ["esperábamos"],
+      "vosotros": ["esperabais"],
+      "ellos": ["esperaban"]
+    },
+    "indicative.future": {
+      "yo": ["esperaré"],
+      "tu": ["esperarás"],
+      "el": ["esperará"],
+      "nosotros": ["esperaremos"],
+      "vosotros": ["esperaréis"],
+      "ellos": ["esperarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["esperaría"],
+      "tu": ["esperarías"],
+      "el": ["esperaría"],
+      "nosotros": ["esperaríamos"],
+      "vosotros": ["esperaríais"],
+      "ellos": ["esperarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["espere"],
+      "tu": ["esperes"],
+      "el": ["espere"],
+      "nosotros": ["esperemos"],
+      "vosotros": ["esperéis"],
+      "ellos": ["esperen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["esperara", "esperase"],
+      "tu": ["esperaras", "esperases"],
+      "el": ["esperara", "esperase"],
+      "nosotros": ["esperáramos", "esperásemos"],
+      "vosotros": ["esperarais", "esperaseis"],
+      "ellos": ["esperaran", "esperasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he esperado"],
+      "tu": ["has esperado"],
+      "el": ["ha esperado"],
+      "nosotros": ["hemos esperado"],
+      "vosotros": ["habéis esperado"],
+      "ellos": ["han esperado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había esperado"],
+      "tu": ["habías esperado"],
+      "el": ["había esperado"],
+      "nosotros": ["habíamos esperado"],
+      "vosotros": ["habíais esperado"],
+      "ellos": ["habían esperado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré esperado"],
+      "tu": ["habrás esperado"],
+      "el": ["habrá esperado"],
+      "nosotros": ["habremos esperado"],
+      "vosotros": ["habréis esperado"],
+      "ellos": ["habrán esperado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría esperado"],
+      "tu": ["habrías esperado"],
+      "el": ["habría esperado"],
+      "nosotros": ["habríamos esperado"],
+      "vosotros": ["habríais esperado"],
+      "ellos": ["habrían esperado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya esperado"],
+      "tu": ["hayas esperado"],
+      "el": ["haya esperado"],
+      "nosotros": ["hayamos esperado"],
+      "vosotros": ["hayáis esperado"],
+      "ellos": ["hayan esperado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera esperado", "hubiese esperado"],
+      "tu": ["hubieras esperado", "hubieses esperado"],
+      "el": ["hubiera esperado", "hubiese esperado"],
+      "nosotros": ["hubiéramos esperado", "hubiésemos esperado"],
+      "vosotros": ["hubierais esperado", "hubieseis esperado"],
+      "ellos": ["hubieran esperado", "hubiesen esperado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy esperando"],
+      "tu": ["estás esperando"],
+      "el": ["está esperando"],
+      "nosotros": ["estamos esperando"],
+      "vosotros": ["estáis esperando"],
+      "ellos": ["están esperando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["espera"],
+      "usted": ["espere"],
+      "nosotros": ["esperemos"],
+      "vosotros": ["esperad"],
+      "ustedes": ["esperen"]
+    },
+    "imperative.negative": {
+      "tu": ["no esperes"],
+      "usted": ["no espere"],
+      "nosotros": ["no esperemos"],
+      "vosotros": ["no esperéis"],
+      "ustedes": ["no esperen"]
+    }
+  }
+}

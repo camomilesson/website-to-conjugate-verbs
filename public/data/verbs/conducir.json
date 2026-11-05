@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "conducir",
+  "infinitive": "conducir",
+  "meaning": "to drive",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["conduzco"],
+      "tu": ["conduces"],
+      "el": ["conduce"],
+      "nosotros": ["conducimos"],
+      "vosotros": ["conducís"],
+      "ellos": ["conducen"]
+    },
+    "indicative.preterite": {
+      "yo": ["conduje"],
+      "tu": ["condujiste"],
+      "el": ["condujo"],
+      "nosotros": ["condujimos"],
+      "vosotros": ["condujisteis"],
+      "ellos": ["condujeron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["conducía"],
+      "tu": ["conducías"],
+      "el": ["conducía"],
+      "nosotros": ["conducíamos"],
+      "vosotros": ["conducíais"],
+      "ellos": ["conducían"]
+    },
+    "indicative.future": {
+      "yo": ["conduciré"],
+      "tu": ["conducirás"],
+      "el": ["conducirá"],
+      "nosotros": ["conduciremos"],
+      "vosotros": ["conduciréis"],
+      "ellos": ["conducirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["conduciría"],
+      "tu": ["conducirías"],
+      "el": ["conduciría"],
+      "nosotros": ["conduciríamos"],
+      "vosotros": ["conduciríais"],
+      "ellos": ["conducirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["conduzca"],
+      "tu": ["conduzcas"],
+      "el": ["conduzca"],
+      "nosotros": ["conduzcamos"],
+      "vosotros": ["conduzcáis"],
+      "ellos": ["conduzcan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["condujera", "condujese"],
+      "tu": ["condujeras", "condujeses"],
+      "el": ["condujera", "condujese"],
+      "nosotros": ["condujéramos", "condujésemos"],
+      "vosotros": ["condujerais", "condujeseis"],
+      "ellos": ["condujeran", "condujesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he conducido"],
+      "tu": ["has conducido"],
+      "el": ["ha conducido"],
+      "nosotros": ["hemos conducido"],
+      "vosotros": ["habéis conducido"],
+      "ellos": ["han conducido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había conducido"],
+      "tu": ["habías conducido"],
+      "el": ["había conducido"],
+      "nosotros": ["habíamos conducido"],
+      "vosotros": ["habíais conducido"],
+      "ellos": ["habían conducido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré conducido"],
+      "tu": ["habrás conducido"],
+      "el": ["habrá conducido"],
+      "nosotros": ["habremos conducido"],
+      "vosotros": ["habréis conducido"],
+      "ellos": ["habrán conducido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría conducido"],
+      "tu": ["habrías conducido"],
+      "el": ["habría conducido"],
+      "nosotros": ["habríamos conducido"],
+      "vosotros": ["habríais conducido"],
+      "ellos": ["habrían conducido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya conducido"],
+      "tu": ["hayas conducido"],
+      "el": ["haya conducido"],
+      "nosotros": ["hayamos conducido"],
+      "vosotros": ["hayáis conducido"],
+      "ellos": ["hayan conducido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera conducido", "hubiese conducido"],
+      "tu": ["hubieras conducido", "hubieses conducido"],
+      "el": ["hubiera conducido", "hubiese conducido"],
+      "nosotros": ["hubiéramos conducido", "hubiésemos conducido"],
+      "vosotros": ["hubierais conducido", "hubieseis conducido"],
+      "ellos": ["hubieran conducido", "hubiesen conducido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy conduciendo"],
+      "tu": ["estás conduciendo"],
+      "el": ["está conduciendo"],
+      "nosotros": ["estamos conduciendo"],
+      "vosotros": ["estáis conduciendo"],
+      "ellos": ["están conduciendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["conduce"],
+      "usted": ["conduzca"],
+      "nosotros": ["conduzcamos"],
+      "vosotros": ["conducid"],
+      "ustedes": ["conduzcan"]
+    },
+    "imperative.negative": {
+      "tu": ["no conduzcas"],
+      "usted": ["no conduzca"],
+      "nosotros": ["no conduzcamos"],
+      "vosotros": ["no conduzcáis"],
+      "ustedes": ["no conduzcan"]
+    }
+  }
+}

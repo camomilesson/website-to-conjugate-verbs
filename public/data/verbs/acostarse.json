@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "acostarse",
+  "infinitive": "acostarse",
+  "meaning": "to go to bed",
+  "tags": ["reflexive", "irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me acuesto"],
+      "tu": ["te acuestas"],
+      "el": ["se acuesta"],
+      "nosotros": ["nos acostamos"],
+      "vosotros": ["os acostáis"],
+      "ellos": ["se acuestan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me acosté"],
+      "tu": ["te acostaste"],
+      "el": ["se acostó"],
+      "nosotros": ["nos acostamos"],
+      "vosotros": ["os acostasteis"],
+      "ellos": ["se acostaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me acostaba"],
+      "tu": ["te acostabas"],
+      "el": ["se acostaba"],
+      "nosotros": ["nos acostábamos"],
+      "vosotros": ["os acostabais"],
+      "ellos": ["se acostaban"]
+    },
+    "indicative.future": {
+      "yo": ["me acostaré"],
+      "tu": ["te acostarás"],
+      "el": ["se acostará"],
+      "nosotros": ["nos acostaremos"],
+      "vosotros": ["os acostaréis"],
+      "ellos": ["se acostarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me acostaría"],
+      "tu": ["te acostarías"],
+      "el": ["se acostaría"],
+      "nosotros": ["nos acostaríamos"],
+      "vosotros": ["os acostaríais"],
+      "ellos": ["se acostarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me acueste"],
+      "tu": ["te acuestes"],
+      "el": ["se acueste"],
+      "nosotros": ["nos acostemos"],
+      "vosotros": ["os acostéis"],
+      "ellos": ["se acuesten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me acostara", "me acostase"],
+      "tu": ["te acostaras", "te acostases"],
+      "el": ["se acostara", "se acostase"],
+      "nosotros": ["nos acostáramos", "nos acostásemos"],
+      "vosotros": ["os acostarais", "os acostaseis"],
+      "ellos": ["se acostaran", "se acostasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he acostado"],
+      "tu": ["te has acostado"],
+      "el": ["se ha acostado"],
+      "nosotros": ["nos hemos acostado"],
+      "vosotros": ["os habéis acostado"],
+      "ellos": ["se han acostado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había acostado"],
+      "tu": ["te habías acostado"],
+      "el": ["se había acostado"],
+      "nosotros": ["nos habíamos acostado"],
+      "vosotros": ["os habíais acostado"],
+      "ellos": ["se habían acostado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré acostado"],
+      "tu": ["te habrás acostado"],
+      "el": ["se habrá acostado"],
+      "nosotros": ["nos habremos acostado"],
+      "vosotros": ["os habréis acostado"],
+      "ellos": ["se habrán acostado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría acostado"],
+      "tu": ["te habrías acostado"],
+      "el": ["se habría acostado"],
+      "nosotros": ["nos habríamos acostado"],
+      "vosotros": ["os habríais acostado"],
+      "ellos": ["se habrían acostado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya acostado"],
+      "tu": ["te hayas acostado"],
+      "el": ["se haya acostado"],
+      "nosotros": ["nos hayamos acostado"],
+      "vosotros": ["os hayáis acostado"],
+      "ellos": ["se hayan acostado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera acostado", "me hubiese acostado"],
+      "tu": ["te hubieras acostado", "te hubieses acostado"],
+      "el": ["se hubiera acostado", "se hubiese acostado"],
+      "nosotros": ["nos hubiéramos acostado", "nos hubiésemos acostado"],
+      "vosotros": ["os hubierais acostado", "os hubieseis acostado"],
+      "ellos": ["se hubieran acostado", "se hubiesen acostado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy acostando", "estoy acostándome"],
+      "tu": ["te estás acostando", "estás acostándote"],
+      "el": ["se está acostando", "está acostándose"],
+      "nosotros": ["nos estamos acostando", "estamos acostándonos"],
+      "vosotros": ["os estáis acostando", "estáis acostándoos"],
+      "ellos": ["se están acostando", "están acostándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["acuéstate"],
+      "usted": ["acuéstese"],
+      "nosotros": ["acostémonos"],
+      "vosotros": ["acostaos"],
+      "ustedes": ["acuéstense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te acuestes"],
+      "usted": ["no se acueste"],
+      "nosotros": ["no nos acostemos"],
+      "vosotros": ["no os acostéis"],
+      "ustedes": ["no se acuesten"]
+    }
+  }
+}

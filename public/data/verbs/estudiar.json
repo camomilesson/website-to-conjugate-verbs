@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "estudiar",
+  "infinitive": "estudiar",
+  "meaning": "to study",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["estudio"],
+      "tu": ["estudias"],
+      "el": ["estudia"],
+      "nosotros": ["estudiamos"],
+      "vosotros": ["estudiáis"],
+      "ellos": ["estudian"]
+    },
+    "indicative.preterite": {
+      "yo": ["estudié"],
+      "tu": ["estudiaste"],
+      "el": ["estudió"],
+      "nosotros": ["estudiamos"],
+      "vosotros": ["estudiasteis"],
+      "ellos": ["estudiaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["estudiaba"],
+      "tu": ["estudiabas"],
+      "el": ["estudiaba"],
+      "nosotros": ["estudiábamos"],
+      "vosotros": ["estudiabais"],
+      "ellos": ["estudiaban"]
+    },
+    "indicative.future": {
+      "yo": ["estudiaré"],
+      "tu": ["estudiarás"],
+      "el": ["estudiará"],
+      "nosotros": ["estudiaremos"],
+      "vosotros": ["estudiaréis"],
+      "ellos": ["estudiarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["estudiaría"],
+      "tu": ["estudiarías"],
+      "el": ["estudiaría"],
+      "nosotros": ["estudiaríamos"],
+      "vosotros": ["estudiaríais"],
+      "ellos": ["estudiarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["estudie"],
+      "tu": ["estudies"],
+      "el": ["estudie"],
+      "nosotros": ["estudiemos"],
+      "vosotros": ["estudiéis"],
+      "ellos": ["estudien"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["estudiara", "estudiase"],
+      "tu": ["estudiaras", "estudiases"],
+      "el": ["estudiara", "estudiase"],
+      "nosotros": ["estudiáramos", "estudiásemos"],
+      "vosotros": ["estudiarais", "estudiaseis"],
+      "ellos": ["estudiaran", "estudiasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he estudiado"],
+      "tu": ["has estudiado"],
+      "el": ["ha estudiado"],
+      "nosotros": ["hemos estudiado"],
+      "vosotros": ["habéis estudiado"],
+      "ellos": ["han estudiado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había estudiado"],
+      "tu": ["habías estudiado"],
+      "el": ["había estudiado"],
+      "nosotros": ["habíamos estudiado"],
+      "vosotros": ["habíais estudiado"],
+      "ellos": ["habían estudiado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré estudiado"],
+      "tu": ["habrás estudiado"],
+      "el": ["habrá estudiado"],
+      "nosotros": ["habremos estudiado"],
+      "vosotros": ["habréis estudiado"],
+      "ellos": ["habrán estudiado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría estudiado"],
+      "tu": ["habrías estudiado"],
+      "el": ["habría estudiado"],
+      "nosotros": ["habríamos estudiado"],
+      "vosotros": ["habríais estudiado"],
+      "ellos": ["habrían estudiado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya estudiado"],
+      "tu": ["hayas estudiado"],
+      "el": ["haya estudiado"],
+      "nosotros": ["hayamos estudiado"],
+      "vosotros": ["hayáis estudiado"],
+      "ellos": ["hayan estudiado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera estudiado", "hubiese estudiado"],
+      "tu": ["hubieras estudiado", "hubieses estudiado"],
+      "el": ["hubiera estudiado", "hubiese estudiado"],
+      "nosotros": ["hubiéramos estudiado", "hubiésemos estudiado"],
+      "vosotros": ["hubierais estudiado", "hubieseis estudiado"],
+      "ellos": ["hubieran estudiado", "hubiesen estudiado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy estudiando"],
+      "tu": ["estás estudiando"],
+      "el": ["está estudiando"],
+      "nosotros": ["estamos estudiando"],
+      "vosotros": ["estáis estudiando"],
+      "ellos": ["están estudiando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["estudia"],
+      "usted": ["estudie"],
+      "nosotros": ["estudiemos"],
+      "vosotros": ["estudiad"],
+      "ustedes": ["estudien"]
+    },
+    "imperative.negative": {
+      "tu": ["no estudies"],
+      "usted": ["no estudie"],
+      "nosotros": ["no estudiemos"],
+      "vosotros": ["no estudiéis"],
+      "ustedes": ["no estudien"]
+    }
+  }
+}

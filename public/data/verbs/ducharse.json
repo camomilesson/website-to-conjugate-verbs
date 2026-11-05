@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "ducharse",
+  "infinitive": "ducharse",
+  "meaning": "to shower",
+  "tags": ["reflexive", "regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["me ducho"],
+      "tu": ["te duchas"],
+      "el": ["se ducha"],
+      "nosotros": ["nos duchamos"],
+      "vosotros": ["os ducháis"],
+      "ellos": ["se duchan"]
+    },
+    "indicative.preterite": {
+      "yo": ["me duché"],
+      "tu": ["te duchaste"],
+      "el": ["se duchó"],
+      "nosotros": ["nos duchamos"],
+      "vosotros": ["os duchasteis"],
+      "ellos": ["se ducharon"]
+    },
+    "indicative.imperfect": {
+      "yo": ["me duchaba"],
+      "tu": ["te duchabas"],
+      "el": ["se duchaba"],
+      "nosotros": ["nos duchábamos"],
+      "vosotros": ["os duchabais"],
+      "ellos": ["se duchaban"]
+    },
+    "indicative.future": {
+      "yo": ["me ducharé"],
+      "tu": ["te ducharás"],
+      "el": ["se duchará"],
+      "nosotros": ["nos ducharemos"],
+      "vosotros": ["os ducharéis"],
+      "ellos": ["se ducharán"]
+    },
+    "indicative.conditional": {
+      "yo": ["me ducharía"],
+      "tu": ["te ducharías"],
+      "el": ["se ducharía"],
+      "nosotros": ["nos ducharíamos"],
+      "vosotros": ["os ducharíais"],
+      "ellos": ["se ducharían"]
+    },
+    "subjunctive.present": {
+      "yo": ["me duche"],
+      "tu": ["te duches"],
+      "el": ["se duche"],
+      "nosotros": ["nos duchemos"],
+      "vosotros": ["os duchéis"],
+      "ellos": ["se duchen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["me duchara", "me duchase"],
+      "tu": ["te ducharas", "te duchases"],
+      "el": ["se duchara", "se duchase"],
+      "nosotros": ["nos ducháramos", "nos duchásemos"],
+      "vosotros": ["os ducharais", "os duchaseis"],
+      "ellos": ["se ducharan", "se duchasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["me he duchado"],
+      "tu": ["te has duchado"],
+      "el": ["se ha duchado"],
+      "nosotros": ["nos hemos duchado"],
+      "vosotros": ["os habéis duchado"],
+      "ellos": ["se han duchado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["me había duchado"],
+      "tu": ["te habías duchado"],
+      "el": ["se había duchado"],
+      "nosotros": ["nos habíamos duchado"],
+      "vosotros": ["os habíais duchado"],
+      "ellos": ["se habían duchado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["me habré duchado"],
+      "tu": ["te habrás duchado"],
+      "el": ["se habrá duchado"],
+      "nosotros": ["nos habremos duchado"],
+      "vosotros": ["os habréis duchado"],
+      "ellos": ["se habrán duchado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["me habría duchado"],
+      "tu": ["te habrías duchado"],
+      "el": ["se habría duchado"],
+      "nosotros": ["nos habríamos duchado"],
+      "vosotros": ["os habríais duchado"],
+      "ellos": ["se habrían duchado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["me haya duchado"],
+      "tu": ["te hayas duchado"],
+      "el": ["se haya duchado"],
+      "nosotros": ["nos hayamos duchado"],
+      "vosotros": ["os hayáis duchado"],
+      "ellos": ["se hayan duchado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["me hubiera duchado", "me hubiese duchado"],
+      "tu": ["te hubieras duchado", "te hubieses duchado"],
+      "el": ["se hubiera duchado", "se hubiese duchado"],
+      "nosotros": ["nos hubiéramos duchado", "nos hubiésemos duchado"],
+      "vosotros": ["os hubierais duchado", "os hubieseis duchado"],
+      "ellos": ["se hubieran duchado", "se hubiesen duchado"]
+    },
+    "progressive.present": {
+      "yo": ["me estoy duchando", "estoy duchándome"],
+      "tu": ["te estás duchando", "estás duchándote"],
+      "el": ["se está duchando", "está duchándose"],
+      "nosotros": ["nos estamos duchando", "estamos duchándonos"],
+      "vosotros": ["os estáis duchando", "estáis duchándoos"],
+      "ellos": ["se están duchando", "están duchándose"]
+    },
+    "imperative.affirmative": {
+      "tu": ["dúchate"],
+      "usted": ["dúchese"],
+      "nosotros": ["duchémonos"],
+      "vosotros": ["duchaos"],
+      "ustedes": ["dúchense"]
+    },
+    "imperative.negative": {
+      "tu": ["no te duches"],
+      "usted": ["no se duche"],
+      "nosotros": ["no nos duchemos"],
+      "vosotros": ["no os duchéis"],
+      "ustedes": ["no se duchen"]
+    }
+  }
+}

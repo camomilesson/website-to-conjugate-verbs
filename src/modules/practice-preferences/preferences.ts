@@ -32,9 +32,7 @@ export interface PracticePreferences {
   personSet: "all" | "select"
 }
 export function commonVerbIds(catalogue: Catalogue): string[] {
-  return catalogue.verbs
-    .filter((verb) => ["ser", "ir", "tener", "hablar"].includes(verb.id))
-    .map((verb) => verb.id)
+  return catalogue.verbs.filter((verb) => verb.common).map((verb) => verb.id)
 }
 export function defaultPreferences(catalogue: Catalogue): PracticePreferences {
   return {

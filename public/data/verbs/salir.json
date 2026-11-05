@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "salir",
+  "infinitive": "salir",
+  "meaning": "to go out",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["salgo"],
+      "tu": ["sales"],
+      "el": ["sale"],
+      "nosotros": ["salimos"],
+      "vosotros": ["salís"],
+      "ellos": ["salen"]
+    },
+    "indicative.preterite": {
+      "yo": ["salí"],
+      "tu": ["saliste"],
+      "el": ["salió"],
+      "nosotros": ["salimos"],
+      "vosotros": ["salisteis"],
+      "ellos": ["salieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["salía"],
+      "tu": ["salías"],
+      "el": ["salía"],
+      "nosotros": ["salíamos"],
+      "vosotros": ["salíais"],
+      "ellos": ["salían"]
+    },
+    "indicative.future": {
+      "yo": ["saldré"],
+      "tu": ["saldrás"],
+      "el": ["saldrá"],
+      "nosotros": ["saldremos"],
+      "vosotros": ["saldréis"],
+      "ellos": ["saldrán"]
+    },
+    "indicative.conditional": {
+      "yo": ["saldría"],
+      "tu": ["saldrías"],
+      "el": ["saldría"],
+      "nosotros": ["saldríamos"],
+      "vosotros": ["saldríais"],
+      "ellos": ["saldrían"]
+    },
+    "subjunctive.present": {
+      "yo": ["salga"],
+      "tu": ["salgas"],
+      "el": ["salga"],
+      "nosotros": ["salgamos"],
+      "vosotros": ["salgáis"],
+      "ellos": ["salgan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["saliera", "saliese"],
+      "tu": ["salieras", "salieses"],
+      "el": ["saliera", "saliese"],
+      "nosotros": ["saliéramos", "saliésemos"],
+      "vosotros": ["salierais", "salieseis"],
+      "ellos": ["salieran", "saliesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he salido"],
+      "tu": ["has salido"],
+      "el": ["ha salido"],
+      "nosotros": ["hemos salido"],
+      "vosotros": ["habéis salido"],
+      "ellos": ["han salido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había salido"],
+      "tu": ["habías salido"],
+      "el": ["había salido"],
+      "nosotros": ["habíamos salido"],
+      "vosotros": ["habíais salido"],
+      "ellos": ["habían salido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré salido"],
+      "tu": ["habrás salido"],
+      "el": ["habrá salido"],
+      "nosotros": ["habremos salido"],
+      "vosotros": ["habréis salido"],
+      "ellos": ["habrán salido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría salido"],
+      "tu": ["habrías salido"],
+      "el": ["habría salido"],
+      "nosotros": ["habríamos salido"],
+      "vosotros": ["habríais salido"],
+      "ellos": ["habrían salido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya salido"],
+      "tu": ["hayas salido"],
+      "el": ["haya salido"],
+      "nosotros": ["hayamos salido"],
+      "vosotros": ["hayáis salido"],
+      "ellos": ["hayan salido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera salido", "hubiese salido"],
+      "tu": ["hubieras salido", "hubieses salido"],
+      "el": ["hubiera salido", "hubiese salido"],
+      "nosotros": ["hubiéramos salido", "hubiésemos salido"],
+      "vosotros": ["hubierais salido", "hubieseis salido"],
+      "ellos": ["hubieran salido", "hubiesen salido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy saliendo"],
+      "tu": ["estás saliendo"],
+      "el": ["está saliendo"],
+      "nosotros": ["estamos saliendo"],
+      "vosotros": ["estáis saliendo"],
+      "ellos": ["están saliendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["sal"],
+      "usted": ["salga"],
+      "nosotros": ["salgamos"],
+      "vosotros": ["salid"],
+      "ustedes": ["salgan"]
+    },
+    "imperative.negative": {
+      "tu": ["no salgas"],
+      "usted": ["no salga"],
+      "nosotros": ["no salgamos"],
+      "vosotros": ["no salgáis"],
+      "ustedes": ["no salgan"]
+    }
+  }
+}

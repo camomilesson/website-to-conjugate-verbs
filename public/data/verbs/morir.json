@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "morir",
+  "infinitive": "morir",
+  "meaning": "to die",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["muero"],
+      "tu": ["mueres"],
+      "el": ["muere"],
+      "nosotros": ["morimos"],
+      "vosotros": ["morís"],
+      "ellos": ["mueren"]
+    },
+    "indicative.preterite": {
+      "yo": ["morí"],
+      "tu": ["moriste"],
+      "el": ["murió"],
+      "nosotros": ["morimos"],
+      "vosotros": ["moristeis"],
+      "ellos": ["murieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["moría"],
+      "tu": ["morías"],
+      "el": ["moría"],
+      "nosotros": ["moríamos"],
+      "vosotros": ["moríais"],
+      "ellos": ["morían"]
+    },
+    "indicative.future": {
+      "yo": ["moriré"],
+      "tu": ["morirás"],
+      "el": ["morirá"],
+      "nosotros": ["moriremos"],
+      "vosotros": ["moriréis"],
+      "ellos": ["morirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["moriría"],
+      "tu": ["morirías"],
+      "el": ["moriría"],
+      "nosotros": ["moriríamos"],
+      "vosotros": ["moriríais"],
+      "ellos": ["morirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["muera"],
+      "tu": ["mueras"],
+      "el": ["muera"],
+      "nosotros": ["muramos"],
+      "vosotros": ["muráis"],
+      "ellos": ["mueran"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["muriera", "muriese"],
+      "tu": ["murieras", "murieses"],
+      "el": ["muriera", "muriese"],
+      "nosotros": ["muriéramos", "muriésemos"],
+      "vosotros": ["murierais", "murieseis"],
+      "ellos": ["murieran", "muriesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he muerto"],
+      "tu": ["has muerto"],
+      "el": ["ha muerto"],
+      "nosotros": ["hemos muerto"],
+      "vosotros": ["habéis muerto"],
+      "ellos": ["han muerto"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había muerto"],
+      "tu": ["habías muerto"],
+      "el": ["había muerto"],
+      "nosotros": ["habíamos muerto"],
+      "vosotros": ["habíais muerto"],
+      "ellos": ["habían muerto"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré muerto"],
+      "tu": ["habrás muerto"],
+      "el": ["habrá muerto"],
+      "nosotros": ["habremos muerto"],
+      "vosotros": ["habréis muerto"],
+      "ellos": ["habrán muerto"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría muerto"],
+      "tu": ["habrías muerto"],
+      "el": ["habría muerto"],
+      "nosotros": ["habríamos muerto"],
+      "vosotros": ["habríais muerto"],
+      "ellos": ["habrían muerto"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya muerto"],
+      "tu": ["hayas muerto"],
+      "el": ["haya muerto"],
+      "nosotros": ["hayamos muerto"],
+      "vosotros": ["hayáis muerto"],
+      "ellos": ["hayan muerto"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera muerto", "hubiese muerto"],
+      "tu": ["hubieras muerto", "hubieses muerto"],
+      "el": ["hubiera muerto", "hubiese muerto"],
+      "nosotros": ["hubiéramos muerto", "hubiésemos muerto"],
+      "vosotros": ["hubierais muerto", "hubieseis muerto"],
+      "ellos": ["hubieran muerto", "hubiesen muerto"]
+    },
+    "progressive.present": {
+      "yo": ["estoy muriendo"],
+      "tu": ["estás muriendo"],
+      "el": ["está muriendo"],
+      "nosotros": ["estamos muriendo"],
+      "vosotros": ["estáis muriendo"],
+      "ellos": ["están muriendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["muere"],
+      "usted": ["muera"],
+      "nosotros": ["muramos"],
+      "vosotros": ["morid"],
+      "ustedes": ["mueran"]
+    },
+    "imperative.negative": {
+      "tu": ["no mueras"],
+      "usted": ["no muera"],
+      "nosotros": ["no muramos"],
+      "vosotros": ["no muráis"],
+      "ustedes": ["no mueran"]
+    }
+  }
+}

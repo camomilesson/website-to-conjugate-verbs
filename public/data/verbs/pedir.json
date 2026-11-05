@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "pedir",
+  "infinitive": "pedir",
+  "meaning": "to ask for",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["pido"],
+      "tu": ["pides"],
+      "el": ["pide"],
+      "nosotros": ["pedimos"],
+      "vosotros": ["pedís"],
+      "ellos": ["piden"]
+    },
+    "indicative.preterite": {
+      "yo": ["pedí"],
+      "tu": ["pediste"],
+      "el": ["pidió"],
+      "nosotros": ["pedimos"],
+      "vosotros": ["pedisteis"],
+      "ellos": ["pidieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["pedía"],
+      "tu": ["pedías"],
+      "el": ["pedía"],
+      "nosotros": ["pedíamos"],
+      "vosotros": ["pedíais"],
+      "ellos": ["pedían"]
+    },
+    "indicative.future": {
+      "yo": ["pediré"],
+      "tu": ["pedirás"],
+      "el": ["pedirá"],
+      "nosotros": ["pediremos"],
+      "vosotros": ["pediréis"],
+      "ellos": ["pedirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["pediría"],
+      "tu": ["pedirías"],
+      "el": ["pediría"],
+      "nosotros": ["pediríamos"],
+      "vosotros": ["pediríais"],
+      "ellos": ["pedirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["pida"],
+      "tu": ["pidas"],
+      "el": ["pida"],
+      "nosotros": ["pidamos"],
+      "vosotros": ["pidáis"],
+      "ellos": ["pidan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["pidiera", "pidiese"],
+      "tu": ["pidieras", "pidieses"],
+      "el": ["pidiera", "pidiese"],
+      "nosotros": ["pidiéramos", "pidiésemos"],
+      "vosotros": ["pidierais", "pidieseis"],
+      "ellos": ["pidieran", "pidiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he pedido"],
+      "tu": ["has pedido"],
+      "el": ["ha pedido"],
+      "nosotros": ["hemos pedido"],
+      "vosotros": ["habéis pedido"],
+      "ellos": ["han pedido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había pedido"],
+      "tu": ["habías pedido"],
+      "el": ["había pedido"],
+      "nosotros": ["habíamos pedido"],
+      "vosotros": ["habíais pedido"],
+      "ellos": ["habían pedido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré pedido"],
+      "tu": ["habrás pedido"],
+      "el": ["habrá pedido"],
+      "nosotros": ["habremos pedido"],
+      "vosotros": ["habréis pedido"],
+      "ellos": ["habrán pedido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría pedido"],
+      "tu": ["habrías pedido"],
+      "el": ["habría pedido"],
+      "nosotros": ["habríamos pedido"],
+      "vosotros": ["habríais pedido"],
+      "ellos": ["habrían pedido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya pedido"],
+      "tu": ["hayas pedido"],
+      "el": ["haya pedido"],
+      "nosotros": ["hayamos pedido"],
+      "vosotros": ["hayáis pedido"],
+      "ellos": ["hayan pedido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera pedido", "hubiese pedido"],
+      "tu": ["hubieras pedido", "hubieses pedido"],
+      "el": ["hubiera pedido", "hubiese pedido"],
+      "nosotros": ["hubiéramos pedido", "hubiésemos pedido"],
+      "vosotros": ["hubierais pedido", "hubieseis pedido"],
+      "ellos": ["hubieran pedido", "hubiesen pedido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy pidiendo"],
+      "tu": ["estás pidiendo"],
+      "el": ["está pidiendo"],
+      "nosotros": ["estamos pidiendo"],
+      "vosotros": ["estáis pidiendo"],
+      "ellos": ["están pidiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["pide"],
+      "usted": ["pida"],
+      "nosotros": ["pidamos"],
+      "vosotros": ["pedid"],
+      "ustedes": ["pidan"]
+    },
+    "imperative.negative": {
+      "tu": ["no pidas"],
+      "usted": ["no pida"],
+      "nosotros": ["no pidamos"],
+      "vosotros": ["no pidáis"],
+      "ustedes": ["no pidan"]
+    }
+  }
+}

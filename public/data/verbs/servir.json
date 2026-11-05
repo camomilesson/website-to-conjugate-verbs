@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "servir",
+  "infinitive": "servir",
+  "meaning": "to serve",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["sirvo"],
+      "tu": ["sirves"],
+      "el": ["sirve"],
+      "nosotros": ["servimos"],
+      "vosotros": ["servís"],
+      "ellos": ["sirven"]
+    },
+    "indicative.preterite": {
+      "yo": ["serví"],
+      "tu": ["serviste"],
+      "el": ["sirvió"],
+      "nosotros": ["servimos"],
+      "vosotros": ["servisteis"],
+      "ellos": ["sirvieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["servía"],
+      "tu": ["servías"],
+      "el": ["servía"],
+      "nosotros": ["servíamos"],
+      "vosotros": ["servíais"],
+      "ellos": ["servían"]
+    },
+    "indicative.future": {
+      "yo": ["serviré"],
+      "tu": ["servirás"],
+      "el": ["servirá"],
+      "nosotros": ["serviremos"],
+      "vosotros": ["serviréis"],
+      "ellos": ["servirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["serviría"],
+      "tu": ["servirías"],
+      "el": ["serviría"],
+      "nosotros": ["serviríamos"],
+      "vosotros": ["serviríais"],
+      "ellos": ["servirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["sirva"],
+      "tu": ["sirvas"],
+      "el": ["sirva"],
+      "nosotros": ["sirvamos"],
+      "vosotros": ["sirváis"],
+      "ellos": ["sirvan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["sirviera", "sirviese"],
+      "tu": ["sirvieras", "sirvieses"],
+      "el": ["sirviera", "sirviese"],
+      "nosotros": ["sirviéramos", "sirviésemos"],
+      "vosotros": ["sirvierais", "sirvieseis"],
+      "ellos": ["sirvieran", "sirviesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he servido"],
+      "tu": ["has servido"],
+      "el": ["ha servido"],
+      "nosotros": ["hemos servido"],
+      "vosotros": ["habéis servido"],
+      "ellos": ["han servido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había servido"],
+      "tu": ["habías servido"],
+      "el": ["había servido"],
+      "nosotros": ["habíamos servido"],
+      "vosotros": ["habíais servido"],
+      "ellos": ["habían servido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré servido"],
+      "tu": ["habrás servido"],
+      "el": ["habrá servido"],
+      "nosotros": ["habremos servido"],
+      "vosotros": ["habréis servido"],
+      "ellos": ["habrán servido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría servido"],
+      "tu": ["habrías servido"],
+      "el": ["habría servido"],
+      "nosotros": ["habríamos servido"],
+      "vosotros": ["habríais servido"],
+      "ellos": ["habrían servido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya servido"],
+      "tu": ["hayas servido"],
+      "el": ["haya servido"],
+      "nosotros": ["hayamos servido"],
+      "vosotros": ["hayáis servido"],
+      "ellos": ["hayan servido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera servido", "hubiese servido"],
+      "tu": ["hubieras servido", "hubieses servido"],
+      "el": ["hubiera servido", "hubiese servido"],
+      "nosotros": ["hubiéramos servido", "hubiésemos servido"],
+      "vosotros": ["hubierais servido", "hubieseis servido"],
+      "ellos": ["hubieran servido", "hubiesen servido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy sirviendo"],
+      "tu": ["estás sirviendo"],
+      "el": ["está sirviendo"],
+      "nosotros": ["estamos sirviendo"],
+      "vosotros": ["estáis sirviendo"],
+      "ellos": ["están sirviendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["sirve"],
+      "usted": ["sirva"],
+      "nosotros": ["sirvamos"],
+      "vosotros": ["servid"],
+      "ustedes": ["sirvan"]
+    },
+    "imperative.negative": {
+      "tu": ["no sirvas"],
+      "usted": ["no sirva"],
+      "nosotros": ["no sirvamos"],
+      "vosotros": ["no sirváis"],
+      "ustedes": ["no sirvan"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "entrar",
+  "infinitive": "entrar",
+  "meaning": "to enter",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["entro"],
+      "tu": ["entras"],
+      "el": ["entra"],
+      "nosotros": ["entramos"],
+      "vosotros": ["entráis"],
+      "ellos": ["entran"]
+    },
+    "indicative.preterite": {
+      "yo": ["entré"],
+      "tu": ["entraste"],
+      "el": ["entró"],
+      "nosotros": ["entramos"],
+      "vosotros": ["entrasteis"],
+      "ellos": ["entraron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["entraba"],
+      "tu": ["entrabas"],
+      "el": ["entraba"],
+      "nosotros": ["entrábamos"],
+      "vosotros": ["entrabais"],
+      "ellos": ["entraban"]
+    },
+    "indicative.future": {
+      "yo": ["entraré"],
+      "tu": ["entrarás"],
+      "el": ["entrará"],
+      "nosotros": ["entraremos"],
+      "vosotros": ["entraréis"],
+      "ellos": ["entrarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["entraría"],
+      "tu": ["entrarías"],
+      "el": ["entraría"],
+      "nosotros": ["entraríamos"],
+      "vosotros": ["entraríais"],
+      "ellos": ["entrarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["entre"],
+      "tu": ["entres"],
+      "el": ["entre"],
+      "nosotros": ["entremos"],
+      "vosotros": ["entréis"],
+      "ellos": ["entren"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["entrara", "entrase"],
+      "tu": ["entraras", "entrases"],
+      "el": ["entrara", "entrase"],
+      "nosotros": ["entráramos", "entrásemos"],
+      "vosotros": ["entrarais", "entraseis"],
+      "ellos": ["entraran", "entrasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he entrado"],
+      "tu": ["has entrado"],
+      "el": ["ha entrado"],
+      "nosotros": ["hemos entrado"],
+      "vosotros": ["habéis entrado"],
+      "ellos": ["han entrado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había entrado"],
+      "tu": ["habías entrado"],
+      "el": ["había entrado"],
+      "nosotros": ["habíamos entrado"],
+      "vosotros": ["habíais entrado"],
+      "ellos": ["habían entrado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré entrado"],
+      "tu": ["habrás entrado"],
+      "el": ["habrá entrado"],
+      "nosotros": ["habremos entrado"],
+      "vosotros": ["habréis entrado"],
+      "ellos": ["habrán entrado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría entrado"],
+      "tu": ["habrías entrado"],
+      "el": ["habría entrado"],
+      "nosotros": ["habríamos entrado"],
+      "vosotros": ["habríais entrado"],
+      "ellos": ["habrían entrado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya entrado"],
+      "tu": ["hayas entrado"],
+      "el": ["haya entrado"],
+      "nosotros": ["hayamos entrado"],
+      "vosotros": ["hayáis entrado"],
+      "ellos": ["hayan entrado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera entrado", "hubiese entrado"],
+      "tu": ["hubieras entrado", "hubieses entrado"],
+      "el": ["hubiera entrado", "hubiese entrado"],
+      "nosotros": ["hubiéramos entrado", "hubiésemos entrado"],
+      "vosotros": ["hubierais entrado", "hubieseis entrado"],
+      "ellos": ["hubieran entrado", "hubiesen entrado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy entrando"],
+      "tu": ["estás entrando"],
+      "el": ["está entrando"],
+      "nosotros": ["estamos entrando"],
+      "vosotros": ["estáis entrando"],
+      "ellos": ["están entrando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["entra"],
+      "usted": ["entre"],
+      "nosotros": ["entremos"],
+      "vosotros": ["entrad"],
+      "ustedes": ["entren"]
+    },
+    "imperative.negative": {
+      "tu": ["no entres"],
+      "usted": ["no entre"],
+      "nosotros": ["no entremos"],
+      "vosotros": ["no entréis"],
+      "ustedes": ["no entren"]
+    }
+  }
+}

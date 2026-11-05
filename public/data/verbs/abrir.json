@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "abrir",
+  "infinitive": "abrir",
+  "meaning": "to open",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["abro"],
+      "tu": ["abres"],
+      "el": ["abre"],
+      "nosotros": ["abrimos"],
+      "vosotros": ["abrís"],
+      "ellos": ["abren"]
+    },
+    "indicative.preterite": {
+      "yo": ["abrí"],
+      "tu": ["abriste"],
+      "el": ["abrió"],
+      "nosotros": ["abrimos"],
+      "vosotros": ["abristeis"],
+      "ellos": ["abrieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["abría"],
+      "tu": ["abrías"],
+      "el": ["abría"],
+      "nosotros": ["abríamos"],
+      "vosotros": ["abríais"],
+      "ellos": ["abrían"]
+    },
+    "indicative.future": {
+      "yo": ["abriré"],
+      "tu": ["abrirás"],
+      "el": ["abrirá"],
+      "nosotros": ["abriremos"],
+      "vosotros": ["abriréis"],
+      "ellos": ["abrirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["abriría"],
+      "tu": ["abrirías"],
+      "el": ["abriría"],
+      "nosotros": ["abriríamos"],
+      "vosotros": ["abriríais"],
+      "ellos": ["abrirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["abra"],
+      "tu": ["abras"],
+      "el": ["abra"],
+      "nosotros": ["abramos"],
+      "vosotros": ["abráis"],
+      "ellos": ["abran"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["abriera", "abriese"],
+      "tu": ["abrieras", "abrieses"],
+      "el": ["abriera", "abriese"],
+      "nosotros": ["abriéramos", "abriésemos"],
+      "vosotros": ["abrierais", "abrieseis"],
+      "ellos": ["abrieran", "abriesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he abierto"],
+      "tu": ["has abierto"],
+      "el": ["ha abierto"],
+      "nosotros": ["hemos abierto"],
+      "vosotros": ["habéis abierto"],
+      "ellos": ["han abierto"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había abierto"],
+      "tu": ["habías abierto"],
+      "el": ["había abierto"],
+      "nosotros": ["habíamos abierto"],
+      "vosotros": ["habíais abierto"],
+      "ellos": ["habían abierto"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré abierto"],
+      "tu": ["habrás abierto"],
+      "el": ["habrá abierto"],
+      "nosotros": ["habremos abierto"],
+      "vosotros": ["habréis abierto"],
+      "ellos": ["habrán abierto"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría abierto"],
+      "tu": ["habrías abierto"],
+      "el": ["habría abierto"],
+      "nosotros": ["habríamos abierto"],
+      "vosotros": ["habríais abierto"],
+      "ellos": ["habrían abierto"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya abierto"],
+      "tu": ["hayas abierto"],
+      "el": ["haya abierto"],
+      "nosotros": ["hayamos abierto"],
+      "vosotros": ["hayáis abierto"],
+      "ellos": ["hayan abierto"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera abierto", "hubiese abierto"],
+      "tu": ["hubieras abierto", "hubieses abierto"],
+      "el": ["hubiera abierto", "hubiese abierto"],
+      "nosotros": ["hubiéramos abierto", "hubiésemos abierto"],
+      "vosotros": ["hubierais abierto", "hubieseis abierto"],
+      "ellos": ["hubieran abierto", "hubiesen abierto"]
+    },
+    "progressive.present": {
+      "yo": ["estoy abriendo"],
+      "tu": ["estás abriendo"],
+      "el": ["está abriendo"],
+      "nosotros": ["estamos abriendo"],
+      "vosotros": ["estáis abriendo"],
+      "ellos": ["están abriendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["abre"],
+      "usted": ["abra"],
+      "nosotros": ["abramos"],
+      "vosotros": ["abrid"],
+      "ustedes": ["abran"]
+    },
+    "imperative.negative": {
+      "tu": ["no abras"],
+      "usted": ["no abra"],
+      "nosotros": ["no abramos"],
+      "vosotros": ["no abráis"],
+      "ustedes": ["no abran"]
+    }
+  }
+}

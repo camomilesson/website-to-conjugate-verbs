@@ -27,12 +27,11 @@ Prettier.
 
 ## Current status and development reference
 
-The public shell is deployed. The seven-verb starter catalogue and
-16-category selectors are approved. Guest typing practice is live, with configurable
-persons/length, accent handling, feedback, and final mistake review. Multiple choice is live too. Step 6 adds remembered browser-local preferences
-and editable Settings on its review branch. Accounts and saved learning progress
-are not implemented yet. Original console
-examples remain separate from the browser app.
+Production includes typing, multiple choice, and remembered browser preferences.
+The steps 7–8 review branch expands this to 100 verbs and prepares Google accounts
+and synced preferences. Authentication still needs owner setup; see
+[AUTH_SETUP.md](AUTH_SETUP.md). Progress and History persistence come later.
+Original console examples remain separate from the browser app.
 
 Use Node.js 24+ and pnpm 12.16.1:
 

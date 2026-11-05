@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "pagar",
+  "infinitive": "pagar",
+  "meaning": "to pay",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["pago"],
+      "tu": ["pagas"],
+      "el": ["paga"],
+      "nosotros": ["pagamos"],
+      "vosotros": ["pagáis"],
+      "ellos": ["pagan"]
+    },
+    "indicative.preterite": {
+      "yo": ["pagué"],
+      "tu": ["pagaste"],
+      "el": ["pagó"],
+      "nosotros": ["pagamos"],
+      "vosotros": ["pagasteis"],
+      "ellos": ["pagaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["pagaba"],
+      "tu": ["pagabas"],
+      "el": ["pagaba"],
+      "nosotros": ["pagábamos"],
+      "vosotros": ["pagabais"],
+      "ellos": ["pagaban"]
+    },
+    "indicative.future": {
+      "yo": ["pagaré"],
+      "tu": ["pagarás"],
+      "el": ["pagará"],
+      "nosotros": ["pagaremos"],
+      "vosotros": ["pagaréis"],
+      "ellos": ["pagarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["pagaría"],
+      "tu": ["pagarías"],
+      "el": ["pagaría"],
+      "nosotros": ["pagaríamos"],
+      "vosotros": ["pagaríais"],
+      "ellos": ["pagarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["pague"],
+      "tu": ["pagues"],
+      "el": ["pague"],
+      "nosotros": ["paguemos"],
+      "vosotros": ["paguéis"],
+      "ellos": ["paguen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["pagara", "pagase"],
+      "tu": ["pagaras", "pagases"],
+      "el": ["pagara", "pagase"],
+      "nosotros": ["pagáramos", "pagásemos"],
+      "vosotros": ["pagarais", "pagaseis"],
+      "ellos": ["pagaran", "pagasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he pagado"],
+      "tu": ["has pagado"],
+      "el": ["ha pagado"],
+      "nosotros": ["hemos pagado"],
+      "vosotros": ["habéis pagado"],
+      "ellos": ["han pagado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había pagado"],
+      "tu": ["habías pagado"],
+      "el": ["había pagado"],
+      "nosotros": ["habíamos pagado"],
+      "vosotros": ["habíais pagado"],
+      "ellos": ["habían pagado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré pagado"],
+      "tu": ["habrás pagado"],
+      "el": ["habrá pagado"],
+      "nosotros": ["habremos pagado"],
+      "vosotros": ["habréis pagado"],
+      "ellos": ["habrán pagado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría pagado"],
+      "tu": ["habrías pagado"],
+      "el": ["habría pagado"],
+      "nosotros": ["habríamos pagado"],
+      "vosotros": ["habríais pagado"],
+      "ellos": ["habrían pagado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya pagado"],
+      "tu": ["hayas pagado"],
+      "el": ["haya pagado"],
+      "nosotros": ["hayamos pagado"],
+      "vosotros": ["hayáis pagado"],
+      "ellos": ["hayan pagado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera pagado", "hubiese pagado"],
+      "tu": ["hubieras pagado", "hubieses pagado"],
+      "el": ["hubiera pagado", "hubiese pagado"],
+      "nosotros": ["hubiéramos pagado", "hubiésemos pagado"],
+      "vosotros": ["hubierais pagado", "hubieseis pagado"],
+      "ellos": ["hubieran pagado", "hubiesen pagado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy pagando"],
+      "tu": ["estás pagando"],
+      "el": ["está pagando"],
+      "nosotros": ["estamos pagando"],
+      "vosotros": ["estáis pagando"],
+      "ellos": ["están pagando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["paga"],
+      "usted": ["pague"],
+      "nosotros": ["paguemos"],
+      "vosotros": ["pagad"],
+      "ustedes": ["paguen"]
+    },
+    "imperative.negative": {
+      "tu": ["no pagues"],
+      "usted": ["no pague"],
+      "nosotros": ["no paguemos"],
+      "vosotros": ["no paguéis"],
+      "ustedes": ["no paguen"]
+    }
+  }
+}

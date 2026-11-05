@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "usar",
+  "infinitive": "usar",
+  "meaning": "to use",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["uso"],
+      "tu": ["usas"],
+      "el": ["usa"],
+      "nosotros": ["usamos"],
+      "vosotros": ["usáis"],
+      "ellos": ["usan"]
+    },
+    "indicative.preterite": {
+      "yo": ["usé"],
+      "tu": ["usaste"],
+      "el": ["usó"],
+      "nosotros": ["usamos"],
+      "vosotros": ["usasteis"],
+      "ellos": ["usaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["usaba"],
+      "tu": ["usabas"],
+      "el": ["usaba"],
+      "nosotros": ["usábamos"],
+      "vosotros": ["usabais"],
+      "ellos": ["usaban"]
+    },
+    "indicative.future": {
+      "yo": ["usaré"],
+      "tu": ["usarás"],
+      "el": ["usará"],
+      "nosotros": ["usaremos"],
+      "vosotros": ["usaréis"],
+      "ellos": ["usarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["usaría"],
+      "tu": ["usarías"],
+      "el": ["usaría"],
+      "nosotros": ["usaríamos"],
+      "vosotros": ["usaríais"],
+      "ellos": ["usarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["use"],
+      "tu": ["uses"],
+      "el": ["use"],
+      "nosotros": ["usemos"],
+      "vosotros": ["uséis"],
+      "ellos": ["usen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["usara", "usase"],
+      "tu": ["usaras", "usases"],
+      "el": ["usara", "usase"],
+      "nosotros": ["usáramos", "usásemos"],
+      "vosotros": ["usarais", "usaseis"],
+      "ellos": ["usaran", "usasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he usado"],
+      "tu": ["has usado"],
+      "el": ["ha usado"],
+      "nosotros": ["hemos usado"],
+      "vosotros": ["habéis usado"],
+      "ellos": ["han usado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había usado"],
+      "tu": ["habías usado"],
+      "el": ["había usado"],
+      "nosotros": ["habíamos usado"],
+      "vosotros": ["habíais usado"],
+      "ellos": ["habían usado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré usado"],
+      "tu": ["habrás usado"],
+      "el": ["habrá usado"],
+      "nosotros": ["habremos usado"],
+      "vosotros": ["habréis usado"],
+      "ellos": ["habrán usado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría usado"],
+      "tu": ["habrías usado"],
+      "el": ["habría usado"],
+      "nosotros": ["habríamos usado"],
+      "vosotros": ["habríais usado"],
+      "ellos": ["habrían usado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya usado"],
+      "tu": ["hayas usado"],
+      "el": ["haya usado"],
+      "nosotros": ["hayamos usado"],
+      "vosotros": ["hayáis usado"],
+      "ellos": ["hayan usado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera usado", "hubiese usado"],
+      "tu": ["hubieras usado", "hubieses usado"],
+      "el": ["hubiera usado", "hubiese usado"],
+      "nosotros": ["hubiéramos usado", "hubiésemos usado"],
+      "vosotros": ["hubierais usado", "hubieseis usado"],
+      "ellos": ["hubieran usado", "hubiesen usado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy usando"],
+      "tu": ["estás usando"],
+      "el": ["está usando"],
+      "nosotros": ["estamos usando"],
+      "vosotros": ["estáis usando"],
+      "ellos": ["están usando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["usa"],
+      "usted": ["use"],
+      "nosotros": ["usemos"],
+      "vosotros": ["usad"],
+      "ustedes": ["usen"]
+    },
+    "imperative.negative": {
+      "tu": ["no uses"],
+      "usted": ["no use"],
+      "nosotros": ["no usemos"],
+      "vosotros": ["no uséis"],
+      "ustedes": ["no usen"]
+    }
+  }
+}

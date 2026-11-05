@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "tocar",
+  "infinitive": "tocar",
+  "meaning": "to touch",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["toco"],
+      "tu": ["tocas"],
+      "el": ["toca"],
+      "nosotros": ["tocamos"],
+      "vosotros": ["tocáis"],
+      "ellos": ["tocan"]
+    },
+    "indicative.preterite": {
+      "yo": ["toqué"],
+      "tu": ["tocaste"],
+      "el": ["tocó"],
+      "nosotros": ["tocamos"],
+      "vosotros": ["tocasteis"],
+      "ellos": ["tocaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["tocaba"],
+      "tu": ["tocabas"],
+      "el": ["tocaba"],
+      "nosotros": ["tocábamos"],
+      "vosotros": ["tocabais"],
+      "ellos": ["tocaban"]
+    },
+    "indicative.future": {
+      "yo": ["tocaré"],
+      "tu": ["tocarás"],
+      "el": ["tocará"],
+      "nosotros": ["tocaremos"],
+      "vosotros": ["tocaréis"],
+      "ellos": ["tocarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["tocaría"],
+      "tu": ["tocarías"],
+      "el": ["tocaría"],
+      "nosotros": ["tocaríamos"],
+      "vosotros": ["tocaríais"],
+      "ellos": ["tocarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["toque"],
+      "tu": ["toques"],
+      "el": ["toque"],
+      "nosotros": ["toquemos"],
+      "vosotros": ["toquéis"],
+      "ellos": ["toquen"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["tocara", "tocase"],
+      "tu": ["tocaras", "tocases"],
+      "el": ["tocara", "tocase"],
+      "nosotros": ["tocáramos", "tocásemos"],
+      "vosotros": ["tocarais", "tocaseis"],
+      "ellos": ["tocaran", "tocasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he tocado"],
+      "tu": ["has tocado"],
+      "el": ["ha tocado"],
+      "nosotros": ["hemos tocado"],
+      "vosotros": ["habéis tocado"],
+      "ellos": ["han tocado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había tocado"],
+      "tu": ["habías tocado"],
+      "el": ["había tocado"],
+      "nosotros": ["habíamos tocado"],
+      "vosotros": ["habíais tocado"],
+      "ellos": ["habían tocado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré tocado"],
+      "tu": ["habrás tocado"],
+      "el": ["habrá tocado"],
+      "nosotros": ["habremos tocado"],
+      "vosotros": ["habréis tocado"],
+      "ellos": ["habrán tocado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría tocado"],
+      "tu": ["habrías tocado"],
+      "el": ["habría tocado"],
+      "nosotros": ["habríamos tocado"],
+      "vosotros": ["habríais tocado"],
+      "ellos": ["habrían tocado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya tocado"],
+      "tu": ["hayas tocado"],
+      "el": ["haya tocado"],
+      "nosotros": ["hayamos tocado"],
+      "vosotros": ["hayáis tocado"],
+      "ellos": ["hayan tocado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera tocado", "hubiese tocado"],
+      "tu": ["hubieras tocado", "hubieses tocado"],
+      "el": ["hubiera tocado", "hubiese tocado"],
+      "nosotros": ["hubiéramos tocado", "hubiésemos tocado"],
+      "vosotros": ["hubierais tocado", "hubieseis tocado"],
+      "ellos": ["hubieran tocado", "hubiesen tocado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy tocando"],
+      "tu": ["estás tocando"],
+      "el": ["está tocando"],
+      "nosotros": ["estamos tocando"],
+      "vosotros": ["estáis tocando"],
+      "ellos": ["están tocando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["toca"],
+      "usted": ["toque"],
+      "nosotros": ["toquemos"],
+      "vosotros": ["tocad"],
+      "ustedes": ["toquen"]
+    },
+    "imperative.negative": {
+      "tu": ["no toques"],
+      "usted": ["no toque"],
+      "nosotros": ["no toquemos"],
+      "vosotros": ["no toquéis"],
+      "ustedes": ["no toquen"]
+    }
+  }
+}

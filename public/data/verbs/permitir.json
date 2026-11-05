@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "permitir",
+  "infinitive": "permitir",
+  "meaning": "to allow",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["permito"],
+      "tu": ["permites"],
+      "el": ["permite"],
+      "nosotros": ["permitimos"],
+      "vosotros": ["permitís"],
+      "ellos": ["permiten"]
+    },
+    "indicative.preterite": {
+      "yo": ["permití"],
+      "tu": ["permitiste"],
+      "el": ["permitió"],
+      "nosotros": ["permitimos"],
+      "vosotros": ["permitisteis"],
+      "ellos": ["permitieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["permitía"],
+      "tu": ["permitías"],
+      "el": ["permitía"],
+      "nosotros": ["permitíamos"],
+      "vosotros": ["permitíais"],
+      "ellos": ["permitían"]
+    },
+    "indicative.future": {
+      "yo": ["permitiré"],
+      "tu": ["permitirás"],
+      "el": ["permitirá"],
+      "nosotros": ["permitiremos"],
+      "vosotros": ["permitiréis"],
+      "ellos": ["permitirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["permitiría"],
+      "tu": ["permitirías"],
+      "el": ["permitiría"],
+      "nosotros": ["permitiríamos"],
+      "vosotros": ["permitiríais"],
+      "ellos": ["permitirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["permita"],
+      "tu": ["permitas"],
+      "el": ["permita"],
+      "nosotros": ["permitamos"],
+      "vosotros": ["permitáis"],
+      "ellos": ["permitan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["permitiera", "permitiese"],
+      "tu": ["permitieras", "permitieses"],
+      "el": ["permitiera", "permitiese"],
+      "nosotros": ["permitiéramos", "permitiésemos"],
+      "vosotros": ["permitierais", "permitieseis"],
+      "ellos": ["permitieran", "permitiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he permitido"],
+      "tu": ["has permitido"],
+      "el": ["ha permitido"],
+      "nosotros": ["hemos permitido"],
+      "vosotros": ["habéis permitido"],
+      "ellos": ["han permitido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había permitido"],
+      "tu": ["habías permitido"],
+      "el": ["había permitido"],
+      "nosotros": ["habíamos permitido"],
+      "vosotros": ["habíais permitido"],
+      "ellos": ["habían permitido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré permitido"],
+      "tu": ["habrás permitido"],
+      "el": ["habrá permitido"],
+      "nosotros": ["habremos permitido"],
+      "vosotros": ["habréis permitido"],
+      "ellos": ["habrán permitido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría permitido"],
+      "tu": ["habrías permitido"],
+      "el": ["habría permitido"],
+      "nosotros": ["habríamos permitido"],
+      "vosotros": ["habríais permitido"],
+      "ellos": ["habrían permitido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya permitido"],
+      "tu": ["hayas permitido"],
+      "el": ["haya permitido"],
+      "nosotros": ["hayamos permitido"],
+      "vosotros": ["hayáis permitido"],
+      "ellos": ["hayan permitido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera permitido", "hubiese permitido"],
+      "tu": ["hubieras permitido", "hubieses permitido"],
+      "el": ["hubiera permitido", "hubiese permitido"],
+      "nosotros": ["hubiéramos permitido", "hubiésemos permitido"],
+      "vosotros": ["hubierais permitido", "hubieseis permitido"],
+      "ellos": ["hubieran permitido", "hubiesen permitido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy permitiendo"],
+      "tu": ["estás permitiendo"],
+      "el": ["está permitiendo"],
+      "nosotros": ["estamos permitiendo"],
+      "vosotros": ["estáis permitiendo"],
+      "ellos": ["están permitiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["permite"],
+      "usted": ["permita"],
+      "nosotros": ["permitamos"],
+      "vosotros": ["permitid"],
+      "ustedes": ["permitan"]
+    },
+    "imperative.negative": {
+      "tu": ["no permitas"],
+      "usted": ["no permita"],
+      "nosotros": ["no permitamos"],
+      "vosotros": ["no permitáis"],
+      "ustedes": ["no permitan"]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "ayudar",
+  "infinitive": "ayudar",
+  "meaning": "to help",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["ayudo"],
+      "tu": ["ayudas"],
+      "el": ["ayuda"],
+      "nosotros": ["ayudamos"],
+      "vosotros": ["ayudáis"],
+      "ellos": ["ayudan"]
+    },
+    "indicative.preterite": {
+      "yo": ["ayudé"],
+      "tu": ["ayudaste"],
+      "el": ["ayudó"],
+      "nosotros": ["ayudamos"],
+      "vosotros": ["ayudasteis"],
+      "ellos": ["ayudaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["ayudaba"],
+      "tu": ["ayudabas"],
+      "el": ["ayudaba"],
+      "nosotros": ["ayudábamos"],
+      "vosotros": ["ayudabais"],
+      "ellos": ["ayudaban"]
+    },
+    "indicative.future": {
+      "yo": ["ayudaré"],
+      "tu": ["ayudarás"],
+      "el": ["ayudará"],
+      "nosotros": ["ayudaremos"],
+      "vosotros": ["ayudaréis"],
+      "ellos": ["ayudarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["ayudaría"],
+      "tu": ["ayudarías"],
+      "el": ["ayudaría"],
+      "nosotros": ["ayudaríamos"],
+      "vosotros": ["ayudaríais"],
+      "ellos": ["ayudarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["ayude"],
+      "tu": ["ayudes"],
+      "el": ["ayude"],
+      "nosotros": ["ayudemos"],
+      "vosotros": ["ayudéis"],
+      "ellos": ["ayuden"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["ayudara", "ayudase"],
+      "tu": ["ayudaras", "ayudases"],
+      "el": ["ayudara", "ayudase"],
+      "nosotros": ["ayudáramos", "ayudásemos"],
+      "vosotros": ["ayudarais", "ayudaseis"],
+      "ellos": ["ayudaran", "ayudasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he ayudado"],
+      "tu": ["has ayudado"],
+      "el": ["ha ayudado"],
+      "nosotros": ["hemos ayudado"],
+      "vosotros": ["habéis ayudado"],
+      "ellos": ["han ayudado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había ayudado"],
+      "tu": ["habías ayudado"],
+      "el": ["había ayudado"],
+      "nosotros": ["habíamos ayudado"],
+      "vosotros": ["habíais ayudado"],
+      "ellos": ["habían ayudado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré ayudado"],
+      "tu": ["habrás ayudado"],
+      "el": ["habrá ayudado"],
+      "nosotros": ["habremos ayudado"],
+      "vosotros": ["habréis ayudado"],
+      "ellos": ["habrán ayudado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría ayudado"],
+      "tu": ["habrías ayudado"],
+      "el": ["habría ayudado"],
+      "nosotros": ["habríamos ayudado"],
+      "vosotros": ["habríais ayudado"],
+      "ellos": ["habrían ayudado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya ayudado"],
+      "tu": ["hayas ayudado"],
+      "el": ["haya ayudado"],
+      "nosotros": ["hayamos ayudado"],
+      "vosotros": ["hayáis ayudado"],
+      "ellos": ["hayan ayudado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera ayudado", "hubiese ayudado"],
+      "tu": ["hubieras ayudado", "hubieses ayudado"],
+      "el": ["hubiera ayudado", "hubiese ayudado"],
+      "nosotros": ["hubiéramos ayudado", "hubiésemos ayudado"],
+      "vosotros": ["hubierais ayudado", "hubieseis ayudado"],
+      "ellos": ["hubieran ayudado", "hubiesen ayudado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy ayudando"],
+      "tu": ["estás ayudando"],
+      "el": ["está ayudando"],
+      "nosotros": ["estamos ayudando"],
+      "vosotros": ["estáis ayudando"],
+      "ellos": ["están ayudando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ayuda"],
+      "usted": ["ayude"],
+      "nosotros": ["ayudemos"],
+      "vosotros": ["ayudad"],
+      "ustedes": ["ayuden"]
+    },
+    "imperative.negative": {
+      "tu": ["no ayudes"],
+      "usted": ["no ayude"],
+      "nosotros": ["no ayudemos"],
+      "vosotros": ["no ayudéis"],
+      "ustedes": ["no ayuden"]
+    }
+  }
+}

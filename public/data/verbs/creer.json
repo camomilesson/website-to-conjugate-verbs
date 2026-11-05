@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "creer",
+  "infinitive": "creer",
+  "meaning": "to believe",
+  "tags": ["irregular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["creo"],
+      "tu": ["crees"],
+      "el": ["cree"],
+      "nosotros": ["creemos"],
+      "vosotros": ["creéis"],
+      "ellos": ["creen"]
+    },
+    "indicative.preterite": {
+      "yo": ["creí"],
+      "tu": ["creíste"],
+      "el": ["creyó"],
+      "nosotros": ["creímos"],
+      "vosotros": ["creísteis"],
+      "ellos": ["creyeron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["creía"],
+      "tu": ["creías"],
+      "el": ["creía"],
+      "nosotros": ["creíamos"],
+      "vosotros": ["creíais"],
+      "ellos": ["creían"]
+    },
+    "indicative.future": {
+      "yo": ["creeré"],
+      "tu": ["creerás"],
+      "el": ["creerá"],
+      "nosotros": ["creeremos"],
+      "vosotros": ["creeréis"],
+      "ellos": ["creerán"]
+    },
+    "indicative.conditional": {
+      "yo": ["creería"],
+      "tu": ["creerías"],
+      "el": ["creería"],
+      "nosotros": ["creeríamos"],
+      "vosotros": ["creeríais"],
+      "ellos": ["creerían"]
+    },
+    "subjunctive.present": {
+      "yo": ["crea"],
+      "tu": ["creas"],
+      "el": ["crea"],
+      "nosotros": ["creamos"],
+      "vosotros": ["creáis"],
+      "ellos": ["crean"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["creyera", "creyese"],
+      "tu": ["creyeras", "creyeses"],
+      "el": ["creyera", "creyese"],
+      "nosotros": ["creyéramos", "creyésemos"],
+      "vosotros": ["creyerais", "creyeseis"],
+      "ellos": ["creyeran", "creyesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he creído"],
+      "tu": ["has creído"],
+      "el": ["ha creído"],
+      "nosotros": ["hemos creído"],
+      "vosotros": ["habéis creído"],
+      "ellos": ["han creído"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había creído"],
+      "tu": ["habías creído"],
+      "el": ["había creído"],
+      "nosotros": ["habíamos creído"],
+      "vosotros": ["habíais creído"],
+      "ellos": ["habían creído"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré creído"],
+      "tu": ["habrás creído"],
+      "el": ["habrá creído"],
+      "nosotros": ["habremos creído"],
+      "vosotros": ["habréis creído"],
+      "ellos": ["habrán creído"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría creído"],
+      "tu": ["habrías creído"],
+      "el": ["habría creído"],
+      "nosotros": ["habríamos creído"],
+      "vosotros": ["habríais creído"],
+      "ellos": ["habrían creído"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya creído"],
+      "tu": ["hayas creído"],
+      "el": ["haya creído"],
+      "nosotros": ["hayamos creído"],
+      "vosotros": ["hayáis creído"],
+      "ellos": ["hayan creído"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera creído", "hubiese creído"],
+      "tu": ["hubieras creído", "hubieses creído"],
+      "el": ["hubiera creído", "hubiese creído"],
+      "nosotros": ["hubiéramos creído", "hubiésemos creído"],
+      "vosotros": ["hubierais creído", "hubieseis creído"],
+      "ellos": ["hubieran creído", "hubiesen creído"]
+    },
+    "progressive.present": {
+      "yo": ["estoy creyendo"],
+      "tu": ["estás creyendo"],
+      "el": ["está creyendo"],
+      "nosotros": ["estamos creyendo"],
+      "vosotros": ["estáis creyendo"],
+      "ellos": ["están creyendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["cree"],
+      "usted": ["crea"],
+      "nosotros": ["creamos"],
+      "vosotros": ["creed"],
+      "ustedes": ["crean"]
+    },
+    "imperative.negative": {
+      "tu": ["no creas"],
+      "usted": ["no crea"],
+      "nosotros": ["no creamos"],
+      "vosotros": ["no creáis"],
+      "ustedes": ["no crean"]
+    }
+  }
+}

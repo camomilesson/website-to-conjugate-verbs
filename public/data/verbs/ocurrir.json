@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "ocurrir",
+  "infinitive": "ocurrir",
+  "meaning": "to happen",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["ocurro"],
+      "tu": ["ocurres"],
+      "el": ["ocurre"],
+      "nosotros": ["ocurrimos"],
+      "vosotros": ["ocurrís"],
+      "ellos": ["ocurren"]
+    },
+    "indicative.preterite": {
+      "yo": ["ocurrí"],
+      "tu": ["ocurriste"],
+      "el": ["ocurrió"],
+      "nosotros": ["ocurrimos"],
+      "vosotros": ["ocurristeis"],
+      "ellos": ["ocurrieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["ocurría"],
+      "tu": ["ocurrías"],
+      "el": ["ocurría"],
+      "nosotros": ["ocurríamos"],
+      "vosotros": ["ocurríais"],
+      "ellos": ["ocurrían"]
+    },
+    "indicative.future": {
+      "yo": ["ocurriré"],
+      "tu": ["ocurrirás"],
+      "el": ["ocurrirá"],
+      "nosotros": ["ocurriremos"],
+      "vosotros": ["ocurriréis"],
+      "ellos": ["ocurrirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["ocurriría"],
+      "tu": ["ocurrirías"],
+      "el": ["ocurriría"],
+      "nosotros": ["ocurriríamos"],
+      "vosotros": ["ocurriríais"],
+      "ellos": ["ocurrirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["ocurra"],
+      "tu": ["ocurras"],
+      "el": ["ocurra"],
+      "nosotros": ["ocurramos"],
+      "vosotros": ["ocurráis"],
+      "ellos": ["ocurran"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["ocurriera", "ocurriese"],
+      "tu": ["ocurrieras", "ocurrieses"],
+      "el": ["ocurriera", "ocurriese"],
+      "nosotros": ["ocurriéramos", "ocurriésemos"],
+      "vosotros": ["ocurrierais", "ocurrieseis"],
+      "ellos": ["ocurrieran", "ocurriesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he ocurrido"],
+      "tu": ["has ocurrido"],
+      "el": ["ha ocurrido"],
+      "nosotros": ["hemos ocurrido"],
+      "vosotros": ["habéis ocurrido"],
+      "ellos": ["han ocurrido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había ocurrido"],
+      "tu": ["habías ocurrido"],
+      "el": ["había ocurrido"],
+      "nosotros": ["habíamos ocurrido"],
+      "vosotros": ["habíais ocurrido"],
+      "ellos": ["habían ocurrido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré ocurrido"],
+      "tu": ["habrás ocurrido"],
+      "el": ["habrá ocurrido"],
+      "nosotros": ["habremos ocurrido"],
+      "vosotros": ["habréis ocurrido"],
+      "ellos": ["habrán ocurrido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría ocurrido"],
+      "tu": ["habrías ocurrido"],
+      "el": ["habría ocurrido"],
+      "nosotros": ["habríamos ocurrido"],
+      "vosotros": ["habríais ocurrido"],
+      "ellos": ["habrían ocurrido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya ocurrido"],
+      "tu": ["hayas ocurrido"],
+      "el": ["haya ocurrido"],
+      "nosotros": ["hayamos ocurrido"],
+      "vosotros": ["hayáis ocurrido"],
+      "ellos": ["hayan ocurrido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera ocurrido", "hubiese ocurrido"],
+      "tu": ["hubieras ocurrido", "hubieses ocurrido"],
+      "el": ["hubiera ocurrido", "hubiese ocurrido"],
+      "nosotros": ["hubiéramos ocurrido", "hubiésemos ocurrido"],
+      "vosotros": ["hubierais ocurrido", "hubieseis ocurrido"],
+      "ellos": ["hubieran ocurrido", "hubiesen ocurrido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy ocurriendo"],
+      "tu": ["estás ocurriendo"],
+      "el": ["está ocurriendo"],
+      "nosotros": ["estamos ocurriendo"],
+      "vosotros": ["estáis ocurriendo"],
+      "ellos": ["están ocurriendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["ocurre"],
+      "usted": ["ocurra"],
+      "nosotros": ["ocurramos"],
+      "vosotros": ["ocurrid"],
+      "ustedes": ["ocurran"]
+    },
+    "imperative.negative": {
+      "tu": ["no ocurras"],
+      "usted": ["no ocurra"],
+      "nosotros": ["no ocurramos"],
+      "vosotros": ["no ocurráis"],
+      "ustedes": ["no ocurran"]
+    }
+  }
+}

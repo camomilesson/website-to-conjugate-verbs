@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "decidir",
+  "infinitive": "decidir",
+  "meaning": "to decide",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["decido"],
+      "tu": ["decides"],
+      "el": ["decide"],
+      "nosotros": ["decidimos"],
+      "vosotros": ["decidís"],
+      "ellos": ["deciden"]
+    },
+    "indicative.preterite": {
+      "yo": ["decidí"],
+      "tu": ["decidiste"],
+      "el": ["decidió"],
+      "nosotros": ["decidimos"],
+      "vosotros": ["decidisteis"],
+      "ellos": ["decidieron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["decidía"],
+      "tu": ["decidías"],
+      "el": ["decidía"],
+      "nosotros": ["decidíamos"],
+      "vosotros": ["decidíais"],
+      "ellos": ["decidían"]
+    },
+    "indicative.future": {
+      "yo": ["decidiré"],
+      "tu": ["decidirás"],
+      "el": ["decidirá"],
+      "nosotros": ["decidiremos"],
+      "vosotros": ["decidiréis"],
+      "ellos": ["decidirán"]
+    },
+    "indicative.conditional": {
+      "yo": ["decidiría"],
+      "tu": ["decidirías"],
+      "el": ["decidiría"],
+      "nosotros": ["decidiríamos"],
+      "vosotros": ["decidiríais"],
+      "ellos": ["decidirían"]
+    },
+    "subjunctive.present": {
+      "yo": ["decida"],
+      "tu": ["decidas"],
+      "el": ["decida"],
+      "nosotros": ["decidamos"],
+      "vosotros": ["decidáis"],
+      "ellos": ["decidan"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["decidiera", "decidiese"],
+      "tu": ["decidieras", "decidieses"],
+      "el": ["decidiera", "decidiese"],
+      "nosotros": ["decidiéramos", "decidiésemos"],
+      "vosotros": ["decidierais", "decidieseis"],
+      "ellos": ["decidieran", "decidiesen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he decidido"],
+      "tu": ["has decidido"],
+      "el": ["ha decidido"],
+      "nosotros": ["hemos decidido"],
+      "vosotros": ["habéis decidido"],
+      "ellos": ["han decidido"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había decidido"],
+      "tu": ["habías decidido"],
+      "el": ["había decidido"],
+      "nosotros": ["habíamos decidido"],
+      "vosotros": ["habíais decidido"],
+      "ellos": ["habían decidido"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré decidido"],
+      "tu": ["habrás decidido"],
+      "el": ["habrá decidido"],
+      "nosotros": ["habremos decidido"],
+      "vosotros": ["habréis decidido"],
+      "ellos": ["habrán decidido"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría decidido"],
+      "tu": ["habrías decidido"],
+      "el": ["habría decidido"],
+      "nosotros": ["habríamos decidido"],
+      "vosotros": ["habríais decidido"],
+      "ellos": ["habrían decidido"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya decidido"],
+      "tu": ["hayas decidido"],
+      "el": ["haya decidido"],
+      "nosotros": ["hayamos decidido"],
+      "vosotros": ["hayáis decidido"],
+      "ellos": ["hayan decidido"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera decidido", "hubiese decidido"],
+      "tu": ["hubieras decidido", "hubieses decidido"],
+      "el": ["hubiera decidido", "hubiese decidido"],
+      "nosotros": ["hubiéramos decidido", "hubiésemos decidido"],
+      "vosotros": ["hubierais decidido", "hubieseis decidido"],
+      "ellos": ["hubieran decidido", "hubiesen decidido"]
+    },
+    "progressive.present": {
+      "yo": ["estoy decidiendo"],
+      "tu": ["estás decidiendo"],
+      "el": ["está decidiendo"],
+      "nosotros": ["estamos decidiendo"],
+      "vosotros": ["estáis decidiendo"],
+      "ellos": ["están decidiendo"]
+    },
+    "imperative.affirmative": {
+      "tu": ["decide"],
+      "usted": ["decida"],
+      "nosotros": ["decidamos"],
+      "vosotros": ["decidid"],
+      "ustedes": ["decidan"]
+    },
+    "imperative.negative": {
+      "tu": ["no decidas"],
+      "usted": ["no decida"],
+      "nosotros": ["no decidamos"],
+      "vosotros": ["no decidáis"],
+      "ustedes": ["no decidan"]
+    }
+  }
+}

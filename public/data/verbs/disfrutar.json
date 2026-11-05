@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "catalogue-1",
+  "id": "disfrutar",
+  "infinitive": "disfrutar",
+  "meaning": "to enjoy",
+  "tags": ["regular"],
+  "conjugations": {
+    "indicative.present": {
+      "yo": ["disfruto"],
+      "tu": ["disfrutas"],
+      "el": ["disfruta"],
+      "nosotros": ["disfrutamos"],
+      "vosotros": ["disfrutáis"],
+      "ellos": ["disfrutan"]
+    },
+    "indicative.preterite": {
+      "yo": ["disfruté"],
+      "tu": ["disfrutaste"],
+      "el": ["disfrutó"],
+      "nosotros": ["disfrutamos"],
+      "vosotros": ["disfrutasteis"],
+      "ellos": ["disfrutaron"]
+    },
+    "indicative.imperfect": {
+      "yo": ["disfrutaba"],
+      "tu": ["disfrutabas"],
+      "el": ["disfrutaba"],
+      "nosotros": ["disfrutábamos"],
+      "vosotros": ["disfrutabais"],
+      "ellos": ["disfrutaban"]
+    },
+    "indicative.future": {
+      "yo": ["disfrutaré"],
+      "tu": ["disfrutarás"],
+      "el": ["disfrutará"],
+      "nosotros": ["disfrutaremos"],
+      "vosotros": ["disfrutaréis"],
+      "ellos": ["disfrutarán"]
+    },
+    "indicative.conditional": {
+      "yo": ["disfrutaría"],
+      "tu": ["disfrutarías"],
+      "el": ["disfrutaría"],
+      "nosotros": ["disfrutaríamos"],
+      "vosotros": ["disfrutaríais"],
+      "ellos": ["disfrutarían"]
+    },
+    "subjunctive.present": {
+      "yo": ["disfrute"],
+      "tu": ["disfrutes"],
+      "el": ["disfrute"],
+      "nosotros": ["disfrutemos"],
+      "vosotros": ["disfrutéis"],
+      "ellos": ["disfruten"]
+    },
+    "subjunctive.imperfect": {
+      "yo": ["disfrutara", "disfrutase"],
+      "tu": ["disfrutaras", "disfrutases"],
+      "el": ["disfrutara", "disfrutase"],
+      "nosotros": ["disfrutáramos", "disfrutásemos"],
+      "vosotros": ["disfrutarais", "disfrutaseis"],
+      "ellos": ["disfrutaran", "disfrutasen"]
+    },
+    "indicative.present-perfect": {
+      "yo": ["he disfrutado"],
+      "tu": ["has disfrutado"],
+      "el": ["ha disfrutado"],
+      "nosotros": ["hemos disfrutado"],
+      "vosotros": ["habéis disfrutado"],
+      "ellos": ["han disfrutado"]
+    },
+    "indicative.pluperfect": {
+      "yo": ["había disfrutado"],
+      "tu": ["habías disfrutado"],
+      "el": ["había disfrutado"],
+      "nosotros": ["habíamos disfrutado"],
+      "vosotros": ["habíais disfrutado"],
+      "ellos": ["habían disfrutado"]
+    },
+    "indicative.future-perfect": {
+      "yo": ["habré disfrutado"],
+      "tu": ["habrás disfrutado"],
+      "el": ["habrá disfrutado"],
+      "nosotros": ["habremos disfrutado"],
+      "vosotros": ["habréis disfrutado"],
+      "ellos": ["habrán disfrutado"]
+    },
+    "indicative.conditional-perfect": {
+      "yo": ["habría disfrutado"],
+      "tu": ["habrías disfrutado"],
+      "el": ["habría disfrutado"],
+      "nosotros": ["habríamos disfrutado"],
+      "vosotros": ["habríais disfrutado"],
+      "ellos": ["habrían disfrutado"]
+    },
+    "subjunctive.present-perfect": {
+      "yo": ["haya disfrutado"],
+      "tu": ["hayas disfrutado"],
+      "el": ["haya disfrutado"],
+      "nosotros": ["hayamos disfrutado"],
+      "vosotros": ["hayáis disfrutado"],
+      "ellos": ["hayan disfrutado"]
+    },
+    "subjunctive.pluperfect": {
+      "yo": ["hubiera disfrutado", "hubiese disfrutado"],
+      "tu": ["hubieras disfrutado", "hubieses disfrutado"],
+      "el": ["hubiera disfrutado", "hubiese disfrutado"],
+      "nosotros": ["hubiéramos disfrutado", "hubiésemos disfrutado"],
+      "vosotros": ["hubierais disfrutado", "hubieseis disfrutado"],
+      "ellos": ["hubieran disfrutado", "hubiesen disfrutado"]
+    },
+    "progressive.present": {
+      "yo": ["estoy disfrutando"],
+      "tu": ["estás disfrutando"],
+      "el": ["está disfrutando"],
+      "nosotros": ["estamos disfrutando"],
+      "vosotros": ["estáis disfrutando"],
+      "ellos": ["están disfrutando"]
+    },
+    "imperative.affirmative": {
+      "tu": ["disfruta"],
+      "usted": ["disfrute"],
+      "nosotros": ["disfrutemos"],
+      "vosotros": ["disfrutad"],
+      "ustedes": ["disfruten"]
+    },
+    "imperative.negative": {
+      "tu": ["no disfrutes"],
+      "usted": ["no disfrute"],
+      "nosotros": ["no disfrutemos"],
+      "vosotros": ["no disfrutéis"],
+      "ustedes": ["no disfruten"]
+    }
+  }
+}
