@@ -2,11 +2,11 @@ import "./practice-answers.ts"
 import "./practice-session.ts"
 
 import { readFileSync } from "node:fs"
-import { loadVerb } from "./verb-guard.ts"
+import { loadVerb } from "../modules/verb-catalogue/verb-guard.ts"
 import "./guard-examples.ts"
 
 const savedVerb = readFileSync(
-  new URL("./data/hablar.json", import.meta.url),
+  new URL("../modules/verb-catalogue/data/hablar.json", import.meta.url),
   "utf8",
 )
 const hablar = loadVerb(savedVerb)

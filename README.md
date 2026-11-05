@@ -1,67 +1,54 @@
-# Website to Conjugate Verbs
+# La Conjugadora
 
-A minimalist website for practicing verb conjugations, developed as a personal project for the Advanced JavaScript and TypeScript course at Harbour.Space University.
+A desktop-first Spanish conjugation practice website with an old-newspaper
+visual style, developed for the Advanced JavaScript and TypeScript course at
+Harbour.Space University.
 
-## About
+## Planned experience
 
-Language-learning apps like Duolingo are great for building vocabulary and learning the basics, but I wanted something more focused: a simple way to drill verb conjugations across different tenses.
+- Approximately 100 common verbs across a defined set of tenses and moods.
+- Typing and multiple-choice practice, configurable by verbs, categories, persons,
+  and test length; optional accent-insensitive typing.
+- Practice, Progress, History, and Settings tabs.
+- Google sign-in, remembered practice preferences, and cross-device learning data.
+- A verb-by-tense accuracy heatmap and completed-test history. Submitted answers
+  count toward progress even when a test is abandoned; tests cannot be resumed.
+- Public hosting, guest practice, and account/data deletion controls.
 
-Existing tools tend to be either too limited or locked behind a paywall. This project aims to provide a free, straightforward alternative.
+## Architecture direction
 
-## Planned Features
+React, TypeScript, Vite, and plain CSS; Vercel hosting; Supabase authentication and
+PostgreSQL for user data. The assistant generates the versioned JSON verb catalogue during development;
+production serves the reviewed static files. Organise implementation as modlets, keeping related code,
+styles, tests, documentation, and useful demos together. Retain pnpm, ESLint, and
+Prettier.
 
-- Practice conjugating verbs across different tenses and persons.
-- Check answers and track performance.
-- Choose which verbs and tenses to practice.
-- Sign in and save settings and learning progress across devices.
-- Keep the interface clean, simple, and distraction-free.
+## Current status and development reference
 
-## Tech Stack
+Step 1 is verified: the React/Vite shell has four navigable sections,
+newspaper styling, and modlet folders. Practice, progress tracking, sign-in,
+and persistence are not implemented yet. Existing console examples are preserved
+separately from the browser app.
 
-- TypeScript
-- HTML/CSS
-- pnpm for package management
-- ESLint and Prettier
-
-## Architecture decisions
-
-- **Vercel** will host the web frontend.
-- **Supabase Auth** will handle authentication; the initial sign-in method is
-  still to be decided.
-- **Supabase PostgreSQL** will store user settings and learning progress.
-  Progress will use a shared table with records associated with each user,
-  rather than a separate table per user.
-- The frontend will initially access Supabase through its JavaScript client.
-  Row-level security policies will restrict users to their own settings and
-  progress. A custom backend server is not currently planned.
-
-Vercel and Supabase are selected but have not been configured yet. The verb-data
-source, frontend framework (if any), and definition of learning progress are
-still open decisions.
-
-The initial goal is a deployed, usable version within roughly a week and a half
-of starting development. A minimal page should be deployed early so deployment
-can be verified before the full practice flow is complete.
-
-## Local development
-
-Use Node.js 24 or newer and pnpm 12.16.1. Node runs the project's erasable
-TypeScript directly; TypeScript checks types separately without generating files.
+Use Node.js 24+ and pnpm 12.16.1:
 
 ```sh
 pnpm install
-pnpm start
-pnpm check
-pnpm lint
-pnpm format
+pnpm dev       # local browser app; also available as pnpm start
+pnpm lint      # typecheck, ESLint, and formatting
+pnpm build     # typecheck and production build in dist/
+pnpm preview   # serve the production build locally
+pnpm examples  # original standalone console examples
 ```
 
-`pnpm lint` runs type checking, type-aware ESLint checks, and Prettier checks.
-`pnpm format` applies formatting. Commit `pnpm-lock.yaml` when dependencies change
-and use pnpm consistently for dependency management.
+Open the URL printed by Vite. Navigation uses `/practice`, `/progress`, `/history`,
+and `/settings`; Vercel routing is prepared for step 2. See [DEPLOYMENT.md](DEPLOYMENT.md) for
+import settings and the publishing workflow. No public URL is confirmed yet. Feature code lives
+under `src/modules/`, while `src/app/` owns composition and the global theme.
 
-## Status
-
-In development. Project approved for the Advanced JavaScript and TypeScript course at Harbour.Space University.
-The repository currently contains the TypeScript and pnpm tooling foundation;
-the web interface, authentication, and persistence are not implemented yet.
+[BLUEPRINT.md](BLUEPRINT.md) is the approved development reference, including the
+16-category release inventory. [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)
+provides numbered steps and review checkpoints. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account
+and setup work for the project owner. At public release, update this README with
+the deployed URL and lasting usage/development documentation, migrate necessary
+blueprint details, and remove the temporary blueprint.

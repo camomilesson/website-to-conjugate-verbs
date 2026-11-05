@@ -1,0 +1,115 @@
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --ink: #27251f;
+  --muted: #625e55;
+  --rule: #c7c0b2;
+  --accent: #823c3b;
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-label: "Courier New", monospace;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background-image: radial-gradient(
+    ellipse at 40% 0%,
+    #fff8 0,
+    transparent 65%
+  );
+}
+a {
+  color: inherit;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+::selection {
+  color: var(--paper);
+  background: var(--accent);
+}
+.newspaper {
+  max-width: 1240px;
+  padding: 2rem 3rem 0;
+  margin: 0 auto;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  padding: 0.8rem;
+  background: var(--paper);
+  z-index: 2;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+.wordmark {
+  display: block;
+  width: fit-content;
+  margin: 1.2rem auto 0;
+  font-size: clamp(2.8rem, 5vw, 4.7rem);
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -0.065em;
+  text-decoration: none;
+}
+.masthead-subtitle {
+  text-align: center;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0.65rem 0 1.5rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  border-top: 3px double var(--ink);
+  border-bottom: 1px solid var(--ink);
+  gap: 2.8rem;
+}
+nav a {
+  text-decoration: none;
+  padding: 0.95rem 0.2rem 0.8rem;
+  border-bottom: 3px solid transparent;
+  font-size: 1.05rem;
+}
+nav a.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+nav a:hover {
+  color: var(--accent);
+}
+main:focus {
+  outline: none;
+}
+.page-section {
+  padding: 2.5rem 0;
+}
+.page-section h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+.placeholder-note {
+  max-width: 38rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+@media (max-width: 760px) {
+  .newspaper {
+    padding: 1rem 1.3rem 0;
+  }
+  nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

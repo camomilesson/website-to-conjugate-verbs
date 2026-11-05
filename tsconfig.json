@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
+    "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "strict": true,
     "verbatimModuleSyntax": true,
     "erasableSyntaxOnly": true,
     "noEmit": true,
     "allowImportingTsExtensions": true,
-    "types": ["node"]
+    "types": ["vite/client", "node"],
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src", "vite.config.ts"]
 }
