@@ -222,8 +222,12 @@ function PracticeSession({
           </p>
           <div className="question-prompt">
             <h2>
-              Conjugate <strong lang="es">{question.infinitive}</strong> in{" "}
-              <span lang="es">
+              Conjugate{" "}
+              <strong className="prompt-verb" lang="es">
+                {question.infinitive}
+              </strong>{" "}
+              in{" "}
+              <span className="prompt-tense" lang="es">
                 {category?.group} · {category?.label}
               </span>
               .

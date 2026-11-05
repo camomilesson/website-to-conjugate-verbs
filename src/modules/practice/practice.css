@@ -577,7 +577,8 @@
 }
 .choice-person {
   font-size: 1.3rem;
-  padding-top: 0.55rem;
+  align-self: center;
+  grid-row: 1;
 }
 .choice-list {
   min-width: 0;
@@ -585,4 +586,23 @@
 .choice-options > .field-note {
   grid-column: 2;
   margin-top: 0;
+}
+
+.typing-session {
+  max-width: 58rem;
+}
+.question-prompt .prompt-verb,
+.question-prompt .prompt-tense {
+  font-size: 1.5em;
+  color: var(--accent);
+}
+.question-prompt .prompt-verb {
+  font-weight: bold;
+}
+.question-prompt .prompt-tense {
+  font-weight: normal;
+}
+
+.choice-list .choice-option:last-child {
+  margin-bottom: 0;
 }

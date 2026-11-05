@@ -473,3 +473,8 @@ Step 5 question-layout amendment: show “Conjugate [verb] in [mood/tense]”,
 then an answer container with the person on the left and the typing field or
 choice options to its right.
 Removed the separate right-aligned person and standalone meaning from questions.
+
+Step 5 visual refinement: verb and tense are 50% larger and burgundy; verb stays
+bold and tense stays normal weight. Choice person is centred on the option list.
+Browser inspection verified 32.4px versus the 21.6px prompt, weights 700/400,
+and matching vertical centres.
