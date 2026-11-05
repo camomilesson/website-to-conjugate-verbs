@@ -1,54 +1,32 @@
 import { useEffect, useRef, useState } from "react"
+import { loadCatalogueVerb } from "../verb-catalogue/index.ts"
+import type { CatalogueVerb } from "../verb-catalogue/index.ts"
+import { savePreferences } from "../practice-preferences/index.ts"
 import {
-  CATEGORIES,
-  PERSONS,
-  getPresetCategories,
-  loadCatalogue,
-  loadCatalogueVerb,
-} from "../verb-catalogue/index.ts"
-import type {
-  Catalogue,
-  CatalogueVerb,
-  CategoryId,
-  PersonId,
-} from "../verb-catalogue/index.ts"
+  PreferenceFields,
+  usePreferenceDraft,
+} from "../practice-preferences/ui.ts"
+import type { PracticeConfig, Question } from "./session.ts"
+import { poolSize, createQuestionPool, createQuestions } from "./session.ts"
 import "./practice.css"
-import { SelectionDialog } from "./SelectionDialog.tsx"
-
-import type { PracticeConfig, PracticeMode, Question } from "./session.ts"
-import {
-  PRACTICE_PERSONS,
-  poolSize,
-  createQuestionPool,
-  createQuestions,
-} from "./session.ts"
 
 export function PracticeSetup({
   onStart,
 }: {
-  onStart: (questions: Question[], config: PracticeConfig) => void
+  onStart: (
+    questions: Question[],
+    config: PracticeConfig,
+    storageNotice: string | null,
+  ) => void
 }) {
-  const [catalogue, setCatalogue] = useState<Catalogue | null>(null)
-  const [selectedVerbs, setSelectedVerbs] = useState<string[]>([])
-  const [selectedCategories, setSelectedCategories] = useState<CategoryId[]>(
-    getPresetCategories("basic"),
-  )
-  const [selectionDialog, setSelectionDialog] = useState<
-    "verbs" | "tenses" | "persons" | null
-  >(null)
-  const [verbSet, setVerbSet] = useState<"all" | "common" | "select">("all")
-  const [tenseSet, setTenseSet] = useState<
-    "basic" | "advanced" | "all" | "select"
-  >("basic")
-  const [personSet, setPersonSet] = useState<"all" | "select">("all")
-  const [error, setError] = useState("")
-  const [attempt, setAttempt] = useState(0)
-  const [selectedPersons, setSelectedPersons] = useState<PersonId[]>([
-    ...PRACTICE_PERSONS,
-  ])
-  const [length, setLength] = useState("20")
-  const [strict, setStrict] = useState(true)
-  const [mode, setMode] = useState<PracticeMode>("typing")
+  const { catalogue, preferences, setPreferences, notice, error, retry } =
+    usePreferenceDraft()
+  const selectedVerbs = preferences?.verbIds ?? []
+  const selectedCategories = preferences?.categories ?? []
+  const selectedPersons = preferences?.persons ?? []
+  const mode = preferences?.mode ?? "typing"
+  const length = preferences?.length ?? "20"
+  const strict = preferences?.accentPolicy !== "relaxed"
   const [choiceData, setChoiceData] = useState<{
     key: string
     verbs?: CatalogueVerb[]
@@ -86,25 +64,6 @@ export function PracticeSetup({
   const startController = useRef<AbortController | null>(null)
   useEffect(() => () => startController.current?.abort(), [])
 
-  useEffect(() => {
-    const controller = new AbortController()
-    void loadCatalogue(controller.signal)
-      .then((data) => {
-        setCatalogue(data)
-        setSelectedVerbs(data.verbs.map((verb) => verb.id))
-        setError("")
-      })
-      .catch((reason: unknown) => {
-        if (!controller.signal.aborted)
-          setError(
-            reason instanceof Error
-              ? reason.message
-              : "Could not load catalogue.",
-          )
-      })
-    return () => controller.abort()
-  }, [attempt])
-
   const currentChoiceData = choiceData?.key === choiceKey ? choiceData : null
   const choiceLoading =
     mode === "choice" && selectedVerbs.length > 0 && !currentChoiceData
@@ -132,6 +91,7 @@ export function PracticeSetup({
   async function start() {
     if (
       !catalogue ||
+      !preferences ||
       loading ||
       startController.current ||
       choiceLoading ||
@@ -166,8 +126,11 @@ export function PracticeSetup({
                   ),
                 ),
             )
-      if (!controller.signal.aborted)
-        onStart(createQuestions(verbs, config), config)
+      if (!controller.signal.aborted) {
+        const questions = createQuestions(verbs, config)
+        const storageNotice = savePreferences(structuredClone(preferences))
+        onStart(questions, config, storageNotice)
+      }
     } catch (reason: unknown) {
       if (!controller.signal.aborted)
         setStartError(
@@ -183,15 +146,6 @@ export function PracticeSetup({
     }
   }
 
-  // Curated starter subset for useful first practice, not a frequency ranking.
-  const commonIds =
-    catalogue?.verbs
-      .filter((verb) => ["ser", "ir", "tener", "hablar"].includes(verb.id))
-      .map((verb) => verb.id) ?? []
-  const summary = (labels: string[]) =>
-    labels.length > 3
-      ? `${labels.slice(0, 3).join(", ")} +${labels.length - 3}`
-      : labels.join(", ") || "None selected"
   return (
     <section
       className="page-section setup-page"
@@ -201,229 +155,22 @@ export function PracticeSetup({
       {error ? (
         <div role="alert">
           <p>{error}</p>
-          <button onClick={() => setAttempt((value) => value + 1)}>
-            Retry catalogue
-          </button>
+          <button onClick={retry}>Retry catalogue</button>
         </div>
-      ) : !catalogue ? (
-        <p role="status">Loading verbs…</p>
+      ) : !catalogue || !preferences ? (
+        <p role="status">Loading preferences…</p>
       ) : (
         <>
-          <div className="compact-setup">
-            <fieldset className="setup-row" disabled={loading}>
-              <legend>Answer mode</legend>
-              <div className="segmented-control mode-toggle">
-                <label>
-                  <input
-                    type="radio"
-                    name="practice-mode"
-                    checked={mode === "typing"}
-                    onChange={() => setMode("typing")}
-                  />
-                  Typing
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="practice-mode"
-                    checked={mode === "choice"}
-                    onChange={() => setMode("choice")}
-                  />
-                  Multiple choice
-                </label>
-              </div>
-            </fieldset>
-            <fieldset className="setup-row" disabled={loading}>
-              <legend>Verbs</legend>
-              <div>
-                <div className="selection-actions">
-                  <button
-                    aria-pressed={verbSet === "all"}
-                    onClick={() => {
-                      setSelectedVerbs(catalogue.verbs.map((verb) => verb.id))
-                      setVerbSet("all")
-                    }}
-                  >
-                    All
-                  </button>
-                  <button
-                    aria-pressed={verbSet === "common"}
-                    onClick={() => {
-                      setSelectedVerbs(commonIds)
-                      setVerbSet("common")
-                    }}
-                  >
-                    Common
-                  </button>
-                  <button
-                    aria-pressed={verbSet === "select"}
-                    aria-haspopup="dialog"
-                    onClick={() => setSelectionDialog("verbs")}
-                  >
-                    Select…
-                  </button>
-                </div>
-                <p className="selection-summary">
-                  {selectedVerbs.length} / {catalogue.verbs.length} ·{" "}
-                  {summary(
-                    catalogue.verbs
-                      .filter((verb) => selectedVerbs.includes(verb.id))
-                      .map((verb) => verb.infinitive),
-                  )}
-                </p>
-              </div>
-            </fieldset>
-            <fieldset className="setup-row" disabled={loading}>
-              <legend>Tenses & moods</legend>
-              <div>
-                <div className="selection-actions">
-                  {(["basic", "advanced", "all"] as const).map((preset) => (
-                    <button
-                      key={preset}
-                      aria-pressed={tenseSet === preset}
-                      onClick={() => {
-                        setSelectedCategories(getPresetCategories(preset))
-                        setTenseSet(preset)
-                      }}
-                    >
-                      {preset[0].toUpperCase() + preset.slice(1)}
-                    </button>
-                  ))}
-                  <button
-                    aria-pressed={tenseSet === "select"}
-                    aria-haspopup="dialog"
-                    onClick={() => setSelectionDialog("tenses")}
-                  >
-                    Select…
-                  </button>
-                </div>
-                <p className="selection-summary">
-                  {selectedCategories.length} / 16 categories
-                  {tenseSet === "basic"
-                    ? " · Everyday indicative forms"
-                    : tenseSet === "advanced" || tenseSet === "all"
-                      ? " · All supported forms"
-                      : " · Custom selection"}
-                </p>
-              </div>
-            </fieldset>
-            <fieldset className="setup-row" disabled={loading}>
-              <legend>Persons</legend>
-              <div>
-                <div className="selection-actions">
-                  <button
-                    aria-pressed={personSet === "all"}
-                    onClick={() => {
-                      setSelectedPersons([...PRACTICE_PERSONS])
-                      setPersonSet("all")
-                    }}
-                  >
-                    All
-                  </button>
-                  <button
-                    aria-pressed={personSet === "select"}
-                    aria-haspopup="dialog"
-                    onClick={() => setSelectionDialog("persons")}
-                  >
-                    Select…
-                  </button>
-                </div>
-                <p className="selection-summary">
-                  {selectedPersons.length} / 6 ·{" "}
-                  {personSet === "all"
-                    ? "Including vosotros"
-                    : summary(selectedPersons.map((person) => PERSONS[person]))}
-                </p>
-              </div>
-            </fieldset>
-            <fieldset className="setup-row settings-row" disabled={loading}>
-              <legend>Session</legend>
-              <div className="session-options">
-                <label className="length-label">
-                  Questions
-                  <input
-                    type="number"
-                    min="1"
-                    step="1"
-                    value={length}
-                    onChange={(event) => setLength(event.target.value)}
-                  />
-                </label>
-                {mode === "typing" && (
-                  <label className="option">
-                    <input
-                      type="checkbox"
-                      checked={strict}
-                      onChange={(event) => setStrict(event.target.checked)}
-                    />
-                    Require accents{" "}
-                    <span className="field-note">(á, ñ, ü)</span>
-                  </label>
-                )}
-              </div>
-            </fieldset>
-          </div>
-          {selectionDialog && (
-            <SelectionDialog
-              title={
-                selectionDialog === "verbs"
-                  ? "Select verbs"
-                  : selectionDialog === "tenses"
-                    ? "Select tenses & moods"
-                    : "Select persons"
-              }
-              searchable={selectionDialog === "verbs"}
-              options={
-                selectionDialog === "verbs"
-                  ? catalogue.verbs.map((verb) => ({
-                      id: verb.id,
-                      label: verb.infinitive,
-                      detail: verb.meaning,
-                    }))
-                  : selectionDialog === "tenses"
-                    ? CATEGORIES.map((category) => ({
-                        id: category.id,
-                        label: category.label,
-                        detail: category.english,
-                        group: category.group,
-                      }))
-                    : PRACTICE_PERSONS.map((person) => ({
-                        id: person,
-                        label: PERSONS[person],
-                        detail:
-                          person === "yo"
-                            ? "Not used in imperatives"
-                            : person === "el"
-                              ? "Includes usted for imperatives"
-                              : person === "ellos"
-                                ? "Includes ustedes for imperatives"
-                                : undefined,
-                      }))
-              }
-              selected={
-                selectionDialog === "verbs"
-                  ? selectedVerbs
-                  : selectionDialog === "tenses"
-                    ? selectedCategories
-                    : selectedPersons
-              }
-              onClose={() => setSelectionDialog(null)}
-              onApply={(ids) => {
-                if (selectionDialog === "verbs") {
-                  setSelectedVerbs(ids)
-                  setVerbSet("select")
-                }
-                if (selectionDialog === "tenses") {
-                  setSelectedCategories(ids as CategoryId[])
-                  setTenseSet("select")
-                }
-                if (selectionDialog === "persons") {
-                  setSelectedPersons(ids as PersonId[])
-                  setPersonSet("select")
-                }
-                setSelectionDialog(null)
-              }}
-            />
+          <PreferenceFields
+            catalogue={catalogue}
+            value={preferences}
+            onChange={setPreferences}
+            disabled={loading}
+          />
+          {notice && (
+            <p className="field-note" role="status">
+              {notice}
+            </p>
           )}
           {choiceLoading && <p role="status">Preparing answer options…</p>}
           {mode === "choice" && currentChoiceData?.error && (

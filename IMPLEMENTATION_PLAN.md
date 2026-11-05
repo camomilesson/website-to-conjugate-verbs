@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 5 ready for your review** · 5 November 2026
+Status: **Step 6 ready for your review** · 5 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -119,7 +119,7 @@ answers. Reload mid-test: expect a fresh setup, no resumed test.
 
 ## Step 5 — Multiple-choice practice
 
-**Status:** Ready for your review · **Depends on:** 4
+**Status:** Verified · **Depends on:** 4
 
 **Outcome:** The same configured test works with multiple-choice answers.
 
@@ -141,7 +141,7 @@ modes for a new test.
 
 ## Step 6 — Remembered preferences and Settings
 
-**Status:** Not started · **Depends on:** 5
+**Status:** Ready for your review · **Depends on:** 5
 
 **Outcome:** Guests return to their most recently started configuration.
 
@@ -478,3 +478,26 @@ Step 5 visual refinement: verb and tense are 50% larger and burgundy; verb stays
 bold and tense stays normal weight. Choice person is centred on the option list.
 Browser inspection verified 32.4px versus the 21.6px prompt, weights 700/400,
 and matching vertical centres.
+
+### Step 6 — Ready for your review
+
+- Approved step 5 was promoted to main. Step 6 is on codex/remember-preferences.
+- Added a shared practice-preferences modlet for defaults, validated local storage,
+  controlled fields, and modal selection. Settings and Practice share this public
+  API without importing one another's internals.
+- Save-on-successful-Start and explicit Save preferences persist mode, IDs,
+  built-in set labels, requested length, and typing accent policy. Draft edits and
+  Restore defaults are unsaved until Start/Save. Never store queues or results.
+- Built-in sets resolve against current catalogue coverage. Custom IDs are
+  filtered/deduplicated; invalid/empty/unusable saved values fall back with a
+  notice. Unknown/corrupt schema and blocked storage fail gracefully.
+- Checks: 27 tests pass; lint/typecheck/build pass. Browser verification: draft
+  edits vanish on refresh; Start restores Common/Advanced/choice/length after
+  reload without resuming the test; Settings Save overrides next setup; a second
+  tab's saved length/person changes leave the running five-question test intact
+  and appear on its next setup. No browser warnings/errors observed.
+- Your verification: customise and Start, then reload. Confirm setup restored,
+  no active question. Change a selection without Start and reload: previous saved
+  values should return. Save different values in Settings and revisit Practice.
+- Settings are browser-local and origin-specific until account syncing in step 8.
+  Step 7 has not started; final verb-list approval is its first checkpoint.

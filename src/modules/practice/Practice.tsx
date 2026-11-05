@@ -43,10 +43,12 @@ function LeavePrompt({
 function PracticeSession({
   questions,
   config,
+  storageNotice,
   onReset,
 }: {
   questions: Question[]
   config: PracticeConfig
+  storageNotice: string | null
   onReset: () => void
 }) {
   const [state, dispatch] = useReducer(
@@ -145,6 +147,11 @@ function PracticeSession({
         }
       }}
     >
+      {storageNotice && (
+        <p className="field-note" role="status">
+          {storageNotice}
+        </p>
+      )}
       {blocker.state === "blocked" || leaving ? (
         <LeavePrompt
           onStay={() => {
@@ -346,11 +353,13 @@ export function Practice() {
   const [session, setSession] = useState<{
     questions: Question[]
     config: PracticeConfig
+    storageNotice: string | null
   } | null>(null)
   return session ? (
     <PracticeSession
       questions={session.questions}
       config={session.config}
+      storageNotice={session.storageNotice}
       onReset={() => {
         setSession(null)
         window.scrollTo(0, 0)
@@ -358,8 +367,8 @@ export function Practice() {
     />
   ) : (
     <PracticeSetup
-      onStart={(questions, config) => {
-        setSession({ questions, config })
+      onStart={(questions, config, storageNotice) => {
+        setSession({ questions, config, storageNotice })
         window.scrollTo(0, 0)
       }}
     />

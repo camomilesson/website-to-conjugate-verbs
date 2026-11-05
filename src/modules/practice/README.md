@@ -4,7 +4,7 @@ Import `Practice` through `index.ts`. The feature owns guest typing and multiple
 all conjugation IDs/data come from the catalogue public API, and matching comes
 from the independent answer-checking module.
 
-- `PracticeSetup.tsx`: compact All/Common/Select verbs, categories/presets, six person groups,
+- `PracticeSetup.tsx`: uses the shared practice-preferences editor for configuration,
   length, strict/relaxed accents, pre-start pool count/capping, and cancellable
   loading of the selected verb files. Invalid/empty pools cannot start. Errors
   retain the selection and let the user retry Start.
@@ -16,9 +16,6 @@ from the independent answer-checking module.
   are excluded before session sizing. Only same-person forms in other categories
   are eligible; ordinary el/ellos map to imperative usted/ustedes and vice versa.
   There is no fallback to another person. Same grammatical group is preferred.
-- `SelectionDialog.tsx`: native modal with draft selections, search for verbs,
-  Apply/Cancel, Escape cancellation, focus trapping, and return to the opener.
-  Common is currently hablar/ser/ir/tener; expand this curated subset in step 7.
 - `ChoiceAnswer.tsx`: native radio group with arrow selection and Enter submission.
 - `Practice.tsx`: setup/session composition, form, accent keys, feedback, mistake
   review, and navigation confirmation. Enter submits; Space on the focused Next
@@ -35,7 +32,10 @@ The results screen lists every mistake for this sitting.
 No guest answers, results, or question queues are persisted. Leaving via app
 navigation or End practice prompts first; reload starts fresh without a resume
 flow. Completed results remain while on the view until New practice/navigation.
-Defaults currently reset on New practice; remembered selections arrive in step 6.
+The last successfully started configuration is saved as defaults. New practice
+restores those defaults without restoring the session. Draft-only changes do not
+write storage. Settings saves the same preferences explicitly. Storage failures
+are reported, and the session keeps its own configuration snapshot.
 
 The earlier development answer preview has been replaced by actual practice.
 Multiple choice is implemented in step 5. Choice submissions require an offered

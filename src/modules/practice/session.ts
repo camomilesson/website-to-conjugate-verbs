@@ -8,14 +8,9 @@ import { shuffled, withChoices } from "./choices.ts"
 import { isCorrectAnswer } from "../answer-checking/index.ts"
 import type { AccentPolicy } from "../answer-checking/index.ts"
 
-export const PRACTICE_PERSONS = [
-  "yo",
-  "tu",
-  "el",
-  "nosotros",
-  "vosotros",
-  "ellos",
-] as const
+import type { PracticeMode } from "../practice-preferences/index.ts"
+export { PRACTICE_PERSONS } from "../practice-preferences/index.ts"
+export type { PracticeMode } from "../practice-preferences/index.ts"
 export function selectedCategoryPersons(
   category: CategoryId,
   selected: readonly PersonId[],
@@ -50,7 +45,6 @@ export interface Question {
   answers: string[]
   options?: string[]
 }
-export type PracticeMode = "typing" | "choice"
 export interface PracticeConfig {
   mode: PracticeMode
   verbIds: string[]

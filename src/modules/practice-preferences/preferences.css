@@ -1,0 +1,290 @@
+.search-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.selection-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.search-label input {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  padding: 0.6rem;
+  font: inherit;
+  min-width: 0;
+  width: 100%;
+}
+.page-section input:focus-visible,
+.page-section select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.option {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+.option input {
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+.option small {
+  color: var(--muted);
+}
+.verb-options .option small {
+  margin-left: auto;
+}
+.practice-options {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2rem 0 1rem;
+  padding: 1rem 0;
+}
+.practice-options legend {
+  font-size: 1.2rem;
+  padding-right: 0.7rem;
+}
+.session-options {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.session-options input[type="number"] {
+  display: block;
+  width: 7rem;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--rule);
+  font: inherit;
+  color: inherit;
+}
+.page-section button {
+  font: inherit;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+.page-section button:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.page-section button.primary-button {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+  padding: 0.7rem 1.2rem;
+}
+.page-section button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+/* Compact desktop setup; long lists live in native modal dialogs. */
+.setup-page {
+  max-width: 58rem;
+  margin: auto;
+  padding-block: 1.4rem;
+}
+.compact-setup {
+  border-top: 1px solid var(--rule);
+}
+.setup-row {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  align-items: center;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  margin: 0;
+  padding: 0.65rem 0;
+  min-width: 0;
+  position: relative;
+}
+.setup-row legend {
+  float: left;
+  width: 10rem;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+}
+.setup-row > div {
+  grid-column: 2;
+}
+.setup-row .selection-actions {
+  margin: 0;
+  gap: 0.35rem;
+}
+.selection-summary {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin: 0.45rem 0 0;
+}
+.setup-row button {
+  padding: 0.35rem 0.8rem;
+}
+.setup-row button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #823c3b08;
+}
+.segmented-control {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid var(--rule);
+}
+.segmented-control label {
+  padding: 0.5rem 1.1rem;
+  position: relative;
+  cursor: pointer;
+}
+.segmented-control label + label {
+  border-left: 1px solid var(--rule);
+}
+.segmented-control label:has(input:checked) {
+  background: var(--accent);
+  color: var(--paper);
+}
+.segmented-control label:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.segmented-control input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.setup-row .session-options {
+  margin: 0;
+  gap: 1.2rem;
+}
+.length-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.setup-row .session-options input[type="number"] {
+  display: inline-block;
+  width: 5rem;
+  padding: 0.35rem 0.5rem;
+  margin: 0;
+}
+.setup-page > .field-note {
+  margin: 0.7rem 0;
+}
+.selection-dialog {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  width: min(36rem, calc(100vw - 2rem));
+  max-height: min(85vh, 44rem);
+  padding: 1.5rem;
+}
+.selection-dialog::backdrop {
+  background: #27251f66;
+}
+.dialog-heading,
+.dialog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.dialog-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+.dialog-heading button {
+  border: 0;
+  font-size: 1.5rem;
+}
+.dialog-options {
+  max-height: 42vh;
+  overflow-y: auto;
+  padding: 0.2rem 0.5rem 0.5rem 0.2rem;
+}
+.dialog-options small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+.dialog-options h3 {
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: normal;
+  margin: 1rem 0 0.4rem;
+}
+.dialog-footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+@media (max-width: 600px) {
+  .setup-row {
+    grid-template-columns: 1fr;
+  }
+  .setup-row legend {
+    float: none;
+    width: auto;
+  }
+  .setup-row > div {
+    grid-column: 1;
+  }
+}
+@media (min-width: 761px) {
+  .newspaper:has(.setup-page, .typing-session) {
+    padding-top: 1rem;
+  }
+  .setup-page {
+    padding-block: 0.8rem;
+  }
+  .setup-page h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.65rem;
+  }
+  .setup-row {
+    padding-block: 0.35rem;
+  }
+  .setup-row legend {
+    padding-block: 0.4rem;
+  }
+  .selection-summary {
+    margin-top: 0.2rem;
+  }
+}
+@media (min-width: 761px) {
+  .newspaper:has(.setup-page, .typing-session) .wordmark {
+    margin-top: 0.6rem;
+    font-size: 3.5rem;
+  }
+  .newspaper:has(.setup-page, .typing-session) .masthead-subtitle {
+    margin: 0.4rem 0 1rem;
+  }
+  .newspaper:has(.setup-page, .typing-session) nav a {
+    padding-block: 0.7rem 0.55rem;
+  }
+}
+@media (min-width: 761px) {
+  .page-section.setup-page {
+    padding-block: 0.7rem;
+  }
+  .page-section.setup-page h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.65rem;
+  }
+}
+.page-section button.primary-button:hover:not(:disabled) {
+  background: #6f3030;
+  border-color: #6f3030;
+  color: var(--paper);
+}
