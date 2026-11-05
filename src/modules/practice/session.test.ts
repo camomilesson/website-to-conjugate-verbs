@@ -22,6 +22,7 @@ const data: unknown = JSON.parse(
 )
 const hablar = parseCatalogueVerb(data)
 const config: PracticeConfig = {
+  mode: "typing",
   verbIds: ["hablar"],
   categories: ["indicative.present"],
   persons: [...PRACTICE_PERSONS],

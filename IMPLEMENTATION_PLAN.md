@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 4 ready for your review** · 5 November 2026
+Status: **Step 5 ready for your review** · 5 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -93,7 +93,7 @@ one category. A practice session is not yet expected to run.
 
 ## Step 4 — Complete guest typing practice
 
-**Status:** Ready for your review · **Depends on:** 3
+**Status:** Verified · **Depends on:** 3
 
 **Outcome:** A guest can configure and complete a typing test.
 
@@ -119,7 +119,7 @@ answers. Reload mid-test: expect a fresh setup, no resumed test.
 
 ## Step 5 — Multiple-choice practice
 
-**Status:** Not started · **Depends on:** 4
+**Status:** Ready for your review · **Depends on:** 4
 
 **Outcome:** The same configured test works with multiple-choice answers.
 
@@ -425,3 +425,29 @@ Public deployment remains incomplete until account setup/import and URL checks.
 - ñ/ü folding has unit-test fixtures (the seven starter verbs do not naturally
   exercise those characters). No practice session is restored after refresh.
 - User review pending; step 5 has not started.
+
+### Step 5 — Ready for your review
+
+- User approved step 4; typing practice was fast-forwarded to main and Vercel
+  reported a successful production deployment. The public setup was verified in
+  the browser. Step 5 lives on codex/choice-practice pending review.
+- Added a typing/choice selector, pre-start preparation of eligible choice pools,
+  shuffled real-form options, keyboard-accessible radio choices, shared feedback,
+  score and mistake review. Each question offers exactly one valid choice.
+- Distractors prefer same-verb/same-category forms, then the same grammatical
+  group, then other supported categories of that verb. All accepted alternatives
+  are excluded. Two/three options are allowed when four are unavailable; questions
+  with no safe wrong option are excluded before the displayed pool size/cap.
+- Choice matching always preserves accents. The typing accent checkbox is hidden
+  for choice mode and its local setting is retained when switching back in setup.
+- Checks passed: pnpm lint, pnpm test (18 tests), pnpm build. Choice tests cover
+  every one of the 658 catalogue combinations across deterministic shuffle
+  boundaries, variants, small pools, indexed submissions, and invalid actions.
+- Browser checks passed: arrow-key selection, Enter submission, Space advance,
+  locked radio feedback, resetting selection for the next question, a known 50%
+  result with one mistake, and a fresh empty typed answer after a choice session.
+- Review: choose Multiple choice, ser and levantarse, affirmative imperative,
+  and a short session. Check one right/wrong pair and the final result. Try arrows,
+  Enter, and Space, then New practice and Typing. Production does not receive step
+  5 until approval; preferences/history remain unsaved until later steps.
+- Step 6 has not started.

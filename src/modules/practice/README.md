@@ -1,6 +1,6 @@
 # Practice modlet
 
-Import `Practice` through `index.ts`. The feature owns guest typing practice;
+Import `Practice` through `index.ts`. The feature owns guest typing and multiple-choice practice;
 all conjugation IDs/data come from the catalogue public API, and matching comes
 from the independent answer-checking module.
 
@@ -11,6 +11,10 @@ from the independent answer-checking module.
 - `session.ts`: pure eligible-person mapping, unique shuffled question sampling,
   session transitions, and score calculation. usted/ustedes follow the selected
   third-person singular/plural groups. Questions snapshot accepted alternatives.
+- `choices.ts`: real same-verb distractors, excluding all accepted alternatives,
+  with per-tier shuffling and two-to-four unique options. Invalid choice questions
+  are excluded before session sizing. Same-category forms are preferred.
+- `ChoiceAnswer.tsx`: native radio group with arrow selection and Enter submission.
 - `Practice.tsx`: setup/session composition, form, accent keys, feedback, mistake
   review, and navigation confirmation. Enter submits; Space on the focused Next
   button advances from feedback. Repeated keys cannot submit/advance repeatedly;
@@ -26,7 +30,11 @@ flow. Completed results remain while on the view until New practice/navigation.
 Defaults currently reset on New practice; remembered selections arrive in step 6.
 
 The earlier development answer preview has been replaced by actual practice.
-Multiple choice is step 5. Authenticated progress/history remains later work.
+Multiple choice is implemented in step 5. Choice submissions require an offered
+index and always use strict matching, independently of the typing accent policy.
+Setup preloads selected verb files in choice mode to show the eligible pool size,
+handles loading/error/retry, and aborts stale loads. Typing still loads on Start.
+Authenticated progress/history remains later work.
 Run `pnpm test` for matching, sampling, and state regression checks. Browser review
 covers keyboard input/focus, character insertion, navigation cancellation, refresh,
 and end-to-end scoring; those are not simulated by the pure unit tests.

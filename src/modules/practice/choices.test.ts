@@ -1,0 +1,149 @@
+import assert from "node:assert/strict"
+import { readFileSync } from "node:fs"
+import { test } from "node:test"
+import {
+  CATEGORIES,
+  getCategoryPersons,
+  parseCatalogue,
+  parseCatalogueVerb,
+} from "../verb-catalogue/index.ts"
+import { isCorrectAnswer, normaliseAnswer } from "../answer-checking/index.ts"
+import { withChoices } from "./choices.ts"
+import {
+  createQuestionPool,
+  createQuestions,
+  initialSession,
+  sessionReducer,
+  PRACTICE_PERSONS,
+} from "./session.ts"
+import type { PracticeConfig } from "./session.ts"
+const root = new URL("../../../public/data/", import.meta.url)
+function read(path: string): unknown {
+  return JSON.parse(readFileSync(new URL(path, root), "utf8")) as unknown
+}
+const catalogue = parseCatalogue(read("catalogue.json"))
+const verbs = catalogue.verbs.map((entry) =>
+  parseCatalogueVerb(read(`verbs/${entry.id}.json`)),
+)
+const config: PracticeConfig = {
+  mode: "choice",
+  verbIds: catalogue.verbs.map((entry) => entry.id),
+  categories: CATEGORIES.map((item) => item.id),
+  persons: [...PRACTICE_PERSONS],
+  length: 1000,
+  accentPolicy: "strict",
+}
+
+await test("every starter choice question has distinct real options and exactly one accepted answer", () => {
+  for (const random of [() => 0, () => 0.5, () => 0.99999]) {
+    const questions = createQuestions(verbs, config, random)
+    assert.equal(questions.length, 658)
+    assert.equal(new Set(questions.map((question) => question.id)).size, 658)
+    for (const question of questions) {
+      assert.equal(question.options?.length, 4)
+      assert.equal(
+        new Set(
+          question.options?.map((option) => normaliseAnswer(option, "strict")),
+        ).size,
+        4,
+      )
+      assert.equal(
+        question.options?.filter((option) =>
+          isCorrectAnswer(option, question.answers, "strict"),
+        ).length,
+        1,
+      )
+      const source = verbs.find((verb) => verb.id === question.verbId)
+      assert.ok(source)
+      const allForms = Object.values(source.conjugations).flatMap((forms) =>
+        Object.values(forms).flatMap((answers) => answers ?? []),
+      )
+      assert.ok(question.options?.every((option) => allForms.includes(option)))
+    }
+  }
+})
+await test("same-category distractors are preferred and all accepted variants are excluded", () => {
+  const verb = verbs[0]
+  const questions = createQuestions(
+    [verb],
+    { ...config, verbIds: [verb.id], categories: ["subjunctive.imperfect"] },
+    () => 0.5,
+  )
+  const sameCategory = Object.values(
+    verb.conjugations["subjunctive.imperfect"],
+  ).flatMap((forms) => forms ?? [])
+  for (const question of questions) {
+    assert.ok(
+      question.options?.every((option) => sameCategory.includes(option)),
+    )
+    assert.equal(
+      question.options?.filter((option) => question.answers.includes(option))
+        .length,
+      1,
+    )
+  }
+})
+await test("small candidate pools show fewer options or exclude a question before sizing the session", () => {
+  const verb = structuredClone(verbs[0])
+  for (const category of CATEGORIES)
+    for (const person of getCategoryPersons(category.id))
+      verb.conjugations[category.id][person] = ["same"]
+  const typed = {
+    ...config,
+    mode: "typing" as const,
+    verbIds: [verb.id],
+    categories: ["indicative.present" as const],
+    persons: ["yo" as const],
+  }
+  const question = createQuestions([verb], typed)[0]
+  assert.equal(
+    withChoices(question, verb, () => 0.5),
+    null,
+  )
+  assert.equal(
+    createQuestionPool([verb], { ...typed, mode: "choice" }).length,
+    0,
+  )
+  assert.throws(
+    () => createQuestions([verb], { ...typed, mode: "choice" }),
+    /valid answer options/,
+  )
+  verb.conjugations["indicative.future"].yo = ["other", "OTHER"]
+  const two = withChoices(question, verb, () => 0.5)
+  assert.equal(two?.options?.length, 2)
+  verb.conjugations["indicative.future"].tu = ["third"]
+  assert.equal(withChoices(question, verb, () => 0.5)?.options?.length, 3)
+})
+await test("choice submission requires a valid offered index and stays strict regardless of typing policy", () => {
+  const question = createQuestions(verbs, { ...config, length: 1 })[0]
+  question.answers = ["hablé"]
+  question.options = ["hablé", "hable"]
+  const initial = initialSession([question], "relaxed")
+  for (const index of [-1, 0.5, 2, NaN])
+    assert.equal(
+      sessionReducer(initial, { type: "submit-choice", index }),
+      initial,
+    )
+  assert.equal(
+    sessionReducer(initial, { type: "submit", text: "hablé" }),
+    initial,
+  )
+  const wrong = sessionReducer(initial, { type: "submit-choice", index: 1 })
+  assert.equal(wrong.results[0].correct, false)
+  assert.equal(wrong.results[0].text, "hable")
+  assert.equal(
+    sessionReducer(wrong, { type: "submit-choice", index: 0 }),
+    wrong,
+  )
+  const right = sessionReducer(initial, { type: "submit-choice", index: 0 })
+  assert.equal(right.results[0].correct, true)
+  assert.equal(sessionReducer(right, { type: "next" }).phase, "complete")
+  const typing = { ...question, options: undefined }
+  assert.equal(
+    sessionReducer(initialSession([typing], "strict"), {
+      type: "submit-choice",
+      index: 0,
+    }).results.length,
+    0,
+  )
+})

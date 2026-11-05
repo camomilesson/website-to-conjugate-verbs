@@ -4,6 +4,7 @@ import type {
   CategoryId,
   PersonId,
 } from "../verb-catalogue/index.ts"
+import { shuffled, withChoices } from "./choices.ts"
 import { isCorrectAnswer } from "../answer-checking/index.ts"
 import type { AccentPolicy } from "../answer-checking/index.ts"
 
@@ -47,21 +48,22 @@ export interface Question {
   category: CategoryId
   person: PersonId
   answers: string[]
+  options?: string[]
 }
+export type PracticeMode = "typing" | "choice"
 export interface PracticeConfig {
+  mode: PracticeMode
   verbIds: string[]
   categories: CategoryId[]
   persons: PersonId[]
   length: number
   accentPolicy: AccentPolicy
 }
-export function createQuestions(
+export function createQuestionPool(
   verbs: readonly CatalogueVerb[],
   config: PracticeConfig,
   random: () => number = Math.random,
 ): Question[] {
-  if (!Number.isInteger(config.length) || config.length < 1)
-    throw new Error("Choose a positive whole number of questions.")
   const pool: Question[] = []
   const seen = new Set<string>()
   for (const verb of verbs) {
@@ -73,7 +75,7 @@ export function createQuestions(
         const answers = verb.conjugations[category][person]
         if (!answers?.length) continue
         seen.add(id)
-        pool.push({
+        const question: Question = {
           id,
           verbId: verb.id,
           infinitive: verb.infinitive,
@@ -81,17 +83,30 @@ export function createQuestions(
           category,
           person,
           answers: [...answers],
-        })
+        }
+        const eligible =
+          config.mode === "choice"
+            ? withChoices(question, verb, random)
+            : question
+        if (eligible) pool.push(eligible)
       }
     }
   }
+  return pool
+}
+export function createQuestions(
+  verbs: readonly CatalogueVerb[],
+  config: PracticeConfig,
+  random: () => number = Math.random,
+): Question[] {
+  if (!Number.isInteger(config.length) || config.length < 1)
+    throw new Error("Choose a positive whole number of questions.")
+  const pool = createQuestionPool(verbs, config, random)
   if (!pool.length)
-    throw new Error("Select at least one available verb, tense, and person.")
-  for (let i = pool.length - 1; i > 0; i--) {
-    const index = Math.floor(random() * (i + 1))
-    ;[pool[i], pool[index]] = [pool[index], pool[i]]
-  }
-  return pool.slice(0, config.length)
+    throw new Error(
+      "Select at least one available verb, tense, and person with valid answer options.",
+    )
+  return shuffled(pool, random).slice(0, config.length)
 }
 export interface AnswerResult {
   question: Question
@@ -105,7 +120,10 @@ export interface SessionState {
   index: number
   results: AnswerResult[]
 }
-export type SessionAction = { type: "submit"; text: string } | { type: "next" }
+export type SessionAction =
+  | { type: "submit"; text: string }
+  | { type: "submit-choice"; index: number }
+  | { type: "next" }
 export function initialSession(
   questions: Question[],
   accentPolicy: AccentPolicy,
@@ -117,9 +135,23 @@ export function sessionReducer(
   state: SessionState,
   action: SessionAction,
 ): SessionState {
-  if (action.type === "submit") {
-    if (state.phase !== "question" || !action.text.trim()) return state
+  if (action.type === "submit" || action.type === "submit-choice") {
+    if (state.phase !== "question") return state
     const question = state.questions[state.index]
+    let text: string
+    if (action.type === "submit-choice") {
+      if (
+        !question.options ||
+        !Number.isInteger(action.index) ||
+        action.index < 0 ||
+        action.index >= question.options.length
+      )
+        return state
+      text = question.options[action.index]
+    } else {
+      if (question.options || !action.text.trim()) return state
+      text = action.text
+    }
     return {
       ...state,
       phase: "feedback",
@@ -127,11 +159,11 @@ export function sessionReducer(
         ...state.results,
         {
           question,
-          text: action.text,
+          text,
           correct: isCorrectAnswer(
-            action.text,
+            text,
             question.answers,
-            state.accentPolicy,
+            question.options ? "strict" : state.accentPolicy,
           ),
         },
       ],

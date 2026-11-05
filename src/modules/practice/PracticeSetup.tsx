@@ -8,14 +8,20 @@ import {
 } from "../verb-catalogue/index.ts"
 import type {
   Catalogue,
+  CatalogueVerb,
   CategoryId,
   PersonId,
   Preset,
 } from "../verb-catalogue/index.ts"
 import "./practice.css"
 
-import type { PracticeConfig, Question } from "./session.ts"
-import { PRACTICE_PERSONS, poolSize, createQuestions } from "./session.ts"
+import type { PracticeConfig, PracticeMode, Question } from "./session.ts"
+import {
+  PRACTICE_PERSONS,
+  poolSize,
+  createQuestionPool,
+  createQuestions,
+} from "./session.ts"
 
 export function PracticeSetup({
   onStart,
@@ -35,6 +41,39 @@ export function PracticeSetup({
   ])
   const [length, setLength] = useState("20")
   const [strict, setStrict] = useState(true)
+  const [mode, setMode] = useState<PracticeMode>("typing")
+  const [choiceData, setChoiceData] = useState<{
+    key: string
+    verbs?: CatalogueVerb[]
+    error?: string
+  } | null>(null)
+  const [choiceAttempt, setChoiceAttempt] = useState(0)
+  const choiceKey = JSON.stringify([catalogue?.datasetVersion, selectedVerbs])
+  useEffect(() => {
+    if (mode !== "choice" || !catalogue || !selectedVerbs.length) return
+    const controller = new AbortController()
+    void Promise.all(
+      catalogue.verbs
+        .filter((verb) => selectedVerbs.includes(verb.id))
+        .map((verb) =>
+          loadCatalogueVerb(verb, catalogue.datasetVersion, controller.signal),
+        ),
+    )
+      .then((verbs) => {
+        if (!controller.signal.aborted) setChoiceData({ key: choiceKey, verbs })
+      })
+      .catch((reason: unknown) => {
+        if (!controller.signal.aborted)
+          setChoiceData({
+            key: choiceKey,
+            error:
+              reason instanceof Error
+                ? reason.message
+                : "Could not prepare answer options.",
+          })
+      })
+    return () => controller.abort()
+  }, [catalogue, selectedVerbs, mode, choiceKey, choiceAttempt])
   const [loading, setLoading] = useState(false)
   const [startError, setStartError] = useState("")
   const startController = useRef<AbortController | null>(null)
@@ -59,44 +98,67 @@ export function PracticeSetup({
     return () => controller.abort()
   }, [attempt])
 
-  const available = poolSize(
+  const currentChoiceData = choiceData?.key === choiceKey ? choiceData : null
+  const choiceLoading =
+    mode === "choice" && selectedVerbs.length > 0 && !currentChoiceData
+  const selectedPoolSize = poolSize(
     selectedVerbs.length,
     selectedCategories,
     selectedPersons,
   )
+  const available =
+    mode === "choice"
+      ? createQuestionPool(
+          currentChoiceData?.verbs ?? [],
+          {
+            mode,
+            verbIds: selectedVerbs,
+            categories: selectedCategories,
+            persons: selectedPersons,
+            length: 1,
+            accentPolicy: "strict",
+          },
+          () => 0.5,
+        ).length
+      : selectedPoolSize
   const validLength = Number.isSafeInteger(Number(length)) && Number(length) > 0
   async function start() {
     if (
       !catalogue ||
       loading ||
       startController.current ||
+      choiceLoading ||
       !available ||
       !validLength
     )
       return
     const config: PracticeConfig = {
+      mode,
       verbIds: [...selectedVerbs],
       categories: [...selectedCategories],
       persons: [...selectedPersons],
       length: Number(length),
-      accentPolicy: strict ? "strict" : "relaxed",
+      accentPolicy: mode === "choice" || strict ? "strict" : "relaxed",
     }
     const controller = new AbortController()
     startController.current = controller
     setLoading(true)
     setStartError("")
     try {
-      const verbs = await Promise.all(
-        catalogue.verbs
-          .filter((verb) => config.verbIds.includes(verb.id))
-          .map((verb) =>
-            loadCatalogueVerb(
-              verb,
-              catalogue.datasetVersion,
-              controller.signal,
-            ),
-          ),
-      )
+      const verbs =
+        mode === "choice" && currentChoiceData?.verbs
+          ? currentChoiceData.verbs
+          : await Promise.all(
+              catalogue.verbs
+                .filter((verb) => config.verbIds.includes(verb.id))
+                .map((verb) =>
+                  loadCatalogueVerb(
+                    verb,
+                    catalogue.datasetVersion,
+                    controller.signal,
+                  ),
+                ),
+            )
       if (!controller.signal.aborted)
         onStart(createQuestions(verbs, config), config)
     } catch (reason: unknown) {
@@ -252,6 +314,31 @@ export function PracticeSetup({
             </fieldset>
           </div>
           <fieldset className="practice-options" disabled={loading}>
+            <legend>Answer mode</legend>
+            <div className="person-options">
+              <label className="option">
+                <input
+                  type="radio"
+                  name="practice-mode"
+                  value="typing"
+                  checked={mode === "typing"}
+                  onChange={() => setMode("typing")}
+                />
+                Typing
+              </label>
+              <label className="option">
+                <input
+                  type="radio"
+                  name="practice-mode"
+                  value="choice"
+                  checked={mode === "choice"}
+                  onChange={() => setMode("choice")}
+                />
+                Multiple choice
+              </label>
+            </div>
+          </fieldset>
+          <fieldset className="practice-options" disabled={loading}>
             <legend>Persons</legend>
             <div className="person-options">
               {PRACTICE_PERSONS.map((person) => (
@@ -286,16 +373,41 @@ export function PracticeSetup({
                   onChange={(event) => setLength(event.target.value)}
                 />
               </label>
-              <label className="option">
-                <input
-                  type="checkbox"
-                  checked={strict}
-                  onChange={(event) => setStrict(event.target.checked)}
-                />
-                Require written accents (including ñ and ü)
-              </label>
+              {mode === "typing" && (
+                <label className="option">
+                  <input
+                    type="checkbox"
+                    checked={strict}
+                    onChange={(event) => setStrict(event.target.checked)}
+                  />
+                  Require written accents (including ñ and ü)
+                </label>
+              )}
             </div>
           </fieldset>
+          {choiceLoading && <p role="status">Preparing answer options…</p>}
+          {mode === "choice" && currentChoiceData?.error && (
+            <div role="alert">
+              <p>{currentChoiceData.error}</p>
+              <button
+                onClick={() => {
+                  setChoiceData(null)
+                  setChoiceAttempt((value) => value + 1)
+                }}
+              >
+                Retry options
+              </button>
+            </div>
+          )}
+          {mode === "choice" &&
+            available < selectedPoolSize &&
+            !choiceLoading &&
+            !currentChoiceData?.error && (
+              <p className="field-note">
+                {selectedPoolSize - available} combinations excluded because
+                they lack distinct incorrect options.
+              </p>
+            )}
           <p className="field-note" role="status">
             {available} unique {available === 1 ? "question" : "questions"}{" "}
             available.
@@ -303,7 +415,7 @@ export function PracticeSetup({
               ? ` This practice will contain ${available} ${available === 1 ? "question" : "questions"} instead of ${length}.`
               : ""}
           </p>
-          {!available && (
+          {!available && !choiceLoading && !currentChoiceData?.error && (
             <p role="status">
               Select at least one verb, tense, and applicable person.
             </p>
@@ -314,14 +426,14 @@ export function PracticeSetup({
           {startError && <p role="alert">{startError}</p>}
           <button
             className="primary-button"
-            disabled={loading || !available || !validLength}
+            disabled={loading || choiceLoading || !available || !validLength}
             onClick={() => {
               void start()
             }}
           >
             {loading
               ? "Loading selected verbs…"
-              : `Start typing practice${validLength && available ? ` · ${Math.min(Number(length), available)} ${Math.min(Number(length), available) === 1 ? "question" : "questions"}` : ""}`}
+              : `Start ${mode === "choice" ? "multiple-choice" : "typing"} practice${validLength && available ? ` · ${Math.min(Number(length), available)} ${Math.min(Number(length), available) === 1 ? "question" : "questions"}` : ""}`}
           </button>
           <p className="field-note">
             Guest practice. Results last for this sitting only.

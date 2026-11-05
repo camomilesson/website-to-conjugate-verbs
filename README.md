@@ -28,10 +28,10 @@ Prettier.
 ## Current status and development reference
 
 The public shell is deployed. The seven-verb starter catalogue and
-16-category selectors are approved. Step 4 adds guest typing practice on its
-review branch, including configurable persons/length, accent handling, feedback,
-and final mistake review. Multiple choice, accounts, and persistence are not
-implemented yet. Original console
+16-category selectors are approved. Guest typing practice is live, with configurable
+persons/length, accent handling, feedback, and final mistake review. Step 5 adds
+multiple choice on its review branch. Accounts and persistence are not implemented
+yet. Original console
 examples remain separate from the browser app.
 
 Use Node.js 24+ and pnpm 12.16.1:

@@ -3,6 +3,7 @@ import { useBlocker } from "react-router"
 import { CATEGORIES, PERSONS } from "../verb-catalogue/index.ts"
 import type { PracticeConfig, Question } from "./session.ts"
 import { initialSession, sessionReducer, sessionScore } from "./session.ts"
+import { ChoiceAnswer } from "./ChoiceAnswer.tsx"
 import { PracticeSetup } from "./PracticeSetup.tsx"
 
 function LeavePrompt({
@@ -39,7 +40,7 @@ function LeavePrompt({
   )
 }
 
-function TypingSession({
+function PracticeSession({
   questions,
   config,
   onReset,
@@ -53,6 +54,7 @@ function TypingSession({
     initialSession(questions, config.accentPolicy),
   )
   const [text, setText] = useState("")
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [leaving, setLeaving] = useState(false)
   const input = useRef<HTMLInputElement>(null)
   const next = useRef<HTMLButtonElement>(null)
@@ -70,6 +72,7 @@ function TypingSession({
 
   function advance() {
     setText("")
+    setSelectedIndex(null)
     dispatch({ type: "next" })
   }
   function insertCharacter(character: string) {
@@ -82,6 +85,19 @@ function TypingSession({
       input.current?.setSelectionRange(start + 1, start + 1)
     })
   }
+  function submit() {
+    if (config.mode === "choice") {
+      if (selectedIndex !== null)
+        dispatch({ type: "submit-choice", index: selectedIndex })
+    } else dispatch({ type: "submit", text })
+  }
+  const modeLabel = config.mode === "choice" ? "Multiple-choice" : "Typing"
+  const policyLabel =
+    config.mode === "choice"
+      ? "Choose one answer"
+      : config.accentPolicy === "strict"
+        ? "Accents required"
+        : "Accents ignored"
   const score = sessionScore(state.results)
   const question = state.questions[state.index]
   const category = CATEGORIES.find((item) => item.id === question.category)
@@ -137,11 +153,9 @@ function TypingSession({
             {score.total} answered
           </p>
           <p className="field-note">
-            Typing ·{" "}
-            {config.accentPolicy === "strict"
-              ? "Accents required"
-              : "Accents ignored"}
-            . Guest results are not saved.
+            {modeLabel}
+            {config.mode === "typing" ? ` · ${policyLabel}` : ""}. Guest results
+            are not saved.
           </p>
           {score.incorrect ? (
             <>
@@ -184,14 +198,12 @@ function TypingSession({
       ) : (
         <>
           <div className="session-heading">
-            <h1 id="session-title">Typing practice</h1>
+            <h1 id="session-title">{modeLabel} practice</h1>
             <button onClick={() => setLeaving(true)}>End practice</button>
           </div>
           <p className="field-note">
             Question {state.index + 1} of {state.questions.length} ·{" "}
-            {config.accentPolicy === "strict"
-              ? "Accents required"
-              : "Accents ignored"}
+            {policyLabel}
           </p>
           <div className="question-prompt">
             <h2 lang="es">{question.infinitive}</h2>
@@ -206,47 +218,66 @@ function TypingSession({
           <form
             onSubmit={(event) => {
               event.preventDefault()
-              dispatch({ type: "submit", text })
+              submit()
             }}
           >
-            <label className="answer-label" htmlFor="typed-answer">
-              Your answer
-            </label>
-            <input
-              id="typed-answer"
-              ref={input}
-              value={text}
-              onChange={(event) => setText(event.target.value)}
-              disabled={state.phase === "feedback"}
-              autoComplete="off"
-              autoCorrect="off"
-              autoCapitalize="none"
-              spellCheck={false}
-              aria-describedby="answer-help"
-            />
-            <p id="answer-help" className="field-note">
-              Include required reflexive pronouns or “no”, but omit the subject
-              pronoun.
-            </p>
+            {question.options ? (
+              <ChoiceAnswer
+                options={question.options}
+                selectedIndex={selectedIndex}
+                disabled={state.phase === "feedback"}
+                inputRef={input}
+                onSelect={setSelectedIndex}
+                onSubmit={submit}
+              />
+            ) : (
+              <>
+                <label className="answer-label" htmlFor="typed-answer">
+                  Your answer
+                </label>
+                <input
+                  id="typed-answer"
+                  ref={input}
+                  value={text}
+                  onChange={(event) => setText(event.target.value)}
+                  disabled={state.phase === "feedback"}
+                  autoComplete="off"
+                  autoCorrect="off"
+                  autoCapitalize="none"
+                  spellCheck={false}
+                  aria-describedby="answer-help"
+                />
+                <p id="answer-help" className="field-note">
+                  Include required reflexive pronouns or “no”, but omit the
+                  subject pronoun.
+                </p>
+              </>
+            )}
             {state.phase === "question" && (
               <>
-                <div className="accent-keys" aria-label="Spanish characters">
-                  {["á", "é", "í", "ó", "ú", "ñ", "ü"].map((character) => (
-                    <button
-                      key={character}
-                      type="button"
-                      aria-label={`Insert ${character}`}
-                      onMouseDown={(event) => event.preventDefault()}
-                      onClick={() => insertCharacter(character)}
-                    >
-                      {character}
-                    </button>
-                  ))}
-                </div>
+                {config.mode === "typing" && (
+                  <div className="accent-keys" aria-label="Spanish characters">
+                    {["á", "é", "í", "ó", "ú", "ñ", "ü"].map((character) => (
+                      <button
+                        key={character}
+                        type="button"
+                        aria-label={`Insert ${character}`}
+                        onMouseDown={(event) => event.preventDefault()}
+                        onClick={() => insertCharacter(character)}
+                      >
+                        {character}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 <button
                   type="submit"
                   className="primary-button"
-                  disabled={!text.trim()}
+                  disabled={
+                    config.mode === "choice"
+                      ? selectedIndex === null
+                      : !text.trim()
+                  }
                 >
                   Submit <span className="key-hint">Enter</span>
                 </button>
@@ -284,7 +315,7 @@ export function Practice() {
     config: PracticeConfig
   } | null>(null)
   return session ? (
-    <TypingSession
+    <PracticeSession
       questions={session.questions}
       config={session.config}
       onReset={() => {

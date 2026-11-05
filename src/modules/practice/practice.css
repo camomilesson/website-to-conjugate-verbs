@@ -258,3 +258,30 @@
 .typing-session dialog::backdrop {
   background: #27251f66;
 }
+.choice-options {
+  border: 0;
+  padding: 0;
+  margin: 1rem 0;
+}
+.choice-options legend {
+  margin-bottom: 0.7rem;
+}
+.choice-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--rule);
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+.choice-option.selected {
+  border-color: var(--accent);
+  background: #823c3b08;
+}
+.choice-option input {
+  accent-color: var(--accent);
+}
+.choice-options:disabled .choice-option {
+  cursor: default;
+}
