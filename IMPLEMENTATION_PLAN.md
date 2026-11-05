@@ -451,3 +451,20 @@ Public deployment remains incomplete until account setup/import and URL checks.
   Enter, and Space, then New practice and Typing. Production does not receive step
   5 until approval; preferences/history remain unsaved until later steps.
 - Step 6 has not started.
+
+### Step 5 — Review amendments (supersede the initial step 5 interaction rules)
+
+- Compact setup and question controls verified at 1280×720 with no page scrolling.
+- Verbs: All/Common/Select; starter Common subset is hablar/ser/ir/tener. Persons:
+  All/Select. Tenses: Basic/Advanced/All/Select. Native dialogs support draft
+  selection, Apply, Cancel/Escape, and searchable verbs. Mode is a segmented toggle.
+- Correct answers advance after 650 ms, including the final correct answer to
+  results. Incorrect answers still require Next. Timer actions are index-guarded,
+  cleaned up on unmount, and paused during navigation/abandonment confirmation.
+- Distractors now use ONLY the same verb and grammatical person across other
+  categories. el/ellos and usted/ustedes are mapped consistently. No cross-person
+  fallback; small pools retain the prior fewer-options/exclusion rules.
+- 19 tests pass, including exhaustive starter same-person choices and stale timer
+  guards. Browser checks cover search, cancelling and applying all three dialogs,
+  Common subset, toggle, correct typed/choice auto-advance, incorrect review, and
+  final score. Step 5 remains in review; step 6 has not started.

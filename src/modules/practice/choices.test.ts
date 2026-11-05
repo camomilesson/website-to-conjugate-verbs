@@ -8,7 +8,7 @@ import {
   parseCatalogueVerb,
 } from "../verb-catalogue/index.ts"
 import { isCorrectAnswer, normaliseAnswer } from "../answer-checking/index.ts"
-import { withChoices } from "./choices.ts"
+import { personInCategory, withChoices } from "./choices.ts"
 import {
   createQuestionPool,
   createQuestions,
@@ -62,26 +62,37 @@ await test("every starter choice question has distinct real options and exactly 
     }
   }
 })
-await test("same-category distractors are preferred and all accepted variants are excluded", () => {
-  const verb = verbs[0]
-  const questions = createQuestions(
-    [verb],
-    { ...config, verbIds: [verb.id], categories: ["subjunctive.imperfect"] },
-    () => 0.5,
-  )
-  const sameCategory = Object.values(
-    verb.conjugations["subjunctive.imperfect"],
-  ).flatMap((forms) => forms ?? [])
-  for (const question of questions) {
-    assert.ok(
-      question.options?.every((option) => sameCategory.includes(option)),
+await test("distractors use only the same grammatical person and exclude every accepted variant", () => {
+  for (const verb of verbs) {
+    const questions = createQuestions(
+      [verb],
+      { ...config, verbIds: [verb.id] },
+      () => 0.5,
     )
-    assert.equal(
-      question.options?.filter((option) => question.answers.includes(option))
-        .length,
-      1,
-    )
+    for (const question of questions) {
+      const samePersonForms = Object.entries(verb.conjugations).flatMap(
+        ([category, forms]) => {
+          const person = personInCategory(question.person, category)
+          return person ? (forms[person] ?? []) : []
+        },
+      )
+      assert.ok(
+        question.options?.every((option) => samePersonForms.includes(option)),
+        question.id,
+      )
+      assert.equal(
+        question.options?.filter((option) =>
+          isCorrectAnswer(option, question.answers, "strict"),
+        ).length,
+        1,
+      )
+    }
   }
+  assert.equal(personInCategory("yo", "imperative.affirmative"), null)
+  assert.equal(personInCategory("usted", "indicative.present"), "el")
+  assert.equal(personInCategory("ustedes", "indicative.present"), "ellos")
+  assert.equal(personInCategory("el", "imperative.negative"), "usted")
+  assert.equal(personInCategory("ellos", "imperative.negative"), "ustedes")
 })
 await test("small candidate pools show fewer options or exclude a question before sizing the session", () => {
   const verb = structuredClone(verbs[0])
@@ -112,6 +123,8 @@ await test("small candidate pools show fewer options or exclude a question befor
   const two = withChoices(question, verb, () => 0.5)
   assert.equal(two?.options?.length, 2)
   verb.conjugations["indicative.future"].tu = ["third"]
+  assert.equal(withChoices(question, verb, () => 0.5)?.options?.length, 2)
+  verb.conjugations["indicative.conditional"].yo = ["third"]
   assert.equal(withChoices(question, verb, () => 0.5)?.options?.length, 3)
 })
 await test("choice submission requires a valid offered index and stays strict regardless of typing policy", () => {

@@ -11,9 +11,9 @@ import type {
   CatalogueVerb,
   CategoryId,
   PersonId,
-  Preset,
 } from "../verb-catalogue/index.ts"
 import "./practice.css"
+import { SelectionDialog } from "./SelectionDialog.tsx"
 
 import type { PracticeConfig, PracticeMode, Question } from "./session.ts"
 import {
@@ -33,7 +33,14 @@ export function PracticeSetup({
   const [selectedCategories, setSelectedCategories] = useState<CategoryId[]>(
     getPresetCategories("basic"),
   )
-  const [search, setSearch] = useState("")
+  const [selectionDialog, setSelectionDialog] = useState<
+    "verbs" | "tenses" | "persons" | null
+  >(null)
+  const [verbSet, setVerbSet] = useState<"all" | "common" | "select">("all")
+  const [tenseSet, setTenseSet] = useState<
+    "basic" | "advanced" | "all" | "select"
+  >("basic")
+  const [personSet, setPersonSet] = useState<"all" | "select">("all")
   const [error, setError] = useState("")
   const [attempt, setAttempt] = useState(0)
   const [selectedPersons, setSelectedPersons] = useState<PersonId[]>([
@@ -176,22 +183,20 @@ export function PracticeSetup({
     }
   }
 
-  function toggleVerb(id: string) {
-    setSelectedVerbs((current) =>
-      current.includes(id)
-        ? current.filter((item) => item !== id)
-        : [...current, id],
-    )
-  }
-  function toggleCategory(id: CategoryId) {
-    setSelectedCategories((current) =>
-      current.includes(id)
-        ? current.filter((item) => item !== id)
-        : [...current, id],
-    )
-  }
+  // Curated starter subset for useful first practice, not a frequency ranking.
+  const commonIds =
+    catalogue?.verbs
+      .filter((verb) => ["ser", "ir", "tener", "hablar"].includes(verb.id))
+      .map((verb) => verb.id) ?? []
+  const summary = (labels: string[]) =>
+    labels.length > 3
+      ? `${labels.slice(0, 3).join(", ")} +${labels.length - 3}`
+      : labels.join(", ") || "None selected"
   return (
-    <section className="page-section" aria-labelledby="practice-title">
+    <section
+      className="page-section setup-page"
+      aria-labelledby="practice-title"
+    >
       <h1 id="practice-title">Practice</h1>
       {error ? (
         <div role="alert">
@@ -204,187 +209,222 @@ export function PracticeSetup({
         <p role="status">Loading verbs…</p>
       ) : (
         <>
-          <div className="selection-grid">
-            <fieldset disabled={loading}>
-              <legend>
-                Verbs{" "}
-                <span className="selection-count">
-                  {selectedVerbs.length} / {catalogue.verbs.length}
-                </span>
-              </legend>
-              <label className="search-label">
-                Search verbs
-                <input
-                  type="search"
-                  value={search}
-                  onChange={(event) => setSearch(event.target.value)}
-                  placeholder="Infinitive or meaning"
-                />
-              </label>
-              <div className="selection-actions">
-                <button
-                  onClick={() =>
-                    setSelectedVerbs(catalogue.verbs.map((verb) => verb.id))
-                  }
-                >
-                  Select all verbs
-                </button>
-                <button onClick={() => setSelectedVerbs([])}>
-                  Clear verbs
-                </button>
-              </div>
-              <div className="verb-options">
-                {catalogue.verbs
-                  .filter((verb) =>
-                    `${verb.infinitive} ${verb.meaning}`
-                      .toLowerCase()
-                      .includes(search.trim().toLowerCase()),
-                  )
-                  .map((verb) => (
-                    <label className="option" key={verb.id}>
-                      <input
-                        type="checkbox"
-                        checked={selectedVerbs.includes(verb.id)}
-                        onChange={() => toggleVerb(verb.id)}
-                      />
-                      <span lang="es">{verb.infinitive}</span>
-                      <small>{verb.meaning}</small>
-                    </label>
-                  ))}
-                {!catalogue.verbs.some((verb) =>
-                  `${verb.infinitive} ${verb.meaning}`
-                    .toLowerCase()
-                    .includes(search.trim().toLowerCase()),
-                ) && <p>No matching verbs.</p>}
+          <div className="compact-setup">
+            <fieldset className="setup-row" disabled={loading}>
+              <legend>Answer mode</legend>
+              <div className="segmented-control mode-toggle">
+                <label>
+                  <input
+                    type="radio"
+                    name="practice-mode"
+                    checked={mode === "typing"}
+                    onChange={() => setMode("typing")}
+                  />
+                  Typing
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="practice-mode"
+                    checked={mode === "choice"}
+                    onChange={() => setMode("choice")}
+                  />
+                  Multiple choice
+                </label>
               </div>
             </fieldset>
-            <fieldset disabled={loading}>
-              <legend>
-                Tenses & moods{" "}
-                <span className="selection-count">
-                  {selectedCategories.length} / {CATEGORIES.length}
-                </span>
-              </legend>
-              <div className="selection-actions">
-                {(["basic", "advanced", "all"] as Preset[]).map((preset) => (
+            <fieldset className="setup-row" disabled={loading}>
+              <legend>Verbs</legend>
+              <div>
+                <div className="selection-actions">
                   <button
-                    key={preset}
-                    onClick={() =>
-                      setSelectedCategories(getPresetCategories(preset))
-                    }
+                    aria-pressed={verbSet === "all"}
+                    onClick={() => {
+                      setSelectedVerbs(catalogue.verbs.map((verb) => verb.id))
+                      setVerbSet("all")
+                    }}
                   >
-                    {preset[0].toUpperCase() + preset.slice(1)}
+                    All
                   </button>
-                ))}
-                <button onClick={() => setSelectedCategories([])}>
-                  Clear tenses
-                </button>
+                  <button
+                    aria-pressed={verbSet === "common"}
+                    onClick={() => {
+                      setSelectedVerbs(commonIds)
+                      setVerbSet("common")
+                    }}
+                  >
+                    Common
+                  </button>
+                  <button
+                    aria-pressed={verbSet === "select"}
+                    aria-haspopup="dialog"
+                    onClick={() => setSelectionDialog("verbs")}
+                  >
+                    Select…
+                  </button>
+                </div>
+                <p className="selection-summary">
+                  {selectedVerbs.length} / {catalogue.verbs.length} ·{" "}
+                  {summary(
+                    catalogue.verbs
+                      .filter((verb) => selectedVerbs.includes(verb.id))
+                      .map((verb) => verb.infinitive),
+                  )}
+                </p>
               </div>
-              <p className="field-note">
-                Basic: 6 categories. Advanced and All: all 16 supported
-                categories.
-              </p>
-              <div className="category-groups">
-                {Array.from(
-                  new Set(CATEGORIES.map((category) => category.group)),
-                ).map((group) => (
-                  <div className="category-group" key={group}>
-                    <h2 lang="es">{group}</h2>
-                    {CATEGORIES.filter(
-                      (category) => category.group === group,
-                    ).map((category) => (
-                      <label
-                        className="option category-option"
-                        key={category.id}
-                      >
-                        <input
-                          type="checkbox"
-                          checked={selectedCategories.includes(category.id)}
-                          onChange={() => toggleCategory(category.id)}
-                        />
-                        <span>
-                          <span lang="es">{category.label}</span>
-                          <small>{category.english}</small>
-                        </span>
-                      </label>
-                    ))}
-                  </div>
-                ))}
+            </fieldset>
+            <fieldset className="setup-row" disabled={loading}>
+              <legend>Tenses & moods</legend>
+              <div>
+                <div className="selection-actions">
+                  {(["basic", "advanced", "all"] as const).map((preset) => (
+                    <button
+                      key={preset}
+                      aria-pressed={tenseSet === preset}
+                      onClick={() => {
+                        setSelectedCategories(getPresetCategories(preset))
+                        setTenseSet(preset)
+                      }}
+                    >
+                      {preset[0].toUpperCase() + preset.slice(1)}
+                    </button>
+                  ))}
+                  <button
+                    aria-pressed={tenseSet === "select"}
+                    aria-haspopup="dialog"
+                    onClick={() => setSelectionDialog("tenses")}
+                  >
+                    Select…
+                  </button>
+                </div>
+                <p className="selection-summary">
+                  {selectedCategories.length} / 16 categories
+                  {tenseSet === "basic"
+                    ? " · Everyday indicative forms"
+                    : tenseSet === "advanced" || tenseSet === "all"
+                      ? " · All supported forms"
+                      : " · Custom selection"}
+                </p>
+              </div>
+            </fieldset>
+            <fieldset className="setup-row" disabled={loading}>
+              <legend>Persons</legend>
+              <div>
+                <div className="selection-actions">
+                  <button
+                    aria-pressed={personSet === "all"}
+                    onClick={() => {
+                      setSelectedPersons([...PRACTICE_PERSONS])
+                      setPersonSet("all")
+                    }}
+                  >
+                    All
+                  </button>
+                  <button
+                    aria-pressed={personSet === "select"}
+                    aria-haspopup="dialog"
+                    onClick={() => setSelectionDialog("persons")}
+                  >
+                    Select…
+                  </button>
+                </div>
+                <p className="selection-summary">
+                  {selectedPersons.length} / 6 ·{" "}
+                  {personSet === "all"
+                    ? "Including vosotros"
+                    : summary(selectedPersons.map((person) => PERSONS[person]))}
+                </p>
+              </div>
+            </fieldset>
+            <fieldset className="setup-row settings-row" disabled={loading}>
+              <legend>Session</legend>
+              <div className="session-options">
+                <label className="length-label">
+                  Questions
+                  <input
+                    type="number"
+                    min="1"
+                    step="1"
+                    value={length}
+                    onChange={(event) => setLength(event.target.value)}
+                  />
+                </label>
+                {mode === "typing" && (
+                  <label className="option">
+                    <input
+                      type="checkbox"
+                      checked={strict}
+                      onChange={(event) => setStrict(event.target.checked)}
+                    />
+                    Require accents{" "}
+                    <span className="field-note">(á, ñ, ü)</span>
+                  </label>
+                )}
               </div>
             </fieldset>
           </div>
-          <fieldset className="practice-options" disabled={loading}>
-            <legend>Answer mode</legend>
-            <div className="person-options">
-              <label className="option">
-                <input
-                  type="radio"
-                  name="practice-mode"
-                  value="typing"
-                  checked={mode === "typing"}
-                  onChange={() => setMode("typing")}
-                />
-                Typing
-              </label>
-              <label className="option">
-                <input
-                  type="radio"
-                  name="practice-mode"
-                  value="choice"
-                  checked={mode === "choice"}
-                  onChange={() => setMode("choice")}
-                />
-                Multiple choice
-              </label>
-            </div>
-          </fieldset>
-          <fieldset className="practice-options" disabled={loading}>
-            <legend>Persons</legend>
-            <div className="person-options">
-              {PRACTICE_PERSONS.map((person) => (
-                <label className="option" key={person}>
-                  <input
-                    type="checkbox"
-                    checked={selectedPersons.includes(person)}
-                    onChange={() =>
-                      setSelectedPersons((current) =>
-                        current.includes(person)
-                          ? current.filter((item) => item !== person)
-                          : [...current, person],
-                      )
-                    }
-                  />
-                  <span lang="es">{PERSONS[person]}</span>
-                </label>
-              ))}
-            </div>
-            <p className="field-note">
-              Imperatives exclude yo; usted and ustedes follow their
-              corresponding selections.
-            </p>
-            <div className="session-options">
-              <label>
-                Questions
-                <input
-                  type="number"
-                  min="1"
-                  step="1"
-                  value={length}
-                  onChange={(event) => setLength(event.target.value)}
-                />
-              </label>
-              {mode === "typing" && (
-                <label className="option">
-                  <input
-                    type="checkbox"
-                    checked={strict}
-                    onChange={(event) => setStrict(event.target.checked)}
-                  />
-                  Require written accents (including ñ and ü)
-                </label>
-              )}
-            </div>
-          </fieldset>
+          {selectionDialog && (
+            <SelectionDialog
+              title={
+                selectionDialog === "verbs"
+                  ? "Select verbs"
+                  : selectionDialog === "tenses"
+                    ? "Select tenses & moods"
+                    : "Select persons"
+              }
+              searchable={selectionDialog === "verbs"}
+              options={
+                selectionDialog === "verbs"
+                  ? catalogue.verbs.map((verb) => ({
+                      id: verb.id,
+                      label: verb.infinitive,
+                      detail: verb.meaning,
+                    }))
+                  : selectionDialog === "tenses"
+                    ? CATEGORIES.map((category) => ({
+                        id: category.id,
+                        label: category.label,
+                        detail: category.english,
+                        group: category.group,
+                      }))
+                    : PRACTICE_PERSONS.map((person) => ({
+                        id: person,
+                        label: PERSONS[person],
+                        detail:
+                          person === "yo"
+                            ? "Not used in imperatives"
+                            : person === "el"
+                              ? "Includes usted for imperatives"
+                              : person === "ellos"
+                                ? "Includes ustedes for imperatives"
+                                : undefined,
+                      }))
+              }
+              selected={
+                selectionDialog === "verbs"
+                  ? selectedVerbs
+                  : selectionDialog === "tenses"
+                    ? selectedCategories
+                    : selectedPersons
+              }
+              onClose={() => setSelectionDialog(null)}
+              onApply={(ids) => {
+                if (selectionDialog === "verbs") {
+                  setSelectedVerbs(ids)
+                  setVerbSet("select")
+                }
+                if (selectionDialog === "tenses") {
+                  setSelectedCategories(ids as CategoryId[])
+                  setTenseSet("select")
+                }
+                if (selectionDialog === "persons") {
+                  setSelectedPersons(ids as PersonId[])
+                  setPersonSet("select")
+                }
+                setSelectionDialog(null)
+              }}
+            />
+          )}
           {choiceLoading && <p role="status">Preparing answer options…</p>}
           {mode === "choice" && currentChoiceData?.error && (
             <div role="alert">

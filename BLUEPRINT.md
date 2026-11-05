@@ -146,9 +146,13 @@ Spanish category names, and explanatory English labels where helpful.
 
 ### Setup
 
-Select verbs with search and checkboxes; provide Select all/Clear actions.
-Select categories individually or apply Basic/Advanced/All. Presets populate the
-same selection controls. Persist the most recently started test configuration
+Keep the desktop setup compact enough for an ordinary 1280×720 viewport. Verbs
+use All/Common/Select; Common currently means hablar, ser, ir, tener in the starter
+catalogue (a curated subset, not a frequency ranking). Select opens a searchable
+modal. Tenses use Basic/Advanced/All/Select and persons use All/Select, with modal
+checkbox selection. Dialogs have Apply and Cancel; cancelling discards draft
+changes. Typing/Multiple choice is a segmented toggle. Presets populate the
+same underlying selections. Persist the most recently started test configuration
 as the next test’s defaults; do not create named presets.
 Choose mode and length. Apply person preferences and, for typing, accent policy.
 Reject an empty verb/category/person pool with a clear explanation.
@@ -171,7 +175,8 @@ merged into an existing account’s saved preferences.
   explain the available count before starting.
 - Accept any valid form for that question, not only the first stored alternative.
 - Multiple choice proposes four unique options. Distractors are curated/generated
-  from plausible forms, exclude every accepted answer, and are checked using the
+  from other tenses/moods of the same verb and grammatical person only, exclude
+  every accepted answer, and are checked using the
   same comparison rules. Show fewer options if four safe options are unavailable;
   require at least two, otherwise exclude that question from choice mode.
 - Enter submits the current typed answer or selected choice. After submission,
@@ -179,7 +184,11 @@ merged into an existing account’s saved preferences.
   while feedback is visible and any persistence acknowledgement has completed.
   Ordinary spaces still work while typing. Ignore held-key repeats, avoid global
   shortcuts on other controls, and prevent the Next shortcut from scrolling the
-  page. Button clicks remain available. No automatic advance.
+  page. After correct feedback, advance automatically after a brief 650 ms pause;
+  after an incorrect answer require Next. Auto-advance also opens final results
+  after the final correct answer and pauses during an abandonment dialog. Once
+  persistence exists, acknowledgement is required before either kind of advance.
+  Button clicks remain available for incorrect-answer review.
 - A nonempty wrong response counts as incorrect; whitespace-only typing cannot
   be submitted. There is no skip button or skip counter.
 - Final score is correct divided by the fixed question count. All questions must

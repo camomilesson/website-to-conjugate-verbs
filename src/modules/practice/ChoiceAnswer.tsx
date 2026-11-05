@@ -48,9 +48,11 @@ export function ChoiceAnswer({
           <span lang="es">{option}</span>
         </label>
       ))}
-      <p className="field-note">
-        Use arrow keys to choose, then Enter to submit.
-      </p>
+      {!disabled && (
+        <p className="field-note">
+          Use arrow keys to choose, then Enter to submit.
+        </p>
+      )}
     </fieldset>
   )
 }

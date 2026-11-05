@@ -102,6 +102,21 @@ function PracticeSession({
   const question = state.questions[state.index]
   const category = CATEGORIES.find((item) => item.id === question.category)
   const result = state.results[state.results.length - 1]
+  useEffect(() => {
+    if (
+      state.phase !== "feedback" ||
+      !result?.correct ||
+      leaving ||
+      blocker.state === "blocked"
+    )
+      return
+    const timer = window.setTimeout(() => {
+      setText("")
+      setSelectedIndex(null)
+      dispatch({ type: "auto-next", index: state.index })
+    }, 650)
+    return () => window.clearTimeout(timer)
+  }, [state.phase, state.index, result?.correct, leaving, blocker.state])
 
   return (
     <section
@@ -290,17 +305,25 @@ function PracticeSession({
               <p>
                 Accepted: <span lang="es">{question.answers.join(" / ")}</span>
               </p>
-              <button
-                type="button"
-                className="primary-button"
-                ref={next}
-                onClick={advance}
-              >
-                {state.index === state.questions.length - 1
-                  ? "See results"
-                  : "Next"}{" "}
-                <span className="key-hint">Space</span>
-              </button>
+              {result.correct ? (
+                <p className="field-note">
+                  {state.index === state.questions.length - 1
+                    ? "Finishing practice…"
+                    : "Next question…"}
+                </p>
+              ) : (
+                <button
+                  type="button"
+                  className="primary-button"
+                  ref={next}
+                  onClick={advance}
+                >
+                  {state.index === state.questions.length - 1
+                    ? "See results"
+                    : "Next"}{" "}
+                  <span className="key-hint">Space</span>
+                </button>
+              )}
             </div>
           )}
         </>

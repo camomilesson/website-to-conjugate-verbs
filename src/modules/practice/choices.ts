@@ -1,5 +1,5 @@
 import { normaliseAnswer } from "../answer-checking/index.ts"
-import type { CatalogueVerb } from "../verb-catalogue/index.ts"
+import type { CatalogueVerb, PersonId } from "../verb-catalogue/index.ts"
 import type { Question } from "./session.ts"
 
 export function shuffled<T>(values: readonly T[], random: () => number): T[] {
@@ -11,8 +11,24 @@ export function shuffled<T>(values: readonly T[], random: () => number): T[] {
   return result
 }
 
-// Use real forms of the same verb. Prefer other persons in the requested tense,
-// then other tenses in the same group, then the remaining supported categories.
+// Match grammatical person across ordinary and imperative labels. Never fall
+// back to a different person when the target category lacks a matching form.
+export function personInCategory(
+  person: PersonId,
+  category: string,
+): PersonId | null {
+  const ordinary =
+    person === "usted" ? "el" : person === "ustedes" ? "ellos" : person
+  if (!category.startsWith("imperative.")) return ordinary
+  if (ordinary === "yo") return null
+  return ordinary === "el"
+    ? "usted"
+    : ordinary === "ellos"
+      ? "ustedes"
+      : ordinary
+}
+
+// Only real forms of the same verb/person, in other tenses or moods.
 export function withChoices(
   question: Question,
   verb: CatalogueVerb,
@@ -24,7 +40,6 @@ export function withChoices(
   const seen = new Set(accepted)
   const entries = Object.entries(verb.conjugations)
   const tiers = [
-    entries.filter(([id]) => id === question.category),
     entries.filter(
       ([id]) =>
         id !== question.category &&
@@ -36,9 +51,10 @@ export function withChoices(
   ]
   const distractors: string[] = []
   for (const tier of tiers) {
-    const candidates = tier.flatMap(([, forms]) =>
-      Object.values(forms).flatMap((answers) => answers ?? []),
-    )
+    const candidates = tier.flatMap(([id, forms]) => {
+      const person = personInCategory(question.person, id)
+      return person ? (forms[person] ?? []) : []
+    })
     for (const candidate of shuffled(candidates, random)) {
       const key = normaliseAnswer(candidate, "strict")
       if (seen.has(key)) continue
