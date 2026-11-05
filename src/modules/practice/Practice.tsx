@@ -221,14 +221,13 @@ function PracticeSession({
             {policyLabel}
           </p>
           <div className="question-prompt">
-            <h2 lang="es">{question.infinitive}</h2>
-            <p>{question.meaning}</p>
-            <p lang="es">
-              {category?.group} · {category?.label}
-            </p>
-            <p className="question-person" lang="es">
-              {PERSONS[question.person]}
-            </p>
+            <h2>
+              Conjugate <strong lang="es">{question.infinitive}</strong> in{" "}
+              <span lang="es">
+                {category?.group} · {category?.label}
+              </span>
+              .
+            </h2>
           </div>
           <form
             onSubmit={(event) => {
@@ -238,6 +237,7 @@ function PracticeSession({
           >
             {question.options ? (
               <ChoiceAnswer
+                person={PERSONS[question.person]}
                 options={question.options}
                 selectedIndex={selectedIndex}
                 disabled={state.phase === "feedback"}
@@ -247,21 +247,27 @@ function PracticeSession({
               />
             ) : (
               <>
-                <label className="answer-label" htmlFor="typed-answer">
-                  Your answer
-                </label>
-                <input
-                  id="typed-answer"
-                  ref={input}
-                  value={text}
-                  onChange={(event) => setText(event.target.value)}
-                  disabled={state.phase === "feedback"}
-                  autoComplete="off"
-                  autoCorrect="off"
-                  autoCapitalize="none"
-                  spellCheck={false}
-                  aria-describedby="answer-help"
-                />
+                <div className="typed-answer-row">
+                  <label
+                    className="answer-label"
+                    htmlFor="typed-answer"
+                    lang="es"
+                  >
+                    {PERSONS[question.person]}:
+                  </label>
+                  <input
+                    id="typed-answer"
+                    ref={input}
+                    value={text}
+                    onChange={(event) => setText(event.target.value)}
+                    disabled={state.phase === "feedback"}
+                    autoComplete="off"
+                    autoCorrect="off"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    aria-describedby="answer-help"
+                  />
+                </div>
                 <p id="answer-help" className="field-note">
                   Include required reflexive pronouns or “no”, but omit the
                   subject pronoun.

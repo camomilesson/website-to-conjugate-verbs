@@ -468,3 +468,8 @@ Public deployment remains incomplete until account setup/import and URL checks.
   guards. Browser checks cover search, cancelling and applying all three dialogs,
   Common subset, toggle, correct typed/choice auto-advance, incorrect review, and
   final score. Step 5 remains in review; step 6 has not started.
+
+Step 5 question-layout amendment: show “Conjugate [verb] in [mood/tense]”,
+then an answer container with the person on the left and the typing field or
+choice options to its right.
+Removed the separate right-aligned person and standalone meaning from questions.
