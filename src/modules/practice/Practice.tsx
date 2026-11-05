@@ -1,324 +1,303 @@
-import { useEffect, useState } from "react"
-import {
-  CATEGORIES,
-  PERSONS,
-  getCategoryPersons,
-  getPresetCategories,
-  loadCatalogue,
-  loadCatalogueVerb,
-} from "../verb-catalogue/index.ts"
-import type {
-  Catalogue,
-  CatalogueVerb,
-  CategoryId,
-  PersonId,
-  Preset,
-} from "../verb-catalogue/index.ts"
-import "./practice.css"
+import { useEffect, useRef, useState, useReducer } from "react"
+import { useBlocker } from "react-router"
+import { CATEGORIES, PERSONS } from "../verb-catalogue/index.ts"
+import type { PracticeConfig, Question } from "./session.ts"
+import { initialSession, sessionReducer, sessionScore } from "./session.ts"
+import { PracticeSetup } from "./PracticeSetup.tsx"
 
-export function Practice() {
-  const [catalogue, setCatalogue] = useState<Catalogue | null>(null)
-  const [selectedVerbs, setSelectedVerbs] = useState<string[]>([])
-  const [selectedCategories, setSelectedCategories] = useState<CategoryId[]>(
-    getPresetCategories("basic"),
+function LeavePrompt({
+  onStay,
+  onLeave,
+}: {
+  onStay: () => void
+  onLeave: () => void
+}) {
+  const dialog = useRef<HTMLDialogElement>(null)
+  useEffect(() => {
+    const element = dialog.current
+    element?.showModal()
+    return () => element?.close()
+  }, [])
+  return (
+    <dialog
+      ref={dialog}
+      aria-labelledby="leave-title"
+      onCancel={(event) => {
+        event.preventDefault()
+        onStay()
+      }}
+    >
+      <h2 id="leave-title">Leave this practice?</h2>
+      <p>This guest session will be discarded. It cannot be resumed.</p>
+      <div className="selection-actions">
+        <button onClick={onStay} autoFocus>
+          Keep practising
+        </button>
+        <button onClick={onLeave}>Leave practice</button>
+      </div>
+    </dialog>
   )
-  const [search, setSearch] = useState("")
-  const [error, setError] = useState("")
-  const [attempt, setAttempt] = useState(0)
-  const [previewAttempt, setPreviewAttempt] = useState(0)
-  const [previewVerbId, setPreviewVerbId] = useState("hablar")
-  const [previewCategoryId, setPreviewCategoryId] =
-    useState<CategoryId>("indicative.present")
-  const [previewPersonId, setPreviewPersonId] = useState<PersonId>("yo")
-  const [preview, setPreview] = useState<CatalogueVerb | null>(null)
-  const [previewError, setPreviewError] = useState("")
+}
 
+function TypingSession({
+  questions,
+  config,
+  onReset,
+}: {
+  questions: Question[]
+  config: PracticeConfig
+  onReset: () => void
+}) {
+  const [state, dispatch] = useReducer(
+    sessionReducer,
+    initialSession(questions, config.accentPolicy),
+  )
+  const [text, setText] = useState("")
+  const [leaving, setLeaving] = useState(false)
+  const input = useRef<HTMLInputElement>(null)
+  const next = useRef<HTMLButtonElement>(null)
+  const resultsHeading = useRef<HTMLHeadingElement>(null)
+  const blocker = useBlocker(
+    ({ currentLocation, nextLocation }) =>
+      state.phase !== "complete" &&
+      currentLocation.pathname !== nextLocation.pathname,
+  )
   useEffect(() => {
-    const controller = new AbortController()
-    void loadCatalogue(controller.signal)
-      .then((data) => {
-        setCatalogue(data)
-        setSelectedVerbs(data.verbs.map((verb) => verb.id))
-        setError("")
-      })
-      .catch((reason: unknown) => {
-        if (!controller.signal.aborted)
-          setError(
-            reason instanceof Error
-              ? reason.message
-              : "Could not load catalogue.",
-          )
-      })
-    return () => controller.abort()
-  }, [attempt])
+    if (state.phase === "question") input.current?.focus()
+    if (state.phase === "feedback") next.current?.focus()
+    if (state.phase === "complete") resultsHeading.current?.focus()
+  }, [state.phase, state.index])
 
-  const activeVerb =
-    catalogue?.verbs.find(
-      (verb) => verb.id === previewVerbId && selectedVerbs.includes(verb.id),
-    ) ?? catalogue?.verbs.find((verb) => selectedVerbs.includes(verb.id))
-  const activeCategory = selectedCategories.includes(previewCategoryId)
-    ? previewCategoryId
-    : selectedCategories[0]
-  const persons = activeCategory ? getCategoryPersons(activeCategory) : []
-  const activePerson = persons.includes(previewPersonId)
-    ? previewPersonId
-    : persons[0]
-
-  useEffect(() => {
-    if (!activeVerb || !catalogue) return
-    const controller = new AbortController()
-    void loadCatalogueVerb(
-      activeVerb,
-      catalogue.datasetVersion,
-      controller.signal,
-    )
-      .then((data) => {
-        setPreview(data)
-        setPreviewError("")
-      })
-      .catch((reason: unknown) => {
-        if (!controller.signal.aborted)
-          setPreviewError(
-            reason instanceof Error ? reason.message : "Could not load verb.",
-          )
-      })
-    return () => controller.abort()
-  }, [activeVerb, catalogue, previewAttempt])
-
-  function toggleVerb(id: string) {
-    setSelectedVerbs((current) =>
-      current.includes(id)
-        ? current.filter((item) => item !== id)
-        : [...current, id],
-    )
+  function advance() {
+    setText("")
+    dispatch({ type: "next" })
   }
-  function toggleCategory(id: CategoryId) {
-    setSelectedCategories((current) =>
-      current.includes(id)
-        ? current.filter((item) => item !== id)
-        : [...current, id],
-    )
+  function insertCharacter(character: string) {
+    if (state.phase !== "question") return
+    const start = input.current?.selectionStart ?? text.length
+    const end = input.current?.selectionEnd ?? start
+    setText(text.slice(0, start) + character + text.slice(end))
+    requestAnimationFrame(() => {
+      input.current?.focus()
+      input.current?.setSelectionRange(start + 1, start + 1)
+    })
   }
-  const loadedPreview = preview?.id === activeVerb?.id ? preview : null
-  const answers =
-    activeCategory && activePerson
-      ? loadedPreview?.conjugations[activeCategory][activePerson]
-      : undefined
+  const score = sessionScore(state.results)
+  const question = state.questions[state.index]
+  const category = CATEGORIES.find((item) => item.id === question.category)
+  const result = state.results[state.results.length - 1]
 
   return (
-    <section className="page-section" aria-labelledby="practice-title">
-      <h1 id="practice-title">Practice</h1>
-      {error ? (
-        <div role="alert">
-          <p>{error}</p>
-          <button onClick={() => setAttempt((value) => value + 1)}>
-            Retry catalogue
+    <section
+      className="page-section typing-session"
+      aria-labelledby="session-title"
+      onKeyDown={(event) => {
+        if (event.nativeEvent.isComposing) {
+          if (event.key === "Enter") event.preventDefault()
+          return
+        }
+        if (
+          (event.key === "Enter" ||
+            (state.phase === "feedback" && event.key === " ")) &&
+          event.repeat
+        ) {
+          event.preventDefault()
+          return
+        }
+        if (
+          state.phase === "feedback" &&
+          event.key === " " &&
+          event.target === next.current
+        ) {
+          event.preventDefault()
+          advance()
+        }
+      }}
+    >
+      {blocker.state === "blocked" || leaving ? (
+        <LeavePrompt
+          onStay={() => {
+            if (blocker.state === "blocked") blocker.reset()
+            setLeaving(false)
+          }}
+          onLeave={() => {
+            if (blocker.state === "blocked") blocker.proceed()
+            else onReset()
+          }}
+        />
+      ) : null}
+      {state.phase === "complete" ? (
+        <>
+          <h1 id="session-title" ref={resultsHeading} tabIndex={-1}>
+            Practice complete
+          </h1>
+          <p className="final-score">{score.percentage}%</p>
+          <p>
+            {score.correct} correct · {score.incorrect} incorrect ·{" "}
+            {score.total} answered
+          </p>
+          <p className="field-note">
+            Typing ·{" "}
+            {config.accentPolicy === "strict"
+              ? "Accents required"
+              : "Accents ignored"}
+            . Guest results are not saved.
+          </p>
+          {score.incorrect ? (
+            <>
+              <h2>Mistakes</h2>
+              <ol className="mistake-list">
+                {state.results
+                  .filter((answer) => !answer.correct)
+                  .map((answer) => {
+                    const tense = CATEGORIES.find(
+                      (item) => item.id === answer.question.category,
+                    )
+                    return (
+                      <li key={answer.question.id}>
+                        <p lang="es">
+                          <strong>{answer.question.infinitive}</strong> ·{" "}
+                          {tense?.group} · {tense?.label} ·{" "}
+                          {PERSONS[answer.question.person]}
+                        </p>
+                        <p>
+                          Your answer: <span lang="es">{answer.text}</span>
+                        </p>
+                        <p>
+                          Accepted:{" "}
+                          <span lang="es">
+                            {answer.question.answers.join(" / ")}
+                          </span>
+                        </p>
+                      </li>
+                    )
+                  })}
+              </ol>
+            </>
+          ) : (
+            <p>No mistakes.</p>
+          )}
+          <button className="primary-button" onClick={onReset}>
+            New practice
           </button>
-        </div>
-      ) : !catalogue ? (
-        <p role="status">Loading verbs…</p>
+        </>
       ) : (
         <>
-          <div className="selection-grid">
-            <fieldset>
-              <legend>
-                Verbs{" "}
-                <span className="selection-count">
-                  {selectedVerbs.length} / {catalogue.verbs.length}
-                </span>
-              </legend>
-              <label className="search-label">
-                Search verbs
-                <input
-                  type="search"
-                  value={search}
-                  onChange={(event) => setSearch(event.target.value)}
-                  placeholder="Infinitive or meaning"
-                />
-              </label>
-              <div className="selection-actions">
-                <button
-                  onClick={() =>
-                    setSelectedVerbs(catalogue.verbs.map((verb) => verb.id))
-                  }
-                >
-                  Select all verbs
-                </button>
-                <button onClick={() => setSelectedVerbs([])}>
-                  Clear verbs
-                </button>
-              </div>
-              <div className="verb-options">
-                {catalogue.verbs
-                  .filter((verb) =>
-                    `${verb.infinitive} ${verb.meaning}`
-                      .toLowerCase()
-                      .includes(search.trim().toLowerCase()),
-                  )
-                  .map((verb) => (
-                    <label className="option" key={verb.id}>
-                      <input
-                        type="checkbox"
-                        checked={selectedVerbs.includes(verb.id)}
-                        onChange={() => toggleVerb(verb.id)}
-                      />
-                      <span lang="es">{verb.infinitive}</span>
-                      <small>{verb.meaning}</small>
-                    </label>
-                  ))}
-                {!catalogue.verbs.some((verb) =>
-                  `${verb.infinitive} ${verb.meaning}`
-                    .toLowerCase()
-                    .includes(search.trim().toLowerCase()),
-                ) && <p>No matching verbs.</p>}
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>
-                Tenses & moods{" "}
-                <span className="selection-count">
-                  {selectedCategories.length} / {CATEGORIES.length}
-                </span>
-              </legend>
-              <div className="selection-actions">
-                {(["basic", "advanced", "all"] as Preset[]).map((preset) => (
-                  <button
-                    key={preset}
-                    onClick={() =>
-                      setSelectedCategories(getPresetCategories(preset))
-                    }
-                  >
-                    {preset[0].toUpperCase() + preset.slice(1)}
-                  </button>
-                ))}
-                <button onClick={() => setSelectedCategories([])}>
-                  Clear tenses
-                </button>
-              </div>
-              <p className="field-note">
-                Basic: 6 categories. Advanced and All: all 16 supported
-                categories.
-              </p>
-              <div className="category-groups">
-                {Array.from(
-                  new Set(CATEGORIES.map((category) => category.group)),
-                ).map((group) => (
-                  <div className="category-group" key={group}>
-                    <h2 lang="es">{group}</h2>
-                    {CATEGORIES.filter(
-                      (category) => category.group === group,
-                    ).map((category) => (
-                      <label
-                        className="option category-option"
-                        key={category.id}
-                      >
-                        <input
-                          type="checkbox"
-                          checked={selectedCategories.includes(category.id)}
-                          onChange={() => toggleCategory(category.id)}
-                        />
-                        <span>
-                          <span lang="es">{category.label}</span>
-                          <small>{category.english}</small>
-                        </span>
-                      </label>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </fieldset>
+          <div className="session-heading">
+            <h1 id="session-title">Typing practice</h1>
+            <button onClick={() => setLeaving(true)}>End practice</button>
           </div>
-          <section
-            className="catalogue-preview"
-            aria-labelledby="preview-title"
+          <p className="field-note">
+            Question {state.index + 1} of {state.questions.length} ·{" "}
+            {config.accentPolicy === "strict"
+              ? "Accents required"
+              : "Accents ignored"}
+          </p>
+          <div className="question-prompt">
+            <h2 lang="es">{question.infinitive}</h2>
+            <p>{question.meaning}</p>
+            <p lang="es">
+              {category?.group} · {category?.label}
+            </p>
+            <p className="question-person" lang="es">
+              {PERSONS[question.person]}
+            </p>
+          </div>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault()
+              dispatch({ type: "submit", text })
+            }}
           >
-            <h2 id="preview-title">Answer preview</h2>
-            {!selectedVerbs.length || !selectedCategories.length ? (
-              <p role="status">
-                Select at least one verb and one tense to preview an answer.
-              </p>
-            ) : (
+            <label className="answer-label" htmlFor="typed-answer">
+              Your answer
+            </label>
+            <input
+              id="typed-answer"
+              ref={input}
+              value={text}
+              onChange={(event) => setText(event.target.value)}
+              disabled={state.phase === "feedback"}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="none"
+              spellCheck={false}
+              aria-describedby="answer-help"
+            />
+            <p id="answer-help" className="field-note">
+              Include required reflexive pronouns or “no”, but omit the subject
+              pronoun.
+            </p>
+            {state.phase === "question" && (
               <>
-                <div className="preview-controls">
-                  <label>
-                    Verb
-                    <select
-                      value={activeVerb?.id ?? ""}
-                      onChange={(event) => {
-                        setPreviewError("")
-                        setPreviewVerbId(event.target.value)
-                      }}
-                    >
-                      {catalogue.verbs
-                        .filter((verb) => selectedVerbs.includes(verb.id))
-                        .map((verb) => (
-                          <option value={verb.id} key={verb.id}>
-                            {verb.infinitive}
-                          </option>
-                        ))}
-                    </select>
-                  </label>
-                  <label>
-                    Tense / mood
-                    <select
-                      value={activeCategory}
-                      onChange={(event) =>
-                        setPreviewCategoryId(event.target.value as CategoryId)
-                      }
-                    >
-                      {CATEGORIES.filter((category) =>
-                        selectedCategories.includes(category.id),
-                      ).map((category) => (
-                        <option value={category.id} key={category.id}>
-                          {category.group} · {category.label}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  <label>
-                    Person
-                    <select
-                      value={activePerson}
-                      onChange={(event) =>
-                        setPreviewPersonId(event.target.value as PersonId)
-                      }
-                    >
-                      {persons.map((person) => (
-                        <option value={person} key={person}>
-                          {PERSONS[person]}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                </div>
-                {previewError ? (
-                  <div role="alert">
-                    <p>{previewError}</p>
+                <div className="accent-keys" aria-label="Spanish characters">
+                  {["á", "é", "í", "ó", "ú", "ñ", "ü"].map((character) => (
                     <button
-                      onClick={() => setPreviewAttempt((value) => value + 1)}
+                      key={character}
+                      type="button"
+                      aria-label={`Insert ${character}`}
+                      onMouseDown={(event) => event.preventDefault()}
+                      onClick={() => insertCharacter(character)}
                     >
-                      Retry data
+                      {character}
                     </button>
-                  </div>
-                ) : (
-                  <p className="answer-preview" role="status" lang="es">
-                    {answers ? answers.join(" / ") : "Loading…"}
-                  </p>
-                )}
-                {activeCategory?.startsWith("imperative.") && (
-                  <p className="field-note">
-                    Imperatives have no yo form. Only applicable persons are
-                    offered.
-                  </p>
-                )}
+                  ))}
+                </div>
+                <button
+                  type="submit"
+                  className="primary-button"
+                  disabled={!text.trim()}
+                >
+                  Submit <span className="key-hint">Enter</span>
+                </button>
               </>
             )}
-          </section>
-          <p className="placeholder-note">
-            Catalogue preview only. Practice sessions are coming next.
-          </p>
+          </form>
+          {state.phase === "feedback" && (
+            <div className="answer-feedback" role="status">
+              <h2>{result.correct ? "Correct" : "Incorrect"}</h2>
+              <p>
+                Accepted: <span lang="es">{question.answers.join(" / ")}</span>
+              </p>
+              <button
+                type="button"
+                className="primary-button"
+                ref={next}
+                onClick={advance}
+              >
+                {state.index === state.questions.length - 1
+                  ? "See results"
+                  : "Next"}{" "}
+                <span className="key-hint">Space</span>
+              </button>
+            </div>
+          )}
         </>
       )}
     </section>
+  )
+}
+
+export function Practice() {
+  const [session, setSession] = useState<{
+    questions: Question[]
+    config: PracticeConfig
+  } | null>(null)
+  return session ? (
+    <TypingSession
+      questions={session.questions}
+      config={session.config}
+      onReset={() => {
+        setSession(null)
+        window.scrollTo(0, 0)
+      }}
+    />
+  ) : (
+    <PracticeSetup
+      onStart={(questions, config) => {
+        setSession({ questions, config })
+        window.scrollTo(0, 0)
+      }}
+    />
   )
 }

@@ -19,8 +19,7 @@
   font: 0.8rem var(--font-label);
   margin-left: 0.5rem;
 }
-.search-label,
-.preview-controls label {
+.search-label {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -31,8 +30,7 @@
   flex-wrap: wrap;
   margin: 1rem 0;
 }
-.selection-grid button,
-.catalogue-preview button {
+.selection-grid button {
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--rule);
@@ -40,13 +38,11 @@
   padding: 0.4rem 0.7rem;
   cursor: pointer;
 }
-.selection-grid button:hover,
-.catalogue-preview button:hover {
+.selection-grid button:hover:not(:disabled) {
   color: var(--accent);
   border-color: var(--accent);
 }
-.search-label input,
-.preview-controls select {
+.search-label input {
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--rule);
@@ -96,27 +92,8 @@
   font-size: 0.85rem;
   line-height: 1.5;
 }
-.catalogue-preview {
-  border-top: 1px solid var(--rule);
-  margin-top: 2rem;
-  padding-top: 1rem;
-}
-.catalogue-preview h2 {
-  font-weight: normal;
-  font-size: 1.3rem;
-}
-.preview-controls {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 1rem;
-}
-.answer-preview {
-  color: var(--accent);
-  font-size: 1.5rem;
-}
 @media (max-width: 760px) {
-  .selection-grid,
-  .preview-controls {
+  .selection-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -137,4 +114,147 @@
   .category-groups .category-group:first-child {
     grid-row: auto;
   }
+}
+.practice-options {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2rem 0 1rem;
+  padding: 1rem 0;
+}
+.practice-options legend {
+  font-size: 1.2rem;
+  padding-right: 0.7rem;
+}
+.person-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+}
+.session-options {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.session-options input[type="number"] {
+  display: block;
+  width: 7rem;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--rule);
+  font: inherit;
+  color: inherit;
+}
+.page-section button {
+  font: inherit;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+.page-section button:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.page-section button.primary-button {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+  padding: 0.7rem 1.2rem;
+}
+.page-section button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.session-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+.typing-session {
+  max-width: 48rem;
+  margin: auto;
+}
+.question-prompt {
+  padding: 1rem 0;
+}
+.question-prompt h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+.question-prompt p {
+  color: var(--muted);
+}
+.question-prompt .question-person {
+  color: var(--ink);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.answer-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+#typed-answer {
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--ink);
+  font: 1.5rem var(--font-body);
+  color: var(--ink);
+}
+#typed-answer:disabled {
+  color: var(--muted);
+}
+.accent-keys {
+  display: flex;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+.accent-keys button {
+  padding: 0.3rem 0.7rem;
+}
+.key-hint {
+  font: 0.7rem var(--font-label);
+  margin-left: 1rem;
+}
+.answer-feedback {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.8rem;
+  margin-top: 1.5rem;
+}
+.answer-feedback h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+.final-score {
+  font-size: 3rem;
+  color: var(--accent);
+  margin: 1rem 0;
+}
+.mistake-list {
+  padding-left: 1.3rem;
+}
+.mistake-list li {
+  padding-block: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  overflow-wrap: anywhere;
+}
+.mistake-list p {
+  line-height: 1.5;
+}
+.typing-session dialog {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 2rem;
+  max-width: 30rem;
+}
+.typing-session dialog::backdrop {
+  background: #27251f66;
 }

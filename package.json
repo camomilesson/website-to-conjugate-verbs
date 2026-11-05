@@ -19,7 +19,7 @@
     "build": "pnpm check && pnpm validate:catalogue && vite build",
     "preview": "vite preview",
     "examples": "node src/examples/index.ts",
-    "test": "node --test src/modules/verb-catalogue/catalogue.test.ts",
+    "test": "node --test src/modules/*/*.test.ts",
     "validate:catalogue": "node --test src/modules/verb-catalogue/catalogue.test.ts"
   },
   "keywords": [],

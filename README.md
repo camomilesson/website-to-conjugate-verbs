@@ -27,9 +27,11 @@ Prettier.
 
 ## Current status and development reference
 
-The public shell is deployed. Step 3 adds the seven-verb starter catalogue,
-16-category selectors, and an answer preview on the review branch. Full practice
-sessions, accounts, and persistence are not implemented yet. Original console
+The public shell is deployed. The seven-verb starter catalogue and
+16-category selectors are approved. Step 4 adds guest typing practice on its
+review branch, including configurable persons/length, accent handling, feedback,
+and final mistake review. Multiple choice, accounts, and persistence are not
+implemented yet. Original console
 examples remain separate from the browser app.
 
 Use Node.js 24+ and pnpm 12.16.1:
@@ -38,7 +40,7 @@ Use Node.js 24+ and pnpm 12.16.1:
 pnpm install
 pnpm dev       # local browser app; also available as pnpm start
 pnpm lint      # typecheck, ESLint, and formatting
-pnpm test      # catalogue validation and regression checks
+pnpm test      # catalogue, answer checking, and session regression checks
 pnpm build     # typecheck, validate catalogue, build in dist/
 pnpm preview   # serve the production build locally
 pnpm examples  # original standalone console examples

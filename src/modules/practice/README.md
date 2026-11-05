@@ -1,11 +1,32 @@
 # Practice modlet
 
-Import `Practice` through `index.ts`. Owns local verb/category selection, search,
-presets, and a labelled answer preview. It consumes the catalogue modlet's public
-API without duplicating grammatical IDs or person rules. CSS is co-located.
+Import `Practice` through `index.ts`. The feature owns guest typing practice;
+all conjugation IDs/data come from the catalogue public API, and matching comes
+from the independent answer-checking module.
 
-Step 3 supports one/many/all verbs, individual categories, Basic/Advanced/All,
-clear actions, loading/error/retry states, and previewing accepted alternatives.
-Selections are local to this mounted view, not persisted yet. Starting/scoring a
-practice session belongs to step 4, remembered defaults to step 6. The preview
-exposes only applicable persons, excluding yo for imperatives.
+- `PracticeSetup.tsx`: one/many/all verbs, categories/presets, six person groups,
+  length, strict/relaxed accents, pre-start pool count/capping, and cancellable
+  loading of the selected verb files. Invalid/empty pools cannot start. Errors
+  retain the selection and let the user retry Start.
+- `session.ts`: pure eligible-person mapping, unique shuffled question sampling,
+  session transitions, and score calculation. usted/ustedes follow the selected
+  third-person singular/plural groups. Questions snapshot accepted alternatives.
+- `Practice.tsx`: setup/session composition, form, accent keys, feedback, mistake
+  review, and navigation confirmation. Enter submits; Space on the focused Next
+  button advances from feedback. Repeated keys cannot submit/advance repeatedly;
+  ordinary spaces remain input. Whitespace-only submissions are disabled.
+
+The reducer ignores submit outside the question state and Next outside feedback,
+preventing double-counting and skips. An answer locks until Next. Final feedback
+is shown before the results screen, which lists every mistake for this sitting.
+
+No guest answers, results, or question queues are persisted. Leaving via app
+navigation or End practice prompts first; reload starts fresh without a resume
+flow. Completed results remain while on the view until New practice/navigation.
+Defaults currently reset on New practice; remembered selections arrive in step 6.
+
+The earlier development answer preview has been replaced by actual practice.
+Multiple choice is step 5. Authenticated progress/history remains later work.
+Run `pnpm test` for matching, sampling, and state regression checks. Browser review
+covers keyboard input/focus, character insertion, navigation cancellation, refresh,
+and end-to-end scoring; those are not simulated by the pure unit tests.

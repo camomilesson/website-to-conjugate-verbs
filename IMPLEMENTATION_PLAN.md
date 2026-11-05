@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 3 ready for your review** · 5 November 2026
+Status: **Step 4 ready for your review** · 5 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -69,7 +69,7 @@ Agree how later review builds will be published.
 
 ## Step 3 — Reviewed starter catalogue
 
-**Status:** Ready for your review · **Depends on:** 2
+**Status:** Verified · **Depends on:** 2
 
 **Outcome:** Inspectable canonical JSON data and a real verb/category selector.
 
@@ -93,7 +93,7 @@ one category. A practice session is not yet expected to run.
 
 ## Step 4 — Complete guest typing practice
 
-**Status:** Not started · **Depends on:** 3
+**Status:** Ready for your review · **Depends on:** 3
 
 **Outcome:** A guest can configure and complete a typing test.
 
@@ -402,3 +402,26 @@ Public deployment remains incomplete until account setup/import and URL checks.
   are in src/modules/verb-catalogue/README.md. No practice session runs yet and
   selections do not persist yet, as scheduled for later steps.
 - User verification is pending. Step 4 has not started.
+
+### Step 4 — Ready for your review
+
+- User approved step 3 and retained static JSON. Step 3 was fast-forwarded to
+  main; step 4 lives on codex/typing-practice for review before promotion.
+- Implemented guest typing setup/session/results, person selection, strict/relaxed
+  accents, shuffled unique questions with pre-start capping, cancellable catalogue
+  loading, feedback, Enter/Space controls, character insertion, and mistake review.
+- Removed the development answer preview from setup; actual practice now uses the
+  reviewed answer tables. No choices, stored preferences, accounts, or statistics
+  persistence yet. Starting a new session restores first-use defaults until step 6.
+- Checks: pnpm lint; pnpm test (14 tests); pnpm build. Browser: known two-answer
+  sequence yielded 50% and one mistake; Enter submission, Space advance, Unicode
+  accent composition, relaxed hable for hablé, spaces/character insertion,
+  abandonment cancellation/reset, and refresh reset were verified without errors.
+- Your verification: choose hablar only, clear tenses then choose Indicativo
+  Presente, set 2 questions. Submit one right and one wrong answer, then inspect
+  score/mistakes. Try End practice and cancelling a tab change. For a deterministic
+  accent check choose hablar, preterite, yo only: requested 20 caps to 1. hable
+  should be incorrect with accents required and correct with accents ignored.
+- ñ/ü folding has unit-test fixtures (the seven starter verbs do not naturally
+  exercise those characters). No practice session is restored after refresh.
+- User review pending; step 5 has not started.
