@@ -50,6 +50,15 @@ The build emits Vite's existing warning about a JS chunk above 500 kB (roughly
 maintenance item, not a failing check. A dedicated mobile polish and consolidation
 of the layered CSS remain deferred; system fonts require no redistributed fonts.
 
+## Handover build verification
+
+Vercel reports the staging handover deployment completed. This assistant browser
+is redirected to Vercel login by preview protection, so no deployed staging
+browser pass is claimed. The owner can use the existing protected staging access.
+The locally served production build was checked at 1280×720: Conjugadora in the
+wordmark/title, favicon link and SVG response, no horizontal page overflow, and
+correct updated privacy/retention copy. The favicon is served as image/svg+xml.
+
 ## Owner final verification
 
 On stable staging, then approve production promotion:
