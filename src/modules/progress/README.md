@@ -24,7 +24,7 @@ Overall. Each cell exposes full names/counts in a native hover title, an accessi
 label, a focus readout, and a modal on click/Enter. There is one roving cell tab
 stop; arrows move across rows/columns, Home/End move within a row, and Ctrl+Home/
 End reach matrix corners. Escape closes details and restores focus. Values remain
-readable without colour; the burgundy scale is a secondary cue. Empty, no-match,
+readable without colour; the green scale is a secondary cue. Empty, no-match,
 loading, error, retry and guest states are explicit.
 
 ## Isolated demo and review
@@ -42,12 +42,10 @@ Pure tests also check weighted totals, bucket separation, sorting, absent cells,
 and mood header spans. Existing colour overrides from shared button CSS were
 corrected and computed backgrounds/foregrounds inspected.
 
-Hosted review on staging: sign in with the step 9 account, inspect the known
-verb/category counts, switch Basic/All/custom, search and sort, use mode filters,
-and open a cell with the keyboard. Confirm Overall includes hidden tenses.
-No SQL migration or environment-variable change is needed. Main remains at
-approved step 9 until the heatmap review is approved. History remains the initial
-step 9 view; its full UI belongs to step 11.
+Hosted review: sign in, inspect known verb/category counts, switch Basic/All/custom,
+search and sort, filter modes and open a cell with the keyboard. Overall includes
+hidden categories. Display persistence requires all four migrations; see the root
+setup documents. The owner approved the heatmap and subsequent persistence work.
 
 ## Remembered display choices
 
@@ -63,5 +61,4 @@ are browser-local (guest answers remain unsaved). Reset learning data retains
 these preferences; deleting the account cascades them.
 
 Apply the new migration as described in `PROGRESS_PREFERENCES_SETUP.md` at the
-repository root. The earlier no-migration note above describes the initial
-heatmap implementation, not this added persistence feature.
+repository root. Apply it only to a new environment where it has not already run.

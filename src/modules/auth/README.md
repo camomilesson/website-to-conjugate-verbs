@@ -16,8 +16,8 @@ browser-local and are never imported automatically. Concurrent device saves use
 last-write-wins, with no automatic live subscription.
 
 See [AUTH_SETUP.md](../../../AUTH_SETUP.md) for the setup and hosted verification
-checkpoint. Pure configuration/repository tests run without credentials. Actual
-OAuth and RLS checks remain pending until that checklist is completed. SDK DOM
+reference. Pure configuration/repository tests run without credentials. Owner
+verified hosted sign-in, two-account isolation and cross-device preferences. SDK DOM
 declaration compatibility requires TypeScript skipLibCheck; strict checking of
 application code remains enabled.
 

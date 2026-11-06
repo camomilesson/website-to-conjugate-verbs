@@ -1,6 +1,6 @@
 # Progress display preferences setup
 
-One manual database change is needed. No new Vercel environment variables,
+The owner applied and verified this migration. For a new environment, one database change is needed. No new Vercel environment variables,
 Google OAuth configuration or Edge Function deployment is required.
 
 ## Apply once in the existing project

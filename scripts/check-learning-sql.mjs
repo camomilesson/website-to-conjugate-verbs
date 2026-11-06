@@ -17,6 +17,7 @@ try {
     grant execute on function auth.uid() to anon, authenticated;`)
   for (const file of [
     "supabase/migrations/202611050001_user_preferences.sql",
+    "supabase/tests/preferences_rls.sql",
     "supabase/migrations/202611060001_durable_practice.sql",
     "supabase/tests/durable_practice.sql",
     "supabase/migrations/202611060002_account_controls.sql",

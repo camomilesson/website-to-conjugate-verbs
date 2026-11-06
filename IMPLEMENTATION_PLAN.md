@@ -1,8 +1,8 @@
 # Implementation plan
 
-Status: **Step 12.5.4 approved; next polish under discussion** · 6 November 2026
+Status: **Step 13 ready for owner review** · 6 November 2026
 
-[BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
+[README.md](README.md) now defines the implemented product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
 setup work. Step 1 was accepted by the user moving on to deployment.
 
@@ -373,11 +373,11 @@ no real resets/deletions were performed by the assistant.
 
 ## Step 13 — Public release and documentation handover
 
-**Status:** Not started · **Depends on:** 12.5
+**Status:** Ready for your review · **Depends on:** 12.5
 
 **Outcome:** A polished public release matches the approved blueprint.
 
-**Assistant work:** Finish newspaper styling, typography/licensing, contrast,
+**Assistant work:** Finalize the approved green workspace styling, typography/licensing, contrast,
 keyboard focus and shortcuts, empty/loading/error states, and comfortable desktop
 overflow. Run the release checks, verify public auth/routing, and document current
 deployment, development, data maintenance, and operations. Migrate lasting
@@ -770,3 +770,32 @@ starting a fresh randomized run with the exact previous configuration and a new
 tracked run ID. The completed run stays intact. Double starts/held Enter are
 prevented and start failures leave results available with an error/retry action.
 No database or environment changes. Step 13 remains on hold for polish review.
+
+### Step 12.5 final approvals — 6 November 2026
+
+Owner approved the green workspace on staging and requested production promotion.
+Production main contains e74f15f, including negative-command distractors and Repeat
+practice. The earlier newspaper direction is superseded by the approved green
+workspace. Further polishing is deferred; proceed with step 13.
+
+### Step 13 — Ready for your review · 6 November 2026
+
+Owner chose to keep Google OAuth in Testing with basic identity scopes, accepted
+the current Vercel/Supabase plans and approved the displayed name Conjugadora.
+Google Branding already matches. Handover aligns the app name/notices/titles and
+adds a matching green/á SVG favicon. URLs, storage keys, auth and learning logic
+are retained. No migration, provider change or function deployment is needed.
+
+README and module docs now describe the implemented product, supported categories,
+keyboard controls and modlet architecture. OPERATIONS.md covers schema, retention,
+keys, migration order, rollback and incident handling. Setup docs no longer claim
+completed features are pending. The temporary blueprint is retired after migrating
+its lasting content; historical decisions remain in Git and this plan.
+
+Release checks and their limits are recorded in RELEASE_CHECKLIST.md: 55 Node
+tests, lint/typecheck/build, artifact audit, all four SQL suites/migrations,
+public routes/static errors, guest typing/choice/feedback and Google redirect.
+Real cross-device sign-in and destructive account tests were previously verified
+by the owner; this pass does not claim to rerun them with real credentials.
+The new name/favicon/docs go to stable staging for final review, leaving
+production at its approved design until promotion. Step 13 is not Verified yet.

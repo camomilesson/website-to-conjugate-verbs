@@ -16,7 +16,7 @@ server-enforced even without that notification.
 Deletion requires typed DELETE and account-specific confirmation. The Edge
 Function remotely validates the bearer token and ignores client-supplied target
 IDs except to compare the expected current owner. The verified identity is
-hard-deleted through the admin API; all six public account tables cascade from
+hard-deleted through the admin API; all seven public account tables cascade from
 auth.users. Frontend sign-out only applies to the same account that initiated the
 request. Unknown outcomes remain errors; retries cannot delete a different new
 account. Cancel never calls a write. In-flight confirmations cannot be dismissed
@@ -27,5 +27,6 @@ manual disposable-account verification, compatibility and retention details.
 `supabase/functions/delete-account/index.ts` is typechecked separately by Deno;
 the pure shared handler is tested by Node and checked by the app's TypeScript/
 ESLint project. Development demo data/code and server credentials are excluded
-from frontend production assets. Step 13 still owns release-wide privacy/terms
-and provider publishing review.
+from frontend production assets. Both practice and Progress display preferences
+survive learning reset and cascade on account deletion. Provider/release decisions
+are recorded in AUTH_SETUP.md and RELEASE_CHECKLIST.md at the repository root.

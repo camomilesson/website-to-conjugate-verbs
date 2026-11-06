@@ -1,7 +1,7 @@
 # Verb catalogue modlet
 
 Public API: `index.ts`. `categories.ts` defines 16 stable category IDs, Spanish
-labels, English explanations, valid persons, and the Basic (6) / Advanced (16) /
+labels, English explanations, valid persons, and the Basic (6) / Advanced (10) /
 All (16) presets. Imperative categories use tú/usted/nosotros/vosotros/ustedes;
 other categories use the six ordinary persons. No imperative yo exists.
 

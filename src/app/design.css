@@ -2,7 +2,7 @@
 :root {
   --paper: #f8f9f5;
   --ink: #213c33;
-  --muted: #65766c;
+  --muted: #5d6e64;
   --rule: #dce3da;
   --accent: #245942;
   --font-body: "Avenir Next", Avenir, "Segoe UI", sans-serif;
@@ -652,7 +652,7 @@ summary:focus-visible {
   border-radius: 4px;
   font-size: 9px;
   margin-left: 14px;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .answer-feedback {
   background: var(--soft);
@@ -770,7 +770,7 @@ summary:focus-visible {
 }
 .heatmap button.heat-none {
   background: var(--surface);
-  color: #83917c;
+  color: var(--muted);
 }
 .heatmap button.heat-low {
   background: #f0eddb;

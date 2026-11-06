@@ -181,7 +181,7 @@ export function ConfirmDataAction({
       </p>
       <p>
         {deleting
-          ? "This permanently deletes your La Conjugadora account, preferences, progress, history and retry records. It cannot be undone. It does not delete your Google account."
+          ? "This permanently deletes your Conjugadora account, preferences, progress, history and retry records. It cannot be undone. It does not delete your Google account."
           : "This permanently clears your progress, history and retry records. Your account and saved preferences remain. It cannot be undone."}
       </p>
       {deleting && (

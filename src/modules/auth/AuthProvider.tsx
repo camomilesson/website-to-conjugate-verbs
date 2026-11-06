@@ -170,7 +170,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         accountNotice,
         announceAccountDeletion: () =>
           setAccountNotice(
-            "Your La Conjugadora account and saved data were deleted.",
+            "Your Conjugadora account and saved data were deleted.",
           ),
         clearAccountNotice: () => setAccountNotice(null),
         signIn,

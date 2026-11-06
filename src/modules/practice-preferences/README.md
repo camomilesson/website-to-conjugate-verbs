@@ -34,8 +34,8 @@ values. Nothing is silently rewritten during restore.
 Storage getters, reads, and writes can fail. Reads fall back with a notice; a
 failed practice save is reported while still allowing the session, and Settings
 never claims a failed write succeeded. This is browser-local data: each origin
-(including production versus preview) has its own settings. Account syncing is
-step 8; no guest-learning-data import is introduced here.
+(including production versus preview) has its own settings. Account syncing uses
+the auth repository; guest learning data is never imported.
 
 Run `pnpm test` for round trips, latest-save behaviour, custom/preset restores,
 invalid/stale values, storage failures, and serialization boundaries. Browser
@@ -48,7 +48,7 @@ When signed in, `usePreferenceDraft` loads/saves via the auth modlet's Supabase
 repository. New accounts use factory defaults; guest data is not imported.
 Identity changes hide stale drafts and cancel pending loads. A failed account
 read/write is surfaced without silently falling back to local storage. See
-[AUTH_SETUP.md](../../../AUTH_SETUP.md); hosted verification is still pending.
+[AUTH_SETUP.md](../../../AUTH_SETUP.md) for the verified configuration and review checklist.
 
 Verb picker options use Spanish alphabetical ordering without mutating catalogue
 order or stored IDs. Shared interface sizing lives in the application theme;

@@ -1,6 +1,6 @@
 # Practice modlet
 
-Import `Practice` through `index.ts`. The feature owns guest typing and multiple-choice practice;
+Import `Practice` through `index.ts`. The feature owns guest and tracked typing/multiple-choice practice;
 all conjugation IDs/data come from the catalogue public API, and matching comes
 from the independent answer-checking module.
 
@@ -38,7 +38,7 @@ write storage. Settings saves the same preferences explicitly. Storage failures
 are reported, and the session keeps its own configuration snapshot.
 
 The earlier development answer preview has been replaced by actual practice.
-Multiple choice is implemented in step 5. Choice submissions require an offered
+Choice submissions require an offered
 index and always use strict matching, independently of the typing accent policy.
 Setup preloads selected verb files in choice mode to show the eligible pool size,
 handles loading/error/retry, and aborts stale loads. Typing still loads on Start.
@@ -51,7 +51,7 @@ Run `pnpm test` for matching, sampling, and state regression checks. Browser rev
 covers keyboard input/focus, character insertion, navigation cancellation, refresh,
 and end-to-end scoring; those are not simulated by the pure unit tests.
 
-## Step 12.5 polish
+## Quick practice and keyboard selection
 
 Practice enters through three quick/customize buttons and a saved-selection
 summary. Quick actions clone the current saved preferences and override mode

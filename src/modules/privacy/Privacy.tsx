@@ -5,7 +5,7 @@ export function Privacy() {
       <h1 id="privacy-title">Privacy &amp; your data</h1>
       <p className="field-note">Updated 6 November 2026</p>
       <p>
-        La Conjugadora uses account information to sign you in and save your
+        Conjugadora uses account information to sign you in and save your
         Spanish practice. You can practise without an account.
       </p>
       <h2>What is stored</h2>
@@ -43,11 +43,12 @@ export function Privacy() {
       </p>
       <h2>Retention and controls</h2>
       <p>
-        Preferences, learning counts and completed history stay until you reset
-        the data or delete your account. Practice submissions expire after 24
-        hours. Their metadata and retry fingerprints become eligible for cleanup
-        after seven days; cleanup runs when you next start a practice, so
-        inactive accounts can retain them longer.
+        Practice and Progress display preferences stay until you change them or
+        delete your account. Learning counts and completed history stay until
+        you reset learning data or delete your account. Practice submissions
+        expire after 24 hours. Their metadata and retry fingerprints become
+        eligible for cleanup after seven days; cleanup runs when you next start
+        a practice, so inactive accounts can retain them longer.
       </p>
       <p>
         In <Link to="/settings">Settings</Link>,{" "}
@@ -57,12 +58,12 @@ export function Privacy() {
         cleared data.
       </p>
       <p>
-        <strong>Delete account</strong> removes your La Conjugadora
-        authentication identity, saved preferences and learning records from the
-        active database, then signs this browser out. It does not delete your
-        Google account. Signing in again creates a fresh La Conjugadora account.
-        Provider backups and logs follow provider retention; deletion from the
-        active database does not promise immediate removal from all backups.
+        <strong>Delete account</strong> removes your Conjugadora authentication
+        identity, saved preferences and learning records from the active
+        database, then signs this browser out. It does not delete your Google
+        account. Signing in again creates a fresh Conjugadora account. Provider
+        backups and logs follow provider retention; deletion from the active
+        database does not promise immediate removal from all backups.
       </p>
       <p>
         Browser-local guest preferences are separate: resetting learning data or

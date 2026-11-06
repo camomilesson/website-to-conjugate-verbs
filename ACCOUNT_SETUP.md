@@ -1,10 +1,9 @@
-# Step 12: reset and account deletion setup
+# Reset and account deletion setup
 
 The owner deployed and verified the controls on staging and approved production
 promotion on 6 November 2026. This file remains the setup reference for new
 environments.
-The assistant has not reset or deleted any real account. Production remains the
-approved step 11. Support contact: conjugadora.support@gmail.com.
+The assistant has not reset or deleted any real account. All controls are deployed. Support contact: conjugadora.support@gmail.com.
 
 ## 1. Apply the migration
 
@@ -16,10 +15,9 @@ Do not rerun the earlier migrations.
 This adds the learning-data generation marker, reset RPC and guarded practice
 write wrappers. Old clients remain compatible until that particular account is
 reset; after reset, old generation-less starts fail closed and require the new
-app. Existing runs get the current generation. Normal users on production remain
-unaffected while this step is reviewed. Test reset/deletion only on a disposable
-account until promotion. The new staging app needs this migration before it can
-start tracked practice.
+app. Existing runs get the current generation. This migration is already applied to the current project. For a new environment,
+apply it before starting tracked practices. Test reset/deletion only with a
+disposable account.
 
 ## 2. Deploy the server function
 
@@ -104,8 +102,8 @@ its own fixture auth row inside the rollback transaction.
 
 Expected: Success, no rows. Checks cover reset preserving settings, all learning
 record deletion, duplicate reset after new answers, stale reset/start/answer
-rejection, legacy-client sealing, another user's data surviving, full six-table
-FK cascade coverage, private-helper/anonymous denial, and old deleted-user JWT
+rejection, legacy-client sealing, another user's data surviving, the original six-table
+FK cascade coverage (the Progress preferences test covers the seventh), private-helper/anonymous denial, and old deleted-user JWT
 rejection. This is not a substitute for testing the deployed GoTrue deletion
 endpoint with the disposable account.
 
@@ -121,8 +119,8 @@ endpoint with the disposable account.
 - The development-only `/dev/account-controls` fixture tests cancellation,
   failure/retry with the same request ID, and exact typed DELETE gating without
   calling Supabase or deleting anything real. It is excluded from production.
-- Hosted migration, function deployment and irreversible account checks remain
-  owner setup/review; independent multi-connection races require hosted checks.
+- The owner deployed the migration/function and verified account controls.
+  Independent multi-connection races require hosted checks; local WASM is serialized.
 
 References: [Edge Function deployment](https://supabase.com/docs/guides/functions/deploy),
 [server secrets](https://supabase.com/docs/guides/functions/secrets),

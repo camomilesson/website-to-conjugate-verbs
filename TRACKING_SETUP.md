@@ -1,4 +1,4 @@
-# Step 9: setup and review
+# Answer tracking: setup and review
 
 Step 9 is approved and deployed to production. This is the retained setup and
 verification reference for a new database. Apply the migration only if absent.
@@ -11,7 +11,7 @@ No new keys, Google settings, environment variables, or paid services are needed
    once. The earlier preferences migration must already exist; do not rerun it.
 3. Expected: Success, no rows. If it errors, stop and share the message.
 4. Open the stable staging URL ending in `/settings`, sign in, and start practice.
-   The production website shares this database but its step 8 code is unchanged.
+   Production and staging share this database; both use the current tracking code.
 
 The migration adds four tables and two authenticated RPCs. Clients can only read
 own counters/history; they cannot directly insert/update either. RPCs take the
@@ -53,9 +53,8 @@ counts first. The answers are `hablo` for yo and `hablas` for tú.
    an account switch abandons the current queue rather than submitting it as the
    new user. Cross-device review should show the same saved counts/history.
 
-The step 10 heatmap is now live; step 11 adds full History pagination and
-presentation on staging. This checklist retains the original tracking scenarios.
-No reset or account deletion UI is introduced until step 12.
+The heatmap, paginated History and account controls are deployed. This checklist
+retains deterministic tracking scenarios for new environments and regression review.
 
 ## Database ownership / retry / atomicity test
 

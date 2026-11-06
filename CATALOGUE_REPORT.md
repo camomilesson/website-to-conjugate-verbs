@@ -1,9 +1,9 @@
 # Catalogue release review — catalogue-1
 
-Prepared 5 November 2026. Ready for owner review, not a native-speaker certification.
+Prepared 5 November 2026. Owner approved and deployed; review is not a native-speaker certification.
 
 100 static verb files cover all 16 supported categories, 94 category/person cells
-per verb: **9,400 cells**. See BLUEPRINT.md for the supported tense inventory.
+per verb: **9,400 cells**. See README.md for the supported tense inventory.
 Imperfect subjunctive accepts both -ra and -se; reflexive progressive accepts both
 pronoun placements; ir/irse commands include their documented alternatives.
 Grammatical coverage does not imply every construction is equally natural in context.

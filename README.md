@@ -1,66 +1,155 @@
-# La Conjugadora
+# Conjugadora
 
-[Open La Conjugadora](https://conjugadora.vercel.app)
+[Practise online](https://conjugadora.vercel.app) · [Privacy & your data](https://conjugadora.vercel.app/privacy)
 
-A desktop-first Spanish conjugation practice website with an old-newspaper
-visual style, developed for the Advanced JavaScript and TypeScript course at
-Harbour.Space University.
+**Practica los verbos en español.** A desktop-first Spanish conjugation practice
+website built for the Advanced JavaScript and TypeScript course at Harbour.Space
+University. The interface uses ivory, forest green and citron, with serif verbs
+and headings and sans-serif controls. No external font service is used.
 
-## Planned experience
+## Practice
 
-- Approximately 100 common verbs across a defined set of tenses and moods.
-- Typing and multiple-choice practice, configurable by verbs, categories, persons,
-  and test length; optional accent-insensitive typing.
-- Practice, Progress, History, and Settings tabs.
-- Google sign-in, remembered practice preferences, and cross-device learning data.
-- A verb-by-tense accuracy heatmap and completed-test history. Submitted answers
-  count toward progress even when a test is abandoned; tests cannot be resumed.
-- Public hosting, guest practice, and account/data deletion controls.
+Choose **Multiple choice** or **Typing** to start with the last saved setup.
+**Customize practice** lets you choose All/Common/individual verbs, categories,
+persons, question count and accent policy. Common is a curated 25-verb subset,
+not a statistical frequency ranking. First-use defaults are all verbs, Basic,
+all supported persons, 20 questions and strict typing.
 
-## Architecture direction
+- **100 verbs**, including regular, irregular and reflexive verbs; **16 supported
+  practice categories**. Coverage does not mean every possible Spanish tense.
+- Questions are shuffled without replacement and capped at the eligible pool.
+  Imperatives exclude yo. Vosotros is selectable; vos is outside release scope.
+- Type the conjugated form, including required reflexive pronouns or `no`,
+  without the subject pronoun. All listed answer alternatives are accepted.
+- Strict typing preserves accents. Relaxed typing folds acute vowels, ñ → n
+  and ü → u. Both modes ignore case and normalize surrounding/repeated spaces;
+  arbitrary spelling changes and punctuation are not forgiven.
+- Multiple-choice distractors match the verb and grammatical person. Negative
+  commands put `no` on every option before deduplication. Usually four options
+  are shown; unsafe questions are excluded or use fewer options (minimum two).
+- Correct feedback advances after 650 ms. Incorrect feedback shows the answer
+  and waits for Next. No skips or resumable practices.
+- Hover, focus or tap the tense for English help. Compound/progressive hints
+  include formation; hints do not change the score.
+- Results show the score and all mistakes from that sitting. **Repeat practice**
+  creates a fresh randomized run with the same settings, including answer mode.
+  **New practice** returns to the mode-choice screen.
 
-React, TypeScript, Vite, and plain CSS; Vercel hosting; Supabase authentication and
-PostgreSQL for user data. The assistant generates the versioned JSON verb catalogue during development;
-production serves the reviewed static files. Organise implementation as modlets, keeping related code,
-styles, tests, documentation, and useful demos together. Retain pnpm, ESLint, and
-Prettier.
+### Supported categories
 
-## Current status and development reference
+| Group               | Categories                                                       |
+| ------------------- | ---------------------------------------------------------------- |
+| Simple indicative   | Present, preterite, imperfect, future, conditional               |
+| Perfect indicative  | Present perfect, pluperfect, future perfect, conditional perfect |
+| Simple subjunctive  | Present, imperfect (both -ra and -se)                            |
+| Perfect subjunctive | Present perfect, pluperfect (both variants)                      |
+| Imperative          | Affirmative, negative                                            |
+| Progressive         | Present                                                          |
 
-The approved app includes 100 verbs across 16 categories, typing and multiple
-choice, Google sign-in, and account-synced practice preferences. Guest practice
-retains browser-local preferences. Production now saves submitted answers and completed practices. The verb-by-tense heatmap is live. Paginated History is live. Reset, account deletion and the public data explanation are approved and
-deployed. Quick-start practice, numbered choices and consistent interface sizing are
-approved for production. Additional prompt/navigation polish is on staging for
-review. See [ACCOUNT_SETUP.md](ACCOUNT_SETUP.md) for account operations. See
-[TRACKING_SETUP.md](TRACKING_SETUP.md).
-See [AUTH_SETUP.md](AUTH_SETUP.md) for environment and provider configuration.
-Original console examples remain separate from the browser app.
+**Basic** contains the five simple indicative categories and present perfect
+indicative (6). **Advanced** contains the other 10, excluding Basic. **All**
+combines both (16). These are convenience sets, not proficiency certifications.
+Preterite anterior, future/future-perfect subjunctive and other progressive
+constructions are outside this release. See the [catalogue report](CATALOGUE_REPORT.md)
+for the full verb list, provenance, review limits and maintenance procedure.
 
-Use Node.js 24+ and pnpm 12.16.1:
+### Keyboard controls
+
+| Context                   | Keys                                                                                                |
+| ------------------------- | --------------------------------------------------------------------------------------------------- |
+| Typing or selected choice | Enter submits                                                                                       |
+| Multiple choice           | 1–4 or arrow keys select an option                                                                  |
+| Incorrect feedback        | Space on the focused Next/See results button, or activate it normally                               |
+| Results                   | Enter from the initially focused heading repeats practice                                           |
+| Tense help / dialogs      | Escape dismisses                                                                                    |
+| Progress matrix           | Arrow keys move cells; Home/End move across a row; Ctrl+Home/End reach corners; Enter opens details |
+
+Tab navigation, visible focus and clickable controls remain available. Held-key
+repeats are ignored. Practice navigation asks before abandoning an active run;
+returning to Practice from completed results needs no confirmation.
+
+## Accounts, Progress and History
+
+Guest practice saves only browser-local practice/display choices. Answers and
+results remain in memory and are never imported into a signed-in account.
+Google sign-in enables account-specific settings, Progress and History across
+devices. Practice defaults save when starting a session or using Settings Save;
+Progress sort/filter/column choices save automatically. Search and scroll are
+not persisted. Separate browser origins have separate guest/session storage.
+
+Each acknowledged signed-in answer updates Progress immediately, even if the
+practice is later abandoned. Only completed practices create History entries.
+Incomplete queues are not saved. A connection failure locks the submitted answer
+and offers Retry using the same ID; it never silently becomes a guest answer.
+There is no durable offline-sync queue.
+
+Progress has one verb per row, Overall plus tense columns, sticky headers and
+labels, search, sorting and mode/accent filters. Accuracy divides summed correct
+counts by summed answered counts, never averages cell percentages. Overall
+includes hidden categories. A dash means unpractised, distinct from attempted
+0%. Cell details expose sample sizes; colour is secondary to the numbers.
+
+History is paginated, newest first, with local date/time, mode, score, exact
+selections, non-default settings and one example mistake. The full mistake list
+is available only in the current results view. Settings includes sign-out,
+learning reset and account deletion. Reset retains both kinds of preferences;
+deletion also removes the authentication account and saved preferences. See
+[account operations](ACCOUNT_SETUP.md) and the public privacy page.
+
+## Development
+
+Use **Node.js 24.x** and **pnpm 12.16.1**, matching `package.json`.
 
 ```sh
-pnpm install
-pnpm dev       # local browser app; also available as pnpm start
-pnpm lint      # typecheck, ESLint, and formatting
-pnpm test      # catalogue, answer checking, and session regression checks
-pnpm build     # typecheck, validate catalogue, build in dist/
-pnpm preview   # serve the production build locally
-pnpm examples  # original standalone console examples
+pnpm install --frozen-lockfile
+pnpm dev                  # Vite; pnpm start is an alias
+pnpm lint                 # strict app typecheck, ESLint, Prettier
+pnpm test                 # pure logic, catalogue, repositories and deletion-handler tests
+pnpm build                # typecheck, catalogue validation, dist/
+pnpm preview              # serve the production build locally
+pnpm validate:catalogue    # catalogue-focused validation
+pnpm examples             # preserved course console examples
 ```
 
-Open the URL printed by Vite. Navigation uses `/practice`, `/progress`, `/history`,
-and `/settings`; Vercel routing is deployed and verified. See [DEPLOYMENT.md](DEPLOYMENT.md) for
-import settings and the publishing workflow. The public shell is live; practice features are still in development. Feature code lives
-under `src/modules/`, while `src/app/` owns composition and the global theme.
+Copy `.env.example` to `.env.local` for local account access. Only the Supabase
+project URL and **publishable** key belong in `VITE_` variables; these are public
+browser configuration. Never put the Google client secret or Supabase privileged
+keys in frontend code or Git. Without configuration the app supports guests.
 
-[BLUEPRINT.md](BLUEPRINT.md) is the approved development reference, including the
-16-category release inventory. [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)
-provides numbered steps and review checkpoints. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account
-and setup work for the project owner. At public release, update this README with
-the deployed URL and lasting usage/development documentation, migrate necessary
-blueprint details, and remove the temporary blueprint.
+## Architecture and maintenance
 
-Latest staging polish adds disjoint Basic/Advanced presets, English tense help,
-and remembered Progress display choices. Account persistence requires the SQL
-migration in [PROGRESS_PREFERENCES_SETUP.md](PROGRESS_PREFERENCES_SETUP.md).
+React + TypeScript + Vite + plain CSS; Vercel serves the SPA/static assets.
+Supabase Auth handles Google OAuth/PKCE. PostgreSQL RLS and atomic owner-scoped
+RPCs handle account data. A Supabase Edge Function performs authenticated account
+deletion with server-only credentials. No separate Fastify/application server is
+required. Learning statistics are client-reported personal practice data, not
+secure competitive grading.
+
+`src/app/` owns composition/navigation and the global visual layer. Feature
+modlets under `src/modules/` co-locate implementation, CSS, tests, docs and useful
+demos, with public entry points. Answer checking and question generation remain
+independent of React/network clients. Static verb JSON is canonical: no production
+AI calls or runtime conjugation engine. The catalogue loads first, then selected
+verb files; IDs and dataset versions are validated before use.
+
+Local-only `/dev/progress`, `/dev/history` and `/dev/account-controls` routes use
+labelled synthetic data. Their imports/routes are excluded from production.
+The green visual layer is currently applied after the older baseline styles;
+consolidating those styles is maintenance work, not a release requirement.
+
+- [Deployment and rollback](DEPLOYMENT.md): main → production; staging → review.
+- [Authentication setup](AUTH_SETUP.md): provider, keys, origins and Testing decision.
+- [Operations](OPERATIONS.md): schema, retention, migrations, incidents and costs.
+- [Tracking setup/tests](TRACKING_SETUP.md), [account controls](ACCOUNT_SETUP.md),
+  [Progress preferences](PROGRESS_PREFERENCES_SETUP.md).
+- [Release checks](RELEASE_CHECKLIST.md) and [owner checklist](MANUAL_SETUP.md).
+- [Implementation record](IMPLEMENTATION_PLAN.md): step 13 awaits owner release verification.
+
+Google OAuth deliberately remains **Testing**, requesting only basic identity
+scopes; branding verification is deferred. The owner has reviewed the current
+hosting/database plans and is happy with them. Desktop support is the release
+target; narrow-screen fallbacks exist, but a mobile polish pass is deferred.
+Spaced repetition, named custom presets, timers, leaderboards and full historical
+answer logs are outside release scope.
+
+Public support: **conjugadora.support@gmail.com**.

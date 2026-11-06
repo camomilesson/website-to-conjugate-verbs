@@ -56,7 +56,7 @@ export function App() {
         : (sections.find(
             (section) => `/${section.toLowerCase()}` === location.pathname,
           ) ?? "Practice")
-    document.title = `La Conjugadora · ${title}`
+    document.title = `Conjugadora · ${title}`
     if (
       previousPath.current !== location.pathname ||
       previousEntry.current !== entryKey
@@ -77,14 +77,14 @@ export function App() {
           to="/practice"
           className="wordmark"
           lang="es"
-          aria-label="La Conjugadora home"
+          aria-label="Conjugadora home"
           onClick={enterPractice}
         >
           <span className="brand-symbol" aria-hidden="true">
             á
           </span>
           <span>
-            La Conjugadora
+            Conjugadora
             <span className="brand-caption">SPANISH, ONE VERB AT A TIME</span>
           </span>
         </NavLink>
@@ -193,7 +193,7 @@ export function App() {
       </main>
       <footer className="site-footer">
         <span>
-          La Conjugadora <span aria-hidden="true">·</span> Made for practice.
+          Conjugadora <span aria-hidden="true">·</span> Made for practice.
         </span>
         <NavLink to="/privacy">Privacy &amp; your data</NavLink>
       </footer>

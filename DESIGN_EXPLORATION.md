@@ -1,8 +1,8 @@
 # Design exploration · Second nature
 
-Experimental branch: `codex/design-exploration`. Production and staging are
-unchanged. This is a working UI proposal, not an amendment to the approved
-blueprint until the owner reviews it.
+The owner approved this direction, reviewed it on staging and promoted it to
+production on 6 November 2026. Original branch: `codex/design-exploration`.
+This record preserves the accepted design rationale. Displayed name is Conjugadora.
 
 ## Direction
 
@@ -26,7 +26,7 @@ logic stays in place. Copy and markup change for presentation. No SQL migration,
 environment variable or server-function deployment is required.
 
 `src/app/design.css` is deliberately a final visual layer after the existing
-styles, keeping the experiment easy to compare/revert. If accepted, consolidate
+styles, keeping the experiment easy to compare/revert. When undertaking style maintenance, consolidate
 tokens and feature styles into the corresponding modlets rather than retaining
 two competing themes long-term. `theme.css` is retained as the baseline.
 
@@ -46,4 +46,4 @@ sync; underlying account behavior is not being redesigned.
 
 Feature previews retain the existing OAuth allow-list requirements. Do not
 broaden authentication access merely to preview styling; the established staging
-origin can be used after the design is approved for staging.
+origin is the configured origin for account review.

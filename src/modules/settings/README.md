@@ -5,6 +5,7 @@ and storage APIs; it does not import Practice internals. Save preferences commit
 the draft, Restore defaults only changes the draft until saved, and navigation
 without saving discards edits. Invalid/empty selections cannot be saved.
 
-Preferences currently live only in this browser. Account controls are explicitly
-unavailable until later milestones. The section does not save answers, incomplete
-sessions, or history.
+Guest choices stay browser-local; account choices sync through the auth preference
+repository. The view composes Google sign-in/sign-out and the account-controls
+modlet for confirmed learning reset/account deletion. It does not save answer
+queues or incomplete sessions. Progress display choices persist independently.
