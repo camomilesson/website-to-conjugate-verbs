@@ -1,9 +1,17 @@
 import { loadAccountControlsDemo } from "../modules/account-controls/index.ts"
 import { Privacy } from "../modules/privacy/index.ts"
 import { useAuth } from "../modules/auth/ui.ts"
+import type { MouseEvent } from "react"
 import { lazy, Suspense, useEffect, useRef } from "react"
-import { NavLink, Navigate, Route, Routes, useLocation } from "react-router"
-import { Practice } from "../modules/practice/index.ts"
+import {
+  NavLink,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+} from "react-router"
+import { Practice, practiceEntryKey } from "../modules/practice/index.ts"
 import { Progress, loadProgressDemo } from "../modules/progress/index.ts"
 import { History, loadHistoryDemo } from "../modules/history/index.ts"
 import { Settings } from "../modules/settings/index.ts"
@@ -21,8 +29,25 @@ const sections = ["Practice", "Progress", "History", "Settings"]
 export function App() {
   const { identityKey } = useAuth()
   const location = useLocation()
+  const navigate = useNavigate()
+  const entryKey = practiceEntryKey(location.state)
+  function enterPractice(event: MouseEvent<HTMLAnchorElement>) {
+    if (
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.altKey ||
+      event.shiftKey
+    )
+      return
+    event.preventDefault()
+    void navigate("/practice", {
+      state: { practiceEntry: crypto.randomUUID() },
+    })
+  }
   const main = useRef<HTMLElement>(null)
   const previousPath = useRef(location.pathname)
+  const previousEntry = useRef(entryKey)
 
   useEffect(() => {
     const title =
@@ -32,11 +57,15 @@ export function App() {
             (section) => `/${section.toLowerCase()}` === location.pathname,
           ) ?? "Practice")
     document.title = `La Conjugadora · ${title}`
-    if (previousPath.current !== location.pathname) {
+    if (
+      previousPath.current !== location.pathname ||
+      previousEntry.current !== entryKey
+    ) {
       main.current?.focus()
       previousPath.current = location.pathname
+      previousEntry.current = entryKey
     }
-  }, [location.pathname])
+  }, [location.pathname, entryKey])
 
   return (
     <div className="newspaper">
@@ -49,6 +78,7 @@ export function App() {
           className="wordmark"
           lang="es"
           aria-label="La Conjugadora home"
+          onClick={enterPractice}
         >
           La Conjugadora
         </NavLink>
@@ -57,7 +87,11 @@ export function App() {
         </p>
         <nav aria-label="Main navigation">
           {sections.map((section) => (
-            <NavLink key={section} to={`/${section.toLowerCase()}`}>
+            <NavLink
+              key={section}
+              to={`/${section.toLowerCase()}`}
+              onClick={section === "Practice" ? enterPractice : undefined}
+            >
               {section}
             </NavLink>
           ))}
@@ -96,7 +130,10 @@ export function App() {
               }
             />
           )}
-          <Route path="/practice" element={<Practice key={identityKey} />} />
+          <Route
+            path="/practice"
+            element={<Practice key={`${identityKey}:${entryKey}`} />}
+          />
           <Route path="/progress" element={<Progress key={identityKey} />} />
           <Route path="/history" element={<History key={identityKey} />} />
           <Route path="/settings" element={<Settings key={identityKey} />} />

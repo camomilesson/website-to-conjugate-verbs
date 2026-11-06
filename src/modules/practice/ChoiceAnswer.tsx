@@ -66,7 +66,7 @@ export function ChoiceAnswer({
       }}
     >
       <span id="choice-person" className="choice-person" lang="es">
-        {person}:
+        {person}
       </span>
       <div className="choice-list">
         {options.map((option, index) => (

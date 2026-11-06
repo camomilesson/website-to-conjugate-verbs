@@ -72,3 +72,19 @@ verb dialogs, number selection without submission, modal protection, typed digit
 accent preference surviving choice→typing starts, focus return and long text.
 Hosted account review remains the owner's checkpoint. No SQL or Edge Function
 redeployment is needed.
+
+## Additional prompt/navigation polish
+
+Question wording is verb in tense (mood), with lowercase display labels, no
+leading Conjugate or person colon, and spaced accent-colour emphasis. Typing
+help includes the accent policy; choice does not. Incorrect feedback labels the
+canonical answer as Correct answer; stored answers and scoring are unchanged.
+Guests get a quiet Settings link below quick starts to sign in for tracking.
+
+The App passes a fresh practiceEntry intent in router state for normal clicks on
+Practice/home. navigation.ts validates that state and decides whether an active
+session must confirm. The Practice component key changes only when navigation
+commits, so cancelling keeps the same queue/draft. Completed results and setup
+have no leave blocker. Main receives focus after the committed entry reset.
+Modified clicks preserve normal browser behaviour. Regression/browser checks
+cover same-tab re-entry as well as navigation to other tabs.

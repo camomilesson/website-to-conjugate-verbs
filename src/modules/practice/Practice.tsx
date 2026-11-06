@@ -1,3 +1,4 @@
+import { shouldConfirmPracticeLeave } from "./navigation.ts"
 import {
   retryableSubmission,
   submissionFor,
@@ -96,10 +97,8 @@ function PracticeSession({
   const input = useRef<HTMLInputElement>(null)
   const next = useRef<HTMLButtonElement>(null)
   const resultsHeading = useRef<HTMLHeadingElement>(null)
-  const blocker = useBlocker(
-    ({ currentLocation, nextLocation }) =>
-      state.phase !== "complete" &&
-      currentLocation.pathname !== nextLocation.pathname,
+  const blocker = useBlocker(({ currentLocation, nextLocation }) =>
+    shouldConfirmPracticeLeave(state.phase, currentLocation, nextLocation),
   )
   useEffect(() => {
     if (state.phase === "question") input.current?.focus()
@@ -279,7 +278,7 @@ function PracticeSession({
                           Your answer: <span lang="es">{answer.text}</span>
                         </p>
                         <p>
-                          Accepted:{" "}
+                          Correct answer:{" "}
                           <span lang="es">
                             {answer.question.answers.join(" / ")}
                           </span>
@@ -303,20 +302,19 @@ function PracticeSession({
             <button onClick={() => setLeaving(true)}>End practice</button>
           </div>
           <p className="field-note">
-            Question {state.index + 1} of {state.questions.length} ·{" "}
-            {policyLabel}
+            Question {state.index + 1} of {state.questions.length}
+            {config.mode === "choice" ? " · Choose one answer" : ""}
           </p>
           <div className="question-prompt">
             <h2>
-              Conjugate{" "}
               <strong className="prompt-verb" lang="es">
                 {question.infinitive}
               </strong>{" "}
               in{" "}
               <span className="prompt-tense" lang="es">
-                {category?.group} · {category?.label}
+                {category?.label.toLocaleLowerCase("es")} (
+                {category?.group.toLocaleLowerCase("es")})
               </span>
-              .
             </h2>
           </div>
           <form
@@ -343,7 +341,7 @@ function PracticeSession({
                     htmlFor="typed-answer"
                     lang="es"
                   >
-                    {PERSONS[question.person]}:
+                    {PERSONS[question.person]}
                   </label>
                   <input
                     id="typed-answer"
@@ -362,8 +360,8 @@ function PracticeSession({
                   />
                 </div>
                 <p id="answer-help" className="field-note">
-                  Include required reflexive pronouns or “no”, but omit the
-                  subject pronoun.
+                  {policyLabel} · Include required reflexive pronouns or “no”,
+                  but omit the subject pronoun.
                 </p>
               </>
             )}
@@ -424,7 +422,8 @@ function PracticeSession({
             <div className="answer-feedback" role="status">
               <h2>{result.correct ? "Correct" : "Incorrect"}</h2>
               <p>
-                Accepted: <span lang="es">{question.answers.join(" / ")}</span>
+                {result.correct ? "Accepted:" : "Correct answer:"}{" "}
+                <span lang="es">{question.answers.join(" / ")}</span>
               </p>
               {result.correct ? (
                 <p className="field-note">

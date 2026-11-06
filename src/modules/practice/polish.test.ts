@@ -1,3 +1,4 @@
+import { practiceEntryKey, shouldConfirmPracticeLeave } from "./navigation.ts"
 import test from "node:test"
 import assert from "node:assert/strict"
 import { choiceNumber, quickPreferences, practiceSummary } from "./polish.ts"
@@ -38,4 +39,22 @@ void test("number shortcuts select available options without repeats, modifiers,
       choiceNumber("2", 4, flags[0], flags[1], flags[2], flags[3]),
       null,
     )
+})
+
+void test("Practice tab re-entry confirms active sessions but resets completed/customization screens directly", () => {
+  const current = { pathname: "/practice", state: { practiceEntry: "old" } }
+  const next = { pathname: "/practice", state: { practiceEntry: "new" } }
+  assert.equal(shouldConfirmPracticeLeave("question", current, next), true)
+  assert.equal(shouldConfirmPracticeLeave("feedback", current, next), true)
+  assert.equal(shouldConfirmPracticeLeave("complete", current, next), false)
+  assert.equal(shouldConfirmPracticeLeave("question", current, current), false)
+  assert.equal(
+    shouldConfirmPracticeLeave("question", current, {
+      pathname: "/history",
+      state: null,
+    }),
+    true,
+  )
+  assert.equal(practiceEntryKey(null), "initial")
+  assert.equal(practiceEntryKey({ practiceEntry: 42 }), "initial")
 })

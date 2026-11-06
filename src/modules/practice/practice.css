@@ -325,3 +325,13 @@
 .answer-feedback p {
   overflow-wrap: anywhere;
 }
+
+.question-prompt .prompt-verb {
+  margin-inline-end: 0.35em;
+}
+.question-prompt .prompt-tense {
+  margin-inline-start: 0.35em;
+}
+.guest-progress-prompt {
+  margin-top: 0.3rem;
+}

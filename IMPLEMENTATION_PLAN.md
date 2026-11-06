@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 12.5 approved; additional polish pending** · 6 November 2026
+Status: **Step 12.5.4 prompt/navigation polish ready for staging review** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -351,6 +351,25 @@ use 1–4 then Enter, customize and back out, inspect alphabetical selection and
 compare the four tabs. No migration, environment or function redeploy is needed.
 Review notice wording using the existing disposable-account workflow if desired;
 no real resets/deletions were performed by the assistant.
+
+### 12.5.4 — Prompt clarity and Practice navigation
+
+**Status:** Ready for your review. Earlier 12.5.1–12.5.3 polish is approved/live.
+
+- Non-invasive guest link below quick starts: Sign in with Google to track
+  progress, leading to Settings.
+- Question prompt: verb in tense (mood), lowercase Spanish category/mood, no
+  Conjugate or trailing period, with spacing and existing accent-colour emphasis.
+- No colon after the person. Incorrect feedback says Correct answer. Typing's
+  accent policy shares the reflexive-pronoun help line; choice has no accent text.
+- Practice tab (and home wordmark) creates a new entry intent. Active question/
+  feedback states use the existing leave confirmation; cancellation preserves
+  the draft, while confirmation resets. Completed results and customization
+  return directly to the quick-start screen. New-tab/modifier clicks stay native.
+- The entry intent only commits after router confirmation; it remounts Practice
+  and focuses main without altering saved preferences, scoring or tracking.
+- 52 tests, lint/build, and local browser checks cover these prompt/navigation
+  states. No migration, environment or function deployment changes are needed.
 
 ## Step 13 — Public release and documentation handover
 
@@ -714,3 +733,12 @@ Step 13 has not started; awaiting hosted polish review.
 
 Owner approved production promotion and indicated more polish requests will
 follow. Hold step 13 until those requests are addressed.
+
+### Additional polish prepared — 6 November 2026
+
+Owner approved the prompt, guest sign-in link and Practice-tab reset behaviour.
+Branch codex/prompt-polish goes to staging, leaving main at the earlier approved
+polish. Browser checks cover same-tab active confirmation/cancel/leave, completed
+results without confirmation, customization discard, guest link destination,
+incorrect feedback, both answer modes and combined typing help. Step 13 stays
+on hold until the remaining polish is approved.

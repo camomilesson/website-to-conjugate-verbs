@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 import { practiceSummary, quickPreferences } from "./polish.ts"
 import type {
   PracticeMode,
@@ -277,6 +278,13 @@ export function PracticeSetup({
                   Customize practice
                 </button>
               </div>
+              {!isAccount && (
+                <p className="field-note guest-progress-prompt">
+                  <Link to="/settings">
+                    Sign in with Google to track progress
+                  </Link>
+                </p>
+              )}
             </>
           ) : (
             <>
