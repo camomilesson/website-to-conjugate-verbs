@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 11 ready for staging review** · 6 November 2026
+Status: **Step 11 approved; step 12 next** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -263,7 +263,7 @@ overall values, and no 0% for unattempted cells.
 
 ## Step 11 — Completed-test history
 
-**Status:** Ready for your review · **Depends on:** 10
+**Status:** Verified · **Depends on:** 10
 
 **Outcome:** History is a usable paginated list of real completed tests.
 
@@ -618,3 +618,7 @@ Owner verified the heatmap and approved promotion and proceeding to step 11.
 - 46 tests, lint, build and local browser pagination/filter/details/empty checks
   pass. No migration or environment changes. Owner's real-account review pending.
 - Step 12 (reset/deletion) has not started.
+
+### Step 11 approved — 6 November 2026
+
+Owner verified History and approved production promotion and step 12.
