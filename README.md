@@ -30,8 +30,8 @@ Prettier.
 The approved app includes 100 verbs across 16 categories, typing and multiple
 choice, Google sign-in, and account-synced practice preferences. Guest practice
 retains browser-local preferences. Production now saves submitted answers and completed practices. The verb-by-tense heatmap is live. Paginated History is live. Reset, account deletion and the public data explanation are approved and
-deployed. Step 12.5 on staging adds quick-start practice, numbered choices and consistent
-interface sizing. See [ACCOUNT_SETUP.md](ACCOUNT_SETUP.md) for account operations. See
+deployed. Quick-start practice, numbered choices and consistent interface sizing are
+approved for production. See [ACCOUNT_SETUP.md](ACCOUNT_SETUP.md) for account operations. See
 [TRACKING_SETUP.md](TRACKING_SETUP.md).
 See [AUTH_SETUP.md](AUTH_SETUP.md) for environment and provider configuration.
 Original console examples remain separate from the browser app.

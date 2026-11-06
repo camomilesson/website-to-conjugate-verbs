@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 12.5 Polish ready for staging review** · 6 November 2026
+Status: **Step 12.5 approved; additional polish pending** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -311,7 +311,7 @@ must create a fresh profile without the deleted learning data.
 
 ## Step 12.5 — Polish
 
-**Status:** Ready for your review · **Depends on:** 12
+**Status:** Verified · **Depends on:** 12
 
 User approved this additional checkpoint before release work.
 
@@ -709,3 +709,8 @@ checks. Work on codex/polish goes to staging; main remains approved step 12.
 All four tabs measured at 1280px: 56px masthead, 28.8px h1, 22.4px page padding
 and 1144px content width. All backend/auth ownership safeguards remain in place.
 Step 13 has not started; awaiting hosted polish review.
+
+### Step 12.5 approved — 6 November 2026
+
+Owner approved production promotion and indicated more polish requests will
+follow. Hold step 13 until those requests are addressed.
