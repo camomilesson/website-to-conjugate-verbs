@@ -31,8 +31,8 @@ review the 100-verb guest experience without doing any of this first.
    ID and client secret there. Keep the secret out of Git, Vercel VITE variables,
    and chat.
 4. In Supabase Authentication → URL Configuration, set Site URL to
-   `https://la-conjugadora.vercel.app`. Add application redirect URLs:
-   - `https://la-conjugadora.vercel.app/settings`
+   `https://conjugadora.vercel.app`. Add application redirect URLs:
+   - `https://conjugadora.vercel.app/settings`
    - The exact stable branch preview's `https://…vercel.app/settings` URL, obtained
      via Visit in Vercel (the dashboard URL is not an application redirect).
    - Optionally `http://localhost:5173/settings` or

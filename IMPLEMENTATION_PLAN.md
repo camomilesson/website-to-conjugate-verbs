@@ -376,7 +376,7 @@ Public deployment remains incomplete until account setup/import and URL checks.
 
 ### Step 2 — Verified (5 November 2026)
 
-- Production URL: https://la-conjugadora.vercel.app
+- Production URL: https://conjugadora.vercel.app
 - User confirmed it works on their end.
 - Independent unauthenticated HTTP checks: root and all four direct app routes
   return 200; missing /assets/ and /data/ files return 404 rather than app HTML.
@@ -525,3 +525,10 @@ and matching vertical centres.
   165 KB gzip; Vite reports its 500 KB chunk advisory. Browser checks covered
   all/all typing, 9,400-choice eligibility, correct choice scoring, verb search,
   and unconfigured account Settings. Hosted OAuth and SQL tests remain pending.
+
+### Hosting rename — 6 November 2026
+
+Owner requested Vercel project slug `conjugadora`. Deployment and auth setup
+references now target `https://conjugadora.vercel.app`; dashboard rename, domain
+assignment, and Supabase redirects still need owner confirmation. App display
+name remains La Conjugadora.

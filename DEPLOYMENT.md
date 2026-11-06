@@ -1,6 +1,7 @@
 # Vercel deployment
 
-Production: https://la-conjugadora.vercel.app — verified 5 November 2026.
+Target production URL: https://conjugadora.vercel.app — project/domain rename
+and public access verification pending (6 November 2026).
 
 ## First import
 
@@ -10,7 +11,7 @@ Production: https://la-conjugadora.vercel.app — verified 5 November 2026.
 2. Open [New Project](https://vercel.com/new) and import
    `camomilesson/website-to-conjugate-verbs` from GitHub. Authorise the Vercel GitHub
    integration for this repository when prompted.
-3. Set the project name to `la-conjugadora` if available (an alternative slug is
+3. Set the project name to `conjugadora` if available (an alternative slug is
    fine). Keep the repository root as Root Directory, framework **Vite**, and
    choose Node.js **24.x** in project settings.
 4. The repository's `vercel.json` sets installation to
@@ -56,3 +57,19 @@ Release smoke check:
 - [Vercel Vite guidance](https://vercel.com/docs/frameworks/frontend/vite)
 - [Vercel project configuration](https://vercel.com/docs/project-configuration)
 - [Vercel environments](https://vercel.com/docs/deployments/environments)
+
+## Project rename checkpoint
+
+Requested Vercel slug: `conjugadora`; display name remains La Conjugadora.
+In Vercel Project Settings → General, save the new project name. Then check
+Settings → Domains and ensure `conjugadora.vercel.app` is assigned to this
+project; changing the name alone must not be treated as domain verification.
+Keep the existing domain until the replacement works, if Vercel allows it.
+Update Supabase Site URL to `https://conjugadora.vercel.app` and add
+`https://conjugadora.vercel.app/settings` to allowed redirects. Recheck preview
+redirects against the actual branch URL. The Google callback still points to
+Supabase. Environment variables stay on the same Vercel project.
+
+The auth client derives its return URL from the browser origin. The local
+preference key retains its existing name to preserve saved settings on existing
+origins; moving domains creates separate browser storage.

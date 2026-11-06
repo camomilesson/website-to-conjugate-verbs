@@ -1,6 +1,6 @@
 # La Conjugadora
 
-[Open La Conjugadora](https://la-conjugadora.vercel.app)
+[Open La Conjugadora](https://conjugadora.vercel.app)
 
 A desktop-first Spanish conjugation practice website with an old-newspaper
 visual style, developed for the Advanced JavaScript and TypeScript course at
