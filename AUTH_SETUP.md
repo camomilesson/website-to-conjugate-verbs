@@ -33,7 +33,7 @@ review the 100-verb guest experience without doing any of this first.
 4. In Supabase Authentication → URL Configuration, set Site URL to
    `https://conjugadora.vercel.app`. Add application redirect URLs:
    - `https://conjugadora.vercel.app/settings`
-   - The exact stable branch preview's `https://…vercel.app/settings` URL, obtained
+   - The permanent `staging` branch's stable preview `https://…vercel.app/settings` URL, obtained
      via Visit in Vercel (the dashboard URL is not an application redirect).
    - Optionally `http://localhost:5173/settings` or
      `http://127.0.0.1:5173/settings`, matching your actual local origin.
@@ -51,7 +51,9 @@ Redeploy the branch so Vite embeds the configuration. No other environment
 variables are needed for this step. These two values are browser configuration;
 row-level security protects the data. Local development can use `.env.local`
 based on `.env.example`, then restart Vite. Do not commit your environment file.
-After review, configure Production and redeploy/promote the approved branch.
+Use the stable staging URL for all account reviews; do not register every feature
+branch. Preview environment variables must apply to `staging` as well. After owner
+approval, merge staging into main for production.
 Do not enable production sign-in before applying the migration and redirects.
 
 ## 4. Checks before step 8 is approved

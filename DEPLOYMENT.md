@@ -25,8 +25,13 @@ and public access verification pending (6 November 2026).
 
 - `main` is production; pushes trigger Vercel production deployments after the
   repository integration is connected.
-- Future work uses `codex/` feature branches with Vercel review deployments.
-  Review a step before merging it into `main` and promoting it to production.
+- Future work uses `codex/` feature branches, then merges into the permanent
+  `staging` branch for review. Register staging’s stable branch URL once with
+  Google/Supabase and use it for authentication testing. Feature preview URLs
+  need no OAuth setup unless explicitly required.
+- After owner approval, merge reviewed staging changes into `main` for production.
+  `staging` remains a Preview environment; do not change Vercel’s production
+  branch from `main`.
 - This first deployment is authorised to commit/push the prepared shell to main.
 - Production must be available without a Vercel login. Check the production URL
   in a private window; preview access can remain restricted independently.

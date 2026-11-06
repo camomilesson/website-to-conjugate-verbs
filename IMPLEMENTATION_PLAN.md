@@ -532,3 +532,12 @@ Owner requested Vercel project slug `conjugadora`. Deployment and auth setup
 references now target `https://conjugadora.vercel.app`; dashboard rename, domain
 assignment, and Supabase redirects still need owner confirmation. App display
 name remains La Conjugadora.
+
+### Permanent staging workflow — 6 November 2026
+
+Owner approved creating `staging` from `codex/catalogue-and-auth`, including the
+100-verb catalogue, account integration, and project rename references. Future
+feature branches merge into staging for review, then approved work goes to main.
+Register staging’s stable Vercel branch URL in Google and Supabase once. Main
+remains production; staging uses Preview environment variables. Hosted OAuth
+verification remains pending manual configuration.
