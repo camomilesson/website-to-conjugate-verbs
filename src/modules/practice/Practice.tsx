@@ -373,7 +373,17 @@ function PracticeSession({
             <h1 id="session-title">{modeLabel} practice</h1>
             <button onClick={() => setLeaving(true)}>End practice</button>
           </div>
-          <p className="field-note">
+          <div
+            className="session-progress"
+            aria-label={`Question ${state.index + 1} of ${state.questions.length}`}
+          >
+            <span
+              style={{
+                width: `${((state.index + 1) / state.questions.length) * 100}%`,
+              }}
+            />
+          </div>
+          <p className="field-note question-counter">
             Question {state.index + 1} of {state.questions.length}
             {config.mode === "choice" ? " · Choose one answer" : ""}
           </p>

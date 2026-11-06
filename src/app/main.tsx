@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router"
 import { AuthProvider } from "../modules/auth/ui.ts"
 import { App } from "./App.tsx"
 import "./theme.css"
+import "./design.css"
 
 const root = document.getElementById("root")
 if (!root) throw new Error("Application root is missing.")

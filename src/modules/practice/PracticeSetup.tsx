@@ -223,11 +223,22 @@ export function PracticeSetup({
 
   return (
     <section
-      className="page-section setup-page"
+      className={`page-section setup-page${customizing ? "" : " practice-home"}`}
       aria-labelledby="practice-title"
     >
+      {!customizing && (
+        <p className="eyebrow">A FEW MINUTES. A LITTLE MORE FLUENT.</p>
+      )}
       <h1 id="practice-title" ref={heading} tabIndex={-1}>
-        {customizing ? "Customize practice" : "Practice"}
+        {customizing ? (
+          "Customize practice"
+        ) : (
+          <>
+            Make it
+            <br />
+            <em>second nature.</em>
+          </>
+        )}
       </h1>
       {error ? (
         <div role="alert">
@@ -240,38 +251,80 @@ export function PracticeSetup({
         <>
           {!customizing ? (
             <>
-              <p className="quick-summary">{practiceSummary(preferences)}</p>
-              <p className="field-note">
-                Typing:{" "}
-                {preferences.accentPolicy === "strict"
-                  ? "accents required"
-                  : "accents ignored"}
-                .
+              <p className="practice-intro">
+                Less translating in your head. More knowing what comes next.
               </p>
+              <div className="saved-setup">
+                <span className="eyebrow">YOUR CURRENT SETUP</span>
+                <p className="quick-summary">{practiceSummary(preferences)}</p>
+                <p className="field-note">
+                  Typing:{" "}
+                  {preferences.accentPolicy === "strict"
+                    ? "accents required"
+                    : "accents ignored"}
+                  .
+                </p>
+              </div>
               <div className="quick-practice-actions">
                 <button
-                  className="primary-button"
+                  className="practice-card choice-card"
+                  aria-label="Multiple-choice practice"
                   disabled={loading || learning.loading || !!learning.error}
                   onClick={() => {
                     void start("choice")
                   }}
                 >
-                  {loading && startingMode === "choice"
-                    ? "Starting practice…"
-                    : "Multiple-choice practice"}
+                  <span className="card-topline">
+                    <span>01 / RECOGNIZE</span>
+                    <span aria-hidden="true">↗</span>
+                  </span>
+                  <span className="card-art choice-art" aria-hidden="true">
+                    <span>a</span>
+                    <span>á</span>
+                    <span>a</span>
+                  </span>
+                  <strong>
+                    {loading && startingMode === "choice"
+                      ? "Starting…"
+                      : "Multiple choice"}
+                  </strong>
+                  <span className="card-description">
+                    Find the right form. Build your instinct.
+                  </span>
+                  <span className="card-action">
+                    Start practice <span aria-hidden="true">→</span>
+                  </span>
                 </button>
                 <button
-                  className="primary-button"
+                  className="practice-card typing-card"
+                  aria-label="Typing practice"
                   disabled={loading || learning.loading || !!learning.error}
                   onClick={() => {
                     void start("typing")
                   }}
                 >
-                  {loading && startingMode === "typing"
-                    ? "Starting practice…"
-                    : "Typing practice"}
+                  <span className="card-topline">
+                    <span>02 / RECALL</span>
+                    <span aria-hidden="true">↗</span>
+                  </span>
+                  <span className="card-art typing-art" aria-hidden="true">
+                    habl<span>o</span>
+                    <i />
+                  </span>
+                  <strong>
+                    {loading && startingMode === "typing"
+                      ? "Starting…"
+                      : "Typing"}
+                  </strong>
+                  <span className="card-description">
+                    Make it come to you. Write the answer.
+                  </span>
+                  <span className="card-action">
+                    Start practice <span aria-hidden="true">→</span>
+                  </span>
                 </button>
                 <button
+                  className="customize-action"
                   ref={customizeButton}
                   disabled={loading}
                   onClick={() => {
@@ -280,7 +333,7 @@ export function PracticeSetup({
                     setStartError("")
                   }}
                 >
-                  Customize practice
+                  Customize practice <span aria-hidden="true">↗</span>
                 </button>
               </div>
               {!isAccount && (

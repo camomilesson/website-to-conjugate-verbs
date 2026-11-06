@@ -15,7 +15,11 @@ export function Progress() {
   }
   return (
     <section className="page-section" aria-labelledby="progress-title">
+      <p className="eyebrow">THE BIG PICTURE</p>
       <h1 id="progress-title">Progress</h1>
+      <p className="page-intro">
+        See what sticks. Find what needs another look.
+      </p>
       {guest && (
         <p>
           <Link to="/settings">Sign in</Link> to save progress. Guest answers

@@ -5,9 +5,11 @@ export function History() {
   const history = useHistory()
   return (
     <section className="page-section" aria-labelledby="history-title">
+      <p className="eyebrow">ONE SESSION AT A TIME</p>
       <h1 id="history-title">History</h1>
+      <p className="page-intro">Every practice is a little progress.</p>
       {history.guest ? (
-        <p>
+        <p className="empty-state">
           <Link to="/settings">Sign in</Link> to save completed practices. Guest
           results are not stored.
         </p>

@@ -27,7 +27,7 @@ const AccountControlsDemo = import.meta.env.DEV
 const sections = ["Practice", "Progress", "History", "Settings"]
 
 export function App() {
-  const { identityKey } = useAuth()
+  const { identityKey, user } = useAuth()
   const location = useLocation()
   const navigate = useNavigate()
   const entryKey = practiceEntryKey(location.state)
@@ -68,7 +68,7 @@ export function App() {
   }, [location.pathname, entryKey])
 
   return (
-    <div className="newspaper">
+    <div className="study-app">
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -80,7 +80,13 @@ export function App() {
           aria-label="La Conjugadora home"
           onClick={enterPractice}
         >
-          La Conjugadora
+          <span className="brand-symbol" aria-hidden="true">
+            á
+          </span>
+          <span>
+            La Conjugadora
+            <span className="brand-caption">SPANISH, ONE VERB AT A TIME</span>
+          </span>
         </NavLink>
         <p className="masthead-subtitle" lang="es">
           Practica los verbos en español
@@ -92,10 +98,55 @@ export function App() {
               to={`/${section.toLowerCase()}`}
               onClick={section === "Practice" ? enterPractice : undefined}
             >
+              <span className="nav-symbol" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {section === "Practice" ? (
+                    <path d="M6 18 18 6M6 6h12v12" />
+                  ) : section === "Progress" ? (
+                    <path d="M5 19V12M12 19V5M19 19V9" />
+                  ) : section === "History" ? (
+                    <path d="M4 10a8 8 0 1 1 1 8M4 5v5h5M12 8v5l3 2" />
+                  ) : (
+                    <>
+                      <path d="M4 7h16M4 17h16" />
+                      <circle cx="9" cy="7" r="2" fill="currentColor" />
+                      <circle cx="15" cy="17" r="2" fill="currentColor" />
+                    </>
+                  )}
+                </svg>
+              </span>
               {section}
             </NavLink>
           ))}
         </nav>
+        <div className="sidebar-note">
+          <span className="sidebar-note-mark" aria-hidden="true">
+            a → á
+          </span>
+          <p>
+            A little practice.
+            <br />A little more natural.
+          </p>
+        </div>
+        <NavLink to="/settings" className="account-link">
+          <span className="account-avatar" aria-hidden="true">
+            {user ? "✓" : "G"}
+          </span>
+          <span>
+            {user ? "Your account" : "Guest workspace"}
+            <small>
+              {user ? "Learning, saved." : "Sign in to save your progress"}
+            </small>
+          </span>
+          <span aria-hidden="true">↗</span>
+        </NavLink>
       </header>
       <main id="main" ref={main} tabIndex={-1}>
         <Routes>
@@ -141,6 +192,9 @@ export function App() {
         </Routes>
       </main>
       <footer className="site-footer">
+        <span>
+          La Conjugadora <span aria-hidden="true">·</span> Made for practice.
+        </span>
         <NavLink to="/privacy">Privacy &amp; your data</NavLink>
       </footer>
     </div>

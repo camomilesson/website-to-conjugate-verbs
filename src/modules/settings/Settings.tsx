@@ -52,6 +52,7 @@ export function Settings() {
       className="page-section setup-page"
       aria-labelledby="settings-title"
     >
+      <p className="eyebrow">MAKE YOURSELF AT HOME</p>
       <h1 id="settings-title">Settings</h1>
       <p className="field-note">
         Defaults for your next practice.{" "}
