@@ -20,3 +20,8 @@ checkpoint. Pure configuration/repository tests run without credentials. Actual
 OAuth and RLS checks remain pending until that checklist is completed. SDK DOM
 declaration compatibility requires TypeScript skipLibCheck; strict checking of
 application code remains enabled.
+
+Reset acknowledgements increment the data revision embedded in identityKey and
+notify same-browser account tabs. This invalidates active practices and cached
+views without importing guest data. Server generation checks enforce correctness
+when other devices cannot receive the broadcast.

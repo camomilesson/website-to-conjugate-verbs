@@ -113,3 +113,11 @@ main:focus {
     flex-wrap: wrap;
   }
 }
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}

@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 11 approved; step 12 next** · 6 November 2026
+Status: **Step 12 prepared; server setup and account review pending** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -286,7 +286,7 @@ or enough completed tests, without inserting fake production history.
 
 ## Step 12 — Reset and account deletion
 
-**Status:** Not started · **Depends on:** 11
+**Status:** Prepared; migration/function deployment and review pending · **Depends on:** 11
 
 **Outcome:** Users can clear learning data or delete their account safely.
 
@@ -622,3 +622,31 @@ Owner verified the heatmap and approved promotion and proceeding to step 11.
 ### Step 11 approved — 6 November 2026
 
 Owner verified History and approved production promotion and step 12.
+
+### Step 12 — Account controls prepared, 6 November 2026
+
+- Approved History promoted to main. Account controls on codex/account-controls
+  go to staging; no live reset/deletion has been performed by the assistant.
+- Reset SQL clears aggregates, history, runs/receipts and retains preferences.
+  Generation locks reject stale starts/answers; reset IDs deduplicate lost replies
+  even after new answers. Legacy clients remain compatible before their first
+  reset and fail closed after reset; no primary-user data was touched.
+- Server-only deletion function remotely verifies the bearer token, binds its
+  target to that owner and hard-deletes through the admin API. FK cascades cover
+  six public account tables. Explicit typed confirmation, failures and local
+  sign-out; no privileged credentials in frontend code.
+- Same-browser data-reset notification invalidates active queues/views; server
+  checks enforce cross-device safety. Public /privacy explanation uses owner-
+  supplied contact conjugadora.support@gmail.com.
+- ACCOUNT_SETUP.md is the owner migration/deployment and disposable-account test
+  checkpoint. SQL and deletion-handler tests pass locally; deployable function
+  passes Deno check. Hosted deployment and destructive review remain pending.
+- Local synthetic UI checks: Cancel makes no request, reset retry reuses its ID,
+  exact DELETE text is required, and data/privacy route renders. No real accounts
+  or production data were reset/deleted. Step 13 has not started.
+
+- Validation: 49 tests, lint and production build pass; all three migrations and
+  durable/reset/deletion-cascade SQL checks execute in local PostgreSQL/WASM.
+  Deno typecheck passes for the server function. Production assets exclude admin
+  credential identifiers, handler code and development fixture routes. Existing
+  bundle-size advisory remains (~174 KB gzip). Hosted checks remain pending.

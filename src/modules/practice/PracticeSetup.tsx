@@ -1,3 +1,4 @@
+import { useLearningGeneration } from "../account-controls/index.ts"
 import { useAuth } from "../auth/ui.ts"
 import {
   practiceMetadata,
@@ -26,6 +27,7 @@ export function PracticeSetup({
   ) => void
 }) {
   const auth = useAuth()
+  const learning = useLearningGeneration()
   const {
     catalogue,
     preferences,
@@ -115,6 +117,7 @@ export function PracticeSetup({
   const validLength = Number.isSafeInteger(Number(length)) && Number(length) > 0
   async function start() {
     if (
+      (auth.user && !learning.generation) ||
       !catalogue ||
       !preferences ||
       loading ||
@@ -162,6 +165,7 @@ export function PracticeSetup({
               practiceMetadata(config, preferences),
               catalogue.datasetVersion,
               questions.length,
+              learning.generation!,
             )
           : null
         if (controller.signal.aborted) return
@@ -246,10 +250,24 @@ export function PracticeSetup({
           {!validLength && (
             <p role="status">Choose a positive whole number of questions.</p>
           )}
+          {learning.loading && <p role="status">Checking learning data…</p>}
+          {learning.error && (
+            <div role="alert">
+              <p>{learning.error}</p>
+              <button onClick={learning.retry}>Retry learning data</button>
+            </div>
+          )}
           {startError && <p role="alert">{startError}</p>}
           <button
             className="primary-button"
-            disabled={loading || choiceLoading || !available || !validLength}
+            disabled={
+              loading ||
+              choiceLoading ||
+              learning.loading ||
+              !!learning.error ||
+              !available ||
+              !validLength
+            }
             onClick={() => {
               void start()
             }}

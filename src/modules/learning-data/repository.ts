@@ -15,12 +15,14 @@ export async function startTrackedPractice(
   metadata: PracticeMetadata,
   datasetVersion: string,
   expected: number,
+  generation: string,
 ): Promise<TrackingContext> {
   const response = await client().rpc("start_practice", {
     p_configuration: metadata,
     p_dataset_version: datasetVersion,
     p_defaults_version: DEFAULTS_VERSION,
     p_expected: expected,
+    p_generation: generation,
   })
   const data: unknown = response.data
   const error = response.error

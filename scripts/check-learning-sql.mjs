@@ -19,6 +19,8 @@ try {
     "supabase/migrations/202611050001_user_preferences.sql",
     "supabase/migrations/202611060001_durable_practice.sql",
     "supabase/tests/durable_practice.sql",
+    "supabase/migrations/202611060002_account_controls.sql",
+    "supabase/tests/account_controls.sql",
   ]) {
     await db.exec(await readFile(file, "utf8"))
     console.log(`PASS ${file}`)

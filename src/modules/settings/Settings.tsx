@@ -1,3 +1,4 @@
+import { DataControls } from "../account-controls/index.ts"
 import { AccountControls } from "../auth/ui.ts"
 import { useState } from "react"
 import {
@@ -119,6 +120,7 @@ export function Settings() {
           </p>
         </>
       )}
+      <DataControls />
     </section>
   )
 }

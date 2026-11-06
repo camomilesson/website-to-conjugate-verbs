@@ -23,8 +23,7 @@ export function AccountControls() {
             Sign out
           </button>
           <p className="field-note">
-            Your preferences and submitted answers sync to this account. Account
-            deletion controls are coming in a later step.
+            Your preferences and submitted answers sync to this account.
           </p>
         </>
       ) : (

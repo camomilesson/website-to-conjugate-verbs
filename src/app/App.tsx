@@ -1,3 +1,5 @@
+import { loadAccountControlsDemo } from "../modules/account-controls/index.ts"
+import { Privacy } from "../modules/privacy/index.ts"
 import { useAuth } from "../modules/auth/ui.ts"
 import { lazy, Suspense, useEffect, useRef } from "react"
 import { NavLink, Navigate, Route, Routes, useLocation } from "react-router"
@@ -10,6 +12,10 @@ const ProgressDemo = import.meta.env.DEV ? lazy(loadProgressDemo) : null
 
 const HistoryDemo = import.meta.env.DEV ? lazy(loadHistoryDemo) : null
 
+const AccountControlsDemo = import.meta.env.DEV
+  ? lazy(loadAccountControlsDemo)
+  : null
+
 const sections = ["Practice", "Progress", "History", "Settings"]
 
 export function App() {
@@ -20,9 +26,11 @@ export function App() {
 
   useEffect(() => {
     const title =
-      sections.find(
-        (section) => `/${section.toLowerCase()}` === location.pathname,
-      ) ?? "Practice"
+      location.pathname === "/privacy"
+        ? "Privacy & your data"
+        : (sections.find(
+            (section) => `/${section.toLowerCase()}` === location.pathname,
+          ) ?? "Practice")
     document.title = `La Conjugadora · ${title}`
     if (previousPath.current !== location.pathname) {
       main.current?.focus()
@@ -57,6 +65,17 @@ export function App() {
       </header>
       <main id="main" ref={main} tabIndex={-1}>
         <Routes>
+          {AccountControlsDemo && (
+            <Route
+              path="/dev/account-controls"
+              element={
+                <Suspense fallback={<p>Loading demo…</p>}>
+                  <AccountControlsDemo />
+                </Suspense>
+              }
+            />
+          )}
+          <Route path="/privacy" element={<Privacy />} />
           {HistoryDemo && (
             <Route
               path="/dev/history"
@@ -84,6 +103,9 @@ export function App() {
           <Route path="*" element={<Navigate to="/practice" replace />} />
         </Routes>
       </main>
+      <footer className="site-footer">
+        <NavLink to="/privacy">Privacy &amp; your data</NavLink>
+      </footer>
     </div>
   )
 }

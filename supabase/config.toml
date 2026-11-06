@@ -1,0 +1,6 @@
+project_id = "conjugadora"
+
+[functions.delete-account]
+# The handler verifies the bearer token remotely with auth.getUser and binds the
+# target to that verified user. This supports current publishable API keys.
+verify_jwt = false

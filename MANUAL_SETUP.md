@@ -82,3 +82,11 @@ Google redirects, and two-account verification. Guest review needs no setup.
 [TRACKING_SETUP.md](TRACKING_SETUP.md) gives the new migration to run in the
 existing project, disposable-project SQL checks, and browser review cases.
 No new account, OAuth client, key, or Vercel variable is needed.
+
+## Step 12 checkpoint
+
+Public support contact supplied: conjugadora.support@gmail.com.
+[ACCOUNT_SETUP.md](ACCOUNT_SETUP.md) covers the new generation/reset migration,
+server-only deletion function, allowed origins, and disposable-account checks.
+No real reset/deletion is authorised for the assistant to execute by this setup
+checklist; the owner performs the final irreversible test confirmations.

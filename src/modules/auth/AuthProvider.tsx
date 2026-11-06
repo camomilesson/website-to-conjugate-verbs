@@ -8,6 +8,7 @@ interface AuthState {
   error: string | null
 }
 interface AuthContextValue extends AuthState {
+  invalidateLearningData: () => void
   identityKey: string
   signIn: () => Promise<void>
   signOut: () => Promise<void>
@@ -20,6 +21,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     user: null,
     error: null,
   })
+  const [dataRevision, setDataRevision] = useState(0)
   const [attempt, setAttempt] = useState(0)
   const [actionError, setActionError] = useState<string | null>(null)
   const actionPending = useRef(false)
@@ -83,6 +85,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       subscription.unsubscribe()
     }
   }, [attempt])
+  useEffect(() => {
+    if (!state.user || typeof BroadcastChannel === "undefined") return
+    const channel = new BroadcastChannel("conjugadora-account-data")
+    channel.onmessage = (event: MessageEvent<unknown>) => {
+      const value = event.data
+      if (
+        value &&
+        typeof value === "object" &&
+        "userId" in value &&
+        value.userId === state.user?.id
+      )
+        setDataRevision((n) => n + 1)
+    }
+    return () => channel.close()
+  }, [state.user?.id])
+  function invalidateLearningData() {
+    setDataRevision((n) => n + 1)
+    if (state.user && typeof BroadcastChannel !== "undefined") {
+      const channel = new BroadcastChannel("conjugadora-account-data")
+      channel.postMessage({ userId: state.user.id })
+      channel.close()
+    }
+  }
   async function signIn() {
     if (!supabase || actionPending.current) return
     actionPending.current = true
@@ -123,13 +148,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const identityKey =
     state.status === "loading" || state.status === "error"
       ? state.status
-      : (state.user?.id ?? "guest")
+      : state.user
+        ? `${state.user.id}:${dataRevision}`
+        : "guest"
   return (
     <AuthContext.Provider
       value={{
         ...state,
         error: actionError ?? state.error,
         identityKey,
+        invalidateLearningData,
         signIn,
         signOut,
         retry: () => {

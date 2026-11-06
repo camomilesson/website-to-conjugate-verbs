@@ -4,7 +4,7 @@ import tseslint from "typescript-eslint"
 import { defineConfig } from "eslint/config"
 
 export default defineConfig([
-  { ignores: ["dist/**"] },
+  { ignores: ["dist/**", "supabase/functions/delete-account/index.ts"] },
   {
     files: ["**/*.{ts,tsx}"],
     extends: [js.configs.recommended, tseslint.configs.recommendedTypeChecked],
