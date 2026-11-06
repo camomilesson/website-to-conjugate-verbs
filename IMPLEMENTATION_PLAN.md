@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 7 ready for review; step 8 awaiting manual setup** · 5 November 2026
+Status: **Steps 7–8 approved; step 9 next** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -162,7 +162,7 @@ expect it on the next setup. Existing active questions must remain unchanged.
 
 ## Step 7 — Full 100-verb catalogue
 
-**Status:** Ready for your review · **Depends on:** 6
+**Status:** Verified · **Depends on:** 6
 
 **Outcome:** Both modes support the full release catalogue.
 
@@ -187,7 +187,7 @@ no missing-answer questions.
 
 ## Step 8 — Google accounts and synced preferences
 
-**Status:** Implemented; manual setup and hosted verification pending · **Depends on:** 7
+**Status:** Verified · **Depends on:** 7
 
 **Outcome:** Public Google sign-in works; account preferences follow the user.
 
@@ -541,3 +541,13 @@ feature branches merge into staging for review, then approved work goes to main.
 Register staging’s stable Vercel branch URL in Google and Supabase once. Main
 remains production; staging uses Preview environment variables. Hosted OAuth
 verification remains pending manual configuration.
+
+### Steps 7–8 approved — 6 November 2026
+
+Owner approved the catalogue and account work after reporting successful Google
+sign-in on the stable staging URL, retained sessions/preferences, cross-device
+sync (phone), and independent preferences while switching between two accounts.
+Owner ran the migration and complete ownership SQL test in a separate disposable
+Supabase project: both returned Success, no rows. This verifies the migration in
+isolation, not an automated audit of the primary project's live policies.
+Staging is approved for production promotion. Step 9 remains the next checkpoint.

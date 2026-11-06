@@ -27,10 +27,10 @@ Prettier.
 
 ## Current status and development reference
 
-Production includes typing, multiple choice, and remembered browser preferences.
-The steps 7–8 review branch expands this to 100 verbs and prepares Google accounts
-and synced preferences. Authentication still needs owner setup; see
-[AUTH_SETUP.md](AUTH_SETUP.md). Progress and History persistence come later.
+The approved app includes 100 verbs across 16 categories, typing and multiple
+choice, Google sign-in, and account-synced practice preferences. Guest practice
+retains browser-local preferences. Progress and History persistence come next.
+See [AUTH_SETUP.md](AUTH_SETUP.md) for environment and provider configuration.
 Original console examples remain separate from the browser app.
 
 Use Node.js 24+ and pnpm 12.16.1:

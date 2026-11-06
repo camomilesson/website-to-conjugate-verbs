@@ -1,7 +1,7 @@
 # Vercel deployment
 
-Target production URL: https://conjugadora.vercel.app — project/domain rename
-and public access verification pending (6 November 2026).
+Production: https://conjugadora.vercel.app — owner confirmed the renamed domain
+and approved steps 7–8 on 6 November 2026.
 
 ## First import
 
