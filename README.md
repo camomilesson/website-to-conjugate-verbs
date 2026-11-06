@@ -29,7 +29,9 @@ Prettier.
 
 The approved app includes 100 verbs across 16 categories, typing and multiple
 choice, Google sign-in, and account-synced practice preferences. Guest practice
-retains browser-local preferences. Progress and History persistence come next.
+retains browser-local preferences. Step 9 on staging adds submitted-answer tracking and initial Progress/History
+views; its new migration and hosted review are pending. See
+[TRACKING_SETUP.md](TRACKING_SETUP.md).
 See [AUTH_SETUP.md](AUTH_SETUP.md) for environment and provider configuration.
 Original console examples remain separate from the browser app.
 

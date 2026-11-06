@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Steps 7–8 approved; step 9 next** · 6 November 2026
+Status: **Step 9 prepared; database setup and staging review pending** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -213,7 +213,7 @@ account's preferences.
 
 ## Step 9 — Durable answer tracking and test completion
 
-**Status:** Not started · **Depends on:** 8
+**Status:** Prepared; migration and hosted review pending · **Depends on:** 8
 
 **Outcome:** Every acknowledged signed-in answer updates progress; completed
 tests create exactly one history record. Data is inspectable before the final UI.
@@ -551,3 +551,25 @@ Owner ran the migration and complete ownership SQL test in a separate disposable
 Supabase project: both returned Success, no rows. This verifies the migration in
 isolation, not an automated audit of the primary project's live policies.
 Staging is approved for production promotion. Step 9 remains the next checkpoint.
+
+### Step 9 — Durable answers prepared, 6 November 2026
+
+- Branch codex/durable-practice, to staging for review; production remains step 8.
+- Atomic owner-checked start/submission RPCs, receipt deduplication and strict,
+  relaxed, choice aggregate buckets. Final answer and History commit together.
+- UI waits for acknowledgement, locks failed submissions and retries identical
+  IDs. Account changes discard queues; guest answers remain unsaved.
+- Initial Progress/History show real counts and latest 50 completed tests.
+  Heatmap and complete history UI remain steps 10–11.
+- Retry expiry 24h; metadata/receipts eligible for owner cleanup after 7 days,
+  opportunistically at next start. Counts/history persist independently.
+- TRACKING_SETUP.md contains the one new migration and hosted review checklist.
+  Actual SQL migration/tests pass in local PostgreSQL/WASM; hosted integration
+  and multiple-connection concurrency remain pending. No primary database changes
+  have been applied by the assistant.
+
+- Browser verification also used a temporary synthetic account API backed by
+  the actual SQL: committed-but-lost final reply, locked Retry, no duplicate count
+  or History entry, and acknowledged abandoned-answer retention all passed.
+  37 pure tests, lint and build pass. Existing Vite large-chunk advisory remains
+  (about 580 KB minified / 168 KB gzip). Hosted checks still require the migration.

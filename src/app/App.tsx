@@ -54,8 +54,8 @@ export function App() {
       <main id="main" ref={main} tabIndex={-1}>
         <Routes>
           <Route path="/practice" element={<Practice key={identityKey} />} />
-          <Route path="/progress" element={<Progress />} />
-          <Route path="/history" element={<History />} />
+          <Route path="/progress" element={<Progress key={identityKey} />} />
+          <Route path="/history" element={<History key={identityKey} />} />
           <Route path="/settings" element={<Settings key={identityKey} />} />
           <Route path="*" element={<Navigate to="/practice" replace />} />
         </Routes>

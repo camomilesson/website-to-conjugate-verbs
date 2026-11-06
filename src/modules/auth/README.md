@@ -9,7 +9,8 @@ synchronous so they do not deadlock the SDK session lock.
 No configuration means guest mode. Partial/invalid configuration is reported in
 Settings. Only project URL and publishable key belong in frontend environment
 variables; database ownership is enforced by the prepared RLS migration.
-Cloud failures are reported, never converted into guest writes. First-time
+Cloud failures are reported, never converted into guest writes. The learning-data
+modlet uses this same session for tracked answers and owner-scoped reads. First-time
 accounts get factory defaults; existing cloud data wins. Guest preferences stay
 browser-local and are never imported automatically. Concurrent device saves use
 last-write-wins, with no automatic live subscription.

@@ -114,8 +114,8 @@ export function Settings() {
           )}
           <p className="field-note">
             Starting a practice saves that setup as your new defaults. Changes
-            here take effect after Save preferences. Answers and unfinished
-            tests are never saved.
+            here take effect after Save preferences. Signed-in answers update
+            progress; unfinished tests cannot be resumed.
           </p>
         </>
       )}

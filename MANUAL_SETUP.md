@@ -76,3 +76,9 @@ values at setup time; this checklist defines responsibilities and sequencing.
 The catalogue and account integration are ready on the review branch. Follow
 [AUTH_SETUP.md](AUTH_SETUP.md) for the exact migration, environment variables,
 Google redirects, and two-account verification. Guest review needs no setup.
+
+## Step 9 checkpoint
+
+[TRACKING_SETUP.md](TRACKING_SETUP.md) gives the new migration to run in the
+existing project, disposable-project SQL checks, and browser review cases.
+No new account, OAuth client, key, or Vercel variable is needed.

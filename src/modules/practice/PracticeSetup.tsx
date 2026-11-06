@@ -1,3 +1,9 @@
+import { useAuth } from "../auth/ui.ts"
+import {
+  practiceMetadata,
+  startTrackedPractice,
+} from "../learning-data/index.ts"
+import type { TrackingContext } from "../learning-data/index.ts"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { loadCatalogueVerb } from "../verb-catalogue/index.ts"
 import type { CatalogueVerb } from "../verb-catalogue/index.ts"
@@ -16,8 +22,10 @@ export function PracticeSetup({
     questions: Question[],
     config: PracticeConfig,
     storageNotice: string | null,
+    tracking: TrackingContext | null,
   ) => void
 }) {
+  const auth = useAuth()
   const {
     catalogue,
     preferences,
@@ -148,7 +156,16 @@ export function PracticeSetup({
         const storageNotice = await save(structuredClone(preferences))
         if (controller.signal.aborted) return
         if (isAccount && storageNotice) throw new Error(storageNotice)
-        onStart(questions, config, storageNotice)
+        const tracking = auth.user
+          ? await startTrackedPractice(
+              auth.user.id,
+              practiceMetadata(config, preferences),
+              catalogue.datasetVersion,
+              questions.length,
+            )
+          : null
+        if (controller.signal.aborted) return
+        onStart(questions, config, storageNotice, tracking)
       }
     } catch (reason: unknown) {
       if (!controller.signal.aborted)
@@ -244,7 +261,9 @@ export function PracticeSetup({
           <p className="field-note">
             Preferences{" "}
             {isAccount ? "sync to your account" : "are stored in this browser"}.
-            Practice results are not saved yet.
+            {isAccount
+              ? "Submitted answers update your progress; completed practices appear in History."
+              : "Guest answers and results are not saved."}
           </p>
         </>
       )}
