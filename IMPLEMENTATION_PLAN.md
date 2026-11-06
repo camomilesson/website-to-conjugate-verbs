@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 12 prepared; server setup and account review pending** · 6 November 2026
+Status: **Step 12 approved; step 13 next** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -286,7 +286,7 @@ or enough completed tests, without inserting fake production history.
 
 ## Step 12 — Reset and account deletion
 
-**Status:** Prepared; migration/function deployment and review pending · **Depends on:** 11
+**Status:** Verified · **Depends on:** 11
 
 **Outcome:** Users can clear learning data or delete their account safely.
 
@@ -650,3 +650,11 @@ Owner verified History and approved production promotion and step 12.
   Deno typecheck passes for the server function. Production assets exclude admin
   credential identifiers, handler code and development fixture routes. Existing
   bundle-size advisory remains (~174 KB gzip). Hosted checks remain pending.
+
+### Step 12 approved — 6 November 2026
+
+Owner deployed the deletion function and allowed-origin setting to the shared
+Supabase project, reported all reset/deletion checks working, and approved
+production promotion. CLI commands now use --remote instead of deprecated
+--project-ref. No real account was reset or deleted by the assistant. Step 13
+remains the next checkpoint and has not started.

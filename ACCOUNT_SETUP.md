@@ -1,7 +1,8 @@
 # Step 12: reset and account deletion setup
 
-The controls are prepared on staging. They are **not approved for production**
-until the new SQL migration and deletion function are deployed and verified.
+The owner deployed and verified the controls on staging and approved production
+promotion on 6 November 2026. This file remains the setup reference for new
+environments.
 The assistant has not reset or deleted any real account. Production remains the
 approved step 11. Support contact: conjugadora.support@gmail.com.
 
@@ -26,8 +27,8 @@ From the repository root, using the Supabase account that owns your project:
 
 ```sh
 npx supabase login
-npx supabase secrets set ACCOUNT_ALLOWED_ORIGINS='https://conjugadora.vercel.app,https://conjugadora-git-staging-camomilesson-3235s-projects.vercel.app' --project-ref YOUR_PROJECT_REF
-npx supabase functions deploy delete-account --project-ref YOUR_PROJECT_REF
+npx supabase secrets set ACCOUNT_ALLOWED_ORIGINS='https://conjugadora.vercel.app,https://conjugadora-git-staging-camomilesson-3235s-projects.vercel.app' --remote=YOUR_PROJECT_REF
+npx supabase functions deploy delete-account --remote=YOUR_PROJECT_REF
 ```
 
 Replace YOUR_PROJECT_REF with the identifier before `.supabase.co` in your

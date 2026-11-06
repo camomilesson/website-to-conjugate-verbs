@@ -26,3 +26,6 @@ build/
 
 # Coverage reports
 coverage/
+
+# Supabase CLI local project metadata
+supabase/.temp/
