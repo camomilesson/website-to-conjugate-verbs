@@ -1,12 +1,29 @@
-# Catalogue release review — catalogue-1
+# Verb catalogue — catalogue-1
 
 Prepared 5 November 2026. Owner approved and deployed; review is not a native-speaker certification.
 
 100 static verb files cover all 16 supported categories, 94 category/person cells
-per verb: **9,400 cells**. See README.md for the supported tense inventory.
+per verb: **9,400 cells**. The supported tense inventory is listed below.
 Imperfect subjunctive accepts both -ra and -se; reflexive progressive accepts both
 pronoun placements; ir/irse commands include their documented alternatives.
 Grammatical coverage does not imply every construction is equally natural in context.
+
+## Supported categories
+
+| Group               | Categories                                                       |
+| ------------------- | ---------------------------------------------------------------- |
+| Simple indicative   | Present, preterite, imperfect, future, conditional               |
+| Perfect indicative  | Present perfect, pluperfect, future perfect, conditional perfect |
+| Simple subjunctive  | Present, imperfect (both -ra and -se)                            |
+| Perfect subjunctive | Present perfect, pluperfect (both variants)                      |
+| Imperative          | Affirmative, negative                                            |
+| Progressive         | Present                                                          |
+
+**Basic** contains the five simple indicative categories and present perfect
+indicative (6). **Advanced** contains the other 10, excluding Basic. **All**
+combines both (16). These are convenience sets, not proficiency certifications.
+Preterite anterior, future/future-perfect subjunctive and other progressive
+constructions are outside this release. See the provenance and maintenance sections below for the full verb list and review limits.
 
 ## Selection
 
@@ -50,3 +67,17 @@ confirmed in the browser; choice uses the same full catalogue as its distractor
 pool. Errors are surfaced rather than producing missing-answer questions.
 The full dataset stays out of the JavaScript bundle. Runtime caches last only
 for the page lifetime; no offline installation or persistent data cache is added.
+
+## Maintenance
+
+Canonical files are [the manifest](../public/data/catalogue.json) and one JSON
+per verb under `public/data/verbs/`. The [catalogue modlet](../src/modules/verb-catalogue/README.md)
+explains its public API, validation, accepted alternatives and retained starter
+review. The category registry uses stable IDs for stored statistics/history.
+
+For a correction, edit the canonical JSON, independently review the affected
+forms, update the dataset version consistently in manifest and all verb files,
+and add meaningful regression anchors. Run `pnpm validate:catalogue` and
+`pnpm test`, then build and review on staging before promotion. Do not silently
+reinterpret existing category IDs or historical defaults. Production never calls
+an AI or regenerates the catalogue at runtime/build time.

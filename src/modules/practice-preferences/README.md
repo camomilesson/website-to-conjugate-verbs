@@ -48,7 +48,7 @@ When signed in, `usePreferenceDraft` loads/saves via the auth modlet's Supabase
 repository. New accounts use factory defaults; guest data is not imported.
 Identity changes hide stale drafts and cancel pending loads. A failed account
 read/write is surfaced without silently falling back to local storage. See
-[AUTH_SETUP.md](../../../AUTH_SETUP.md) for the verified configuration and review checklist.
+[operations/authentication guide](../../../docs/OPERATIONS.md#authentication) for the verified configuration and review checklist.
 
 Verb picker options use Spanish alphabetical ordering without mutating catalogue
 order or stored IDs. Shared interface sizing lives in the application theme;

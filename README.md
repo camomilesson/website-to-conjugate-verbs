@@ -35,23 +35,10 @@ all supported persons, 20 questions and strict typing.
   creates a fresh randomized run with the same settings, including answer mode.
   **New practice** returns to the mode-choice screen.
 
-### Supported categories
-
-| Group               | Categories                                                       |
-| ------------------- | ---------------------------------------------------------------- |
-| Simple indicative   | Present, preterite, imperfect, future, conditional               |
-| Perfect indicative  | Present perfect, pluperfect, future perfect, conditional perfect |
-| Simple subjunctive  | Present, imperfect (both -ra and -se)                            |
-| Perfect subjunctive | Present perfect, pluperfect (both variants)                      |
-| Imperative          | Affirmative, negative                                            |
-| Progressive         | Present                                                          |
-
-**Basic** contains the five simple indicative categories and present perfect
-indicative (6). **Advanced** contains the other 10, excluding Basic. **All**
-combines both (16). These are convenience sets, not proficiency certifications.
-Preterite anterior, future/future-perfect subjunctive and other progressive
-constructions are outside this release. See the [catalogue report](CATALOGUE_REPORT.md)
-for the full verb list, provenance, review limits and maintenance procedure.
+Basic has 6 categories, Advanced has the other 10, and All combines both (16).
+These are convenience sets, not formal proficiency levels. See the
+[catalogue guide](docs/CATALOGUE.md) for the full verb list, supported inventory,
+provenance, review limits and correction procedure.
 
 ### Keyboard controls
 
@@ -94,7 +81,7 @@ selections, non-default settings and one example mistake. The full mistake list
 is available only in the current results view. Settings includes sign-out,
 learning reset and account deletion. Reset retains both kinds of preferences;
 deletion also removes the authentication account and saved preferences. See
-[account operations](ACCOUNT_SETUP.md) and the public privacy page.
+[account operations](docs/OPERATIONS.md#account-deletion) and the public privacy page.
 
 ## Development
 
@@ -137,13 +124,15 @@ labelled synthetic data. Their imports/routes are excluded from production.
 The green visual layer is currently applied after the older baseline styles;
 consolidating those styles is maintenance work, not a release requirement.
 
-- [Deployment and rollback](DEPLOYMENT.md): main → production; staging → review.
-- [Authentication setup](AUTH_SETUP.md): provider, keys, origins and Testing decision.
-- [Operations](OPERATIONS.md): schema, retention, migrations, incidents and costs.
-- [Tracking setup/tests](TRACKING_SETUP.md), [account controls](ACCOUNT_SETUP.md),
-  [Progress preferences](PROGRESS_PREFERENCES_SETUP.md).
-- [Release checks](RELEASE_CHECKLIST.md) and [owner checklist](MANUAL_SETUP.md).
-- [Implementation record](IMPLEMENTATION_PLAN.md): step 13 awaits owner release verification.
+- [Operations](docs/OPERATIONS.md): hosting, Google/Supabase setup, migration order,
+  schema, retention, release verification, rollback and troubleshooting.
+- [Catalogue](docs/CATALOGUE.md): verb selection, category coverage, provenance
+  and data maintenance.
+- Module READMEs in `src/` explain feature APIs and implementation details beside
+  their code. Completed plans/checkpoint docs are retired; Git preserves history.
+
+The owner approved the public release (step 13) on 6 November 2026. Production
+and staging use the established publishing workflow described in Operations.
 
 Google OAuth deliberately remains **Testing**, requesting only basic identity
 scopes; branding verification is deferred. The owner has reviewed the current

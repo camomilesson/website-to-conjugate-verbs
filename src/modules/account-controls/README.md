@@ -22,11 +22,11 @@ request. Unknown outcomes remain errors; retries cannot delete a different new
 account. Cancel never calls a write. In-flight confirmations cannot be dismissed
 with Cancel/Escape. No real account is touched by automated/browser tests.
 
-See [ACCOUNT_SETUP.md](../../../ACCOUNT_SETUP.md) for deployment, keys, SQL tests,
+See [account deletion guide](../../../docs/OPERATIONS.md#account-deletion) for deployment, keys, SQL tests,
 manual disposable-account verification, compatibility and retention details.
 `supabase/functions/delete-account/index.ts` is typechecked separately by Deno;
 the pure shared handler is tested by Node and checked by the app's TypeScript/
 ESLint project. Development demo data/code and server credentials are excluded
 from frontend production assets. Both practice and Progress display preferences
 survive learning reset and cascade on account deletion. Provider/release decisions
-are recorded in AUTH_SETUP.md and RELEASE_CHECKLIST.md at the repository root.
+are recorded in the [Operations guide](../../../docs/OPERATIONS.md).

@@ -15,7 +15,7 @@ accounts get factory defaults; existing cloud data wins. Guest preferences stay
 browser-local and are never imported automatically. Concurrent device saves use
 last-write-wins, with no automatic live subscription.
 
-See [AUTH_SETUP.md](../../../AUTH_SETUP.md) for the setup and hosted verification
+See [operations/authentication guide](../../../docs/OPERATIONS.md#authentication) for the setup and hosted verification
 reference. Pure configuration/repository tests run without credentials. Owner
 verified hosted sign-in, two-account isolation and cross-device preferences. SDK DOM
 declaration compatibility requires TypeScript skipLibCheck; strict checking of

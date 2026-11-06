@@ -46,7 +46,7 @@ Signed-in practice now starts a tracked server run and waits for each answer's
 acknowledgement before feedback/advancement. A failed save locks the answer and
 retries the same ID/payload; leaving warns that an unknown reply may already
 have committed. The last answer creates history atomically with its counters.
-See the learning-data modlet and TRACKING_SETUP.md. Guest scoring is unchanged.
+See the learning-data modlet and the [tracking verification guide](../../../docs/OPERATIONS.md#verification). Guest scoring is unchanged.
 Run `pnpm test` for matching, sampling, and state regression checks. Browser review
 covers keyboard input/focus, character insertion, navigation cancellation, refresh,
 and end-to-end scoring; those are not simulated by the pure unit tests.

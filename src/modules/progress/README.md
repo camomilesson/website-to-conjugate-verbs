@@ -60,5 +60,6 @@ automatically. Search, focus and scroll remain temporary. Guest display choices
 are browser-local (guest answers remain unsaved). Reset learning data retains
 these preferences; deleting the account cascades them.
 
-Apply the new migration as described in `PROGRESS_PREFERENCES_SETUP.md` at the
-repository root. Apply it only to a new environment where it has not already run.
+For new environments, follow the [migration order](../../../docs/OPERATIONS.md#database-and-migrations)
+and [verification cases](../../../docs/OPERATIONS.md#verification). Existing applied
+migrations must not be rerun.

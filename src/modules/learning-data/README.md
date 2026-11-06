@@ -19,7 +19,7 @@ typing/relaxed dimensions. Overall percentages divide summed counts.
 Retries expire after 24h. Old run IDs always reject, even after cleanup. Metadata
 and receipts are eligible for opportunistic owner cleanup at 7 days; aggregate
 counts and completed history remain until reset/deletion. See
-[TRACKING_SETUP.md](../../../TRACKING_SETUP.md) for SQL tests, hosted setup,
+[tracking verification guide](../../../docs/OPERATIONS.md#verification) for SQL tests, hosted setup,
 retention caveats, concurrency checks and local test runtime instructions.
 
 Correctness is client-reported personal practice data, not secure grading.
