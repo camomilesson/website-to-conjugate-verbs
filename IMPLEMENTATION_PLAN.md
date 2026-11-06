@@ -748,3 +748,14 @@ on hold until the remaining polish is approved.
 Owner approved production promotion. Next polish under discussion: Advanced
 excluding Basic, English tense hover descriptions (one example must be approved
 before authoring all descriptions), and per-account Progress display preferences.
+
+### Step 12.5.5 prepared — 6 November 2026
+
+Approved: Advanced excludes Basic (6 Basic / 10 Advanced / 16 All), English tense
+help using the approved example format and formation hints for compound and
+progressive forms, and automatically remembered Progress display choices.
+Per-account display choices use a separate RLS-protected progress_preferences
+row; guest choices stay browser-local. Search/scroll are temporary. Reset keeps
+display choices and account deletion cascades them. See
+PROGRESS_PREFERENCES_SETUP.md for the one hosted migration and review checklist.
+Step 13 remains on hold; this batch awaits hosted review before promotion.

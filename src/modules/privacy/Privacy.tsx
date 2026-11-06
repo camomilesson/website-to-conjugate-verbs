@@ -11,8 +11,8 @@ export function Privacy() {
       <h2>What is stored</h2>
       <ul>
         <li>
-          Guest mode saves your practice preferences in this browser. Guest
-          answers and results are not uploaded.
+          Guest mode saves your practice and Progress display preferences in
+          this browser. Guest answers and results are not uploaded.
         </li>
         <li>
           Google sign-in supplies your account identifier, email and basic
@@ -21,10 +21,11 @@ export function Privacy() {
           or contacts.
         </li>
         <li>
-          Your account stores practice preferences, correct/answered counts by
-          verb, tense and answer mode, completed-practice summaries, and one
-          example mistake per practice. A mistake example includes the submitted
-          text, question and accepted answer.
+          Your account stores practice and Progress display preferences,
+          correct/answered counts by verb, tense and answer mode,
+          completed-practice summaries, and one example mistake per practice. A
+          mistake example includes the submitted text, question and accepted
+          answer.
         </li>
         <li>
           Short-lived practice metadata and submission fingerprints prevent

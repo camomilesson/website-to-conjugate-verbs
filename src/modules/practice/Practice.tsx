@@ -1,3 +1,4 @@
+import { TenseHint } from "./TenseHint.tsx"
 import { shouldConfirmPracticeLeave } from "./navigation.ts"
 import {
   retryableSubmission,
@@ -178,7 +179,6 @@ function PracticeSession({
         : "Accents ignored"
   const score = sessionScore(state.results)
   const question = state.questions[state.index]
-  const category = CATEGORIES.find((item) => item.id === question.category)
   const result = state.results[state.results.length - 1]
   useEffect(() => {
     if (
@@ -310,11 +310,7 @@ function PracticeSession({
               <strong className="prompt-verb" lang="es">
                 {question.infinitive}
               </strong>{" "}
-              in{" "}
-              <span className="prompt-tense" lang="es">
-                {category?.label.toLocaleLowerCase("es")} (
-                {category?.group.toLocaleLowerCase("es")})
-              </span>
+              in <TenseHint key={question.id} categoryId={question.category} />
             </h2>
           </div>
           <form

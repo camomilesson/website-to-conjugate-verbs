@@ -123,11 +123,10 @@ Built-in presets:
 
 - **Basic:** five simple indicative categories plus present perfect indicative
   (6 columns).
-- **Advanced:** Basic plus the other three perfect indicative categories, four
+- **Advanced:** the three other perfect indicative categories, four
   subjunctive categories, two imperative categories, and present progressive
-  (16 columns total).
-- **All:** all 16 supported categories. It initially matches Advanced, but means
-  the complete supported inventory if future releases add categories.
+  (10 columns; excludes Basic).
+- **All:** all 16 supported categories, combining Basic and Advanced.
 
 These are convenience selections, not formal proficiency levels. All means all
 supported release categories; the UI and README must not promise every possible
@@ -400,7 +399,7 @@ persist. Relaxed typing folds ñ and ü as well as acute accents. Enter submits;
 Space advances only from acknowledged feedback. Completed-test results include
 the in-memory mistake list; stored history retains one example mistake.
 
-Approved: the 16-category release inventory and its 6/16 Basic/Advanced presets.
+Approved: the 16-category release inventory and its 6/10 Basic/Advanced presets (All: 16).
 The assistant generates the canonical JSON files during development; production
 uses those static files. Retain the independent correctness checks above. Follow the modlet structure
 when implementation starts; this documentation update does not move source code.
@@ -431,3 +430,10 @@ Approved name: La Conjugadora. Subline: Practica los verbos en español.
 Keep the newspaper typography, paper background, rules, and burgundy accent,
 while removing promotional panels, decorative captions, numbered navigation,
 and redundant slogans. Prioritise functional practice controls as they arrive.
+
+Progress display choices (sort, answer-mode/accent filter, preset and custom
+columns) save automatically per account in `progress_preferences`, independently
+of Practice defaults. Guests retain those choices locally. Search and scroll
+remain temporary. Learning-data reset preserves display choices; account deletion
+removes them. Active practice exposes English tense help on hover/focus/tap,
+including formation hints for compound tenses and the progressive.

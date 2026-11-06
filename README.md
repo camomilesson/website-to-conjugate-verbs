@@ -60,3 +60,7 @@ provides numbered steps and review checkpoints. [MANUAL_SETUP.md](MANUAL_SETUP.m
 and setup work for the project owner. At public release, update this README with
 the deployed URL and lasting usage/development documentation, migrate necessary
 blueprint details, and remove the temporary blueprint.
+
+Latest staging polish adds disjoint Basic/Advanced presets, English tense help,
+and remembered Progress display choices. Account persistence requires the SQL
+migration in [PROGRESS_PREFERENCES_SETUP.md](PROGRESS_PREFERENCES_SETUP.md).

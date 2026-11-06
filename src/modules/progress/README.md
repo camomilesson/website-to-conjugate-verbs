@@ -6,7 +6,7 @@ writes. `matrix.ts` provides pure weighted aggregation, filtering, search,
 sorting, heat levels, and visible mood spans. Related styles and tests live here.
 
 Every catalogue verb is a row, with Overall then category columns. The initial
-view has six Basic columns. Advanced/All cover the approved 16-category inventory;
+view has six Basic columns. Advanced contains the other 10 categories; All covers the 16-category inventory;
 Select columns supports arbitrary subsets, including Overall only. Overall sums
 all supported categories matching the mode/accent filter, regardless of visible
 columns. Missing data is a dash, distinct from attempted 0%. Persons are combined
@@ -48,3 +48,20 @@ and open a cell with the keyboard. Confirm Overall includes hidden tenses.
 No SQL migration or environment-variable change is needed. Main remains at
 approved step 9 until the heatmap review is approved. History remains the initial
 step 9 view; its full UI belongs to step 11.
+
+## Remembered display choices
+
+`preferences.ts` validates versioned display settings and serializes writes.
+`preferences-repository.ts` keeps account writes queued across tab unmounts and
+isolated by owner; reads wait for pending saves. Failed saves expose retry and
+keep the latest selection in memory. `useProgressPreferences.ts` hydrates before
+mounting Heatmap. No guest choices are imported into an account.
+
+Sort, answer mode/accent filter, column preset and custom columns save
+automatically. Search, focus and scroll remain temporary. Guest display choices
+are browser-local (guest answers remain unsaved). Reset learning data retains
+these preferences; deleting the account cascades them.
+
+Apply the new migration as described in `PROGRESS_PREFERENCES_SETUP.md` at the
+repository root. The earlier no-migration note above describes the initial
+heatmap implementation, not this added persistence feature.

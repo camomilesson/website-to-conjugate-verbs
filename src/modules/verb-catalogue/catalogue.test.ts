@@ -58,8 +58,13 @@ await test("static catalogue has 100 matching files and complete supported cover
 await test("presets and imperative persons match release scope", () => {
   assert.equal(new Set(CATEGORIES.map((category) => category.id)).size, 16)
   assert.equal(getPresetCategories("basic").length, 6)
-  assert.equal(getPresetCategories("advanced").length, 16)
-  assert.deepEqual(getPresetCategories("all"), getPresetCategories("advanced"))
+  assert.equal(getPresetCategories("advanced").length, 10)
+  assert.equal(getPresetCategories("all").length, 16)
+  assert.ok(
+    getPresetCategories("advanced").every(
+      (id) => !getPresetCategories("basic").includes(id),
+    ),
+  )
   assert.equal(
     getCategoryPersons("imperative.affirmative").includes("yo"),
     false,

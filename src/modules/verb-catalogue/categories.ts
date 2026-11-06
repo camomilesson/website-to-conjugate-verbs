@@ -145,7 +145,9 @@ export type CategoryId = (typeof CATEGORIES)[number]["id"]
 export type Preset = "basic" | "advanced" | "all"
 export function getPresetCategories(preset: Preset): CategoryId[] {
   return CATEGORIES.filter(
-    (category) => preset !== "basic" || category.basic,
+    (category) =>
+      preset === "all" ||
+      (preset === "basic" ? category.basic : !category.basic),
   ).map((category) => category.id)
 }
 export function getCategoryPersons(

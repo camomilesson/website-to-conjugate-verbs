@@ -88,3 +88,17 @@ commits, so cancelling keeps the same queue/draft. Completed results and setup
 have no leave blocker. Main receives focus after the committed entry reset.
 Modified clicks preserve normal browser behaviour. Regression/browser checks
 cover same-tab re-entry as well as navigation to other tabs.
+
+## Tense explanations
+
+`tense-help.ts` provides English usage cues and English-only examples for all
+16 supported categories. Compound and progressive categories include formation
+hints; no current Spanish conjugated answer is revealed. `TenseHint.tsx` opens
+above the tense on hover, keyboard focus or tap, moving below if necessary to
+stay in the viewport. Escape dismisses it. Hints do not affect scoring.
+
+Grammar review references (short cues are not exhaustive definitions):
+
+- [UOC: verbs](https://www.uoc.edu/es/servicios/lengua-estilo/criterios/gramatica/verbos)
+- [UCM: tense, aspect and mood](https://www.ucm.es/plataformaele/caracteristicas-tam)
+- [INTEF: tense, mood and voice](https://descargas.intef.es/recursos_educativos/It_didac/Leng_ESO/1/04/04_El_verbo_tiempo_modo_voz/tiempo_modo_y_voz.html)

@@ -173,6 +173,11 @@ await test("built-in sets follow current catalogue coverage while custom selecti
   ).preferences
   assert.equal(common.verbIds.length, 25)
   assert.equal(common.categories.length, 16)
+  assert.equal(
+    restorePreferences(stored({ ...defaults, tenseSet: "advanced" }), catalogue)
+      .preferences.categories.length,
+    10,
+  )
 })
 await test("read/write storage failures are reported without blocking guest practice", () => {
   const blocked = () => {

@@ -1,3 +1,5 @@
+import { defaultProgressPreferences } from "./preferences.ts"
+import type { ProgressPreferences } from "./preferences.ts"
 import { useEffect, useMemo, useRef, useState } from "react"
 import type { KeyboardEvent } from "react"
 import { CATEGORIES, getPresetCategories } from "../verb-catalogue/index.ts"
@@ -64,18 +66,43 @@ export function Heatmap({
   catalogue,
   counts,
   onRefresh,
+  initialPreferences,
+  onPreferencesChange,
 }: {
   catalogue: Catalogue
   counts: readonly CountRow[]
   onRefresh?: () => void
+  initialPreferences?: ProgressPreferences
+  onPreferencesChange?: (value: ProgressPreferences) => void
 }) {
-  const [mode, setMode] = useState<ModeFilter>("all")
-  const [view, setView] = useState<Preset | "select">("basic")
-  const [custom, setCustom] = useState<CategoryId[]>(
-    getPresetCategories("basic"),
-  )
+  const initial = initialPreferences ?? defaultProgressPreferences()
+  const [mode, setMode] = useState<ModeFilter>(initial.mode)
+  const [view, setView] = useState<Preset | "select">(initial.view)
+  const [custom, setCustom] = useState<CategoryId[]>(initial.custom)
   const [search, setSearch] = useState("")
-  const [sort, setSort] = useState<SortOrder>("name")
+  const [sort, setSort] = useState<SortOrder>(initial.sort)
+  const emitted = useRef(
+    JSON.stringify({
+      schemaVersion: 1,
+      mode: initial.mode,
+      view: initial.view,
+      custom: initial.custom,
+      sort: initial.sort,
+    }),
+  )
+  useEffect(() => {
+    const value: ProgressPreferences = {
+      schemaVersion: 1,
+      mode,
+      view,
+      custom,
+      sort,
+    }
+    const serialized = JSON.stringify(value)
+    if (serialized === emitted.current) return
+    emitted.current = serialized
+    onPreferencesChange?.(value)
+  }, [mode, view, custom, sort, onPreferencesChange])
   const [selecting, setSelecting] = useState(false)
   const [detail, setDetail] = useState<CellDetail | null>(null)
   const [focused, setFocused] = useState({ row: 0, col: 0 })

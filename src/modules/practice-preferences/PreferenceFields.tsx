@@ -158,9 +158,11 @@ export function PreferenceFields({
               {selectedCategories.length} / 16 categories
               {tenseSet === "basic"
                 ? " · Everyday indicative forms"
-                : tenseSet === "advanced" || tenseSet === "all"
-                  ? " · All supported forms"
-                  : " · Custom selection"}
+                : tenseSet === "advanced"
+                  ? " · Beyond the Basic set"
+                  : tenseSet === "all"
+                    ? " · All supported forms"
+                    : " · Custom selection"}
             </p>
           </div>
         </fieldset>
