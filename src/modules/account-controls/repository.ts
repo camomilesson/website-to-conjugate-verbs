@@ -29,7 +29,10 @@ export async function resetLearningData(
     )
   return value
 }
-export async function deleteOwnAccount(expectedUserId: string) {
+export async function deleteOwnAccount(
+  expectedUserId: string,
+  onDeleted?: () => void,
+) {
   const service = client()
   const response = await service.functions.invoke("delete-account", {
     body: { confirmation: "DELETE", expectedUserId },
@@ -66,6 +69,7 @@ export async function deleteOwnAccount(expectedUserId: string) {
     throw new Error(
       "Account deletion was not acknowledged. Retry or sign out and check.",
     )
+  onDeleted?.()
   // Do not sign out a different account that signed in during the request.
   const session = await service.auth.getSession()
   if (session.data.session?.user.id === expectedUserId) {

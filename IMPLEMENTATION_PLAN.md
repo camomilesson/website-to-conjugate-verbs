@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 12 approved; step 13 next** · 6 November 2026
+Status: **Step 12.5 Polish ready for staging review** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -309,9 +309,52 @@ changes. Confirm reset and expect empty Progress/History with settings retained.
 Delete the account and expect sign-out and removed records. Signing in again
 must create a fresh profile without the deleted learning data.
 
+## Step 12.5 — Polish
+
+**Status:** Ready for your review · **Depends on:** 12
+
+User approved this additional checkpoint before release work.
+
+### 12.5.1 — Keyboard and selection
+
+Number keys 1–4 choose offered multiple-choice options; Enter submits. Numbers
+appear beside the options and radios expose their shortcuts. Ignore shortcuts
+when editing text, using modifiers, composing/repeating a key, viewing feedback,
+or a modal is open. Verb pickers sort by Spanish alphabetical order without
+changing catalogue IDs, saved selections or question sampling.
+
+### 12.5.2 — Consistent interface
+
+All four tabs share the desktop masthead, heading/body/control scale, full content
+width and page padding. The matrix retains readable dense cells and its own
+scroll container. Long mistake text wraps. Reset/deletion acknowledgements remain
+visible in Settings, including the signed-out view after confirmed deletion.
+No destructive backend logic or server setup changes are introduced.
+
+### 12.5.3 — Simpler Practice entry
+
+Three actions: Multiple-choice practice, Typing practice, Customize practice.
+Quick starts use saved selections or factory defaults and override only mode;
+the typing accent preference survives multiple-choice starts. A compact summary
+shows the selections and typing policy. Customize exposes the detailed setup;
+Back discards the draft and restores focus to Customize. Only a successfully
+started practice saves its setup, as before. Loading/errors disable duplicate
+starts and preserve retry behaviour.
+
+**Assistant checks:** 51 tests, lint/build, and local browser checks cover number
+selection/Enter, modal blocking, typed digits, picker ordering, draft cancellation,
+mode/accent persistence, matching tab metrics, focus return, and 2,000-character
+mistake wrapping. Existing bundle-size advisory remains.
+
+**Your verification:** On staging, quick-start both modes with saved preferences,
+use 1–4 then Enter, customize and back out, inspect alphabetical selection and
+compare the four tabs. No migration, environment or function redeploy is needed.
+Review notice wording using the existing disposable-account workflow if desired;
+no real resets/deletions were performed by the assistant.
+
 ## Step 13 — Public release and documentation handover
 
-**Status:** Not started · **Depends on:** 12
+**Status:** Not started · **Depends on:** 12.5
 
 **Outcome:** A polished public release matches the approved blueprint.
 
@@ -658,3 +701,11 @@ Supabase project, reported all reset/deletion checks working, and approved
 production promotion. CLI commands now use --remote instead of deprecated
 --project-ref. No real account was reset or deleted by the assistant. Step 13
 remains the next checkpoint and has not started.
+
+### Step 12.5 prepared — 6 November 2026
+
+Owner approved the three polish substeps and associated focus/loading/overflow
+checks. Work on codex/polish goes to staging; main remains approved step 12.
+All four tabs measured at 1280px: 56px masthead, 28.8px h1, 22.4px page padding
+and 1144px content width. All backend/auth ownership safeguards remain in place.
+Step 13 has not started; awaiting hosted polish review.

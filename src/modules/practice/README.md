@@ -50,3 +50,25 @@ See the learning-data modlet and TRACKING_SETUP.md. Guest scoring is unchanged.
 Run `pnpm test` for matching, sampling, and state regression checks. Browser review
 covers keyboard input/focus, character insertion, navigation cancellation, refresh,
 and end-to-end scoring; those are not simulated by the pure unit tests.
+
+## Step 12.5 polish
+
+Practice enters through three quick/customize buttons and a saved-selection
+summary. Quick actions clone the current saved preferences and override mode
+without losing the hidden typing accent policy. Detailed setup keeps a separate
+entry snapshot: Back restores it without a save, and returns focus to Customize.
+Successful starts still save defaults and use the same tracking/generation path.
+Choice files prefetch only in detailed choice setup; quick choice start loads
+the selected files directly and applies the usual eligible-question cap.
+
+ChoiceAnswer handles 1–4 through a scoped-lifetime keyboard listener: no submit,
+no missing option, no editing/modifier/repeat/composition/modal interception.
+Selection focuses the radio; Enter remains the explicit submit action. Feedback/
+pending save removes the listener. The visual numbers have aria-keyshortcuts on
+the radios. Long mistake text wraps within the content width.
+
+Local browser review verified both quick starts, Back discarding edits, sorted
+verb dialogs, number selection without submission, modal protection, typed digits,
+accent preference surviving choice→typing starts, focus return and long text.
+Hosted account review remains the owner's checkpoint. No SQL or Edge Function
+redeployment is needed.

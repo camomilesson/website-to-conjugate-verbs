@@ -5,6 +5,12 @@ export function AccountControls() {
   return (
     <section className="account-controls" aria-labelledby="account-title">
       <h2 id="account-title">Account</h2>
+      {auth.accountNotice && (
+        <div className="account-notice" role="status">
+          <p>{auth.accountNotice}</p>
+          <button onClick={auth.clearAccountNotice}>Dismiss message</button>
+        </div>
+      )}
       {auth.status === "unconfigured" ? (
         <p>
           Google sign-in is not configured yet. Guest practice and browser

@@ -231,11 +231,15 @@ export function PreferenceFields({
           searchable={selectionDialog === "verbs"}
           options={
             selectionDialog === "verbs"
-              ? catalogue.verbs.map((verb) => ({
-                  id: verb.id,
-                  label: verb.infinitive,
-                  detail: verb.meaning,
-                }))
+              ? [...catalogue.verbs]
+                  .sort((a, b) =>
+                    a.infinitive.localeCompare(b.infinitive, "es"),
+                  )
+                  .map((verb) => ({
+                    id: verb.id,
+                    label: verb.infinitive,
+                    detail: verb.meaning,
+                  }))
               : selectionDialog === "tenses"
                 ? CATEGORIES.map((category) => ({
                     id: category.id,

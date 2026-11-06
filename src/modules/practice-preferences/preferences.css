@@ -91,9 +91,7 @@
 }
 /* Compact desktop setup; long lists live in native modal dialogs. */
 .setup-page {
-  max-width: 58rem;
-  margin: auto;
-  padding-block: 1.4rem;
+  min-width: 0;
 }
 .compact-setup {
   border-top: 1px solid var(--rule);
@@ -242,16 +240,6 @@
   }
 }
 @media (min-width: 761px) {
-  .newspaper:has(.setup-page, .typing-session) {
-    padding-top: 1rem;
-  }
-  .setup-page {
-    padding-block: 0.8rem;
-  }
-  .setup-page h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.65rem;
-  }
   .setup-row {
     padding-block: 0.35rem;
   }
@@ -260,27 +248,6 @@
   }
   .selection-summary {
     margin-top: 0.2rem;
-  }
-}
-@media (min-width: 761px) {
-  .newspaper:has(.setup-page, .typing-session) .wordmark {
-    margin-top: 0.6rem;
-    font-size: 3.5rem;
-  }
-  .newspaper:has(.setup-page, .typing-session) .masthead-subtitle {
-    margin: 0.4rem 0 1rem;
-  }
-  .newspaper:has(.setup-page, .typing-session) nav a {
-    padding-block: 0.7rem 0.55rem;
-  }
-}
-@media (min-width: 761px) {
-  .page-section.setup-page {
-    padding-block: 0.7rem;
-  }
-  .page-section.setup-page h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.65rem;
   }
 }
 .page-section button.primary-button:hover:not(:disabled) {

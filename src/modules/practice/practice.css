@@ -84,8 +84,7 @@
   gap: 1rem;
 }
 .typing-session {
-  max-width: 48rem;
-  margin: auto;
+  min-width: 0;
 }
 .question-prompt {
   padding: 1rem 0;
@@ -207,13 +206,6 @@
   padding-block: 0.6rem;
 }
 @media (min-width: 761px) {
-  .typing-session {
-    padding-block: 1rem;
-  }
-  .typing-session h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-  }
   .typing-session .choice-options {
     margin-block: 0.5rem;
   }
@@ -226,13 +218,6 @@
   }
 }
 @media (min-width: 761px) {
-  .page-section.typing-session {
-    padding-block: 0.8rem;
-  }
-  .page-section.typing-session h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-  }
   .typing-session .answer-feedback {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -301,7 +286,7 @@
   margin-top: 0;
 }
 .typing-session {
-  max-width: 58rem;
+  min-width: 0;
 }
 .question-prompt .prompt-verb,
 .question-prompt .prompt-tense {
@@ -316,4 +301,27 @@
 }
 .choice-list .choice-option:last-child {
   margin-bottom: 0;
+}
+
+.quick-practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.quick-summary {
+  line-height: 1.6;
+}
+.choice-number {
+  font: 0.8rem var(--font-label);
+  color: var(--muted);
+  min-width: 1.4rem;
+  text-align: center;
+  border: 1px solid var(--rule);
+  padding: 0.2rem;
+}
+
+.mistake-list p,
+.answer-feedback p {
+  overflow-wrap: anywhere;
 }

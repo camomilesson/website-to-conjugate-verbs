@@ -90,6 +90,11 @@ export function DataControls() {
         <ConfirmDataAction
           confirmation={confirmation}
           onClose={() => setConfirmation(null)}
+          executeDelete={(owner) =>
+            deleteOwnAccount(owner, () => {
+              if (active.current) auth.announceAccountDeletion()
+            })
+          }
           onReset={() => {
             auth.invalidateLearningData()
             setConfirmation(null)

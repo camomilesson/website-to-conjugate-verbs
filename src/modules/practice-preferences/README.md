@@ -49,3 +49,7 @@ repository. New accounts use factory defaults; guest data is not imported.
 Identity changes hide stale drafts and cancel pending loads. A failed account
 read/write is surfaced without silently falling back to local storage. See
 [AUTH_SETUP.md](../../../AUTH_SETUP.md); hosted verification is still pending.
+
+Verb picker options use Spanish alphabetical ordering without mutating catalogue
+order or stored IDs. Shared interface sizing lives in the application theme;
+setup retains its compact field layout at the common page width.

@@ -9,6 +9,9 @@ interface AuthState {
 }
 interface AuthContextValue extends AuthState {
   invalidateLearningData: () => void
+  accountNotice: string | null
+  announceAccountDeletion: () => void
+  clearAccountNotice: () => void
   identityKey: string
   signIn: () => Promise<void>
   signOut: () => Promise<void>
@@ -21,6 +24,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     user: null,
     error: null,
   })
+  const [accountNotice, setAccountNotice] = useState<string | null>(null)
   const [dataRevision, setDataRevision] = useState(0)
   const [attempt, setAttempt] = useState(0)
   const [actionError, setActionError] = useState<string | null>(null)
@@ -101,6 +105,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => channel.close()
   }, [state.user?.id])
   function invalidateLearningData() {
+    setAccountNotice(
+      "Learning data reset. Your account and practice preferences were kept.",
+    )
     setDataRevision((n) => n + 1)
     if (state.user && typeof BroadcastChannel !== "undefined") {
       const channel = new BroadcastChannel("conjugadora-account-data")
@@ -111,6 +118,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   async function signIn() {
     if (!supabase || actionPending.current) return
     actionPending.current = true
+    setAccountNotice(null)
     setActionError(null)
     try {
       const { error } = await supabase.auth.signInWithOAuth({
@@ -131,6 +139,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   async function signOut() {
     if (!supabase || actionPending.current) return
     actionPending.current = true
+    setAccountNotice(null)
     setActionError(null)
     try {
       const { error } = await supabase.auth.signOut({ scope: "local" })
@@ -158,6 +167,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         error: actionError ?? state.error,
         identityKey,
         invalidateLearningData,
+        accountNotice,
+        announceAccountDeletion: () =>
+          setAccountNotice(
+            "Your La Conjugadora account and saved data were deleted.",
+          ),
+        clearAccountNotice: () => setAccountNotice(null),
         signIn,
         signOut,
         retry: () => {

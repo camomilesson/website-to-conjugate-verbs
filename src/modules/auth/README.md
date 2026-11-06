@@ -25,3 +25,8 @@ Reset acknowledgements increment the data revision embedded in identityKey and
 notify same-browser account tabs. This invalidates active practices and cached
 views without importing guest data. Server generation checks enforce correctness
 when other devices cannot receive the broadcast.
+
+Account change notices are held in provider memory, survive a Settings remount,
+and can be dismissed. A confirmed reset announces retained preferences; a
+verified deletion acknowledgement sets a notice before local sign-out so the
+signed-out Settings view can confirm the result. Failures never announce success.
