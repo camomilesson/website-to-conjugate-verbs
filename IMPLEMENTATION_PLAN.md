@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 12.5.4 prompt/navigation polish ready for staging review** · 6 November 2026
+Status: **Step 12.5.4 approved; next polish under discussion** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -354,7 +354,7 @@ no real resets/deletions were performed by the assistant.
 
 ### 12.5.4 — Prompt clarity and Practice navigation
 
-**Status:** Ready for your review. Earlier 12.5.1–12.5.3 polish is approved/live.
+**Status:** Verified. Earlier 12.5.1–12.5.3 polish is approved/live.
 
 - Non-invasive guest link below quick starts: Sign in with Google to track
   progress, leading to Settings.
@@ -742,3 +742,9 @@ polish. Browser checks cover same-tab active confirmation/cancel/leave, complete
 results without confirmation, customization discard, guest link destination,
 incorrect feedback, both answer modes and combined typing help. Step 13 stays
 on hold until the remaining polish is approved.
+
+### Step 12.5.4 approved — 6 November 2026
+
+Owner approved production promotion. Next polish under discussion: Advanced
+excluding Basic, English tense hover descriptions (one example must be approved
+before authoring all descriptions), and per-account Progress display preferences.
