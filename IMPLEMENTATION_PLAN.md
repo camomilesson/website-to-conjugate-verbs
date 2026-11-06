@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 13 ready for owner review** · 6 November 2026
+Status: **Complete — step 13 verified** · 6 November 2026
 
 [README.md](README.md) now defines the implemented product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -373,7 +373,7 @@ no real resets/deletions were performed by the assistant.
 
 ## Step 13 — Public release and documentation handover
 
-**Status:** Ready for your review · **Depends on:** 12.5
+**Status:** Verified · **Depends on:** 12.5
 
 **Outcome:** A polished public release matches the approved blueprint.
 
@@ -799,3 +799,9 @@ Real cross-device sign-in and destructive account tests were previously verified
 by the owner; this pass does not claim to rerun them with real credentials.
 The new name/favicon/docs go to stable staging for final review, leaving
 production at its approved design until promotion. Step 13 is not Verified yet.
+
+### Step 13 verified — 6 November 2026
+
+Owner approved the release handover and requested production promotion. The
+implementation plan is complete. Subsequent work consolidates reference docs
+under docs/; the temporary plan/checklist can be retired after that consolidation.
