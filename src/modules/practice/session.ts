@@ -186,3 +186,10 @@ export function sessionScore(results: readonly AnswerResult[]) {
       : 0,
   }
 }
+
+// Original catalogue and selection snapshot for a fresh run with identical settings.
+export interface PracticeSource {
+  verbs: CatalogueVerb[]
+  datasetVersion: string
+  preferences: import("../practice-preferences/index.ts").PracticePreferences
+}

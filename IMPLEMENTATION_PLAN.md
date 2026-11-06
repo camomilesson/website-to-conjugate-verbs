@@ -759,3 +759,14 @@ row; guest choices stay browser-local. Search/scroll are temporary. Reset keeps
 display choices and account deletion cascades them. See
 PROGRESS_PREFERENCES_SETUP.md for the one hosted migration and review checklist.
 Step 13 remains on hold; this batch awaits hosted review before promotion.
+
+### Step 12.5.5 approved; 12.5.6 prepared — 6 November 2026
+
+Owner confirmed tense help and display preferences work, and approved promotion
+of aecd655 to production. Next staging batch prefixes every negative-imperative
+distractor with no before deduplication/accepted-answer exclusion. Results now
+include Repeat practice (Enter from the initially focused results heading),
+starting a fresh randomized run with the exact previous configuration and a new
+tracked run ID. The completed run stays intact. Double starts/held Enter are
+prevented and start failures leave results available with an error/retry action.
+No database or environment changes. Step 13 remains on hold for polish review.

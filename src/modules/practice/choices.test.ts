@@ -34,7 +34,7 @@ const config: PracticeConfig = {
   accentPolicy: "strict",
 }
 
-await test("every catalogue choice question has distinct real options and exactly one accepted answer", () => {
+await test("every catalogue choice question has distinct options and exactly one accepted answer", () => {
   for (const random of [() => 0, () => 0.5, () => 0.99999]) {
     const questions = createQuestions(verbs, config, random)
     assert.equal(questions.length, 9400)
@@ -58,7 +58,21 @@ await test("every catalogue choice question has distinct real options and exactl
       const allForms = Object.values(source.conjugations).flatMap((forms) =>
         Object.values(forms).flatMap((answers) => answers ?? []),
       )
-      assert.ok(question.options?.every((option) => allForms.includes(option)))
+      const displayedForms =
+        question.category === "imperative.negative"
+          ? allForms.map((form) => `no ${form.replace(/^no\s+/i, "")}`)
+          : allForms
+      assert.ok(
+        question.options?.every((option) => displayedForms.includes(option)),
+      )
+      if (question.category === "imperative.negative") {
+        assert.ok(
+          question.options?.every(
+            (option) =>
+              option.startsWith("no ") && !option.startsWith("no no "),
+          ),
+        )
+      }
     }
   }
 })
@@ -73,7 +87,10 @@ await test("distractors use only the same grammatical person and exclude every a
       const samePersonForms = Object.entries(verb.conjugations).flatMap(
         ([category, forms]) => {
           const person = personInCategory(question.person, category)
-          return person ? (forms[person] ?? []) : []
+          const answers = person ? (forms[person] ?? []) : []
+          return question.category === "imperative.negative"
+            ? answers.map((form) => `no ${form.replace(/^no\s+/i, "")}`)
+            : answers
         },
       )
       assert.ok(

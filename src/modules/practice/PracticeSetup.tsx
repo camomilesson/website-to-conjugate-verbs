@@ -18,7 +18,7 @@ import {
   PreferenceFields,
   usePreferenceDraft,
 } from "../practice-preferences/ui.ts"
-import type { PracticeConfig, Question } from "./session.ts"
+import type { PracticeConfig, PracticeSource, Question } from "./session.ts"
 import { poolSize, createQuestionPool, createQuestions } from "./session.ts"
 import "./practice.css"
 
@@ -30,6 +30,7 @@ export function PracticeSetup({
     config: PracticeConfig,
     storageNotice: string | null,
     tracking: TrackingContext | null,
+    source: PracticeSource,
   ) => void
 }) {
   const [customizing, setCustomizing] = useState(false)
@@ -198,7 +199,11 @@ export function PracticeSetup({
         const storageNotice = await save(snapshot)
         if (controller.signal.aborted) return
         if (isAccount && storageNotice) throw new Error(storageNotice)
-        onStart(questions, config, storageNotice, tracking)
+        onStart(questions, config, storageNotice, tracking, {
+          verbs,
+          datasetVersion: catalogue.datasetVersion,
+          preferences: snapshot,
+        })
       }
     } catch (reason: unknown) {
       if (!controller.signal.aborted)

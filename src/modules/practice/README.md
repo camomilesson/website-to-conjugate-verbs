@@ -11,7 +11,7 @@ from the independent answer-checking module.
 - `session.ts`: pure eligible-person mapping, unique shuffled question sampling,
   session transitions, and score calculation. usted/ustedes follow the selected
   third-person singular/plural groups. Questions snapshot accepted alternatives.
-- `choices.ts`: real same-verb distractors, excluding all accepted alternatives,
+- `choices.ts`: same-verb distractors, excluding all accepted alternatives,
   with per-tier shuffling and two-to-four unique options. Invalid choice questions
   are excluded before session sizing. Only same-person forms in other categories
   are eligible; ordinary el/ellos map to imperative usted/ustedes and vice versa.
@@ -102,3 +102,15 @@ Grammar review references (short cues are not exhaustive definitions):
 - [UOC: verbs](https://www.uoc.edu/es/servicios/lengua-estilo/criterios/gramatica/verbos)
 - [UCM: tense, aspect and mood](https://www.ucm.es/plataformaele/caracteristicas-tam)
 - [INTEF: tense, mood and voice](https://descargas.intef.es/recursos_educativos/It_didac/Leng_ESO/1/04/04_El_verbo_tiempo_modo_voz/tiempo_modo_y_voz.html)
+
+Negative-imperative distractors receive exactly one leading `no ` before
+normalization, deduplication and accepted-answer exclusion, so the prefix cannot
+identify the correct option. Base forms still match the requested verb/person.
+
+Results offer Repeat practice, keeping the previous mode, verbs, categories,
+persons, length and accent policy, with a newly randomized queue. It starts a
+new tracked run (never reuses the completed run ID) and does not rewrite saved
+defaults. Enter on the initially focused results heading or the Repeat button
+starts it; held-key repeats and duplicate starts are ignored. Other focused
+controls retain their normal behavior. Failed starts keep the results and allow
+retry. New practice still returns to the quick-choice screen.

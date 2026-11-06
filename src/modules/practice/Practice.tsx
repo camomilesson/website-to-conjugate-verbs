@@ -1,3 +1,9 @@
+import { useAuth } from "../auth/ui.ts"
+import { useLearningGeneration } from "../account-controls/index.ts"
+import {
+  practiceMetadata,
+  startTrackedPractice,
+} from "../learning-data/index.ts"
 import { TenseHint } from "./TenseHint.tsx"
 import { shouldConfirmPracticeLeave } from "./navigation.ts"
 import {
@@ -10,8 +16,13 @@ import type { SessionAction } from "./session.ts"
 import { useEffect, useRef, useState, useReducer } from "react"
 import { useBlocker } from "react-router"
 import { CATEGORIES, PERSONS } from "../verb-catalogue/index.ts"
-import type { PracticeConfig, Question } from "./session.ts"
-import { initialSession, sessionReducer, sessionScore } from "./session.ts"
+import type { PracticeConfig, PracticeSource, Question } from "./session.ts"
+import {
+  createQuestions,
+  initialSession,
+  sessionReducer,
+  sessionScore,
+} from "./session.ts"
 import { ChoiceAnswer } from "./ChoiceAnswer.tsx"
 import { PracticeSetup } from "./PracticeSetup.tsx"
 
@@ -59,17 +70,57 @@ function PracticeSession({
   storageNotice,
   tracking,
   onReset,
+  source,
+  onRepeat,
 }: {
   questions: Question[]
   config: PracticeConfig
   storageNotice: string | null
   tracking: TrackingContext | null
   onReset: () => void
+  source: PracticeSource
+  onRepeat: (questions: Question[], tracking: TrackingContext | null) => void
 }) {
   const [state, dispatch] = useReducer(
     sessionReducer,
     initialSession(questions, config.accentPolicy),
   )
+  const auth = useAuth()
+  const learning = useLearningGeneration()
+  const repeating = useRef(false)
+  const [repeatLoading, setRepeatLoading] = useState(false)
+  const [repeatError, setRepeatError] = useState<string | null>(null)
+  async function repeatPractice() {
+    if (repeating.current) return
+    repeating.current = true
+    setRepeatLoading(true)
+    setRepeatError(null)
+    try {
+      const questions = createQuestions(source.verbs, config)
+      if (auth.user && !learning.generation)
+        throw new Error("Account data is still loading. Try again.")
+      const tracking = auth.user
+        ? await startTrackedPractice(
+            auth.user.id,
+            practiceMetadata(config, source.preferences),
+            source.datasetVersion,
+            questions.length,
+            learning.generation!,
+          )
+        : null
+      if (active.current) onRepeat(questions, tracking)
+    } catch (reason: unknown) {
+      if (active.current)
+        setRepeatError(
+          reason instanceof Error
+            ? reason.message
+            : "Could not repeat practice. Try again.",
+        )
+    } finally {
+      repeating.current = false
+      if (active.current) setRepeatLoading(false)
+    }
+  }
   const active = useRef(true)
   const busy = useRef(false)
   const pending = useRef<{
@@ -214,6 +265,14 @@ function PracticeSession({
           return
         }
         if (
+          state.phase === "complete" &&
+          event.key === "Enter" &&
+          event.target === resultsHeading.current
+        ) {
+          event.preventDefault()
+          void repeatPractice()
+        }
+        if (
           state.phase === "feedback" &&
           event.key === " " &&
           event.target === next.current
@@ -291,9 +350,22 @@ function PracticeSession({
           ) : (
             <p>No mistakes.</p>
           )}
-          <button className="primary-button" onClick={onReset}>
-            New practice
-          </button>
+          {repeatError && <p role="alert">{repeatError}</p>}
+          <div className="selection-actions">
+            <button
+              className="primary-button"
+              disabled={repeatLoading}
+              onClick={() => {
+                void repeatPractice()
+              }}
+            >
+              {repeatLoading ? "Starting…" : "Repeat practice"}{" "}
+              <span className="key-hint">Enter</span>
+            </button>
+            <button onClick={onReset} disabled={repeatLoading}>
+              New practice
+            </button>
+          </div>
         </>
       ) : (
         <>
@@ -449,14 +521,23 @@ function PracticeSession({
 }
 
 export function Practice() {
+  const [run, setRun] = useState(0)
   const [session, setSession] = useState<{
     questions: Question[]
     config: PracticeConfig
     storageNotice: string | null
     tracking: TrackingContext | null
+    source: PracticeSource
   } | null>(null)
   return session ? (
     <PracticeSession
+      key={run}
+      source={session.source}
+      onRepeat={(questions, tracking) => {
+        setRun((value) => value + 1)
+        setSession({ ...session, questions, tracking })
+        window.scrollTo(0, 0)
+      }}
       questions={session.questions}
       config={session.config}
       storageNotice={session.storageNotice}
@@ -468,8 +549,8 @@ export function Practice() {
     />
   ) : (
     <PracticeSetup
-      onStart={(questions, config, storageNotice, tracking) => {
-        setSession({ questions, config, storageNotice, tracking })
+      onStart={(questions, config, storageNotice, tracking, source) => {
+        setSession({ questions, config, storageNotice, tracking, source })
         window.scrollTo(0, 0)
       }}
     />

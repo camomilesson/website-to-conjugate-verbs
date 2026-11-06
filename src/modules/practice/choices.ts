@@ -28,7 +28,7 @@ export function personInCategory(
       : ordinary
 }
 
-// Only real forms of the same verb/person, in other tenses or moods.
+// Same-verb/person forms; negative-command distractors all receive no.
 export function withChoices(
   question: Question,
   verb: CatalogueVerb,
@@ -55,7 +55,11 @@ export function withChoices(
       const person = personInCategory(question.person, id)
       return person ? (forms[person] ?? []) : []
     })
-    for (const candidate of shuffled(candidates, random)) {
+    for (const source of shuffled(candidates, random)) {
+      const candidate =
+        question.category === "imperative.negative"
+          ? `no ${source.replace(/^no\s+/i, "")}`
+          : source
       const key = normaliseAnswer(candidate, "strict")
       if (seen.has(key)) continue
       seen.add(key)
