@@ -9,6 +9,5 @@ export {
   startTrackedPractice,
   submitTrackedAnswer,
   readCounts,
-  readHistory,
 } from "./repository.ts"
 export { useAccountData } from "./useAccountData.ts"

@@ -10,12 +10,12 @@ export interface PracticeMetadata {
   resolved: PracticeConfig
   selections: Pick<PracticePreferences, "verbSet" | "tenseSet" | "personSet">
   defaults: {
-    mode: "typing"
-    length: 20
-    accentPolicy: "strict"
-    verbSet: "all"
-    tenseSet: "basic"
-    personSet: "all"
+    mode: "typing" | "choice"
+    length: number
+    accentPolicy: "strict" | "relaxed"
+    verbSet: "all" | "common" | "select"
+    tenseSet: "basic" | "advanced" | "all" | "select"
+    personSet: "all" | "select"
   }
 }
 export function practiceMetadata(

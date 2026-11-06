@@ -24,6 +24,5 @@ retention caveats, concurrency checks and local test runtime instructions.
 
 Correctness is client-reported personal practice data, not secure grading.
 Reads are RLS-scoped and sorted; count reads page through all buckets (rather
-than silently accepting the API's 1,000-row default). History is the latest 50
-entries for this initial review. Read requests ignore stale identity responses;
+than silently accepting the API's 1,000-row default). The History modlet owns cursor pagination of completed entries. Read requests ignore stale identity responses;
 there is no real-time subscription. Refresh or re-enter the tab to reload data.

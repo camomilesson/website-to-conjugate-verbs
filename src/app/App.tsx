@@ -3,10 +3,12 @@ import { lazy, Suspense, useEffect, useRef } from "react"
 import { NavLink, Navigate, Route, Routes, useLocation } from "react-router"
 import { Practice } from "../modules/practice/index.ts"
 import { Progress, loadProgressDemo } from "../modules/progress/index.ts"
-import { History } from "../modules/history/index.ts"
+import { History, loadHistoryDemo } from "../modules/history/index.ts"
 import { Settings } from "../modules/settings/index.ts"
 
 const ProgressDemo = import.meta.env.DEV ? lazy(loadProgressDemo) : null
+
+const HistoryDemo = import.meta.env.DEV ? lazy(loadHistoryDemo) : null
 
 const sections = ["Practice", "Progress", "History", "Settings"]
 
@@ -55,6 +57,16 @@ export function App() {
       </header>
       <main id="main" ref={main} tabIndex={-1}>
         <Routes>
+          {HistoryDemo && (
+            <Route
+              path="/dev/history"
+              element={
+                <Suspense fallback={<p>Loading demo…</p>}>
+                  <HistoryDemo />
+                </Suspense>
+              }
+            />
+          )}
           {ProgressDemo && (
             <Route
               path="/dev/progress"

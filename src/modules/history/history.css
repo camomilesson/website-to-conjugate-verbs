@@ -1,0 +1,87 @@
+.history-controls {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.history-controls label {
+  display: grid;
+  gap: 0.3rem;
+}
+.history-controls select {
+  font: inherit;
+  padding: 0.45rem;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  background: var(--paper);
+}
+.history-list {
+  padding: 0;
+  list-style: none;
+}
+.history-list > li {
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--rule);
+}
+.history-entry-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem 1.2rem;
+}
+.history-score {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+.history-settings {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.history-mistake {
+  border-left: 2px solid var(--accent);
+  padding-left: 0.9rem;
+  margin: 1rem 0;
+}
+.history-mistake p {
+  margin: 0.4rem 0;
+  overflow-wrap: anywhere;
+}
+.history-perfect {
+  font-style: italic;
+}
+.history-list summary {
+  cursor: pointer;
+  width: fit-content;
+}
+.history-list summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.history-details {
+  display: grid;
+  grid-template-columns: minmax(8rem, 14rem) minmax(0, 1fr);
+  gap: 0.7rem 1rem;
+  line-height: 1.5;
+}
+.history-details dt {
+  font-weight: bold;
+}
+.history-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.history-details ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.history-pagination {
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 0;
+}
+.history-pagination span {
+  color: var(--muted);
+}

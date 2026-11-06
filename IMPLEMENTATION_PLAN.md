@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 10 approved; step 11 next** · 6 November 2026
+Status: **Step 11 ready for staging review** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -263,7 +263,7 @@ overall values, and no 0% for unattempted cells.
 
 ## Step 11 — Completed-test history
 
-**Status:** Not started · **Depends on:** 10
+**Status:** Ready for your review · **Depends on:** 10
 
 **Outcome:** History is a usable paginated list of real completed tests.
 
@@ -601,3 +601,20 @@ interim Progress table is intentionally replaced by the step 10 matrix next.
 ### Step 10 approved — 6 November 2026
 
 Owner verified the heatmap and approved promotion and proceeding to step 11.
+
+### Step 11 — Completed History ready for review, 6 November 2026
+
+- Approved heatmap promoted to main; History work on codex/history-view goes to
+  staging. Production remains step 10 until review.
+- Newest-first pages of 10 with deterministic timestamp/UUID keyset cursors and
+  a sentinel row for Next. Microsecond timestamps are preserved. Previous/Next,
+  mode filters and Refresh; stale page/identity reads are aborted and masked.
+- Entries show local time, score/counts, verb/tense presets, non-default settings
+  compared against saved defaults, exact expandable selections, and one saved
+  mistake or No mistakes. No implication of a stored full mistake log.
+- Isolated /dev/history demo with 26 synthetic entries, equal timestamps,
+  different configurations, perfect tests and empty states; no account writes.
+  Demo/fixtures are excluded from production builds.
+- 46 tests, lint, build and local browser pagination/filter/details/empty checks
+  pass. No migration or environment changes. Owner's real-account review pending.
+- Step 12 (reset/deletion) has not started.

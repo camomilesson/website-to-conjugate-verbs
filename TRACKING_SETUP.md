@@ -53,9 +53,9 @@ counts first. The answers are `hablo` for yo and `hablas` for tú.
    an account switch abandons the current queue rather than submitting it as the
    new user. Cross-device review should show the same saved counts/history.
 
-Progress is currently a real-data table with mode filters, not the step 10
-heatmap. History shows the latest 50 entries; filtering/pagination/polish belong
-to step 11. No reset or account deletion UI is introduced in this step.
+The step 10 heatmap is now live; step 11 adds full History pagination and
+presentation on staging. This checklist retains the original tracking scenarios.
+No reset or account deletion UI is introduced until step 12.
 
 ## Database ownership / retry / atomicity test
 

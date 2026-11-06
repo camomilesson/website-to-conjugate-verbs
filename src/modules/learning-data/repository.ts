@@ -2,7 +2,6 @@ import { supabase } from "../auth/client.ts"
 import { DEFAULTS_VERSION, parseAcknowledgement } from "./model.ts"
 import type {
   CountRow,
-  HistoryRow,
   PracticeMetadata,
   Submission,
   TrackingContext,
@@ -78,18 +77,4 @@ export async function readCounts(userId: string): Promise<CountRow[]> {
     all.push(...rows)
     if (rows.length < 500) return all
   }
-}
-export async function readHistory(userId: string): Promise<HistoryRow[]> {
-  const { data, error } = await client()
-    .from("practice_history")
-    .select(
-      "id,completed_at,mode,accent_policy,correct,answered,configuration,dataset_version,defaults_version,example_mistake",
-    )
-    .eq("user_id", userId)
-    .order("completed_at", { ascending: false })
-    .order("id")
-    .limit(50)
-    .returns<HistoryRow[]>()
-  if (error) throw new Error(`Could not load history: ${error.message}`)
-  return data
 }
