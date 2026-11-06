@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 10 ready for staging review** · 6 November 2026
+Status: **Step 10 approved; step 11 next** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -240,7 +240,7 @@ and no Next until acknowledged. A second account must see none of these records.
 
 ## Step 10 — Progress heatmap
 
-**Status:** Ready for your review · **Depends on:** 9
+**Status:** Verified · **Depends on:** 9
 
 **Outcome:** The desktop verb-by-category heatmap displays real account data.
 
@@ -597,3 +597,7 @@ interim Progress table is intentionally replaced by the step 10 matrix next.
   both scroll axes/fixed labels, sorting, search and empty states.
 - Hosted real-account inspection remains the owner's review checkpoint. Step 11
   has not started. The existing large-bundle advisory remains (~170 KB gzip).
+
+### Step 10 approved — 6 November 2026
+
+Owner verified the heatmap and approved promotion and proceeding to step 11.
