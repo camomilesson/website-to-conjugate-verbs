@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 9 prepared; database setup and staging review pending** · 6 November 2026
+Status: **Step 9 approved; step 10 next** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -213,7 +213,7 @@ account's preferences.
 
 ## Step 9 — Durable answer tracking and test completion
 
-**Status:** Prepared; migration and hosted review pending · **Depends on:** 8
+**Status:** Verified · **Depends on:** 8
 
 **Outcome:** Every acknowledged signed-in answer updates progress; completed
 tests create exactly one history record. Data is inspectable before the final UI.
@@ -573,3 +573,8 @@ Staging is approved for production promotion. Step 9 remains the next checkpoint
   or History entry, and acknowledged abandoned-answer retention all passed.
   37 pure tests, lint and build pass. Existing Vite large-chunk advisory remains
   (about 580 KB minified / 168 KB gzip). Hosted checks still require the migration.
+
+### Step 9 approved — 6 November 2026
+
+Owner confirmed hosted tracking works and approved production promotion. The
+interim Progress table is intentionally replaced by the step 10 matrix next.
