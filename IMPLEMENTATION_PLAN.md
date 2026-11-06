@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: **Step 9 approved; step 10 next** · 6 November 2026
+Status: **Step 10 ready for staging review** · 6 November 2026
 
 [BLUEPRINT.md](BLUEPRINT.md) defines the approved product and architecture.
 This file tracks execution. [MANUAL_SETUP.md](MANUAL_SETUP.md) lists account-owner
@@ -240,7 +240,7 @@ and no Next until acknowledged. A second account must see none of these records.
 
 ## Step 10 — Progress heatmap
 
-**Status:** Not started · **Depends on:** 9
+**Status:** Ready for your review · **Depends on:** 9
 
 **Outcome:** The desktop verb-by-category heatmap displays real account data.
 
@@ -578,3 +578,22 @@ Staging is approved for production promotion. Step 9 remains the next checkpoint
 
 Owner confirmed hosted tracking works and approved production promotion. The
 interim Progress table is intentionally replaced by the step 10 matrix next.
+
+### Step 10 — Heatmap ready for review, 6 November 2026
+
+- Approved step 9 promoted to main; Vercel reported success. Heatmap work on
+  codex/progress-heatmap goes to staging, leaving production tracking unchanged.
+- All 100 catalogue verb rows, Overall and 16 supported category columns. Basic,
+  Advanced, All and custom views; sticky mood/tense headers, verbs and Overall.
+- Weighted cell/overall values, counts via hover/focus/dialog, unattempted dash,
+  mode/accent filtering, search and sorting. Hidden columns never change Overall.
+- Roving keyboard focus, arrow/Home/End navigation, Escape details dismissal.
+- No new schema/configuration. Existing counts supply the matrix. Refresh keeps
+  the previous matrix mounted so filters survive successful refreshes.
+- Isolated synthetic dense/empty demo at /dev/progress in development only; no
+  demo route or fixture text in the production build. No sample account writes.
+- 41 tests, lint and build pass. Desktop browser review confirms 100×16 coverage,
+  weighted hidden-column Overall, mode filters, custom columns, keyboard details,
+  both scroll axes/fixed labels, sorting, search and empty states.
+- Hosted real-account inspection remains the owner's review checkpoint. Step 11
+  has not started. The existing large-bundle advisory remains (~170 KB gzip).

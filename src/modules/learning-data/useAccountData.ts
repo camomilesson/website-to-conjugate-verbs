@@ -7,7 +7,6 @@ export function useAccountData<T>(load: (userId: string) => Promise<T>) {
   const [attempt, setAttempt] = useState(0)
   useEffect(() => {
     let active = true
-    setData(null)
     setError(null)
     if (auth.user) {
       void load(auth.user.id)

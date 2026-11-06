@@ -29,8 +29,8 @@ Prettier.
 
 The approved app includes 100 verbs across 16 categories, typing and multiple
 choice, Google sign-in, and account-synced practice preferences. Guest practice
-retains browser-local preferences. Step 9 on staging adds submitted-answer tracking and initial Progress/History
-views; its new migration and hosted review are pending. See
+retains browser-local preferences. Production now saves submitted answers and completed practices. Step 10 on
+staging replaces the interim Progress table with the verb-by-tense heatmap. See
 [TRACKING_SETUP.md](TRACKING_SETUP.md).
 See [AUTH_SETUP.md](AUTH_SETUP.md) for environment and provider configuration.
 Original console examples remain separate from the browser app.

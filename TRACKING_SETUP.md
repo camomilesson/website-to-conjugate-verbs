@@ -1,7 +1,7 @@
 # Step 9: setup and review
 
-Code is ready for staging review. Production main stays at the approved step 8.
-The hosted database needs one new migration before signed-in tracking can work.
+Step 9 is approved and deployed to production. This is the retained setup and
+verification reference for a new database. Apply the migration only if absent.
 No new keys, Google settings, environment variables, or paid services are needed.
 
 ## Apply the new migration

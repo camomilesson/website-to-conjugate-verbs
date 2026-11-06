@@ -1,10 +1,12 @@
 import { useAuth } from "../modules/auth/ui.ts"
-import { useEffect, useRef } from "react"
+import { lazy, Suspense, useEffect, useRef } from "react"
 import { NavLink, Navigate, Route, Routes, useLocation } from "react-router"
 import { Practice } from "../modules/practice/index.ts"
-import { Progress } from "../modules/progress/index.ts"
+import { Progress, loadProgressDemo } from "../modules/progress/index.ts"
 import { History } from "../modules/history/index.ts"
 import { Settings } from "../modules/settings/index.ts"
+
+const ProgressDemo = import.meta.env.DEV ? lazy(loadProgressDemo) : null
 
 const sections = ["Practice", "Progress", "History", "Settings"]
 
@@ -53,6 +55,16 @@ export function App() {
       </header>
       <main id="main" ref={main} tabIndex={-1}>
         <Routes>
+          {ProgressDemo && (
+            <Route
+              path="/dev/progress"
+              element={
+                <Suspense fallback={<p>Loading demo…</p>}>
+                  <ProgressDemo />
+                </Suspense>
+              }
+            />
+          )}
           <Route path="/practice" element={<Practice key={identityKey} />} />
           <Route path="/progress" element={<Progress key={identityKey} />} />
           <Route path="/history" element={<History key={identityKey} />} />
