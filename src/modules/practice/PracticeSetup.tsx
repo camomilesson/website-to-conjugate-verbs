@@ -234,7 +234,7 @@ export function PracticeSetup({
           "Customize practice"
         ) : (
           <>
-            Make it
+            Make conjugation
             <br />
             <em>second nature.</em>
           </>
