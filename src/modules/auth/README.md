@@ -1,5 +1,6 @@
 # Account modlet
 
+`index.ts` exposes the configured Supabase client to other feature repositories.
 `ui.ts` exposes the provider, account controls, auth hook, and account preference
 repository. The application uses Supabase Google OAuth with PKCE. Session changes
 remount Practice and Settings, clearing previous user drafts/questions. Stale

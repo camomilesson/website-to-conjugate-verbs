@@ -15,10 +15,6 @@ as static assets; no runtime AI or conjugation engine is involved. Load through
 and dataset version before exposing answers. Loading is cancellable and errors
 are surfaced to the caller. Practice loads the selected session data. See [catalogue guide](../../docs/CATALOGUE.md) for the full release review.
 
-The old `verb.ts`, `verb-guard.ts`, and `data/hablar.json` remain solely for the
-preserved course console examples. They describe the earlier 24-table format;
-the browser uses `CatalogueVerb` and the canonical public files instead.
-
 ## Review record — starter-1, 5 November 2026
 
 Seven verbs: hablar, comer, vivir, ser, ir, tener, levantarse. Every verb covers

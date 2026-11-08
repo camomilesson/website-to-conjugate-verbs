@@ -44,3 +44,8 @@ keyboard expansion and empty-state controls. Hosted review remains the owner's
 checkpoint: compare two real completed practices (ideally including a perfect
 one), check exact selections and the saved example, and confirm abandoned tests
 are absent. Switch accounts to verify no data carries over.
+
+Repository replies pass through runtime validation before pagination or rendering.
+Invalid rows (including malformed nested configuration or mistakes) produce a
+clear load error and Retry. Legacy rows without saved defaults retain the
+version-aware baseline fallback; database timestamp precision is preserved.

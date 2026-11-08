@@ -18,7 +18,6 @@
     "dev": "vite",
     "build": "nx run-many -t build",
     "preview": "vite preview",
-    "examples": "node src/examples/index.ts",
     "test": "pnpm --filter @conjugadora/verb-catalogue test && node --test src/modules/*/*.test.ts",
     "validate:catalogue": "pnpm --filter @conjugadora/verb-catalogue test",
     "check:release": "pnpm lint && pnpm test && pnpm build && node scripts/check-release.mjs",

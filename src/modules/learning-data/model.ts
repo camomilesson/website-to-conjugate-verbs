@@ -1,4 +1,4 @@
-import type { AnswerResult, PracticeConfig } from "../practice/session.ts"
+import type { AnswerResult, PracticeConfig } from "../practice/index.ts"
 import type { PracticePreferences } from "../practice-preferences/index.ts"
 
 export const DEFAULTS_VERSION = "practice-1"
@@ -143,7 +143,8 @@ export interface HistoryRow {
   accent_policy: string
   correct: number
   answered: number
-  configuration: PracticeMetadata
+  configuration: Pick<PracticeMetadata, "resolved" | "selections"> &
+    Partial<Pick<PracticeMetadata, "defaults">>
   dataset_version: string
   defaults_version: string
   example_mistake: {

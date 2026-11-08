@@ -1,4 +1,4 @@
-import { supabase } from "../auth/client.ts"
+import { supabase } from "../auth/index.ts"
 function client() {
   if (!supabase) throw new Error("Account services are unavailable.")
   return supabase

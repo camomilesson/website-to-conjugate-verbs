@@ -1,4 +1,5 @@
-import { supabase } from "../auth/client.ts"
+import { supabase } from "../auth/index.ts"
+import { parseCountRows } from "./validation.ts"
 import { DEFAULTS_VERSION, parseAcknowledgement } from "./model.ts"
 import type {
   CountRow,
@@ -63,19 +64,7 @@ export async function readCounts(userId: string): Promise<CountRow[]> {
       .order("accent_policy")
       .range(offset, offset + 499)
     if (error) throw new Error(`Could not load progress: ${error.message}`)
-    const rows = data as CountRow[]
-    if (
-      !Array.isArray(rows) ||
-      rows.some(
-        (row) =>
-          !Number.isSafeInteger(row.correct) ||
-          !Number.isSafeInteger(row.answered) ||
-          row.correct < 0 ||
-          row.answered <= 0 ||
-          row.correct > row.answered,
-      )
-    )
-      throw new Error("Invalid progress counts from server.")
+    const rows = parseCountRows(data)
     all.push(...rows)
     if (rows.length < 500) return all
   }

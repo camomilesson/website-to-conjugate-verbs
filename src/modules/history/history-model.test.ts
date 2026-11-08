@@ -9,6 +9,7 @@ import {
   personLabel,
 } from "./history-model.ts"
 import { fixturePage, historyFixtures } from "./history-fixtures.ts"
+import { parseHistoryRows } from "../learning-data/data.ts"
 const rows = historyFixtures()
 void test("keyset pages retain timestamp ties and traverse every completed practice exactly once", () => {
   const seen: string[] = []
@@ -66,8 +67,8 @@ void test("non-default settings use the saved baseline rather than current defau
   assert.ok(nonDefaultSettings(changed)!.includes("Verbs: Selected"))
   const future = structuredClone(changed)
   future.defaults_version = "practice-2"
-  future.configuration.defaults.length = 7
-  future.configuration.defaults.accentPolicy = "relaxed"
+  future.configuration.defaults!.length = 7
+  future.configuration.defaults!.accentPolicy = "relaxed"
   assert.ok(!nonDefaultSettings(future)!.includes("7 requested questions"))
   assert.ok(!nonDefaultSettings(future)!.includes("Accents ignored"))
   const choice = rows[2]
@@ -82,4 +83,72 @@ void test("perfect tests have no example and labels disambiguate moods and perso
   assert.equal(categoryLabel("subjunctive.present"), "Subjuntivo · Presente")
   assert.equal(personLabel("el"), "él / ella / usted")
   assert.equal(categoryLabel("legacy-category"), "legacy-category")
+})
+
+void test("history responses validate full records and preserve cursor precision and saved defaults", () => {
+  assert.deepEqual(parseHistoryRows(rows), rows)
+  assert.deepEqual(parseHistoryRows([]), [])
+  const legacy = structuredClone(rows[0])
+  delete legacy.configuration.defaults
+  legacy.completed_at = "2026-11-06T12:00:00.123456+00:00"
+  assert.deepEqual(nonDefaultSettings(parseHistoryRows([legacy])[0]), [])
+  assert.equal(parseHistoryRows([legacy])[0].completed_at, legacy.completed_at)
+  legacy.defaults_version = "future-defaults"
+  assert.equal(nonDefaultSettings(parseHistoryRows([legacy])[0]), null)
+})
+
+void test("malformed history records fail with a recoverable message before rendering", () => {
+  const base = rows[1]
+  for (const value of [
+    null,
+    {},
+    [null],
+    [base, null],
+    [{ ...base, id: "invalid" }],
+    [{ ...base, completed_at: "yesterday" }],
+    [{ ...base, correct: "1" }],
+    [{ ...base, answered: 0 }],
+    [{ ...base, correct: base.answered + 1 }],
+    [{ ...base, mode: "choice" }],
+    [{ ...base, dataset_version: null }],
+    [{ ...base, configuration: null }],
+    [{ ...base, configuration: { ...base.configuration, resolved: null } }],
+    [{ ...base, configuration: { ...base.configuration, selections: {} } }],
+    [{ ...base, configuration: { ...base.configuration, defaults: {} } }],
+    [
+      {
+        ...base,
+        configuration: {
+          ...base.configuration,
+          resolved: { ...base.configuration.resolved, persons: [null] },
+        },
+      },
+    ],
+    [
+      {
+        ...base,
+        configuration: {
+          ...base.configuration,
+          resolved: { ...base.configuration.resolved, categories: ["unknown"] },
+        },
+      },
+    ],
+    [
+      {
+        ...base,
+        configuration: {
+          ...base.configuration,
+          resolved: { ...base.configuration.resolved, length: 1 },
+        },
+      },
+    ],
+    [{ ...base, example_mistake: {} }],
+    [
+      {
+        ...base,
+        example_mistake: { ...base.example_mistake, answers: [null] },
+      },
+    ],
+  ])
+    assert.throws(() => parseHistoryRows(value), /Invalid history data.*Retry/)
 })

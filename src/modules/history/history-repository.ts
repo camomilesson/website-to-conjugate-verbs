@@ -1,5 +1,5 @@
-import { supabase } from "../auth/client.ts"
-import type { HistoryRow } from "../learning-data/index.ts"
+import { supabase } from "../auth/index.ts"
+import { parseHistoryRows } from "../learning-data/index.ts"
 import {
   cursorCondition,
   HISTORY_PAGE_SIZE,
@@ -29,7 +29,7 @@ export async function readHistoryPage(
   const bound = options.cursor ?? options.ceiling
   if (bound) query = query.or(cursorCondition(bound, options.cursor === null))
   if (options.signal) query = query.abortSignal(options.signal)
-  const { data, error } = await query.returns<HistoryRow[]>()
+  const { data, error } = await query
   if (error) throw new Error(`Could not load history: ${error.message}`)
-  return historyPage(data)
+  return historyPage(parseHistoryRows(data))
 }

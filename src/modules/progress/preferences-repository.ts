@@ -1,4 +1,4 @@
-import { supabase } from "../auth/client.ts"
+import { supabase } from "../auth/index.ts"
 import {
   defaultProgressPreferences,
   parseProgressPreferences,

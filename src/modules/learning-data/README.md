@@ -26,3 +26,10 @@ Correctness is client-reported personal practice data, not secure grading.
 Reads are RLS-scoped and sorted; count reads page through all buckets (rather
 than silently accepting the API's 1,000-row default). The History modlet owns cursor pagination of completed entries. Read requests ignore stale identity responses;
 there is no real-time subscription. Refresh or re-enter the tab to reload data.
+
+`data.ts` is the public entry point for pure models and History response parsing;
+it can be imported by Node tests without initializing browser account services.
+`index.ts` also exposes the account repositories and React hook. History rows
+and Progress count rows are validated at their repository boundaries, including
+nested History selections, optional saved defaults, timestamps, and mistakes.
+Malformed replies reject with a message handled by the existing retry UI.

@@ -3,8 +3,9 @@ export {
   submissionFor,
   retryableSubmission,
   totals,
-} from "./model.ts"
-export type { TrackingContext, CountRow, HistoryRow } from "./model.ts"
+  parseHistoryRows,
+} from "./data.ts"
+export type { TrackingContext, CountRow, HistoryRow } from "./data.ts"
 export {
   startTrackedPractice,
   submitTrackedAnswer,

@@ -8,3 +8,4 @@ Conjugadora.
 - [Create your workspace](submission-workspace.md)
 - [Load a file in your project](submission-async-loading.md)
 - [Server, fetch, generics, and DOM](submission-server-fetch-generics-dom.md)
+- [Personal Project Final](submission-final.md)

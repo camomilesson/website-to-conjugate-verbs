@@ -7,6 +7,33 @@ website built for the Advanced JavaScript and TypeScript course at Harbour.Space
 University. The interface uses ivory, forest green and citron, with serif verbs
 and headings and sans-serif controls. No external font service is used.
 
+## Quick start
+
+Install **Node.js 24.x** and **pnpm 12.16.1**, then clone the repository:
+
+```sh
+git clone https://github.com/camomilesson/website-to-conjugate-verbs.git
+cd website-to-conjugate-verbs
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Open the local URL printed by Vite. Guest practice works without environment
+variables or a backend setup. To review the production build locally, run
+`pnpm build` followed by `pnpm preview`. Run `pnpm check:release` for lint,
+TypeScript, tests, ordered builds, and the production artifact audit.
+
+For account features, copy `.env.example` to `.env.local` and follow
+[Operations: authentication](docs/OPERATIONS.md#authentication), including
+Supabase migrations, Google OAuth, and local redirect configuration. Backend
+setup and the deletion function are documented in [Operations](docs/OPERATIONS.md);
+the hosted backend is not started by `pnpm dev`.
+
+For review, try guest practice first, then sign in to check saved preferences,
+Progress, and History. Reset and account deletion act on real account data.
+The architecture and course requirement adaptations are recorded in the
+[final submission guide](docs/submission/submission-final.md).
+
 ## Practice
 
 Choose **Multiple choice** or **Typing** to start with the last saved setup.
@@ -95,7 +122,6 @@ pnpm test                 # pure logic, catalogue, repositories and deletion-han
 pnpm build                # Nx: catalogue validation, then app typecheck/build to dist/
 pnpm preview              # serve the production build locally
 pnpm validate:catalogue    # catalogue-focused validation
-pnpm examples             # preserved course console examples
 ```
 
 Copy `.env.example` to `.env.local` for local account access. Only the Supabase
@@ -149,16 +175,23 @@ consolidating those styles is maintenance work, not a release requirement.
 - [Catalogue](docs/CATALOGUE.md): verb selection, category coverage, provenance
   and data maintenance.
 - Module READMEs in `src/` explain feature APIs and implementation details beside
-  their code. Completed plans/checkpoint docs are retired; Git preserves history.
+  their code. Classwork requirement mappings live in [docs/submission/](docs/submission/README.md);
+  they are not needed to run or maintain the app.
 
-The owner approved the public release (step 13) on 6 November 2026. Production
-and staging use the established publishing workflow described in Operations.
+## Current limits and next steps
 
-Google OAuth deliberately remains **Testing**, requesting only basic identity
-scopes; branding verification is deferred. The owner has reviewed the current
-hosting/database plans and is happy with them. Desktop support is the release
-target; narrow-screen fallbacks exist, but a mobile polish pass is deferred.
-Spaced repetition, named custom presets, timers, leaderboards and full historical
-answer logs are outside release scope.
+The supported release includes both practice modes, customization, account
+preferences, Progress, History, and account data controls described above.
+A fresh clone supports guest practice; account features need configured cloud
+services. The project has no command-line application or standalone Fastify
+server. Supabase and a Deno Edge Function provide the backend.
+
+There is no durable offline queue, resumable practice, or full historical answer
+log. Desktop is the release target; narrow-screen fallbacks exist, but mobile
+polish is deferred. Google OAuth remains **Testing**, requesting basic identity
+scopes; branding verification is deferred.
+Next priorities are a mobile/accessibility review and consolidation of the
+layered CSS. Further learning features could include spaced repetition and
+named practice presets; these are future work, not current functionality.
 
 Public support: **conjugadora.support@gmail.com**.
