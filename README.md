@@ -121,7 +121,7 @@ requests only when source, assets, build configuration, dependencies, or the
 workflow itself change. It installs from the frozen lockfile and runs
 `pnpm check:release` (lint, all tests, ordered builds, and artifact audit).
 Documentation-only changes outside the source packages do not trigger CI.
-See [the workspace checkpoint](docs/SUBMISSION-WORKSPACE.md) for submission files.
+See [the workspace checkpoint](docs/submission/submission-workspace.md) for submission files.
 
 ## Architecture and maintenance
 
