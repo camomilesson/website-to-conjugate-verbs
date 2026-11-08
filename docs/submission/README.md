@@ -6,3 +6,4 @@ requirements to the implementation; they are not needed to use, run, or maintain
 Conjugadora.
 
 - [Create your workspace](submission-workspace.md)
+- [Load a file in your project](submission-async-loading.md)
