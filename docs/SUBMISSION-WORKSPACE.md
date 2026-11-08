@@ -11,7 +11,7 @@ root and the public data URLs used by the app.
 | Shared dependency catalog            | `pnpm-workspace.yaml` pins TypeScript; both package manifests use `catalog:`                                                        |
 | Nx task default and dependency order | `nx.json`: `build.dependsOn: ["^build"]`; root `pnpm build` runs both package builds, validating the catalogue before the app       |
 | Workflow path filter                 | `.github/workflows/workspace-check.yml`: matching `push.paths` and `pull_request.paths`                                             |
-| Passing GitHub workflow              | Add the successful run URL after pushing and verifying this branch                                                                  |
+| Passing GitHub workflow              | [Successful run on GitHub](https://github.com/camomilesson/website-to-conjugate-verbs/actions/runs/42482055720), commit `95b695f`   |
 
 ## Reproduce
 
