@@ -12,8 +12,8 @@ import {
 } from "../learning-data/index.ts"
 import type { TrackingContext } from "../learning-data/index.ts"
 import { useEffect, useMemo, useRef, useState } from "react"
-import { loadCatalogueVerb } from "../verb-catalogue/index.ts"
-import type { CatalogueVerb } from "../verb-catalogue/index.ts"
+import { loadCatalogueVerb } from "@conjugadora/verb-catalogue"
+import type { CatalogueVerb } from "@conjugadora/verb-catalogue"
 import {
   PreferenceFields,
   usePreferenceDraft,

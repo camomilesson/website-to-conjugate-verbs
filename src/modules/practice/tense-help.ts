@@ -1,4 +1,4 @@
-import type { CategoryId } from "../verb-catalogue/index.ts"
+import type { CategoryId } from "@conjugadora/verb-catalogue"
 export interface TenseHelp {
   title: string
   meaning: string

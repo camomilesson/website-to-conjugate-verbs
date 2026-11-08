@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { loadCatalogue } from "../verb-catalogue/index.ts"
+import { loadCatalogue } from "@conjugadora/verb-catalogue"
 import { HistoryControls, HistoryList } from "./HistoryList.tsx"
 import { fixturePage, historyFixtures } from "./history-fixtures.ts"
 import type { HistoryCursor, HistoryMode } from "./history-model.ts"

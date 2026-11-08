@@ -1,4 +1,4 @@
-import type { Catalogue } from "../verb-catalogue/index.ts"
+import type { Catalogue } from "@conjugadora/verb-catalogue"
 import {
   defaultPreferences,
   restorePreferences,

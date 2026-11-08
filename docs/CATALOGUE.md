@@ -71,7 +71,7 @@ for the page lifetime; no offline installation or persistent data cache is added
 ## Maintenance
 
 Canonical files are [the manifest](../public/data/catalogue.json) and one JSON
-per verb under `public/data/verbs/`. The [catalogue modlet](../src/modules/verb-catalogue/README.md)
+per verb under `public/data/verbs/`. The [catalogue package](../packages/verb-catalogue/README.md)
 explains its public API, validation, accepted alternatives and retained starter
 review. The category registry uses stable IDs for stored statistics/history.
 

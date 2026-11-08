@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { loadCatalogue } from "../verb-catalogue/index.ts"
-import type { Catalogue } from "../verb-catalogue/index.ts"
+import { loadCatalogue } from "@conjugadora/verb-catalogue"
+import type { Catalogue } from "@conjugadora/verb-catalogue"
 import { accountPreferencesRepository, useAuth } from "../auth/ui.ts"
 import { readPreferences, savePreferences } from "./preferences.ts"
 import { loadAccountPreferences, saveAccountPreferences } from "./repository.ts"

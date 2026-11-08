@@ -1,5 +1,5 @@
 import { normaliseAnswer } from "../answer-checking/index.ts"
-import type { CatalogueVerb, PersonId } from "../verb-catalogue/index.ts"
+import type { CatalogueVerb, PersonId } from "@conjugadora/verb-catalogue"
 import type { Question } from "./session.ts"
 
 export function shuffled<T>(values: readonly T[], random: () => number): T[] {

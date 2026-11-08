@@ -1,9 +1,9 @@
-import { getCategoryPersons } from "../verb-catalogue/index.ts"
+import { getCategoryPersons } from "@conjugadora/verb-catalogue"
 import type {
   CatalogueVerb,
   CategoryId,
   PersonId,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import { shuffled, withChoices } from "./choices.ts"
 import { isCorrectAnswer } from "../answer-checking/index.ts"
 import type { AccentPolicy } from "../answer-checking/index.ts"

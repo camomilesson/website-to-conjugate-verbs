@@ -1,5 +1,5 @@
-import { CATEGORIES, PERSONS } from "../verb-catalogue/index.ts"
-import type { PersonId } from "../verb-catalogue/index.ts"
+import { CATEGORIES, PERSONS } from "@conjugadora/verb-catalogue"
+import type { PersonId } from "@conjugadora/verb-catalogue"
 import type { HistoryRow } from "../learning-data/index.ts"
 export const HISTORY_PAGE_SIZE = 10
 export type HistoryMode = "all" | "typing" | "choice"

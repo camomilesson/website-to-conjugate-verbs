@@ -92,7 +92,7 @@ pnpm install --frozen-lockfile
 pnpm dev                  # Vite; pnpm start is an alias
 pnpm lint                 # strict app typecheck, ESLint, Prettier
 pnpm test                 # pure logic, catalogue, repositories and deletion-handler tests
-pnpm build                # typecheck, catalogue validation, dist/
+pnpm build                # Nx: catalogue validation, then app typecheck/build to dist/
 pnpm preview              # serve the production build locally
 pnpm validate:catalogue    # catalogue-focused validation
 pnpm examples             # preserved course console examples
@@ -102,6 +102,26 @@ Copy `.env.example` to `.env.local` for local account access. Only the Supabase
 project URL and **publishable** key belong in `VITE_` variables; these are public
 browser configuration. Never put the Google client secret or Supabase privileged
 keys in frontend code or Git. Without configuration the app supports guests.
+
+## Workspace and CI
+
+The repository has two pnpm workspace packages: `conjugadora` (the app at the
+root) and `@conjugadora/verb-catalogue` (`packages/verb-catalogue`). The app
+imports the catalogue through its public package entry point and declares it as
+`workspace:*`. Both packages use `typescript: catalog:`; the exact shared version
+is pinned in `pnpm-workspace.yaml`.
+
+`pnpm build` runs Nx across both packages. The `build` task default in `nx.json`
+uses `dependsOn: ["^build"]`, so the catalogue's typecheck and dataset tests must
+pass before the app builds. The catalogue exports TypeScript source, consumed
+by Vite and Node 24; it does not need a separate emitted JavaScript bundle.
+
+[Workspace checks](.github/workflows/workspace-check.yml) runs on pushes and pull
+requests only when source, assets, build configuration, dependencies, or the
+workflow itself change. It installs from the frozen lockfile and runs
+`pnpm check:release` (lint, all tests, ordered builds, and artifact audit).
+Documentation-only changes outside the source packages do not trigger CI.
+See [the workspace checkpoint](docs/SUBMISSION-WORKSPACE.md) for submission files.
 
 ## Architecture and maintenance
 

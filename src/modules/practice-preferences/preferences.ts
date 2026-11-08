@@ -2,12 +2,12 @@ import {
   CATEGORIES,
   getCategoryPersons,
   getPresetCategories,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import type {
   Catalogue,
   CategoryId,
   PersonId,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import type { AccentPolicy } from "../answer-checking/index.ts"
 
 export const PREFERENCE_KEY = "la-conjugadora.practice-preferences.v1"

@@ -4,7 +4,7 @@ import { test } from "node:test"
 import {
   parseCatalogueVerb,
   getPresetCategories,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import {
   createQuestions,
   initialSession,

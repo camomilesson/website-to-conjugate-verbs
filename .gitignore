@@ -29,3 +29,6 @@ coverage/
 
 # Supabase CLI local project metadata
 supabase/.temp/
+
+# Nx local state
+.nx/

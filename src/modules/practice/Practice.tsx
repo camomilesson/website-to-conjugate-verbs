@@ -15,7 +15,7 @@ import type { TrackingContext } from "../learning-data/index.ts"
 import type { SessionAction } from "./session.ts"
 import { useEffect, useRef, useState, useReducer } from "react"
 import { useBlocker } from "react-router"
-import { CATEGORIES, PERSONS } from "../verb-catalogue/index.ts"
+import { CATEGORIES, PERSONS } from "@conjugadora/verb-catalogue"
 import type { PracticeConfig, PracticeSource, Question } from "./session.ts"
 import {
   createQuestions,

@@ -1,6 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react"
-import type { CategoryId } from "../verb-catalogue/index.ts"
-import { CATEGORIES } from "../verb-catalogue/index.ts"
+import type { CategoryId } from "@conjugadora/verb-catalogue"
+import { CATEGORIES } from "@conjugadora/verb-catalogue"
 import { TENSE_HELP } from "./tense-help.ts"
 export function TenseHint({ categoryId }: { categoryId: CategoryId }) {
   const category = CATEGORIES.find((item) => item.id === categoryId)!

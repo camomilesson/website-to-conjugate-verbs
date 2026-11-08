@@ -4,12 +4,12 @@ import {
   CATEGORIES,
   PERSONS,
   getPresetCategories,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import type {
   Catalogue,
   CategoryId,
   PersonId,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import { PRACTICE_PERSONS, commonVerbIds } from "./preferences.ts"
 import type { PracticePreferences, PracticeMode } from "./preferences.ts"
 import { SelectionDialog } from "./SelectionDialog.tsx"

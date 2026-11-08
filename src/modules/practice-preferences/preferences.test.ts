@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import { readFileSync } from "node:fs"
 import { test } from "node:test"
-import { parseCatalogue } from "../verb-catalogue/index.ts"
+import { parseCatalogue } from "@conjugadora/verb-catalogue"
 import {
   PREFERENCE_KEY,
   defaultPreferences,

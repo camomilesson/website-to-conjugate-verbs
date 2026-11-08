@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 import type { CountRow } from "../learning-data/index.ts"
-import { CATEGORIES } from "../verb-catalogue/index.ts"
+import { CATEGORIES } from "@conjugadora/verb-catalogue"
 import { Heatmap } from "./Heatmap.tsx"
 import { useCatalogue } from "./useCatalogue.ts"
 export default function ProgressDemo() {

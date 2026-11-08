@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import { test } from "node:test"
-import { parseCatalogue } from "../verb-catalogue/index.ts"
+import { parseCatalogue } from "@conjugadora/verb-catalogue"
 import {
   defaultPreferences,
   loadAccountPreferences,

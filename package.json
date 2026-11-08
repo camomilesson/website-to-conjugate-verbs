@@ -6,7 +6,7 @@
   "engines": {
     "node": "24.x"
   },
-  "description": "",
+  "description": "Spanish conjugation practice with account progress and history",
   "scripts": {
     "start": "vite",
     "check": "tsc --noEmit",
@@ -16,12 +16,13 @@
     "lint": "pnpm run lint-typecheck && pnpm run lint-eslint && pnpm run lint-prettier",
     "format": "prettier --write .",
     "dev": "vite",
-    "build": "pnpm check && pnpm validate:catalogue && vite build",
+    "build": "nx run-many -t build",
     "preview": "vite preview",
     "examples": "node src/examples/index.ts",
-    "test": "node --test src/modules/*/*.test.ts",
-    "validate:catalogue": "node --test src/modules/verb-catalogue/catalogue.test.ts",
-    "check:release": "pnpm lint && pnpm test && pnpm build && node scripts/check-release.mjs"
+    "test": "pnpm --filter @conjugadora/verb-catalogue test && node --test src/modules/*/*.test.ts",
+    "validate:catalogue": "pnpm --filter @conjugadora/verb-catalogue test",
+    "check:release": "pnpm lint && pnpm test && pnpm build && node scripts/check-release.mjs",
+    "build:app": "pnpm check && vite build"
   },
   "keywords": [],
   "author": "",
@@ -36,14 +37,26 @@
     "eslint": "^10.13.0",
     "globals": "^17.13.0",
     "prettier": "^3.9.10",
-    "typescript": "^6.0.3",
+    "typescript": "catalog:",
     "typescript-eslint": "^8.72.0",
-    "vite": "^8.3.5"
+    "vite": "^8.3.5",
+    "nx": "24.0.5"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-router": "^8.5.1"
+    "react-router": "^8.5.1",
+    "@conjugadora/verb-catalogue": "workspace:*"
+  },
+  "nx": {
+    "includedScripts": [
+      "build"
+    ],
+    "targets": {
+      "build": {
+        "command": "pnpm run build:app"
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 import test from "node:test"
 import assert from "node:assert/strict"
 import { buildMatrix, selectRows, moodGroups, heatLevel } from "./matrix.ts"
-import { parseCatalogue, CATEGORIES } from "../verb-catalogue/index.ts"
+import { parseCatalogue, CATEGORIES } from "@conjugadora/verb-catalogue"
 import { readFileSync } from "node:fs"
 import type { CountRow } from "../learning-data/index.ts"
 const catalogue = parseCatalogue(

@@ -1,0 +1,44 @@
+name: Workspace checks
+
+on:
+  push:
+    paths: &workspace-paths
+      - "src/**"
+      - "packages/**"
+      - "public/**"
+      - "scripts/**"
+      - "supabase/functions/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - "nx.json"
+      - "tsconfig.json"
+      - "vite.config.ts"
+      - "eslint.config.js"
+      - ".prettier*"
+      - ".gitignore"
+      - "index.html"
+      - "vercel.json"
+      - ".github/workflows/workspace-check.yml"
+  pull_request:
+    paths: *workspace-paths
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NX_DAEMON: "false"
+      NX_ISOLATE_PLUGINS: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:release

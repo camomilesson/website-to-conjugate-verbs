@@ -6,7 +6,7 @@ import {
   getCategoryPersons,
   parseCatalogue,
   parseCatalogueVerb,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import { isCorrectAnswer, normaliseAnswer } from "../answer-checking/index.ts"
 import { personInCategory, withChoices } from "./choices.ts"
 import {

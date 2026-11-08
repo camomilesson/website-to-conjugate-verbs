@@ -1,5 +1,5 @@
-import { CATEGORIES, getPresetCategories } from "../verb-catalogue/index.ts"
-import type { CategoryId, Preset } from "../verb-catalogue/index.ts"
+import { CATEGORIES, getPresetCategories } from "@conjugadora/verb-catalogue"
+import type { CategoryId, Preset } from "@conjugadora/verb-catalogue"
 import type { ModeFilter, SortOrder } from "./matrix.ts"
 export interface ProgressPreferences {
   schemaVersion: 1

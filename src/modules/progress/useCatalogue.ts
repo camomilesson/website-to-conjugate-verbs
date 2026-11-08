@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { loadCatalogue } from "../verb-catalogue/index.ts"
-import type { Catalogue } from "../verb-catalogue/index.ts"
+import { loadCatalogue } from "@conjugadora/verb-catalogue"
+import type { Catalogue } from "@conjugadora/verb-catalogue"
 export function useCatalogue(attempt: number) {
   const [catalogue, setCatalogue] = useState<Catalogue | null>(null)
   const [error, setError] = useState<string | null>(null)

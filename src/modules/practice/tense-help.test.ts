@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import { test } from "node:test"
-import { CATEGORIES } from "../verb-catalogue/index.ts"
+import { CATEGORIES } from "@conjugadora/verb-catalogue"
 import { TENSE_HELP } from "./tense-help.ts"
 await test("every supported category has English help; compound and progressive forms have formation hints", () => {
   assert.deepEqual(

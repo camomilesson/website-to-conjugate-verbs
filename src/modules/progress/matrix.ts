@@ -1,9 +1,9 @@
-import { CATEGORIES } from "../verb-catalogue/index.ts"
+import { CATEGORIES } from "@conjugadora/verb-catalogue"
 import type {
   Catalogue,
   CatalogueEntry,
   CategoryId,
-} from "../verb-catalogue/index.ts"
+} from "@conjugadora/verb-catalogue"
 import type { CountRow } from "../learning-data/index.ts"
 export type ModeFilter = "all" | "typing" | "choice" | "strict" | "relaxed"
 export type SortOrder =
