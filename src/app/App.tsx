@@ -28,6 +28,16 @@ const sections = ["Practice", "Progress", "History", "Settings"]
 
 export function App() {
   const { identityKey, user } = useAuth()
+  const accountName = [
+    user?.user_metadata?.given_name,
+    user?.user_metadata?.full_name,
+    user?.user_metadata?.name,
+  ]
+    .find(
+      (value): value is string => typeof value === "string" && !!value.trim(),
+    )
+    ?.trim()
+    .split(/\s+/)[0]
   const location = useLocation()
   const navigate = useNavigate()
   const entryKey = practiceEntryKey(location.state)
@@ -140,7 +150,11 @@ export function App() {
             {user ? "✓" : "G"}
           </span>
           <span>
-            {user ? "Your account" : "Guest workspace"}
+            {user
+              ? accountName
+                ? `${accountName}'s account`
+                : "Your account"
+              : "Guest workspace"}
             <small>
               {user ? "Learning, saved." : "Sign in to save your progress"}
             </small>

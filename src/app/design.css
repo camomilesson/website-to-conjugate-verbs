@@ -1162,3 +1162,11 @@ summary:focus-visible {
     scroll-padding-left: 0;
   }
 }
+
+.account-link > span:nth-child(2) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.account-avatar {
+  flex-shrink: 0;
+}
