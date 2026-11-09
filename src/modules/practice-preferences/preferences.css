@@ -118,7 +118,10 @@
 }
 .setup-row .selection-actions {
   margin: 0;
-  gap: 0.35rem;
+  gap: 0.5rem 0.35rem;
+}
+.setup-row .selection-actions + .selection-actions {
+  margin-top: 0.5rem;
 }
 .selection-summary {
   color: var(--muted);
