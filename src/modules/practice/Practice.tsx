@@ -12,6 +12,7 @@ import {
   submitTrackedAnswer,
 } from "../learning-data/index.ts"
 import type { TrackingContext } from "../learning-data/index.ts"
+import { createSaveQueue } from "./save-queue.ts"
 import type { SessionAction } from "./session.ts"
 import { useEffect, useRef, useState, useReducer } from "react"
 import { useBlocker } from "react-router"
@@ -52,7 +53,8 @@ function LeavePrompt({
       <p>
         This practice cannot be resumed. Acknowledged answers stay in account
         progress. An unfinished practice has no History entry; a submitted final
-        answer may already have completed it.
+        answer may already have completed it. Answers still waiting to be sent
+        may be lost if you leave.
       </p>
       <div className="selection-actions">
         <button onClick={onStay} autoFocus>
@@ -91,7 +93,7 @@ function PracticeSession({
   const [repeatLoading, setRepeatLoading] = useState(false)
   const [repeatError, setRepeatError] = useState<string | null>(null)
   async function repeatPractice() {
-    if (repeating.current) return
+    if (repeating.current || saveQueue.snapshot().pending > 0) return
     repeating.current = true
     setRepeatLoading(true)
     setRepeatError(null)
@@ -122,13 +124,12 @@ function PracticeSession({
     }
   }
   const active = useRef(true)
-  const busy = useRef(false)
-  const pending = useRef<{
-    action: SessionAction
-    request: ReturnType<typeof retryableSubmission>
-  } | null>(null)
-  const [saving, setSaving] = useState(false)
-  const [saveError, setSaveError] = useState<string | null>(null)
+  const [saveQueue] = useState(createSaveQueue)
+  const [saveState, setSaveState] = useState(saveQueue.snapshot)
+  const submittedIndex = useRef(-1)
+  const saveError = saveState.error
+  const unsaved = saveState.pending > 0
+  useEffect(() => saveQueue.subscribe(setSaveState), [saveQueue])
   useEffect(() => {
     active.current = true
     return () => {
@@ -136,29 +137,39 @@ function PracticeSession({
     }
   }, [])
   useEffect(() => {
-    if (state.phase === "complete") return
+    if (state.phase === "complete" && !unsaved) return
     const warn = (event: BeforeUnloadEvent) => {
       event.preventDefault()
     }
     window.addEventListener("beforeunload", warn)
     return () => window.removeEventListener("beforeunload", warn)
-  }, [state.phase])
+  }, [state.phase, unsaved])
   const [text, setText] = useState("")
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [leaving, setLeaving] = useState(false)
   const input = useRef<HTMLInputElement>(null)
   const next = useRef<HTMLButtonElement>(null)
+  const retrySave = useRef<HTMLButtonElement>(null)
   const resultsHeading = useRef<HTMLHeadingElement>(null)
   const blocker = useBlocker(({ currentLocation, nextLocation }) =>
-    shouldConfirmPracticeLeave(state.phase, currentLocation, nextLocation),
+    shouldConfirmPracticeLeave(
+      unsaved ? "feedback" : state.phase,
+      currentLocation,
+      nextLocation,
+    ),
   )
   useEffect(() => {
+    if (saveError) {
+      retrySave.current?.focus()
+      return
+    }
     if (state.phase === "question") input.current?.focus()
     if (state.phase === "feedback") next.current?.focus()
     if (state.phase === "complete") resultsHeading.current?.focus()
-  }, [state.phase, state.index])
+  }, [state.phase, state.index, saveError])
 
   function advance() {
+    if (saveQueue.snapshot().error) return
     setText("")
     setSelectedIndex(null)
     dispatch({ type: "next" })
@@ -173,53 +184,33 @@ function PracticeSession({
       input.current?.setSelectionRange(start + 1, start + 1)
     })
   }
-  async function savePending() {
-    if (!pending.current || busy.current) return
-    busy.current = true
-    setSaving(true)
-    setSaveError(null)
-    const current = pending.current
-    try {
-      await current.request.send()
-      if (!active.current) return
-      pending.current = null
-      dispatch(current.action)
-    } catch (reason: unknown) {
-      if (active.current)
-        setSaveError(
-          reason instanceof Error
-            ? reason.message
-            : "Could not save your answer. Retry.",
-        )
-    } finally {
-      busy.current = false
-      if (active.current) setSaving(false)
-    }
-  }
   function submit() {
-    if (state.phase !== "question" || pending.current || busy.current) return
+    if (
+      state.phase !== "question" ||
+      saveQueue.snapshot().error ||
+      submittedIndex.current === state.index
+    )
+      return
     const action: SessionAction =
       config.mode === "choice"
         ? { type: "submit-choice", index: selectedIndex ?? -1 }
         : { type: "submit", text }
     const proposed = sessionReducer(state, action)
     if (proposed === state) return
-    if (!tracking) {
-      dispatch(action)
-      return
-    }
-    pending.current = {
-      action,
-      request: retryableSubmission(
-        submissionFor(
-          tracking.runId,
-          state.index + 1,
-          proposed.results[proposed.results.length - 1],
+    submittedIndex.current = state.index
+    if (tracking) {
+      saveQueue.enqueue(
+        retryableSubmission(
+          submissionFor(
+            tracking.runId,
+            state.index + 1,
+            proposed.results[proposed.results.length - 1],
+          ),
+          submitTrackedAnswer,
         ),
-        submitTrackedAnswer,
-      ),
+      )
     }
-    void savePending()
+    dispatch(action)
   }
   const modeLabel = config.mode === "choice" ? "Multiple-choice" : "Typing"
   const policyLabel =
@@ -235,17 +226,27 @@ function PracticeSession({
     if (
       state.phase !== "feedback" ||
       !result?.correct ||
+      saveError ||
       leaving ||
       blocker.state === "blocked"
     )
       return
     const timer = window.setTimeout(() => {
+      if (saveQueue.snapshot().error) return
       setText("")
       setSelectedIndex(null)
       dispatch({ type: "auto-next", index: state.index })
     }, 650)
     return () => window.clearTimeout(timer)
-  }, [state.phase, state.index, result?.correct, leaving, blocker.state])
+  }, [
+    state.phase,
+    state.index,
+    result?.correct,
+    leaving,
+    blocker.state,
+    saveError,
+    saveQueue,
+  ])
 
   return (
     <section
@@ -299,10 +300,35 @@ function PracticeSession({
           }}
         />
       ) : null}
+      {unsaved && !saveError && (
+        <p className="field-note" role="status">
+          Saving progress… {saveState.pending}{" "}
+          {saveState.pending === 1 ? "answer" : "answers"} pending.
+        </p>
+      )}
+      {saveError && (
+        <div role="alert">
+          <p>{saveError}</p>
+          <p>
+            Practice is paused. Your feedback is kept; retry saves the same
+            answer before sending the remaining answers. Leaving may lose
+            answers that have not been sent; a lost reply may already have
+            saved.
+          </p>
+          <button
+            ref={retrySave}
+            className="primary-button"
+            disabled={saveState.saving}
+            onClick={() => saveQueue.retry()}
+          >
+            {saveState.saving ? "Retrying save…" : "Retry save"}
+          </button>
+        </div>
+      )}
       {state.phase === "complete" ? (
         <>
           <h1 id="session-title" ref={resultsHeading} tabIndex={-1}>
-            Practice complete
+            {unsaved ? "Practice answered" : "Practice complete"}
           </h1>
           <p className="final-score">{score.percentage}%</p>
           <p>
@@ -313,7 +339,9 @@ function PracticeSession({
             {modeLabel}
             {config.mode === "typing" ? ` · ${policyLabel}` : ""}. Practice
             {tracking
-              ? "results saved to your account."
+              ? unsaved
+                ? "results are waiting to be saved to your account."
+                : "results saved to your account."
               : "results are not saved in guest mode."}
           </p>
           {score.incorrect ? (
@@ -354,7 +382,7 @@ function PracticeSession({
           <div className="selection-actions">
             <button
               className="primary-button"
-              disabled={repeatLoading}
+              disabled={repeatLoading || unsaved}
               onClick={() => {
                 void repeatPractice()
               }}
@@ -362,7 +390,7 @@ function PracticeSession({
               {repeatLoading ? "Starting…" : "Repeat practice"}{" "}
               <span className="key-hint">Enter</span>
             </button>
-            <button onClick={onReset} disabled={repeatLoading}>
+            <button onClick={onReset} disabled={repeatLoading || unsaved}>
               New practice
             </button>
           </div>
@@ -406,7 +434,7 @@ function PracticeSession({
                 person={PERSONS[question.person]}
                 options={question.options}
                 selectedIndex={selectedIndex}
-                disabled={state.phase === "feedback" || saving || !!saveError}
+                disabled={state.phase === "feedback" || !!saveError}
                 inputRef={input}
                 onSelect={setSelectedIndex}
                 onSubmit={submit}
@@ -426,9 +454,7 @@ function PracticeSession({
                     ref={input}
                     value={text}
                     onChange={(event) => setText(event.target.value)}
-                    disabled={
-                      state.phase === "feedback" || saving || !!saveError
-                    }
+                    disabled={state.phase === "feedback" || !!saveError}
                     maxLength={2000}
                     autoComplete="off"
                     autoCorrect="off"
@@ -443,7 +469,7 @@ function PracticeSession({
                 </p>
               </>
             )}
-            {state.phase === "question" && !saving && !saveError && (
+            {state.phase === "question" && !saveError && (
               <>
                 {config.mode === "typing" && (
                   <div className="accent-keys" aria-label="Spanish characters">
@@ -474,28 +500,6 @@ function PracticeSession({
               </>
             )}
           </form>
-          {saving && (
-            <p role="status">
-              Saving answer… Waiting for acknowledgement before continuing.
-            </p>
-          )}
-          {saveError && (
-            <div role="alert">
-              <p>{saveError}</p>
-              <p>
-                Your answer stays locked so retry sends the same submission. If
-                you leave now, a lost reply may still have been saved.
-              </p>
-              <button
-                className="primary-button"
-                onClick={() => {
-                  void savePending()
-                }}
-              >
-                Retry save
-              </button>
-            </div>
-          )}
           {state.phase === "feedback" && (
             <div className="answer-feedback" role="status">
               <h2>{result.correct ? "Correct" : "Incorrect"}</h2>
@@ -505,15 +509,18 @@ function PracticeSession({
               </p>
               {result.correct ? (
                 <p className="field-note">
-                  {state.index === state.questions.length - 1
-                    ? "Finishing practice…"
-                    : "Next question…"}
+                  {saveError
+                    ? "Retry saving to continue."
+                    : state.index === state.questions.length - 1
+                      ? "Finishing practice…"
+                      : "Next question…"}
                 </p>
               ) : (
                 <button
                   type="button"
                   className="primary-button"
                   ref={next}
+                  disabled={!!saveError}
                   onClick={advance}
                 >
                   {state.index === state.questions.length - 1

@@ -281,6 +281,21 @@ connection; it does not prove independent hosted races or the real Supabase
 GoTrue deletion service. Deletion-handler Node tests and a prior Deno entry-point
 check complement the SQL suites. Local fixture UI routes never call real deletion.
 
+### Background practice-save checks (1.1.0)
+
+No migration or server redeployment is needed. The existing answer RPC still
+requires sequential ordinals and deduplicates retries by submission ID/payload.
+
+On stable staging, test typing and choice with throttled network responses:
+feedback should appear immediately and questions may advance while saves remain
+pending. After all questions, results must say they are waiting to save, disable
+Repeat/New practice, and warn before navigation until acknowledgement completes.
+Simulate a failed response: progression pauses and Retry save retains the original
+submission. After successful retry, counts/history must not duplicate. Reload or
+confirmed navigation can lose unsent answers; this is not offline persistence.
+Account changes/reset must stop unsent requests from the old practice. Existing
+server owner/generation checks remain authoritative for any in-flight requests.
+
 ### Release smoke check
 
 1. Open production without a Vercel session. Confirm Conjugadora, the subline,

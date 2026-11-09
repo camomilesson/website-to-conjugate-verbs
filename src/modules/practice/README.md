@@ -42,10 +42,15 @@ Choice submissions require an offered
 index and always use strict matching, independently of the typing accent policy.
 Setup preloads selected verb files in choice mode to show the eligible pool size,
 handles loading/error/retry, and aborts stale loads. Typing still loads on Start.
-Signed-in practice now starts a tracked server run and waits for each answer's
-acknowledgement before feedback/advancement. A failed save locks the answer and
-retries the same ID/payload; leaving warns that an unknown reply may already
-have committed. The last answer creates history atomically with its counters.
+Signed-in practice starts a tracked server run, shows feedback immediately and
+saves through the serial memory-only queue in `save-queue.ts`. Each request keeps
+its ID/payload for retry. A failed save pauses input and manual/automatic
+advancement until retry succeeds. Leaving warns about unsent answers and replies
+that may already have committed. Local results appear while the queue drains;
+saved/completed wording and Repeat/New practice wait for acknowledgement of every
+answer. Pending saves keep navigation/reload warnings active even on results.
+Unmount/account changes stop unsent requests; in-flight writes may still commit.
+The last answer creates history atomically with its counters.
 See the learning-data modlet and the [tracking verification guide](../../../docs/OPERATIONS.md#verification). Guest scoring is unchanged.
 Run `pnpm test` for matching, sampling, and state regression checks. Browser review
 covers keyboard input/focus, character insertion, navigation cancellation, refresh,

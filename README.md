@@ -91,6 +91,11 @@ devices. Practice defaults save when starting a session or using Settings Save;
 Progress sort/filter/column choices save automatically. Search and scroll are
 not persisted. Separate browser origins have separate guest/session storage.
 
+Answer feedback is immediate; signed-in answers save in order in the background.
+Failed saves pause practice until retry succeeds. Final results are labelled saved
+only after all answers are acknowledged. Pending answers are memory-only and can
+be lost when leaving or reloading.
+
 Each acknowledged signed-in answer updates Progress immediately, even if the
 practice is later abandoned. Only completed practices create History entries.
 Incomplete queues are not saved. A connection failure locks the submitted answer

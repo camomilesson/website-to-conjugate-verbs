@@ -4,10 +4,12 @@
 weighted totals. `model.ts` stays pure; `repository.ts` uses the auth client.
 Practice starts a server-issued run with effective configuration, presets,
 defaults/dataset versions, and actual eligible length. Each answer is locally
-checked, then persisted before feedback/advance. `retryableSubmission` holds one
-in-memory ID/payload across failures and shares concurrent send attempts. The UI
-blocks further answers until acknowledgement and drops its queue on identity
-change. No persisted browser queue or resume mechanism exists.
+checked with immediate feedback, then saved in order by the Practice memory-only
+queue. `retryableSubmission` holds one in-memory ID/payload across failures and
+shares concurrent send attempts. Failed saves pause progression until a successful
+retry. Pending saves prevent results being labelled saved or a repeat/new run from
+starting. The queue stops unsent requests on identity change/unmount; an in-flight
+write may still commit. No persisted browser queue or resume mechanism exists.
 
 Database writes use owner-checked security-definer RPCs with empty search_path,
 explicit permissions, run-row serialization, atomic counter upserts, and unique
