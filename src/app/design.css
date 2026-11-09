@@ -1170,3 +1170,11 @@ summary:focus-visible {
 .account-avatar {
   flex-shrink: 0;
 }
+
+.remember-sign-in {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  cursor: pointer;
+}

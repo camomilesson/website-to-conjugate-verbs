@@ -119,6 +119,29 @@ client-checked personal practice data, not tamper-proof grading.
 
 ## Authentication
 
+### Sign-in storage rollout (1.1.0)
+
+No database migration, Edge Function deployment, environment variable or new OAuth
+redirect URL is required for the remember-me change. Deploy the frontend to stable
+staging first. Existing sessions keep working; ask the small tester group to sign
+out and sign in once to make the new choice. Do not clear learning data.
+
+Before production, verify:
+
+1. Sign out, leave “Keep me signed in on this device” unchecked, and complete real
+   Google sign-in. Refresh the same tab: account/preferences/progress should return.
+   Open a separate tab directly: it should be a guest when no persistent session
+   exists. Browser restore or Duplicate Tab may preserve session storage.
+2. Sign out, repeat with the checkbox checked, and verify sign-in in a separately
+   opened tab and after closing/reopening the site. Sign out and confirm the other
+   persistent tab updates. Independent session-only logins are separate sessions.
+3. Confirm Google cancellation/error handling, retry, account switching and existing
+   data restoration. Verify deletion's existing local sign-out path in a disposable
+   test account only; never delete a real tester account just for a smoke check.
+4. Inspect Supabase dashboard session timebox/inactivity settings if an exact login
+   duration is needed. This update does not set a fixed maximum: access tokens
+   refresh, and persistence ends on sign-out, site-data removal, expiry or revocation.
+
 Google OAuth intentionally remains **Testing** by owner decision on 6 November 2026. Declared scopes are `openid`, `https://www.googleapis.com/auth/userinfo.email`
 and `https://www.googleapis.com/auth/userinfo.profile`. The public production
 redirect was inspected at release and requested only `email profile`, with the

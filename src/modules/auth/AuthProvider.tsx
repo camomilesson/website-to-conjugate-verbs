@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react"
 import type { ReactNode } from "react"
 import type { User } from "@supabase/supabase-js"
-import { supabase } from "./client.ts"
+import { supabase, sessionStorageChoice } from "./client.ts"
 interface AuthState {
   status: "loading" | "guest" | "signed-in" | "unconfigured" | "error"
   user: User | null
@@ -13,7 +13,7 @@ interface AuthContextValue extends AuthState {
   announceAccountDeletion: () => void
   clearAccountNotice: () => void
   identityKey: string
-  signIn: () => Promise<void>
+  signIn: (remember: boolean) => void
   signOut: () => Promise<void>
   retry: () => void
 }
@@ -29,6 +29,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [attempt, setAttempt] = useState(0)
   const [actionError, setActionError] = useState<string | null>(null)
   const actionPending = useRef(false)
+  const oauthStart = useRef<Promise<{
+    error: { message: string } | null
+  }> | null>(null)
   useEffect(() => {
     if (!supabase) return
     let active = true
@@ -70,6 +73,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 ? reason.message
                 : "Could not read your session.",
           })
+      })
+    if (sessionStorageChoice?.consumeSignIn()) {
+      oauthStart.current = supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: `${window.location.origin}/settings` },
+      })
+    }
+    void oauthStart.current
+      ?.then(({ error }) => {
+        if (error && active) setActionError(error.message)
+      })
+      .catch((reason: unknown) => {
+        if (active)
+          setActionError(
+            reason instanceof Error
+              ? reason.message
+              : "Could not start Google sign-in.",
+          )
       })
     const params = new URLSearchParams(window.location.search)
     if (params.has("error")) {
@@ -115,17 +136,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       channel.close()
     }
   }
-  async function signIn() {
+  function signIn(remember: boolean) {
     if (!supabase || actionPending.current) return
     actionPending.current = true
     setAccountNotice(null)
     setActionError(null)
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google",
-        options: { redirectTo: `${window.location.origin}/settings` },
-      })
-      if (error) throw error
+      if (!sessionStorageChoice)
+        throw new Error("Browser storage is unavailable.")
+      sessionStorageChoice.prepareSignIn(remember)
+      // Recreate the client with the selected storage before writing the PKCE
+      // verifier. The pending flag is consumed once, before the Google redirect.
+      window.location.assign(`${window.location.origin}/settings`)
     } catch (reason: unknown) {
       setActionError(
         reason instanceof Error

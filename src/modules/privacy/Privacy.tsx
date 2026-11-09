@@ -3,7 +3,7 @@ export function Privacy() {
   return (
     <section className="page-section" aria-labelledby="privacy-title">
       <h1 id="privacy-title">Privacy &amp; your data</h1>
-      <p className="field-note">Updated 6 November 2026</p>
+      <p className="field-note">Updated 9 November 2026</p>
       <p>
         Conjugadora uses account information to sign you in and save your
         Spanish practice. You can practise without an account.
@@ -37,11 +37,27 @@ export function Privacy() {
       <p>
         Vercel hosts the website. Supabase stores account information and
         learning data. Google handles Google sign-in. Authentication session
-        information is stored in your browser so you stay signed in. Hosting and
-        authentication providers may also process technical logs under their own
-        retention settings.
+        information is stored in your browser. Without “Keep me signed in on
+        this device”, it uses session storage for the current tab. With that
+        option, it uses local storage to keep you signed in between visits. The
+        Google redirect also temporarily stores a security verifier in the
+        selected storage. Google manages its own sign-in session on Google's
+        site. Hosting and authentication providers may also process technical
+        logs under their own retention settings.
       </p>
       <h2>Retention and controls</h2>
+      <p>
+        Session-only sign-in normally ends when its tab is closed, although
+        browser session restoration or duplicating a tab may retain it.
+        Persistent sign-in remains until you sign out, clear this browser’s site
+        data, or the session expires or is revoked by Supabase. Access tokens
+        refresh automatically, so their short lifetime does not by itself limit
+        how long you stay signed in. Sign out in Settings to remove the saved
+        sign-in from this browser context; this keeps your account and progress.
+        Tabs opened separately without a persistent sign-in must sign in
+        separately. Existing sign-ins from before this update retain their
+        previous storage until you sign out and choose again.
+      </p>
       <p>
         Practice and Progress display preferences stay until you change them or
         delete your account. Learning counts and completed history stay until

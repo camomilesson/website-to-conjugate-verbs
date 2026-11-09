@@ -1,7 +1,9 @@
+import { useState } from "react"
 import { configurationError } from "./client.ts"
 import { useAuth } from "./AuthProvider.tsx"
 export function AccountControls() {
   const auth = useAuth()
+  const [remember, setRemember] = useState(false)
   return (
     <section className="account-controls" aria-labelledby="account-title">
       <h2 id="account-title">Account</h2>
@@ -34,10 +36,25 @@ export function AccountControls() {
         </>
       ) : (
         <>
+          <label className="remember-sign-in">
+            <input
+              type="checkbox"
+              checked={remember}
+              onChange={(event) => setRemember(event.target.checked)}
+              aria-describedby="remember-sign-in-help"
+            />
+            Keep me signed in on this device
+          </label>
+          <p id="remember-sign-in-help" className="field-note">
+            Saves your sign-in in this browser between visits. Sign out to
+            remove it. Leave unchecked for this tab’s browser session; your
+            account and progress stay saved either way. Browsers may restore
+            sessions when reopening tabs.
+          </p>
           <button
             disabled={auth.status === "error"}
             onClick={() => {
-              void auth.signIn()
+              void auth.signIn(remember)
             }}
           >
             Continue with Google

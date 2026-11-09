@@ -31,3 +31,29 @@ Account change notices are held in provider memory, survive a Settings remount,
 and can be dismissed. A confirmed reset announces retained preferences; a
 verified deletion acknowledgement sets a notice before local sign-out so the
 signed-out Settings view can confirm the result. Failures never announce success.
+
+## Sign-in storage choice (1.1.0)
+
+`session-storage.ts` selects tab-scoped sessionStorage by default, or localStorage
+when the sign-in checkbox is selected. The existing default Supabase key is kept
+for persistent sessions; each session-only tab gets a separate SDK key (including
+its BroadcastChannel namespace). A tab's storage choice and identifier survive
+reload and OAuth return. Duplicated/restored tabs can inherit sessionStorage.
+
+AccountControls keeps the checkbox unchecked for each new sign-in UI. Sign-in
+writes the choice plus a one-use pending redirect flag and reloads Settings. The
+new client therefore owns the correct storage before writing the PKCE verifier.
+AuthProvider consumes the flag and starts Google OAuth once, including under React
+StrictMode. Verifier exchange and session refresh are handled by the SDK. Errors
+surface in Account controls; storage failure never falls back to persistence.
+
+Unmarked existing localStorage sessions are retained during rollout without
+recording consent. Testers sign out/in once to make an explicit choice. Learning
+records and preferences are unchanged; no SQL migration is needed. The SDK's local
+sign-out clears its selected session and informs tabs sharing that persistent
+session. Independently authenticated session-only tabs have their own sessions.
+
+Pure storage and SDK tests use synthetic tokens/responses, never live credentials.
+Local browser fixture review covered both OAuth redirects, reload, new-tab isolation,
+persistent sharing and sign-out broadcast. Real Google and provider session limits
+remain hosted verification checkpoints in OPERATIONS.
