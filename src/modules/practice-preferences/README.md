@@ -58,7 +58,8 @@ Selection dialogs use a flex column with only the options list scrolling. Headin
 search, selection actions and Apply/Cancel stay visible, including on short mobile
 viewports. The shared layout applies in both Practice and Settings.
 
-Practice can supply optional progress-based verb actions and a manual-selection
-callback. The shared fields keep their existing behaviour in Settings and for
-guests. Targeted session selection lives in Practice, preserving the existing
-stored preference enums and manual verb IDs.
+`verbSet` includes `least-practiced` and `most-mistakes` as saved selection rules.
+Only signed-in Practice and Settings show those buttons. Practice supplies an
+optional progress-preview/status slot; Settings explains that up to 20 verbs are
+chosen at start. Restoring a rule discards stale cached IDs; fresh progress resolves
+the actual list for each run. Manual presets and draft/Back behaviour stay intact.

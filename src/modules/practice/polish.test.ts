@@ -58,3 +58,14 @@ void test("Practice tab re-entry confirms active sessions but resets completed/c
   assert.equal(practiceEntryKey(null), "initial")
   assert.equal(practiceEntryKey({ practiceEntry: 42 }), "initial")
 })
+
+void test("home summary and quick starts retain the saved targeted rule", () => {
+  for (const verbSet of ["least-practiced", "most-mistakes"] as const) {
+    const preferences = { ...saved, verbSet }
+    assert.match(
+      practiceSummary(preferences),
+      verbSet === "least-practiced" ? /Least practiced/ : /Most mistakes/,
+    )
+    assert.equal(quickPreferences(preferences, "choice").verbSet, verbSet)
+  }
+})

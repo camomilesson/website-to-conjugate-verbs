@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs"
 import { parseCatalogue, parseCatalogueVerb } from "@conjugadora/verb-catalogue"
 import type { CountRow } from "../learning-data/data.ts"
 import { defaultPreferences } from "../practice-preferences/index.ts"
-import { targetedVerbs } from "./targeted.ts"
+import { targetedVerbs, resolveVerbSelection } from "./targeted.ts"
 import { createQuestions } from "./session.ts"
 const catalogue = parseCatalogue(
   JSON.parse(
@@ -153,4 +153,42 @@ await test("targeted question sampling favours unattempted pairs, then fills wit
     assert.equal(questions[6].category, "indicative.present")
     assert.equal(new Set(questions.map((q) => q.id)).size, 7)
   }
+})
+
+await test("saved rules recalculate on each new run and follow the quick-start answer mode", () => {
+  const saved = {
+    ...preferences,
+    verbSet: "most-mistakes" as const,
+    verbIds: ["hablar"],
+  }
+  const counts: CountRow[] = [
+    count("comer", 5, 0),
+    count("vivir", 5, 4),
+    { ...count("hablar", 3, 0), mode: "choice", accent_policy: "na" },
+  ]
+  const first = resolveVerbSelection(catalogue, counts, saved)
+  assert.deepEqual(first.preferences.verbIds, ["comer", "vivir"])
+  assert.equal(first.preferences.verbSet, "most-mistakes")
+  const updated = resolveVerbSelection(
+    catalogue,
+    [count("comer", 100, 99), count("vivir", 5, 0)],
+    first.preferences,
+  )
+  assert.deepEqual(updated.preferences.verbIds, ["vivir", "comer"])
+  const choice = resolveVerbSelection(catalogue, counts, {
+    ...saved,
+    mode: "choice",
+  })
+  assert.deepEqual(choice.preferences.verbIds, ["hablar"])
+  assert.deepEqual(saved.verbIds, ["hablar"])
+  assert.throws(
+    () => resolveVerbSelection(catalogue, [], saved),
+    /No attempted verbs/,
+  )
+  const least = resolveVerbSelection(catalogue, [], {
+    ...saved,
+    verbSet: "least-practiced",
+  })
+  assert.equal(least.preferences.verbIds.length, 20)
+  assert.equal(least.preferredPairs.length, 40)
 })

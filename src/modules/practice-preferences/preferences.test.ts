@@ -205,3 +205,18 @@ await test("only preference fields are stored, never question queues or results"
   assert.equal(raw.includes("results"), false)
   assert.equal(raw.includes("currentIndex"), false)
 })
+await test("targeted verb rules round-trip and restore without treating last resolved IDs as the rule", () => {
+  for (const verbSet of ["least-practiced", "most-mistakes"] as const) {
+    const { storage } = memoryStorage()
+    const value = { ...defaults, verbSet, verbIds: ["hablar"] }
+    assert.equal(
+      savePreferences(value, () => storage),
+      null,
+    )
+    const restored = readPreferences(catalogue, () => storage)
+    assert.equal(restored.notice, null)
+    assert.equal(restored.preferences.verbSet, verbSet)
+    assert.equal(restored.preferences.verbIds.length, catalogue.verbs.length)
+    assert.equal(validPreferences({ ...value, verbIds: [] }), true)
+  }
+})

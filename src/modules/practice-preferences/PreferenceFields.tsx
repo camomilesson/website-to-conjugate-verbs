@@ -10,7 +10,11 @@ import type {
   CategoryId,
   PersonId,
 } from "@conjugadora/verb-catalogue"
-import { PRACTICE_PERSONS, commonVerbIds } from "./preferences.ts"
+import {
+  PRACTICE_PERSONS,
+  commonVerbIds,
+  isTargetedVerbSet,
+} from "./preferences.ts"
 import type { PracticePreferences, PracticeMode } from "./preferences.ts"
 import { SelectionDialog } from "./SelectionDialog.tsx"
 import "./preferences.css"
@@ -20,17 +24,15 @@ export function PreferenceFields({
   value,
   onChange,
   disabled = false,
-  verbActions,
-  onManualVerbs,
-  targeted = false,
+  verbStatus,
+  allowTargeted = false,
 }: {
   catalogue: Catalogue
   value: PracticePreferences
   onChange: Dispatch<SetStateAction<PracticePreferences | null>>
   disabled?: boolean
-  verbActions?: ReactNode
-  onManualVerbs?: () => void
-  targeted?: boolean
+  verbStatus?: ReactNode
+  allowTargeted?: boolean
 }) {
   const {
     verbIds: selectedVerbs,
@@ -43,6 +45,7 @@ export function PreferenceFields({
     tenseSet,
     personSet,
   } = value
+  const targeted = isTargetedVerbSet(verbSet)
   const strict = accentPolicy === "strict"
   const loading = disabled
   const [selectionDialog, setSelectionDialog] = useState<
@@ -103,7 +106,6 @@ export function PreferenceFields({
               <button
                 aria-pressed={!targeted && verbSet === "all"}
                 onClick={() => {
-                  onManualVerbs?.()
                   setSelectedVerbs(catalogue.verbs.map((verb) => verb.id))
                   setVerbSet("all")
                 }}
@@ -113,7 +115,6 @@ export function PreferenceFields({
               <button
                 aria-pressed={!targeted && verbSet === "common"}
                 onClick={() => {
-                  onManualVerbs?.()
                   setSelectedVerbs(commonIds)
                   setVerbSet("common")
                 }}
@@ -123,21 +124,40 @@ export function PreferenceFields({
               <button
                 aria-pressed={!targeted && verbSet === "select"}
                 aria-haspopup="dialog"
-                onClick={() => {
-                  onManualVerbs?.()
-                  setSelectionDialog("verbs")
-                }}
+                onClick={() => setSelectionDialog("verbs")}
               >
                 Select…
               </button>
             </div>
-            {verbActions}
+            {allowTargeted && (
+              <div className="selection-actions">
+                <button
+                  aria-pressed={verbSet === "least-practiced"}
+                  onClick={() => update({ verbSet: "least-practiced" })}
+                >
+                  Least practiced
+                </button>
+                <button
+                  aria-pressed={verbSet === "most-mistakes"}
+                  onClick={() => update({ verbSet: "most-mistakes" })}
+                >
+                  Most mistakes
+                </button>
+              </div>
+            )}
+            {verbStatus}
             <p className="selection-summary">
-              {selectedVerbs.length} / {catalogue.verbs.length} ·{" "}
-              {summary(
-                catalogue.verbs
-                  .filter((verb) => selectedVerbs.includes(verb.id))
-                  .map((verb) => verb.infinitive),
+              {targeted && !verbStatus ? (
+                "Up to 20 verbs, chosen from current progress when practice starts."
+              ) : (
+                <>
+                  {selectedVerbs.length} / {catalogue.verbs.length} ·{" "}
+                  {summary(
+                    catalogue.verbs
+                      .filter((verb) => selectedVerbs.includes(verb.id))
+                      .map((verb) => verb.infinitive),
+                  )}
+                </>
               )}
             </p>
           </div>

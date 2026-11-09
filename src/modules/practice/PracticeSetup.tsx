@@ -1,5 +1,5 @@
-import { targetedVerbs } from "./targeted.ts"
-import type { TargetedMode } from "./targeted.ts"
+import { targetedVerbs, resolveVerbSelection } from "./targeted.ts"
+import { isTargetedVerbSet } from "../practice-preferences/index.ts"
 import { usePracticeCounts } from "./usePracticeCounts.ts"
 import { Link } from "react-router"
 import { practiceSummary, quickPreferences } from "./polish.ts"
@@ -11,6 +11,7 @@ import { useLearningGeneration } from "../account-controls/index.ts"
 import { useAuth } from "../auth/ui.ts"
 import {
   practiceMetadata,
+  readCounts,
   startTrackedPractice,
 } from "../learning-data/index.ts"
 import type { TrackingContext } from "../learning-data/index.ts"
@@ -71,8 +72,11 @@ export function PracticeSetup({
     save,
     isAccount,
   } = usePreferenceDraft()
-  const [targeted, setTargeted] = useState<TargetedMode | null>(null)
-  const progress = usePracticeCounts(customizing && !!auth.user)
+  const targeted =
+    preferences && isTargetedVerbSet(preferences.verbSet)
+      ? preferences.verbSet
+      : null
+  const progress = usePracticeCounts(!!auth.user && (customizing || !!targeted))
   const ranked = useMemo(
     () =>
       catalogue && preferences && targeted && progress.counts
@@ -85,7 +89,7 @@ export function PracticeSetup({
       ? {
           ...preferences,
           verbIds: ranked.map((row) => row.verb.id),
-          verbSet: "select" as const,
+          verbSet: targeted,
         }
       : preferences
   const selectedVerbs = useMemo(
@@ -181,18 +185,18 @@ export function PracticeSetup({
   const validLength = Number.isSafeInteger(Number(length)) && Number(length) > 0
   async function start(targetMode: PracticeMode = mode) {
     if (
-      targetedUnavailable ||
+      (customizing && targetedUnavailable) ||
       (auth.user && !learning.generation) ||
       !catalogue ||
       !preferences ||
       loading ||
       startController.current ||
       (customizing && choiceLoading) ||
-      !selectedPoolSize ||
+      (!targeted && !selectedPoolSize) ||
       !validLength
     )
       return
-    const snapshot = quickPreferences(effectivePreferences!, targetMode)
+    let snapshot = quickPreferences(preferences, targetMode)
     const config: PracticeConfig = {
       mode: targetMode,
       verbIds: [...selectedVerbs],
@@ -207,8 +211,22 @@ export function PracticeSetup({
     setStartingMode(targetMode)
     setStartError("")
     try {
+      let preferredPairs: string[] = []
+      if (targeted) {
+        if (!auth.user)
+          throw new Error("Sign in to use progress-based verb selections.")
+        const resolved = resolveVerbSelection(
+          catalogue,
+          await readCounts(auth.user.id),
+          snapshot,
+        )
+        if (controller.signal.aborted) return
+        snapshot = resolved.preferences
+        preferredPairs = resolved.preferredPairs
+        config.verbIds = [...snapshot.verbIds]
+      }
       const verbs =
-        targetMode === "choice" && currentChoiceData?.verbs
+        targetMode === "choice" && !targeted && currentChoiceData?.verbs
           ? currentChoiceData.verbs
           : await Promise.all(
               catalogue.verbs
@@ -222,12 +240,6 @@ export function PracticeSetup({
                 ),
             )
       if (!controller.signal.aborted) {
-        const preferredPairs =
-          targeted === "least-practiced"
-            ? ranked.flatMap((row) =>
-                row.unattempted.map((category) => `${row.verb.id}:${category}`),
-              )
-            : []
         const questions = createQuestions(
           verbs,
           config,
@@ -244,9 +256,7 @@ export function PracticeSetup({
             )
           : null
         if (controller.signal.aborted) return
-        const storageNotice = await save(
-          quickPreferences(preferences, targetMode),
-        )
+        const storageNotice = await save(snapshot)
         if (controller.signal.aborted) return
         if (isAccount && storageNotice) throw new Error(storageNotice)
         onStart(questions, config, storageNotice, tracking, {
@@ -254,6 +264,7 @@ export function PracticeSetup({
           datasetVersion: catalogue.datasetVersion,
           preferences: snapshot,
           preferredPairs,
+          catalogue,
         })
       }
     } catch (reason: unknown) {
@@ -323,6 +334,12 @@ export function PracticeSetup({
                   .
                 </p>
               </div>
+              {targeted && progress.error && (
+                <div role="alert">
+                  <p>{progress.error}</p>
+                  <button onClick={progress.retry}>Retry progress</button>
+                </div>
+              )}
               <div className="quick-practice-actions">
                 <button
                   className="practice-card choice-card"
@@ -407,27 +424,10 @@ export function PracticeSetup({
               <PreferenceFields
                 catalogue={catalogue}
                 value={effectivePreferences!}
-                targeted={!!targeted}
-                onManualVerbs={() => setTargeted(null)}
-                verbActions={
+                allowTargeted={!!auth.user}
+                verbStatus={
                   auth.user ? (
                     <div className="targeted-selection">
-                      <div className="selection-actions">
-                        <button
-                          disabled={!progress.counts || !!progress.error}
-                          aria-pressed={targeted === "least-practiced"}
-                          onClick={() => setTargeted("least-practiced")}
-                        >
-                          Least practiced
-                        </button>
-                        <button
-                          disabled={!progress.counts || !!progress.error}
-                          aria-pressed={targeted === "most-mistakes"}
-                          onClick={() => setTargeted("most-mistakes")}
-                        >
-                          Most mistakes
-                        </button>
-                      </div>
                       {!progress.counts && !progress.error && (
                         <p className="field-note" role="status">
                           Loading progress-based selections…
@@ -451,8 +451,7 @@ export function PracticeSetup({
                             : targeted === "most-mistakes"
                               ? "No attempted verbs match this answer mode and tense selection yet."
                               : "Select a tense and an applicable person to find verbs."}{" "}
-                          Your saved manual verb selection is kept. Progress
-                          combines all persons.
+                          Recalculated from current progress each practice.
                         </p>
                       )}
                     </div>
@@ -547,7 +546,6 @@ export function PracticeSetup({
                   if (beforeCustomize.current)
                     setPreferences(structuredClone(beforeCustomize.current))
                   setCustomizing(false)
-                  setTargeted(null)
                   setStartError("")
                 }}
               >

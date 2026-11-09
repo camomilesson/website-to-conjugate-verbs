@@ -1,6 +1,7 @@
 import { getCategoryPersons } from "@conjugadora/verb-catalogue"
 import type { Catalogue, CategoryId } from "@conjugadora/verb-catalogue"
 import type { CountRow } from "../learning-data/data.ts"
+import { isTargetedVerbSet } from "../practice-preferences/index.ts"
 import type { PracticePreferences } from "../practice-preferences/index.ts"
 export type TargetedMode = "least-practiced" | "most-mistakes"
 export function targetedVerbs(
@@ -55,4 +56,30 @@ export function targetedVerbs(
       return rank || a.verb.infinitive.localeCompare(b.verb.infinitive, "es")
     })
     .slice(0, 20)
+}
+
+/** Saved mode is the rule; cached verb IDs never determine a targeted new run. */
+export function resolveVerbSelection(
+  catalogue: Catalogue,
+  counts: readonly CountRow[],
+  preferences: PracticePreferences,
+) {
+  const snapshot = structuredClone(preferences)
+  if (!isTargetedVerbSet(snapshot.verbSet))
+    return { preferences: snapshot, preferredPairs: [] as string[] }
+  const ranked = targetedVerbs(catalogue, counts, snapshot, snapshot.verbSet)
+  if (!ranked.length)
+    throw new Error(
+      "No attempted verbs match this answer mode and tense selection. Choose another verb mode or practise some verbs first.",
+    )
+  snapshot.verbIds = ranked.map((row) => row.verb.id)
+  return {
+    preferences: snapshot,
+    preferredPairs:
+      snapshot.verbSet === "least-practiced"
+        ? ranked.flatMap((row) =>
+            row.unattempted.map((category) => `${row.verb.id}:${category}`),
+          )
+        : [],
+  }
 }

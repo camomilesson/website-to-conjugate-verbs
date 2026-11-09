@@ -137,13 +137,18 @@ match current tenses, eligible persons, mode and accent policy; counts themselve
 combine persons. Spanish names break ties. `usePracticeCounts.ts` loads counts on
 customization entry with owner/retry guards and ignores late replies.
 
-Only signed-in Customize renders the two modes. They stay in setup memory, never
-extend the persisted preference/schema enums, and do not replace saved manual verb
-IDs. Successful starts save the manual preferences while tracking snapshots contain
-the effective selected IDs. `preferredPairs` in PracticeSource prioritises missing
-combinations during initial and repeat sampling without storing queues or changing
-RPC payloads. Repeat keeps that original selection/priority; new customization
-reads fresh counts. No candidates means no Start, with an explanatory message.
+Signed-in Customize and Settings expose both modes as regular `verbSet` values.
+A successful Start saves the selected rule; Settings saves it explicitly. Restored
+rules ignore cached resolved IDs. The home summary names the mode, and each start
+(including quick starts and Repeat) reads fresh counts and resolves a new list for
+the requested answer mode. `resolveVerbSelection` snapshots this rule plus the
+resolved IDs; `preferredPairs` prioritises missing combinations without storing
+question queues. History records the mode name and the effective selected verbs.
+No candidates means an explanatory error, never a silent manual fallback.
+
+Saved modes require `202611090001_targeted_verb_modes.sql` after the previous four
+migrations. It extends only the private start validator; public owner/generation
+guards and existing data are preserved. Guests keep All/Common/Select.
 
 Results link to Progress only after all saves are acknowledged. Guest results use
 the existing guest Progress destination. Customize has a visible tertiary button

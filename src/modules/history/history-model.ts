@@ -81,6 +81,8 @@ export function setLabel(value: string) {
       {
         all: "All",
         common: "Common",
+        "least-practiced": "Least practiced",
+        "most-mistakes": "Most mistakes",
         select: "Selected",
         basic: "Basic",
         advanced: "Advanced",

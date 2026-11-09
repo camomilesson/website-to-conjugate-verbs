@@ -27,9 +27,14 @@ export interface PracticePreferences {
   persons: PersonId[]
   length: string
   accentPolicy: AccentPolicy
-  verbSet: "all" | "common" | "select"
+  verbSet: "all" | "common" | "select" | "least-practiced" | "most-mistakes"
   tenseSet: "basic" | "advanced" | "all" | "select"
   personSet: "all" | "select"
+}
+export function isTargetedVerbSet(
+  value: string,
+): value is "least-practiced" | "most-mistakes" {
+  return value === "least-practiced" || value === "most-mistakes"
 }
 export function commonVerbIds(catalogue: Catalogue): string[] {
   return catalogue.verbs.filter((verb) => verb.common).map((verb) => verb.id)
@@ -108,7 +113,8 @@ export function restorePreferences(
   if (
     value.verbSet === "all" ||
     value.verbSet === "common" ||
-    value.verbSet === "select"
+    value.verbSet === "select" ||
+    (typeof value.verbSet === "string" && isTargetedVerbSet(value.verbSet))
   )
     preferences.verbSet = value.verbSet
   else adjusted = true
@@ -128,7 +134,9 @@ export function restorePreferences(
       ? defaults.verbIds
       : preferences.verbSet === "common"
         ? commonVerbIds(catalogue)
-        : selection(value.verbIds, defaults.verbIds, defaults.verbIds)
+        : isTargetedVerbSet(preferences.verbSet)
+          ? defaults.verbIds
+          : selection(value.verbIds, defaults.verbIds, defaults.verbIds)
   if (!preferences.verbIds.length) {
     preferences.verbIds = defaults.verbIds
     preferences.verbSet = "all"
@@ -163,7 +171,8 @@ export function hasEligibleCombination(
   preferences: PracticePreferences,
 ): boolean {
   return (
-    preferences.verbIds.length > 0 &&
+    (isTargetedVerbSet(preferences.verbSet) ||
+      preferences.verbIds.length > 0) &&
     preferences.categories.some((category) =>
       getCategoryPersons(category).some((person) =>
         preferences.persons.includes(

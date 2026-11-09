@@ -2,8 +2,12 @@ import { useAuth } from "../auth/ui.ts"
 import { useLearningGeneration } from "../account-controls/index.ts"
 import {
   practiceMetadata,
+  readCounts,
   startTrackedPractice,
 } from "../learning-data/index.ts"
+import { isTargetedVerbSet } from "../practice-preferences/index.ts"
+import { resolveVerbSelection } from "./targeted.ts"
+import { loadCatalogueVerb } from "@conjugadora/verb-catalogue"
 import { TenseHint } from "./TenseHint.tsx"
 import { shouldConfirmPracticeLeave } from "./navigation.ts"
 import {
@@ -81,7 +85,12 @@ function PracticeSession({
   tracking: TrackingContext | null
   onReset: () => void
   source: PracticeSource
-  onRepeat: (questions: Question[], tracking: TrackingContext | null) => void
+  onRepeat: (
+    questions: Question[],
+    tracking: TrackingContext | null,
+    config: PracticeConfig,
+    source: PracticeSource,
+  ) => void
 }) {
   const [state, dispatch] = useReducer(
     sessionReducer,
@@ -98,24 +107,49 @@ function PracticeSession({
     setRepeatLoading(true)
     setRepeatError(null)
     try {
+      let nextConfig = config
+      let nextSource = source
+      if (isTargetedVerbSet(source.preferences.verbSet)) {
+        if (!auth.user || !source.catalogue)
+          throw new Error("Sign in again to refresh this selection.")
+        const resolved = resolveVerbSelection(
+          source.catalogue,
+          await readCounts(auth.user.id),
+          source.preferences,
+        )
+        if (!active.current) return
+        const verbs = await Promise.all(
+          source.catalogue.verbs
+            .filter((verb) => resolved.preferences.verbIds.includes(verb.id))
+            .map((verb) => loadCatalogueVerb(verb, source.datasetVersion)),
+        )
+        nextConfig = { ...config, verbIds: [...resolved.preferences.verbIds] }
+        nextSource = {
+          ...source,
+          verbs,
+          preferences: resolved.preferences,
+          preferredPairs: resolved.preferredPairs,
+        }
+      }
+      if (!active.current) return
       const questions = createQuestions(
-        source.verbs,
-        config,
+        nextSource.verbs,
+        nextConfig,
         Math.random,
-        new Set(source.preferredPairs),
+        new Set(nextSource.preferredPairs),
       )
       if (auth.user && !learning.generation)
         throw new Error("Account data is still loading. Try again.")
       const tracking = auth.user
         ? await startTrackedPractice(
             auth.user.id,
-            practiceMetadata(config, source.preferences),
+            practiceMetadata(nextConfig, nextSource.preferences),
             source.datasetVersion,
             questions.length,
             learning.generation!,
           )
         : null
-      if (active.current) onRepeat(questions, tracking)
+      if (active.current) onRepeat(questions, tracking, nextConfig, nextSource)
     } catch (reason: unknown) {
       if (active.current)
         setRepeatError(
@@ -560,9 +594,9 @@ export function Practice() {
     <PracticeSession
       key={run}
       source={session.source}
-      onRepeat={(questions, tracking) => {
+      onRepeat={(questions, tracking, config, source) => {
         setRun((value) => value + 1)
-        setSession({ ...session, questions, tracking })
+        setSession({ ...session, questions, tracking, config, source })
         window.scrollTo(0, 0)
       }}
       questions={session.questions}

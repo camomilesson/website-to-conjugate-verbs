@@ -6,6 +6,7 @@ import {
   historyPage,
   nonDefaultSettings,
   categoryLabel,
+  setLabel,
   personLabel,
 } from "./history-model.ts"
 import { fixturePage, historyFixtures } from "./history-fixtures.ts"
@@ -151,4 +152,17 @@ void test("malformed history records fail with a recoverable message before rend
     ],
   ])
     assert.throws(() => parseHistoryRows(value), /Invalid history data.*Retry/)
+})
+
+void test("history accepts and names persistent progress-based verb selections", () => {
+  for (const verbSet of ["least-practiced", "most-mistakes"] as const) {
+    const row = structuredClone(rows[0])
+    row.configuration.selections.verbSet = verbSet
+    const parsed = parseHistoryRows([row])
+    assert.equal(parsed[0].configuration.selections.verbSet, verbSet)
+    assert.equal(
+      setLabel(verbSet),
+      verbSet === "least-practiced" ? "Least practiced" : "Most mistakes",
+    )
+  }
 })

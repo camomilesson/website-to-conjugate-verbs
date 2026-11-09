@@ -2,6 +2,7 @@ export {
   PREFERENCE_KEY,
   PRACTICE_PERSONS,
   commonVerbIds,
+  isTargetedVerbSet,
   defaultPreferences,
   restorePreferences,
   readPreferences,

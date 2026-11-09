@@ -69,9 +69,10 @@ provenance, review limits and correction procedure.
 
 #Signed-in Customize also offers **Least practiced** (up to 20 verbs with the most
 unattempted selected tense combinations) and **Most mistakes** (lowest weighted
-accuracy among attempted verbs). These temporary session choices follow the answer
-mode and accent setting and keep saved manual verb selections intact. Guests do
-not see them. Completed results offer **View progress** once saves finish.
+accuracy among attempted verbs). These saved verb modes appear in the home setup
+summary and recalculate from current progress for every start, including quick
+starts and Repeat, following the answer mode and accent setting. Guests do not
+see them. Completed results offer **View progress** once saves finish.
 
 ## Keyboard controls
 

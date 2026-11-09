@@ -70,6 +70,7 @@ export function Settings() {
         <>
           <PreferenceFields
             disabled={saving}
+            allowTargeted={isAccount}
             catalogue={catalogue}
             value={preferences}
             onChange={(update) => {

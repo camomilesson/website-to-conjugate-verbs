@@ -24,6 +24,8 @@ try {
     "supabase/tests/account_controls.sql",
     "supabase/migrations/202611060003_progress_preferences.sql",
     "supabase/tests/progress_preferences.sql",
+    "supabase/migrations/202611090001_targeted_verb_modes.sql",
+    "supabase/tests/targeted_verb_modes.sql",
   ]) {
     await db.exec(await readFile(file, "utf8"))
     console.log(`PASS ${file}`)

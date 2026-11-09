@@ -14,7 +14,11 @@ export function practiceSummary(preferences: PracticePreferences) {
       ? "All verbs"
       : preferences.verbSet === "common"
         ? "Common verbs"
-        : `Selected verbs (${preferences.verbIds.length})`
+        : preferences.verbSet === "least-practiced"
+          ? "Least practiced"
+          : preferences.verbSet === "most-mistakes"
+            ? "Most mistakes"
+            : `Selected verbs (${preferences.verbIds.length})`
   const tenses =
     preferences.tenseSet === "select"
       ? `Selected tenses (${preferences.categories.length})`

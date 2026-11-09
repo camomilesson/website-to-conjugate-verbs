@@ -35,7 +35,9 @@ function selections(value: unknown): value is PracticeMetadata["selections"] {
   return (
     object(value) &&
     typeof value.verbSet === "string" &&
-    ["all", "common", "select"].includes(value.verbSet) &&
+    ["all", "common", "select", "least-practiced", "most-mistakes"].includes(
+      value.verbSet,
+    ) &&
     typeof value.tenseSet === "string" &&
     ["all", "basic", "advanced", "select"].includes(value.tenseSet) &&
     typeof value.personSet === "string" &&

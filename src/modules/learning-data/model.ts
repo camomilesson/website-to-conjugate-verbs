@@ -13,7 +13,7 @@ export interface PracticeMetadata {
     mode: "typing" | "choice"
     length: number
     accentPolicy: "strict" | "relaxed"
-    verbSet: "all" | "common" | "select"
+    verbSet: PracticePreferences["verbSet"]
     tenseSet: "basic" | "advanced" | "all" | "select"
     personSet: "all" | "select"
   }

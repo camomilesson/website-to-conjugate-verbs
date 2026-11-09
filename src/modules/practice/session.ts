@@ -196,6 +196,7 @@ export function sessionScore(results: readonly AnswerResult[]) {
 
 // Original catalogue and selection snapshot for a fresh run with identical settings.
 export interface PracticeSource {
+  catalogue?: import("@conjugadora/verb-catalogue").Catalogue
   preferredPairs?: string[]
   verbs: CatalogueVerb[]
   datasetVersion: string

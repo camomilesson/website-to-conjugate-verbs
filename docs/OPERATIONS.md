@@ -70,8 +70,12 @@ Apply migrations once in filename order on a new project:
 2. [202611060001_durable_practice.sql](../supabase/migrations/202611060001_durable_practice.sql): runs, receipts, accuracy, History, atomic RPCs.
 3. [202611060002_account_controls.sql](../supabase/migrations/202611060002_account_controls.sql): learning generation, safe reset and guarded writes.
 4. [202611060003_progress_preferences.sql](../supabase/migrations/202611060003_progress_preferences.sql): display settings, ownership RLS.
+5. [202611090001_targeted_verb_modes.sql](../supabase/migrations/202611090001_targeted_verb_modes.sql): allow saved Least practiced/Most mistakes labels in practice metadata and History.
 
-The existing hosted project already has these migrations; **do not rerun them**.
+The existing hosted project has the first four migrations; **do not rerun them**.
+Apply migration 5 once in the Supabase SQL editor before testing saved targeted
+modes. It preserves existing rows and public write guards. No Edge Function or
+Google provider configuration change is needed.
 Create a new additive migration for schema changes. Rehearse in a disposable
 project, test access policies and compatibility, apply the migration before
 shipping code that requires it. Never relax RLS to work around a frontend error.
@@ -157,7 +161,7 @@ release task. [Google's audience guidance](https://support.google.com/cloud/answ
 ### Provider setup for a new environment
 
 1. Create a Supabase project; choose a region/plan and store its password privately.
-2. Apply all four migrations once in the [order above](#database-and-migrations).
+2. Apply all five migrations once in the [order above](#database-and-migrations).
 3. Obtain the project URL and **publishable key** (`sb_publishable_…`).
 4. In Google Auth Platform, configure Branding, Audience and the three basic
    scopes in Data Access. Create a Web application OAuth client.
@@ -254,7 +258,7 @@ node scripts/check-learning-sql.mjs /private/tmp/conjugadora-db-check/node_modul
 production build and artifact audit. The audit checks asset/favicon references,
 100 static verb files, old branding, fixture routes/content, known server-only
 credential names, secret-key patterns and privileged JWT roles. It is a targeted
-static audit. The optional SQL harness runs actual migrations and all four SQL
+static audit. The optional SQL harness runs actual migrations and all five SQL
 suites with simulated auth roles in PGlite; it adds no application dependency.
 Deno separately checks the deployable Edge Function entry point when changing it:
 
@@ -298,13 +302,16 @@ server owner/generation checks remain authoritative for any in-flight requests.
 
 ### Targeted practice checks (1.1.0)
 
-No migration or server deployment is required. On staging, check that guest
+Apply migration 5 above before testing the saved modes. On staging, check that guest
 Customize has no Least practiced/Most mistakes controls. Signed-in Customize
 should load current counts, filter ranking when mode/accent/tenses change, and
 explain an empty Most mistakes pool. Least practiced can start from an empty
 account and prioritises unattempted combinations. Both cap selection at 20 verbs.
-Complete a targeted session, then verify the saved manual verb default is unchanged
-and View progress opens the updated heatmap only after all saves are acknowledged.
+Save either targeted mode in Settings or start it from Customize. Reload and confirm
+the home summary retains the mode. Test both quick-start cards and Repeat against
+current progress (the previous resolved list must not become a fixed selection).
+History should name the mode and retain the actual selected verbs. View progress
+opens the updated heatmap only after all saves are acknowledged.
 Inspect the tertiary Customize button and wrapped selection controls on mobile.
 
 ### Release smoke check
