@@ -53,3 +53,7 @@ read/write is surfaced without silently falling back to local storage. See
 Verb picker options use Spanish alphabetical ordering without mutating catalogue
 order or stored IDs. Shared interface sizing lives in the application theme;
 setup retains its compact field layout at the common page width.
+
+Selection dialogs use a flex column with only the options list scrolling. Heading,
+search, selection actions and Apply/Cancel stay visible, including on short mobile
+viewports. The shared layout applies in both Practice and Settings.

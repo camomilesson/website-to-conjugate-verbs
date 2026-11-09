@@ -46,6 +46,17 @@ export function PracticeSetup({
   }, [customizing])
   const beforeCustomize = useRef<PracticePreferences | null>(null)
   const auth = useAuth()
+  const metadata = auth.user?.user_metadata
+  const displayName = [
+    metadata?.given_name,
+    metadata?.full_name,
+    metadata?.name,
+  ]
+    .find(
+      (value): value is string => typeof value === "string" && !!value.trim(),
+    )
+    ?.trim()
+    .split(/\s+/)[0]
   const learning = useLearningGeneration()
   const {
     catalogue,
@@ -227,7 +238,14 @@ export function PracticeSetup({
       aria-labelledby="practice-title"
     >
       {!customizing && (
-        <p className="eyebrow">A FEW MINUTES. A LITTLE MORE FLUENT.</p>
+        <>
+          {auth.status === "signed-in" && (
+            <p className="practice-greeting">
+              {displayName ? `Hello, ${displayName}.` : "Welcome back."}
+            </p>
+          )}
+          <p className="eyebrow">A FEW MINUTES. A LITTLE MORE FLUENT.</p>
+        </>
       )}
       <h1 id="practice-title" ref={heading} tabIndex={-1}>
         {customizing ? (

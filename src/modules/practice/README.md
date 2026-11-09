@@ -114,3 +114,11 @@ defaults. Enter on the initially focused results heading or the Repeat button
 starts it; held-key repeats and duplicate starts are ignored. Other focused
 controls retain their normal behavior. Failed starts keep the results and allow
 retry. New practice still returns to the quick-choice screen.
+
+## Interface update (1.1.0)
+
+Tense help has a visible circled question mark inside the existing trigger, an
+explicit accessible explanation label and a 44 px minimum height. The Practice
+home screen greets signed-in users using the first available given_name, full_name
+or name, falling back to “Welcome back.” Names render as text and wrap; guest,
+customization, question and result screens retain their existing copy.

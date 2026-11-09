@@ -79,6 +79,7 @@ export function TenseHint({ categoryId }: { categoryId: CategoryId }) {
         ref={anchor}
         aria-describedby={open ? id : undefined}
         aria-expanded={open}
+        aria-label={`Explain ${category.label} (${category.group})`}
         onFocus={show}
         onBlur={close}
         onClick={show}
@@ -86,6 +87,9 @@ export function TenseHint({ categoryId }: { categoryId: CategoryId }) {
       >
         {category.label.toLocaleLowerCase("es")} (
         {category.group.toLocaleLowerCase("es")})
+        <span className="tense-help-marker" aria-hidden="true">
+          ?
+        </span>
       </button>
       {open && (
         <span

@@ -1134,3 +1134,31 @@ summary:focus-visible {
     margin-block: 18px;
   }
 }
+
+@media (max-width: 760px) {
+  .heatmap {
+    table-layout: auto;
+    min-width: 0;
+  }
+  .heatmap .verb-column {
+    width: 1%;
+    min-width: 0;
+    max-width: none;
+    white-space: nowrap;
+    padding-inline: 0.6rem;
+    border-right: 2px solid #ccd8c3;
+  }
+  .heatmap .overall-column {
+    position: static;
+    left: auto;
+    border-right: 1px solid var(--rule);
+  }
+  .heatmap thead .overall-column {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+  .heatmap-scroll {
+    scroll-padding-left: 0;
+  }
+}

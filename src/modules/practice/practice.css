@@ -373,3 +373,26 @@
 .tense-tooltip > strong {
   color: var(--accent);
 }
+
+.practice-greeting {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  margin: 0 0 0.75rem;
+}
+.question-prompt button.tense-trigger {
+  min-height: 44px;
+}
+.tense-help-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: 0.4em;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font:
+    600 0.6em/1 system-ui,
+    sans-serif;
+  vertical-align: middle;
+}

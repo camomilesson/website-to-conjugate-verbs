@@ -63,3 +63,10 @@ these preferences; deleting the account cascades them.
 For new environments, follow the [migration order](../../../docs/OPERATIONS.md#database-and-migrations)
 and [verification cases](../../../docs/OPERATIONS.md#verification). Existing applied
 migrations must not be rerun.
+
+## Mobile column layout
+
+At widths up to 760 px, only Verb remains horizontally frozen. Its width follows
+the longest displayed infinitive with compact padding. Overall scrolls alongside
+the tense columns; its header stays vertically sticky. Desktop keeps both frozen
+columns.
