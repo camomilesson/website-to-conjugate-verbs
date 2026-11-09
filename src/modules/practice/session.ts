@@ -92,6 +92,7 @@ export function createQuestions(
   verbs: readonly CatalogueVerb[],
   config: PracticeConfig,
   random: () => number = Math.random,
+  preferredPairs: ReadonlySet<string> = new Set(),
 ): Question[] {
   if (!Number.isInteger(config.length) || config.length < 1)
     throw new Error("Choose a positive whole number of questions.")
@@ -100,7 +101,13 @@ export function createQuestions(
     throw new Error(
       "Select at least one available verb, tense, and person with valid answer options.",
     )
-  return shuffled(pool, random).slice(0, config.length)
+  const randomized = shuffled(pool, random)
+  const preferred = (question: Question) =>
+    preferredPairs.has(`${question.verbId}:${question.category}`)
+  return [
+    ...randomized.filter(preferred),
+    ...randomized.filter((question) => !preferred(question)),
+  ].slice(0, config.length)
 }
 export interface AnswerResult {
   question: Question
@@ -189,6 +196,7 @@ export function sessionScore(results: readonly AnswerResult[]) {
 
 // Original catalogue and selection snapshot for a fresh run with identical settings.
 export interface PracticeSource {
+  preferredPairs?: string[]
   verbs: CatalogueVerb[]
   datasetVersion: string
   preferences: import("../practice-preferences/index.ts").PracticePreferences

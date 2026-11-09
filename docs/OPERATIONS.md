@@ -296,6 +296,17 @@ confirmed navigation can lose unsent answers; this is not offline persistence.
 Account changes/reset must stop unsent requests from the old practice. Existing
 server owner/generation checks remain authoritative for any in-flight requests.
 
+### Targeted practice checks (1.1.0)
+
+No migration or server deployment is required. On staging, check that guest
+Customize has no Least practiced/Most mistakes controls. Signed-in Customize
+should load current counts, filter ranking when mode/accent/tenses change, and
+explain an empty Most mistakes pool. Least practiced can start from an empty
+account and prioritises unattempted combinations. Both cap selection at 20 verbs.
+Complete a targeted session, then verify the saved manual verb default is unchanged
+and View progress opens the updated heatmap only after all saves are acknowledged.
+Inspect the tertiary Customize button and wrapped selection controls on mobile.
+
 ### Release smoke check
 
 1. Open production without a Vercel session. Confirm Conjugadora, the subline,

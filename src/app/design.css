@@ -422,11 +422,13 @@ summary:focus-visible {
 .page-section button.customize-action {
   grid-column: 1/-1;
   justify-self: center;
-  border: 0;
-  background: none;
-  color: var(--muted);
-  font-size: 12px;
-  padding: 7px 12px;
+  border: 1px solid #bdcbb4;
+  background: var(--soft);
+  color: var(--ink);
+  font-size: 13px;
+  padding: 11px 20px;
+  min-height: 44px;
+  border-radius: 8px;
 }
 .customize-action span {
   margin-left: 15px;
@@ -1177,4 +1179,31 @@ summary:focus-visible {
   gap: 0.6rem;
   min-height: 44px;
   cursor: pointer;
+}
+
+.page-section button.customize-action:hover:not(:disabled) {
+  background: #e1e8d9;
+  border-color: var(--accent);
+}
+.targeted-selection {
+  border-top: 1px solid var(--rule);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}
+a.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+}
+a.secondary-button:hover {
+  border-color: var(--accent);
+  background: var(--soft);
 }

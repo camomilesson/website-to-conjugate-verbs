@@ -127,3 +127,24 @@ explicit accessible explanation label and a 44 px minimum height. The Practice
 home screen greets signed-in users using the first available given_name, full_name
 or name, falling back to “Welcome back.” Names render as text and wrap; guest,
 customization, question and result screens retain their existing copy.
+
+## Progress-based session selections (1.1.0)
+
+`targeted.ts` ranks up to 20 catalogue verbs using current aggregate counts.
+Least practiced ranks missing verb/category cells then attempts; Most mistakes
+ranks weighted accuracy then more attempts, excluding unattempted verbs. Filters
+match current tenses, eligible persons, mode and accent policy; counts themselves
+combine persons. Spanish names break ties. `usePracticeCounts.ts` loads counts on
+customization entry with owner/retry guards and ignores late replies.
+
+Only signed-in Customize renders the two modes. They stay in setup memory, never
+extend the persisted preference/schema enums, and do not replace saved manual verb
+IDs. Successful starts save the manual preferences while tracking snapshots contain
+the effective selected IDs. `preferredPairs` in PracticeSource prioritises missing
+combinations during initial and repeat sampling without storing queues or changing
+RPC payloads. Repeat keeps that original selection/priority; new customization
+reads fresh counts. No candidates means no Start, with an explanatory message.
+
+Results link to Progress only after all saves are acknowledged. Guest results use
+the existing guest Progress destination. Customize has a visible tertiary button
+border/background and minimum 44 px height.

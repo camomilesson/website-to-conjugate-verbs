@@ -15,7 +15,7 @@ import type { TrackingContext } from "../learning-data/index.ts"
 import { createSaveQueue } from "./save-queue.ts"
 import type { SessionAction } from "./session.ts"
 import { useEffect, useRef, useState, useReducer } from "react"
-import { useBlocker } from "react-router"
+import { Link, useBlocker } from "react-router"
 import { CATEGORIES, PERSONS } from "@conjugadora/verb-catalogue"
 import type { PracticeConfig, PracticeSource, Question } from "./session.ts"
 import {
@@ -98,7 +98,12 @@ function PracticeSession({
     setRepeatLoading(true)
     setRepeatError(null)
     try {
-      const questions = createQuestions(source.verbs, config)
+      const questions = createQuestions(
+        source.verbs,
+        config,
+        Math.random,
+        new Set(source.preferredPairs),
+      )
       if (auth.user && !learning.generation)
         throw new Error("Account data is still loading. Try again.")
       const tracking = auth.user
@@ -390,6 +395,11 @@ function PracticeSession({
               {repeatLoading ? "Starting…" : "Repeat practice"}{" "}
               <span className="key-hint">Enter</span>
             </button>
+            {!unsaved && !repeatLoading && (
+              <Link className="secondary-button" to="/progress">
+                View progress
+              </Link>
+            )}
             <button onClick={onReset} disabled={repeatLoading || unsaved}>
               New practice
             </button>

@@ -1,3 +1,6 @@
+import { targetedVerbs } from "./targeted.ts"
+import type { TargetedMode } from "./targeted.ts"
+import { usePracticeCounts } from "./usePracticeCounts.ts"
 import { Link } from "react-router"
 import { practiceSummary, quickPreferences } from "./polish.ts"
 import type {
@@ -68,7 +71,29 @@ export function PracticeSetup({
     save,
     isAccount,
   } = usePreferenceDraft()
-  const selectedVerbs = preferences?.verbIds ?? []
+  const [targeted, setTargeted] = useState<TargetedMode | null>(null)
+  const progress = usePracticeCounts(customizing && !!auth.user)
+  const ranked = useMemo(
+    () =>
+      catalogue && preferences && targeted && progress.counts
+        ? targetedVerbs(catalogue, progress.counts, preferences, targeted)
+        : [],
+    [catalogue, preferences, targeted, progress.counts],
+  )
+  const effectivePreferences =
+    preferences && targeted
+      ? {
+          ...preferences,
+          verbIds: ranked.map((row) => row.verb.id),
+          verbSet: "select" as const,
+        }
+      : preferences
+  const selectedVerbs = useMemo(
+    () => effectivePreferences?.verbIds ?? [],
+    [preferences?.verbIds, targeted, ranked],
+  )
+  const targetedUnavailable =
+    !!targeted && (!progress.counts || !!progress.error || !ranked.length)
   const selectedCategories = preferences?.categories ?? []
   const selectedPersons = preferences?.persons ?? []
   const mode = preferences?.mode ?? "typing"
@@ -156,6 +181,7 @@ export function PracticeSetup({
   const validLength = Number.isSafeInteger(Number(length)) && Number(length) > 0
   async function start(targetMode: PracticeMode = mode) {
     if (
+      targetedUnavailable ||
       (auth.user && !learning.generation) ||
       !catalogue ||
       !preferences ||
@@ -166,7 +192,7 @@ export function PracticeSetup({
       !validLength
     )
       return
-    const snapshot = quickPreferences(preferences, targetMode)
+    const snapshot = quickPreferences(effectivePreferences!, targetMode)
     const config: PracticeConfig = {
       mode: targetMode,
       verbIds: [...selectedVerbs],
@@ -196,7 +222,18 @@ export function PracticeSetup({
                 ),
             )
       if (!controller.signal.aborted) {
-        const questions = createQuestions(verbs, config)
+        const preferredPairs =
+          targeted === "least-practiced"
+            ? ranked.flatMap((row) =>
+                row.unattempted.map((category) => `${row.verb.id}:${category}`),
+              )
+            : []
+        const questions = createQuestions(
+          verbs,
+          config,
+          Math.random,
+          new Set(preferredPairs),
+        )
         const tracking = auth.user
           ? await startTrackedPractice(
               auth.user.id,
@@ -207,13 +244,16 @@ export function PracticeSetup({
             )
           : null
         if (controller.signal.aborted) return
-        const storageNotice = await save(snapshot)
+        const storageNotice = await save(
+          quickPreferences(preferences, targetMode),
+        )
         if (controller.signal.aborted) return
         if (isAccount && storageNotice) throw new Error(storageNotice)
         onStart(questions, config, storageNotice, tracking, {
           verbs,
           datasetVersion: catalogue.datasetVersion,
           preferences: snapshot,
+          preferredPairs,
         })
       }
     } catch (reason: unknown) {
@@ -366,7 +406,58 @@ export function PracticeSetup({
             <>
               <PreferenceFields
                 catalogue={catalogue}
-                value={preferences}
+                value={effectivePreferences!}
+                targeted={!!targeted}
+                onManualVerbs={() => setTargeted(null)}
+                verbActions={
+                  auth.user ? (
+                    <div className="targeted-selection">
+                      <div className="selection-actions">
+                        <button
+                          disabled={!progress.counts || !!progress.error}
+                          aria-pressed={targeted === "least-practiced"}
+                          onClick={() => setTargeted("least-practiced")}
+                        >
+                          Least practiced
+                        </button>
+                        <button
+                          disabled={!progress.counts || !!progress.error}
+                          aria-pressed={targeted === "most-mistakes"}
+                          onClick={() => setTargeted("most-mistakes")}
+                        >
+                          Most mistakes
+                        </button>
+                      </div>
+                      {!progress.counts && !progress.error && (
+                        <p className="field-note" role="status">
+                          Loading progress-based selections…
+                        </p>
+                      )}
+                      {progress.error && (
+                        <div role="alert">
+                          <p>{progress.error}</p>
+                          <button onClick={progress.retry}>
+                            Retry progress
+                          </button>
+                        </div>
+                      )}
+                      {targeted && (
+                        <p className="field-note" role="status">
+                          {targeted === "least-practiced"
+                            ? "Most unattempted verb–tense combinations first; ties use fewest attempts. Questions favour unattempted combinations."
+                            : "Lowest accuracy first; ties use more attempts. Unattempted verbs are excluded."}{" "}
+                          {ranked.length
+                            ? `Using ${ranked.length} verbs for this session.`
+                            : targeted === "most-mistakes"
+                              ? "No attempted verbs match this answer mode and tense selection yet."
+                              : "Select a tense and an applicable person to find verbs."}{" "}
+                          Your saved manual verb selection is kept. Progress
+                          combines all persons.
+                        </p>
+                      )}
+                    </div>
+                  ) : undefined
+                }
                 onChange={setPreferences}
                 disabled={loading}
               />
@@ -439,6 +530,7 @@ export function PracticeSetup({
                   learning.loading ||
                   !!learning.error ||
                   !available ||
+                  targetedUnavailable ||
                   !validLength
                 }
                 onClick={() => {
@@ -455,6 +547,7 @@ export function PracticeSetup({
                   if (beforeCustomize.current)
                     setPreferences(structuredClone(beforeCustomize.current))
                   setCustomizing(false)
+                  setTargeted(null)
                   setStartError("")
                 }}
               >

@@ -57,3 +57,8 @@ setup retains its compact field layout at the common page width.
 Selection dialogs use a flex column with only the options list scrolling. Heading,
 search, selection actions and Apply/Cancel stay visible, including on short mobile
 viewports. The shared layout applies in both Practice and Settings.
+
+Practice can supply optional progress-based verb actions and a manual-selection
+callback. The shared fields keep their existing behaviour in Settings and for
+guests. Targeted session selection lives in Practice, preserving the existing
+stored preference enums and manual verb IDs.

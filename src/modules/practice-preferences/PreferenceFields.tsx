@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { Dispatch, SetStateAction } from "react"
+import type { Dispatch, SetStateAction, ReactNode } from "react"
 import {
   CATEGORIES,
   PERSONS,
@@ -20,11 +20,17 @@ export function PreferenceFields({
   value,
   onChange,
   disabled = false,
+  verbActions,
+  onManualVerbs,
+  targeted = false,
 }: {
   catalogue: Catalogue
   value: PracticePreferences
   onChange: Dispatch<SetStateAction<PracticePreferences | null>>
   disabled?: boolean
+  verbActions?: ReactNode
+  onManualVerbs?: () => void
+  targeted?: boolean
 }) {
   const {
     verbIds: selectedVerbs,
@@ -95,8 +101,9 @@ export function PreferenceFields({
           <div>
             <div className="selection-actions">
               <button
-                aria-pressed={verbSet === "all"}
+                aria-pressed={!targeted && verbSet === "all"}
                 onClick={() => {
+                  onManualVerbs?.()
                   setSelectedVerbs(catalogue.verbs.map((verb) => verb.id))
                   setVerbSet("all")
                 }}
@@ -104,8 +111,9 @@ export function PreferenceFields({
                 All
               </button>
               <button
-                aria-pressed={verbSet === "common"}
+                aria-pressed={!targeted && verbSet === "common"}
                 onClick={() => {
+                  onManualVerbs?.()
                   setSelectedVerbs(commonIds)
                   setVerbSet("common")
                 }}
@@ -113,13 +121,17 @@ export function PreferenceFields({
                 Common
               </button>
               <button
-                aria-pressed={verbSet === "select"}
+                aria-pressed={!targeted && verbSet === "select"}
                 aria-haspopup="dialog"
-                onClick={() => setSelectionDialog("verbs")}
+                onClick={() => {
+                  onManualVerbs?.()
+                  setSelectionDialog("verbs")
+                }}
               >
                 Select…
               </button>
             </div>
+            {verbActions}
             <p className="selection-summary">
               {selectedVerbs.length} / {catalogue.verbs.length} ·{" "}
               {summary(

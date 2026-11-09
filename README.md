@@ -67,7 +67,13 @@ These are convenience sets, not formal proficiency levels. See the
 [catalogue guide](docs/CATALOGUE.md) for the full verb list, supported inventory,
 provenance, review limits and correction procedure.
 
-### Keyboard controls
+#Signed-in Customize also offers **Least practiced** (up to 20 verbs with the most
+unattempted selected tense combinations) and **Most mistakes** (lowest weighted
+accuracy among attempted verbs). These temporary session choices follow the answer
+mode and accent setting and keep saved manual verb selections intact. Guests do
+not see them. Completed results offer **View progress** once saves finish.
+
+## Keyboard controls
 
 | Context                   | Keys                                                                                                |
 | ------------------------- | --------------------------------------------------------------------------------------------------- |
