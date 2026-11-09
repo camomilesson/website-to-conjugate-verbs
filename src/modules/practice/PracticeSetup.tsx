@@ -295,7 +295,6 @@ export function PracticeSetup({
               {displayName ? `Hello, ${displayName}.` : "Welcome back."}
             </p>
           )}
-          <p className="eyebrow">A FEW MINUTES. A LITTLE MORE FLUENT.</p>
         </>
       )}
       <h1 id="practice-title" ref={heading} tabIndex={-1}>
@@ -320,9 +319,6 @@ export function PracticeSetup({
         <>
           {!customizing ? (
             <>
-              <p className="practice-intro">
-                Less translating in your head. More knowing what comes next.
-              </p>
               <div className="saved-setup">
                 <span className="eyebrow">YOUR CURRENT SETUP</span>
                 <p className="quick-summary">{practiceSummary(preferences)}</p>
