@@ -28,6 +28,7 @@ import {
   sessionReducer,
   sessionScore,
 } from "./session.ts"
+import { usePracticeSound } from "./usePracticeSound.ts"
 import { ChoiceAnswer } from "./ChoiceAnswer.tsx"
 import { PracticeSetup } from "./PracticeSetup.tsx"
 
@@ -96,6 +97,7 @@ function PracticeSession({
     sessionReducer,
     initialSession(questions, config.accentPolicy),
   )
+  const sound = usePracticeSound()
   const auth = useAuth()
   const learning = useLearningGeneration()
   const repeating = useRef(false)
@@ -236,6 +238,7 @@ function PracticeSession({
         : { type: "submit", text }
     const proposed = sessionReducer(state, action)
     if (proposed === state) return
+    sound.play(proposed.results[proposed.results.length - 1].correct)
     submittedIndex.current = state.index
     if (tracking) {
       saveQueue.enqueue(
@@ -261,31 +264,6 @@ function PracticeSession({
   const score = sessionScore(state.results)
   const question = state.questions[state.index]
   const result = state.results[state.results.length - 1]
-  useEffect(() => {
-    if (
-      state.phase !== "feedback" ||
-      !result?.correct ||
-      saveError ||
-      leaving ||
-      blocker.state === "blocked"
-    )
-      return
-    const timer = window.setTimeout(() => {
-      if (saveQueue.snapshot().error) return
-      setText("")
-      setSelectedIndex(null)
-      dispatch({ type: "auto-next", index: state.index })
-    }, 650)
-    return () => window.clearTimeout(timer)
-  }, [
-    state.phase,
-    state.index,
-    result?.correct,
-    leaving,
-    blocker.state,
-    saveError,
-    saveQueue,
-  ])
 
   return (
     <section
@@ -443,7 +421,17 @@ function PracticeSession({
         <>
           <div className="session-heading">
             <h1 id="session-title">{modeLabel} practice</h1>
-            <button onClick={() => setLeaving(true)}>End practice</button>
+            <div className="practice-session-actions">
+              <button
+                type="button"
+                aria-pressed={sound.enabled}
+                aria-label="Practice sound"
+                onClick={sound.toggle}
+              >
+                Sound: {sound.enabled ? "on" : "off"}
+              </button>
+              <button onClick={() => setLeaving(true)}>End practice</button>
+            </div>
           </div>
           <div
             className="session-progress"
@@ -478,6 +466,9 @@ function PracticeSession({
                 person={PERSONS[question.person]}
                 options={question.options}
                 selectedIndex={selectedIndex}
+                correctAnswers={
+                  state.phase === "feedback" ? question.answers : null
+                }
                 disabled={state.phase === "feedback" || !!saveError}
                 inputRef={input}
                 onSelect={setSelectedIndex}
@@ -551,28 +542,18 @@ function PracticeSession({
                 {result.correct ? "Accepted:" : "Correct answer:"}{" "}
                 <span lang="es">{question.answers.join(" / ")}</span>
               </p>
-              {result.correct ? (
-                <p className="field-note">
-                  {saveError
-                    ? "Retry saving to continue."
-                    : state.index === state.questions.length - 1
-                      ? "Finishing practice…"
-                      : "Next question…"}
-                </p>
-              ) : (
-                <button
-                  type="button"
-                  className="primary-button"
-                  ref={next}
-                  disabled={!!saveError}
-                  onClick={advance}
-                >
-                  {state.index === state.questions.length - 1
-                    ? "See results"
-                    : "Next"}{" "}
-                  <span className="key-hint">Space</span>
-                </button>
-              )}
+              <button
+                type="button"
+                className="primary-button"
+                ref={next}
+                disabled={!!saveError}
+                onClick={advance}
+              >
+                {state.index === state.questions.length - 1
+                  ? "See results"
+                  : "Next"}{" "}
+                <span className="key-hint">Enter / Space</span>
+              </button>
             </div>
           )}
         </>

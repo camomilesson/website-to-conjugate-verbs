@@ -125,7 +125,6 @@ export type SessionAction =
   | { type: "submit"; text: string }
   | { type: "submit-choice"; index: number }
   | { type: "next" }
-  | { type: "auto-next"; index: number }
 export function initialSession(
   questions: Question[],
   accentPolicy: AccentPolicy,
@@ -171,12 +170,6 @@ export function sessionReducer(
       ],
     }
   }
-  if (
-    action.type === "auto-next" &&
-    (action.index !== state.index ||
-      !state.results[state.results.length - 1]?.correct)
-  )
-    return state
   if (state.phase !== "feedback") return state
   return state.index === state.questions.length - 1
     ? { ...state, phase: "complete" }

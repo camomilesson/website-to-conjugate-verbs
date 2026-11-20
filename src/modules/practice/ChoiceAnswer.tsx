@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { isCorrectAnswer } from "../answer-checking/index.ts"
 import { choiceNumber } from "./polish.ts"
 import type { RefObject } from "react"
 
@@ -6,6 +7,7 @@ export function ChoiceAnswer({
   person,
   options,
   selectedIndex,
+  correctAnswers,
   disabled,
   inputRef,
   onSelect,
@@ -14,6 +16,7 @@ export function ChoiceAnswer({
   person: string
   options: readonly string[]
   selectedIndex: number | null
+  correctAnswers: readonly string[] | null
   disabled: boolean
   inputRef: RefObject<HTMLInputElement | null>
   onSelect: (index: number) => void
@@ -69,26 +72,38 @@ export function ChoiceAnswer({
         {person}
       </span>
       <div className="choice-list">
-        {options.map((option, index) => (
-          <label
-            className={`choice-option${selectedIndex === index ? " selected" : ""}`}
-            key={option}
-          >
-            <input
-              type="radio"
-              name="choice-answer"
-              aria-keyshortcuts={String(index + 1)}
-              value={index}
-              checked={selectedIndex === index}
-              onChange={() => onSelect(index)}
-              ref={index === 0 ? inputRef : undefined}
-            />
-            <span className="choice-number" aria-hidden="true">
-              {index + 1}
-            </span>
-            <span lang="es">{option}</span>
-          </label>
-        ))}
+        {options.map((option, index) => {
+          const correct =
+            correctAnswers !== null &&
+            isCorrectAnswer(option, correctAnswers, "strict")
+          const incorrect =
+            correctAnswers !== null && selectedIndex === index && !correct
+          return (
+            <label
+              className={`choice-option${selectedIndex === index ? " selected" : ""}${correct ? " correct" : ""}${incorrect ? " incorrect" : ""}`}
+              key={option}
+            >
+              <input
+                type="radio"
+                name="choice-answer"
+                aria-keyshortcuts={String(index + 1)}
+                value={index}
+                checked={selectedIndex === index}
+                onChange={() => onSelect(index)}
+                ref={index === 0 ? inputRef : undefined}
+              />
+              <span className="choice-number" aria-hidden="true">
+                {index + 1}
+              </span>
+              <span lang="es">{option}</span>
+              {(correct || incorrect) && (
+                <span className="choice-result">
+                  {correct ? "✓ Correct" : "✕ Incorrect"}
+                </span>
+              )}
+            </label>
+          )
+        })}
       </div>
       {!disabled && (
         <p className="field-note">

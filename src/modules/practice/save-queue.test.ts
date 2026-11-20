@@ -40,7 +40,7 @@ await test("feedback and local completion do not wait for saves; requests remain
         return i === 0 ? first.promise : last.promise
       },
     })
-    state = sessionReducer(state, { type: "auto-next", index: i })
+    state = sessionReducer(state, { type: "next" })
   }
   assert.equal(state.phase, "complete")
   assert.equal(state.results.length, 2)

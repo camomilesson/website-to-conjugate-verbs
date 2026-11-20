@@ -154,28 +154,26 @@ await test("sessions accept non-first alternatives and preserve strict/relaxed p
   assert.equal(sessionScore([]).percentage, 0)
 })
 
-await test("automatic advance only accepts current correct feedback and ignores stale timers", () => {
+await test("correct answers including the final answer wait for manual next", () => {
   const questions = createQuestions([hablar], { ...config, length: 2 })
-  const initial = initialSession(questions, "strict")
-  assert.equal(
-    sessionReducer(initial, { type: "auto-next", index: 0 }),
-    initial,
-  )
-  const wrong = sessionReducer(initial, { type: "submit", text: "wrong" })
-  assert.equal(sessionReducer(wrong, { type: "auto-next", index: 0 }), wrong)
-  const right = sessionReducer(initial, {
-    type: "submit",
-    text: questions[0].answers[0],
-  })
-  const second = sessionReducer(right, { type: "auto-next", index: 0 })
-  assert.equal(second.index, 1)
-  assert.equal(second.phase, "question")
-  const last = sessionReducer(second, {
-    type: "submit",
-    text: questions[1].answers[0],
-  })
-  assert.equal(sessionReducer(last, { type: "auto-next", index: 0 }), last)
-  const completed = sessionReducer(last, { type: "auto-next", index: 1 })
-  assert.equal(completed.phase, "complete")
-  assert.equal(sessionScore(completed.results).percentage, 100)
+  let state = initialSession(questions, "strict")
+  for (let index = 0; index < questions.length; index++) {
+    state = sessionReducer(state, {
+      type: "submit",
+      text: questions[index].answers[0],
+    })
+    assert.equal(state.phase, "feedback")
+    assert.equal(state.index, index)
+    assert.equal(state.results.length, index + 1)
+    assert.equal(
+      sessionReducer(state, {
+        type: "submit",
+        text: questions[index].answers[0],
+      }),
+      state,
+    )
+    state = sessionReducer(state, { type: "next" })
+  }
+  assert.equal(state.phase, "complete")
+  assert.equal(sessionScore(state.results).percentage, 100)
 })

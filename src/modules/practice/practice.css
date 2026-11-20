@@ -396,3 +396,28 @@
     sans-serif;
   vertical-align: middle;
 }
+
+.practice-session-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.choice-option.correct {
+  border-color: #337348;
+  background: #e8f3eb;
+  color: #245535;
+}
+.choice-option.incorrect {
+  border-color: #a13838;
+  background: #fbecec;
+  color: #842c2c;
+}
+.choice-option.correct input {
+  accent-color: #337348;
+}
+.choice-result {
+  margin-left: auto;
+  font: 0.75rem var(--font-label);
+}
